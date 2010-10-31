@@ -32,7 +32,7 @@ $specialPageAliases['bg'] = array(
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
-	'RegexBlock' => array( 'Reguläre Ausdrücke-Sperrung' ),
+	'RegexBlock' => array( 'Reguläre_Ausdrücke-Sperrung' ),
 );
 
 /** Lower Sorbian (Dolnoserbski) */
@@ -47,7 +47,7 @@ $specialPageAliases['hsb'] = array(
 
 /** Interlingua (Interlingua) */
 $specialPageAliases['ia'] = array(
-	'RegexBlock' => array( 'Blocar con regex' ),
+	'RegexBlock' => array( 'Blocar_con_regex' ),
 );
 
 /** Indonesian (Bahasa Indonesia) */
