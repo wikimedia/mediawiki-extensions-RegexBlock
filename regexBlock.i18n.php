@@ -1670,16 +1670,24 @@ $messages['is'] = array(
 );
 
 /** Italian (Italiano)
+ * @author Beta16
  * @author Darth Kule
  */
 $messages['it'] = array(
+	'regexblock-block-log' => "Il nome utente o indirizzo IP '''$1''' è stato bloccato.",
+	'regexblock-block-success' => 'Blocco eseguito',
 	'regexblock-form-username' => 'Indirizzo IP o nome utente:',
 	'regexblock-form-reason' => 'Motivo:',
 	'regexblock-form-expiry' => 'Scadenza del blocco:',
 	'regexblock-form-submit' => "Blocca l'utente",
+	'regexblock-unblock-success' => 'Sblocco eseguito',
 	'regexblock-view-all' => 'Tutti',
 	'regexblock-view-go' => 'Vai',
 	'regexblock-view-reason' => 'motivo: $1',
+	'regexblock-view-block-infinite' => 'blocco permanente',
+	'regexblock-view-block-by' => 'bloccato da:',
+	'regexblock-view-block-unblock' => 'sblocca',
+	'regexblock-view-stats' => 'statistiche',
 );
 
 /** Japanese (日本語)
@@ -3384,7 +3392,7 @@ $messages['vo'] = array(
 	'regexblock-view-go' => 'Ledunön',
 	'regexblock-view-reason' => 'kod: $1',
 	'regexblock-view-block-infinite' => 'blokam laidüpik',
-	'regexblock-view-block-by' => 'peblokon fa',
+	'regexblock-view-block-by' => 'peblokon fa:',
 	'regexblock-view-block-unblock' => 'säblokön',
 	'regexblock-view-stats' => 'statits',
 	'regexblock-view-empty' => 'Lised gebananemas e ladetas-IP peblokölas vagon.',
