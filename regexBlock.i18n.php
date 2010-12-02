@@ -1693,6 +1693,7 @@ $messages['it'] = array(
 /** Japanese (日本語)
  * @author Fryed-peach
  * @author Hosiryuhosi
+ * @author 青子守歌
  */
 $messages['ja'] = array(
 	'regexblock' => '正規表現ブロック',
@@ -1710,7 +1711,7 @@ $messages['ja'] = array(
 	'regexblock-reason-name' => 'この利用者名は荒らしなどの破壊行為のため編集が禁止されています。これが間違いだとお考えなら、[[$1|我々に連絡]]してください',
 	'regexblock-reason-regex' => '類似した名前の利用者による荒らしなどの破壊行為のため、この利用者名は編集が禁止されています。別の名前でアカウントを作成されるか、この問題について[[$1|我々に連絡]]してください',
 	'regexblock-form-username' => 'IPアドレスまたは利用者名:',
-	'regexblock-form-reason' => '理由:',
+	'regexblock-form-reason' => '理由：',
 	'regexblock-form-expiry' => '期限:',
 	'regexblock-form-match' => '完全一致',
 	'regexblock-form-account-block' => '新規アカウントの作成をブロックする',
