@@ -2913,11 +2913,12 @@ $messages['sl'] = array(
 );
 
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
+ * @author Rancher
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
-	'regexblock-block-success' => 'Блок успео',
+	'regexblock-block-success' => 'Приступ је забрањен',
 	'regexblock-currently-blocked' => 'Тренутно блокиране адресе:',
 	'regexblock-page-title-1' => 'Блокирај адресе користећи регуларне изразе',
 	'regexblock-form-username' => 'IP адреса или корисничко име:',
@@ -2926,7 +2927,7 @@ $messages['sr-ec'] = array(
 	'regexblock-form-match' => 'Тачно слагање',
 	'regexblock-form-submit' => 'Блокирај овог корисника',
 	'regexblock-view-all' => 'Све',
-	'regexblock-view-go' => 'Иди',
+	'regexblock-view-go' => 'Пређи',
 	'regexblock-view-reason' => 'разлог: $1',
 	'regexblock-view-reason-default' => 'генерички разлог',
 	'regexblock-view-block-infinite' => 'трајан блок',
