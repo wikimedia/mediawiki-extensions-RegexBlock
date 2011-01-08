@@ -1947,6 +1947,13 @@ Warscheinlech gëtt et esou e Benotzer net.',
 	'right-regexblock' => 'Spär Benotzer fir Ännerungen op alle Wikiën vun der Wiki-Farm',
 );
 
+/** Latgalian (Latgaļu)
+ * @author Dark Eagle
+ */
+$messages['ltg'] = array(
+	'regexblock-view-all' => 'Vysi',
+);
+
 /** Moksha (Мокшень)
  * @author Jarmanj Turtash
  * @author Khazar II
