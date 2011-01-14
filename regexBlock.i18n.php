@@ -2919,9 +2919,10 @@ $messages['sl'] = array(
 	'regexblock-form-reason' => 'Razlog:',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Sasa Stefanovic
+ * @author Жељко Тодоровић
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -2939,13 +2940,14 @@ $messages['sr-ec'] = array(
 	'regexblock-view-reason-default' => 'генерички разлог',
 	'regexblock-view-block-infinite' => 'трајан блок',
 	'regexblock-view-block-by' => 'блокирао:',
-	'regexblock-view-block-unblock' => 'одблокирај',
+	'regexblock-view-block-unblock' => 'деблокирај',
 	'regexblock-view-stats' => 'статистике',
 	'regexblock-view-time' => 'у $1',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
+ * @author Жељко Тодоровић
  */
 $messages['sr-el'] = array(
 	'regexblock-block-success' => 'Blok uspeo',
@@ -2962,7 +2964,7 @@ $messages['sr-el'] = array(
 	'regexblock-view-reason-default' => 'generički razlog',
 	'regexblock-view-block-infinite' => 'trajan blok',
 	'regexblock-view-block-by' => 'blokirao:',
-	'regexblock-view-block-unblock' => 'odblokiraj',
+	'regexblock-view-block-unblock' => 'deblokiraj',
 	'regexblock-view-stats' => 'statistike',
 	'regexblock-view-time' => 'u $1',
 );
