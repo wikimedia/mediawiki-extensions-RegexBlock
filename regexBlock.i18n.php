@@ -3449,18 +3449,21 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Gzdavidwong
+ * @author Mark85296341
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
 	'regexblock-block-success' => '封禁成功',
-	'regexblock-form-username' => 'IP位址或使用者名稱：',
+	'regexblock-expire-duration' => '1小時，2小時，4小時，6小時，1天，3天，1週，2週，一個月，三個月，六個月，一年，永久',
+	'regexblock-form-username' => 'IP 位址或使用者名稱：',
 	'regexblock-form-reason' => '原因：',
 	'regexblock-form-expiry' => '到期日：',
 	'regexblock-form-submit' => '封禁該名使用者',
-	'regexblock-nodata-found' => '找不到數據',
+	'regexblock-nodata-found' => '找不到資料',
 	'regexblock-view-reason' => '原因：$1',
 	'regexblock-view-reason-default' => '一般原因',
 	'regexblock-view-block-infinite' => '永久封禁',
+	'regexblock-view-block-unblock' => '解除禁封',
 	'regexblock-view-stats' => '統計',
 );
 
