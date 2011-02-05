@@ -1792,18 +1792,18 @@ $messages['kl'] = array(
  */
 $messages['km'] = array(
 	'regexblock-already-blocked' => '$1ត្រូវបានហាមឃាត់រួចហើយ។',
-	'regexblock-block-log' => "ឈ្មោះអ្នកប្រើប្រាស់ ឬ អាសយដ្ឋាន IP '''$1''' បានត្រូវ រាំងខ្ទប់។",
+	'regexblock-block-log' => "អត្តនាមឬ អាសយដ្ឋានIP '''$1''' បានត្រូវរាំងខ្ទប់។",
 	'regexblock-block-success' => 'រាំងខ្ទប់ដោយជោគជ័យ',
 	'regexblock-currently-blocked' => 'អាសយដ្ឋានដែលត្រូវបានហាមឃាត់បច្ចុប្បន្ន៖',
-	'regexblock-form-username' => 'អាសយដ្ឋានIP ឬឈ្មោះអ្នកប្រើប្រាស់៖',
+	'regexblock-form-username' => 'អាសយដ្ឋានIP ឬអត្តនាម៖',
 	'regexblock-form-reason' => 'មូលហេតុ៖',
 	'regexblock-form-expiry' => 'ផុតកំណត់:',
 	'regexblock-form-account-block' => 'រាំងខ្ទប់​ការបង្កើត​គណនី​ថ្មី',
 	'regexblock-form-submit' => 'ហាមឃាត់អ្នកប្រើប្រាស់នេះ',
-	'regexblock-form-submit-empty' => 'ផ្តល់ឈ្មោះអ្នកប្រើប្រាស់ឬអាសយដ្ឋានIPដើម្បីហាមឃាត់។',
+	'regexblock-form-submit-empty' => 'ផ្តល់អត្តនាមឬអាសយដ្ឋានIPដើម្បីហាមឃាត់។',
 	'regexblock-form-submit-expiry' => 'សូម​ធ្វើការ​បញ្ជាក់​កាលបរិច្ឆេទ​ដែល​ត្រូវ​ផុតកំណត់​។',
 	'regexblock-unblock-success' => 'បានឈប់ហាមឃាត់ដោយជោគជ័យ',
-	'regexblock-unblock-log' => "ឈ្មោះអ្នកប្រើប្រាស់ ឬ អាសយដ្ឋាន IP '''$1''' បានត្រូវ​លែងរាំងខ្ទប់​។",
+	'regexblock-unblock-log' => "អត្តនាមឬ អាសយដ្ឋាន IP '''$1''' បានត្រូវ​លែងរាំងខ្ទប់​។",
 	'regexblock-view-blocked' => 'មើល​ការ​រាំងខ្ទប់​ដោយ:',
 	'regexblock-view-all' => 'ទាំងអស់',
 	'regexblock-view-go' => 'ទៅ',
@@ -1811,7 +1811,8 @@ $messages['km'] = array(
 	'regexblock-view-reason' => 'មូលហេតុ៖ $1',
 	'regexblock-view-block-by' => 'ត្រូវបានរាំងខ្ទប់ដោយ៖',
 	'regexblock-view-block-unblock' => 'ឈប់ហាមឃាត់',
-	'regexblock-view-empty' => 'បញ្ជីឈ្មោះអ្នកប្រើប្រាស់និងអាសយដ្ឋានIPគឺទទេ។',
+	'regexblock-view-stats' => 'ស្ថិតិ',
+	'regexblock-view-empty' => 'បញ្ជីអត្តនាមនិងអាសយដ្ឋានIPគឺទទេ។',
 	'regexblock-view-time' => 'នៅ $1',
 );
 
