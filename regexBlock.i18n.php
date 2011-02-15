@@ -2195,7 +2195,7 @@ $messages['nl'] = array(
 	'regexblock-help' => "Gebruik het onderstaande formulier om schrijftoegang voor een IP-adres of gebruiker te ontzeggen. Dit hoort eigenlijk alleen te gebeuren om vandalisme te voorkomen, en dient in overeenstemming te zijn met het beleid. ''U kunt zelfs gebruikers die nog niet bestaan blokkeren. Daarnaast worden ook gebruikers met gelijkende namen geblokkeerd. \"Test\" wordt samen met \"Test 2\", enzovoort geblokkeerd. U kunt ook een IP-adres blokkeren, wat betekent dat niemand van dat IP-adres pagina's kan bewerken. Opmerking: IP-adressen worden behandeld als gebruikersnamen bij het bepalen van blokkades. Als er geen reden is opgegeven, dan wordt er een standaard reden gebruikt.''",
 	'regexblock-page-title-1' => 'IP-adres blokkeren met behulp van reguliere uitdrukkingen',
 	'regexblock-reason-ip' => 'Gebruikers vanaf dit IP-adres mogen niet bewerken wegens vandalisme of verstoring door u of door iemand met hetzelfde IP-adres.
-Als u denk dat dit ten onrechte is, [[$1|neem dan contact met ons op]]',
+Als u denk dat dit ten onrechte is, [[$1|neem dan contact met ons op]].',
 	'regexblock-reason-name' => 'Deze gebruiker mag niet bewerken wegens vandalisme of verstoring.
 Als u denkt dat dit ten onrechte is, [[$1|neem dan contact met ons op]]',
 	'regexblock-reason-regex' => 'Deze gebruiker mag niet bewerken wegens vandalisme of verstoring door een gebruiker met een gelijkluidende naam.
