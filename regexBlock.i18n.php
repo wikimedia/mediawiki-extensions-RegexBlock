@@ -1676,6 +1676,7 @@ $messages['is'] = array(
 $messages['it'] = array(
 	'regexblock-block-log' => "Il nome utente o indirizzo IP '''$1''' è stato bloccato.",
 	'regexblock-block-success' => 'Blocco eseguito',
+	'regexblock-expire-duration' => '1 ora, 2 ore, 4 ore, 6 ore, 1 giorno, 3 giorni, 1 settimana, 2 settimane, 1 mese, 3 mesi, 6 mesi, 1 anno, infinito',
 	'regexblock-form-username' => 'Indirizzo IP o nome utente:',
 	'regexblock-form-reason' => 'Motivo:',
 	'regexblock-form-expiry' => 'Scadenza del blocco:',
