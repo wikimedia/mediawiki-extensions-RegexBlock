@@ -1887,7 +1887,7 @@ Wann de meins, dat es nit en Odenung, [[$1|lohß et uns weße]], odder nemm janz
 	'regexblock-regex-filter' => ' odder en <i lang="en">regular expression</i>:',
 	'regexblock-view-blocked' => 'Sök bloß de Sperre uß vun däm Metmaacher:',
 	'regexblock-view-all' => 'All',
-	'regexblock-view-go' => 'Loß Jonn!',
+	'regexblock-view-go' => 'Lohß Jonn!',
 	'regexblock-view-match' => '(akkeraat jetroffe)',
 	'regexblock-view-regex' => '(<i lang="en">regular expression</i> jetroffe)',
 	'regexblock-view-account' => '(Neu Aanmelde verbodde)',
