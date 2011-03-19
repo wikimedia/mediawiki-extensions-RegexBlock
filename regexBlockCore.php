@@ -573,7 +573,7 @@ class RegexBlock {
 			/* account creation check goes through the same hook... */
 			if ( $valid['create'] == 1 ) {
 				if ( $user->mBlock ) {
-					$user->mBlock->mCreateAccount = 1;
+					$user->mBlock->prevents( 'createaccount', true );
 				}
 			}
 			/* set expiry information */
