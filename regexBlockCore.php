@@ -578,10 +578,10 @@ class RegexBlock {
 			}
 			/* set expiry information */
 			if ( $user->mBlock ) {
-				$user->mBlock->mId = $valid['blckid'];
+				# $user->mBlock->mId = $valid['blckid']; FIXME: why does this want to do this?
 				$user->mBlock->mExpiry = $valid['expire'];
 				$user->mBlock->mTimestamp = $valid['timestamp'];
-				$user->mBlock->mAddress = ($valid['ip'] == 1) ? wfGetIP() : $user->getName();
+				$user->mBlock->setTarget( ($valid['ip'] == 1) ? wfGetIP() : $user->getName() );
 			}
 
 			$result = self::updateStats( $user, $user_ip, $blocker, $valid['match'], $valid['blckid'] );
