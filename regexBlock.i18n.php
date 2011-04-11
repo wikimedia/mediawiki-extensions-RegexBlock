@@ -1538,7 +1538,7 @@ Tu pote tamben blocar adresses IP complete, isto vole dicer que necuno connecten
 Nota: le adresses IP partial essera considerate como nomines de usator in le determination del blocada.
 Si nulle motivo es specificate, un motivo generic predefenite essera usate.\'\'',
 	'regexblock-page-title-1' => 'Blocar adresses per medio de expressiones regular',
-	'regexblock-reason-ip' => 'Iste adresse IP es impedite de facer modificationes pro causa de vandalismo o de altere disruption per te o per alcuno altere qui usa un adresse IP in commun con te. Si tu crede que isto sia un error, per favor [[$1|contacta nos]].',
+	'regexblock-reason-ip' => 'Iste adresse IP es impedite de facer modificationes pro causa de vandalismo o de altere disruption per te o per alcuno altere qui usa un adresse IP in commun con te. Si tu crede que isto es un error, per favor [[$1|contacta nos]].',
 	'regexblock-reason-name' => 'Iste nomine de usator es impedite de facer modificationes pro causa de vandalismo o de altere disruption.
 Si tu crede que isto sia un error, per favor [[$1|contacta nos]].',
 	'regexblock-reason-regex' => 'Iste nomine de usator es impedite de facer modificationes pro causa de vandalismo o de altere disruption per un usator con un nomine similar.
