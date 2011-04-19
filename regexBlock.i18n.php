@@ -996,7 +996,7 @@ Si vous êtes persuadé{{GENDER:||e|(e)}} qu’il s’agit d’une erreur, [[$1|
 	'regexblock-reason-regex' => 'Cet utilisateur est écarté de toute modification pour cause de vandalisme ou autres faits analogues commis par un utilisateur ayant un nom similaire. Veuillez créer un autre compte ou [[$1|contactez-nous]] pour signaler le problème.',
 	'regexblock-form-username' => 'Adresse IP ou Utilisateur :',
 	'regexblock-form-reason' => 'Motif :',
-	'regexblock-form-expiry' => 'Expiration :&#160;',
+	'regexblock-form-expiry' => 'Expiration :',
 	'regexblock-form-match' => 'Terme exact',
 	'regexblock-form-account-block' => 'Interdire la création d’un nouveau compte.',
 	'regexblock-form-submit' => 'Bloquer cet utilisateur',
