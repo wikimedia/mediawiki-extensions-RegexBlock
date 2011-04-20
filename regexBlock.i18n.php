@@ -1828,9 +1828,10 @@ $messages['kn'] = array(
 
 /** Krio (Krio)
  * @author Jose77
+ * @author Psubhashish
  */
 $messages['kri'] = array(
-	'regexblock-view-go' => 'Go to am',
+	'regexblock-view-go' => 'ଯିବା',
 );
 
 /** Kinaray-a (Kinaray-a)
