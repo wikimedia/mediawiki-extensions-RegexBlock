@@ -2746,12 +2746,13 @@ $messages['rif'] = array(
 /** Romanian (Română)
  * @author Firilacroco
  * @author KlaudiuMihaila
+ * @author Minisarm
  */
 $messages['ro'] = array(
 	'regexblock' => 'Blocare regex',
 	'regexblock-already-blocked' => '$1 este deja blocat.',
 	'regexblock-currently-blocked' => 'Adrese blocate în prezent:',
-	'regexblock-form-username' => 'Adresă IP sau nume d utilizator:',
+	'regexblock-form-username' => 'Adresă IP sau nume de utilizator:',
 	'regexblock-form-reason' => 'Motiv:',
 	'regexblock-form-expiry' => 'Expirare:',
 	'regexblock-form-account-block' => 'Blochează crearea de conturi noi',
