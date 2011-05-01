@@ -429,10 +429,23 @@ $messages['bg'] = array(
 
 /** Bengali (বাংলা)
  * @author Bellayet
+ * @author Wikitanvir
  */
 $messages['bn'] = array(
+	'regexblock-form-username' => 'আইপি ঠিকানা বা ব্যবহারকারীর নাম:',
+	'regexblock-form-reason' => 'কারণ:',
+	'regexblock-form-expiry' => 'যখন মেয়াদোত্তীর্ণ হবে:',
+	'regexblock-form-account-block' => 'নতুন অ্যাকাউন্ট তৈরিতে বাধা দাও',
+	'regexblock-form-submit' => 'এই ব্যবহারকারীকে বাধা দাও',
+	'regexblock-form-submit-empty' => 'বাধা প্রদানের জন্য একটি ব্যবহারকারী নাম বা আইপি ঠিকানা দিন',
+	'regexblock-form-submit-regex' => 'অবৈধ রেগুলার এক্সপ্রেশন',
+	'regexblock-form-submit-expiry' => 'অনুগ্রহপূর্বক মেয়াদ উত্তীর্ণের সময়সীমা উল্লেখ করুন।',
+	'regexblock-link' => 'রেগুলার এক্সপ্রেশনসহ বাধাদান',
+	'regexblock-nodata-found' => 'কোনো ডেটা খুঁজে পাওয়া যায়নি',
+	'regexblock-unblock-success' => 'সফলভাবে বাধা তুলে নেওয়া হয়েছে',
 	'regexblock-view-all' => 'সমস্ত',
 	'regexblock-view-go' => 'যাও',
+	'regexblock-view-stats' => 'পরিসংখ্যান',
 );
 
 /** Breton (Brezhoneg)
@@ -2080,6 +2093,7 @@ $messages['mn'] = array(
 );
 
 /** Marathi (मराठी)
+ * @author Htt
  * @author Kaustubh
  */
 $messages['mr'] = array(
@@ -2127,7 +2141,7 @@ $messages['mr'] = array(
 	'regexblock-view-reason' => 'कारण: $1',
 	'regexblock-view-reason-default' => 'सर्वसाधारण कारण',
 	'regexblock-view-block-infinite' => 'कायमस्वरूपी ब्लॉक',
-	'regexblock-view-block-by' => 'ब्लॉक कर्ता',
+	'regexblock-view-block-by' => 'ब्लॉक कर्ता:',
 	'regexblock-view-block-unblock' => 'अनब्लॉक',
 	'regexblock-view-stats' => 'सांख्यिकी',
 	'regexblock-view-empty' => 'ब्लॉक केलेल्या सदस्यनाव तसेच आयपी अंकपत्त्यांची यादी रिकामी आहे.',
