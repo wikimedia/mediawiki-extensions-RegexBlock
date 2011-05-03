@@ -321,6 +321,13 @@ $messages['arz'] = array(
 	'right-regexblock' => 'منع المستخدمين من التعديل فى كل الويكيات فى مزرعة الويكى',
 );
 
+/** Azerbaijani (Azərbaycanca)
+ * @author Cekli829
+ */
+$messages['az'] = array(
+	'regexblock-form-reason' => 'Səbəb:',
+);
+
 /** Belarusian (Беларуская)
  * @author Тест
  */
