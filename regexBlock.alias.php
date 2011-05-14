@@ -8,9 +8,7 @@
 
 $specialPageAliases = array();
 
-/** English
- * @author IAlex
- */
+/** English (English) */
 $specialPageAliases['en'] = array(
 	'RegexBlock' => array( 'RegexBlock' ),
 );
@@ -63,6 +61,11 @@ $specialPageAliases['ja'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'RegexBlock' => array( 'Regex_Spär' ),
+);
+
+/** Macedonian (Македонски) */
+$specialPageAliases['mk'] = array(
+	'RegexBlock' => array( 'БлокирањеНаРегуларниИзрази' ),
 );
 
 /** Nedersaksisch (Nedersaksisch) */
