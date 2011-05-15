@@ -188,6 +188,7 @@ $messages['an'] = array(
 
 /** Arabic (العربية)
  * @author Meno25
+ * @author OsamaK
  */
 $messages['ar'] = array(
 	'regexblock' => 'تعبير منتظم لمنع',
@@ -217,7 +218,7 @@ $messages['ar'] = array(
 	'regexblock-form-expiry' => 'الانتهاء:',
 	'regexblock-form-match' => 'تطابق تام',
 	'regexblock-form-account-block' => 'منع إنشاء الحسابات الجديدة',
-	'regexblock-form-submit' => 'منع هذا المستخدم',
+	'regexblock-form-submit' => 'امنع هذا المستخدم',
 	'regexblock-form-submit-empty' => 'أعط اسم مستخدم أو عنوان أيبي للمنع.',
 	'regexblock-form-submit-regex' => 'تعبير منتظم غير صحيح.',
 	'regexblock-form-submit-expiry' => 'من فضلك حدد تاريخ انتهاء.',
@@ -1848,10 +1849,11 @@ $messages['kn'] = array(
 
 /** Krio (Krio)
  * @author Jose77
+ * @author Lloffiwr
  * @author Psubhashish
  */
 $messages['kri'] = array(
-	'regexblock-view-go' => 'ଯିବା',
+	'regexblock-view-go' => 'Go to am',
 );
 
 /** Kinaray-a (Kinaray-a)
