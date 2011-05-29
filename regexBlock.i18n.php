@@ -2158,10 +2158,13 @@ $messages['mr'] = array(
 );
 
 /** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
  * @author Aurora
  */
 $messages['ms'] = array(
 	'regexblock-form-reason' => 'Sebab:',
+	'regexblock-view-all' => 'Semua',
+	'regexblock-view-go' => 'Pergi',
 );
 
 /** Maltese (Malti)
