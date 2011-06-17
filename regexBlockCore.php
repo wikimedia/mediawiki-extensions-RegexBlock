@@ -563,7 +563,7 @@ class RegexBlock {
 				if ( $valid['ip'] == 1 ) {
 					/* we blocked by IP */
 					$user->mBlockreason = wfMsg( 'regexblock-reason-ip', $wgContactLink );
-				} else if( $valid['exact'] == 1 ) {
+				} elseif( $valid['exact'] == 1 ) {
 					/* we blocked by username exact match */
 					$user->mBlockreason = wfMsg( 'regexblock-reason-name', $wgContactLink );
 				}
