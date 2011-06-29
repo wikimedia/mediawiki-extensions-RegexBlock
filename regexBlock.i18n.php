@@ -2163,6 +2163,7 @@ $messages['mr'] = array(
  */
 $messages['ms'] = array(
 	'regexblock-form-reason' => 'Sebab:',
+	'regexblock-form-expiry' => 'Tamat:',
 	'regexblock-view-all' => 'Semua',
 	'regexblock-view-go' => 'Pergi',
 );
