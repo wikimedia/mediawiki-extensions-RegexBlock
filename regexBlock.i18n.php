@@ -3461,16 +3461,18 @@ $messages['yi'] = array(
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Gzdavidwong
  * @author Liangent
+ * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
 	'regexblock-block-success' => '封禁成功',
+	'regexblock-expire-duration' => '1小时，2小时，4小时，6小时，1天，3天，1周，2周，1个月，3个月，6个月，1年，无限期',
 	'regexblock-form-username' => 'IP地址或用户名：',
 	'regexblock-form-reason' => '原因：',
 	'regexblock-form-expiry' => '到期日：',
 	'regexblock-form-submit' => '封禁这位用户',
 	'regexblock-nodata-found' => '找不到数据',
 	'regexblock-view-all' => '全部',
-	'regexblock-view-go' => '进入',
+	'regexblock-view-go' => '提交',
 	'regexblock-view-reason' => '原因：$1',
 	'regexblock-view-reason-default' => '一般原因',
 	'regexblock-view-block-infinite' => '永久封禁',
