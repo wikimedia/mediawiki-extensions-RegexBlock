@@ -570,16 +570,16 @@ class RegexBlock {
 			}
 			/* account creation check goes through the same hook... */
 			if ( $valid['create'] == 1 ) {
-				if ( $user->isBlocked() ) {
-					$user->getBlock()->prevents( 'createaccount', true );
+				if ( $user->mBlock ) {
+					$user->mBlock->prevents( 'createaccount', true );
 				}
 			}
 			/* set expiry information */
-			if ( $user->isBlocked() ) {
+			if ( $user->mBlock ) {
 				# $user->mBlock->mId = $valid['blckid']; FIXME: why does this want to do this?
-				$user->getBlock()->mExpiry = $valid['expire'];
-				$user->getBlock()->mTimestamp = $valid['timestamp'];
-				$user->getBlock()->setTarget( ($valid['ip'] == 1) ? wfGetIP() : $user->getName() );
+				$user->mBlock->mExpiry = $valid['expire'];
+				$user->mBlock->mTimestamp = $valid['timestamp'];
+				$user->mBlock->setTarget( ($valid['ip'] == 1) ? wfGetIP() : $user->getName() );
 			}
 
 			$result = self::updateStats( $user, $user_ip, $blocker, $valid['match'], $valid['blckid'] );
