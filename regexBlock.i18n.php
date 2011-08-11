@@ -1112,7 +1112,7 @@ $messages['gl'] = array(
 	'regexblock-desc' => 'Extensión usada para bloquear nomes de usuario e mais enderezos IP con expresións regulares. Contén o mecanismo de bloqueo e unha [[Special:Regexblock|páxina especial]] para engadir/xestionar bloqueos',
 	'regexblock-expire-duration' => '1 hora,2 horas,4 horas,6 horas,1 día,3 días,1 semana,2 semanas,1 mes,3 meses,6 meses,1 ano,para sempre',
 	'regexblock-page-title' => 'Bloqueo do nome da expresión regular',
-	'regexblockstats' => 'Estatísticas do bloqueo Regex',
+	'regexblockstats' => 'Estatísticas do bloqueo por expresións regulares',
 	'regexblock-help' => "Use o formulario de embaixo para bloquear o acceso de escritura desde un determinado enderezo IP ou nome de usuario.
 Isto debería facerse só para previr vandalismo, e segundo a política e normas de bloqueo.
 ''Esta páxina permitiralle bloquear incluso usuarios que non existen, e usuarios con nomes semellantes ao dado, é dicir, «Test» será bloqueado xunto con «Test 2», etc. Tamén pode bloquear enderezos IP completos, no sentido de que ninguén rexistrado nos mesmos será capaz de editar páxinas. Nota: os enderezos IP parciais serán tratados polos nomes de usuarios na determinación do bloqueo. Se non se especifica a razón, será usado por defecto un motivo xenérico.''",
@@ -1134,7 +1134,7 @@ Cree un nome de usuario diferente ou [[$1|contacte con nós]] para falar sobre o
 	'regexblock-link' => 'bloquear cunha expresión regular',
 	'regexblock-match-stats-record' => '$1 bloqueou a "$2" en "$3" ás $4, rexistrado desde o enderezo "$5"',
 	'regexblock-nodata-found' => 'Non se atoparon os datos',
-	'regexblock-stats-title' => 'Estatíticas do bloqueo Regex',
+	'regexblock-stats-title' => 'Estatísticas do bloqueo por expresións regulares',
 	'regexblock-unblock-success' => 'O desbloqueo foi un éxito',
 	'regexblock-unblock-log' => "O nome de usuario ou o enderezo IP '''$1''' foi desbloqueado.",
 	'regexblock-unblock-error' => 'Erro desbloqueando $1. Probabelmente non existe tal usuario.',
