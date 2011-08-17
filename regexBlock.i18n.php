@@ -2452,7 +2452,7 @@ Se sètz segur{{GENDER:||a}} que s’agís d’una error, [[$1|contactatz-nos]].
 	'right-regexblock' => 'Blocar en escritura los utilizaires sus totes los wikis de la bòria wiki',
 );
 
-/** Ossetic (Иронау)
+/** Ossetic (Ирон)
  * @author Amikeco
  */
 $messages['os'] = array(
