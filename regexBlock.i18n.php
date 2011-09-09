@@ -327,6 +327,7 @@ $messages['arz'] = array(
  */
 $messages['az'] = array(
 	'regexblock-form-reason' => 'Səbəb:',
+	'regexblock-view-all' => 'Hamısı',
 );
 
 /** Belarusian (Беларуская)
