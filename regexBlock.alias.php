@@ -25,7 +25,7 @@ $specialPageAliases['arz'] = array(
 
 /** Bulgarian (Български) */
 $specialPageAliases['bg'] = array(
-	'RegexBlock' => array( 'Блокиране по регулярни изрази' ),
+	'RegexBlock' => array( 'Блокиране_по_регулярни_изрази' ),
 );
 
 /** German (Deutsch) */
