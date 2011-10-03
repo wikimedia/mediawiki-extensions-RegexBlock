@@ -1118,7 +1118,8 @@ $messages['gl'] = array(
 Isto debería facerse só para previr vandalismo, e segundo a política e normas de bloqueo.
 ''Esta páxina permitiralle bloquear incluso usuarios que non existen, e usuarios con nomes semellantes ao dado, é dicir, «Test» será bloqueado xunto con «Test 2», etc. Tamén pode bloquear enderezos IP completos, no sentido de que ninguén rexistrado nos mesmos será capaz de editar páxinas. Nota: os enderezos IP parciais serán tratados polos nomes de usuarios na determinación do bloqueo. Se non se especifica a razón, será usado por defecto un motivo xenérico.''",
 	'regexblock-page-title-1' => 'Bloquear un enderezo usando expresións regulares',
-	'regexblock-reason-ip' => 'A este enderezo IP estalle prohibido editar debido a vandalismo ou outras actividades negativas realizadas por vostede ou por alguén que comparte o seu enderezo IP. Se pensa que se trata dun erro, [[$1|contacte con nós]]',
+	'regexblock-reason-ip' => 'A este enderezo IP estalle prohibido editar debido a vandalismo ou outras actividades negativas realizadas por vostede ou por alguén que comparte o seu enderezo IP.
+Se pensa que se trata dun erro, [[$1|póñase en contacto con nós]]',
 	'regexblock-reason-name' => 'A este nome de usuario estalle prohibido editar debido a vandalismo ou outras actividades negativas.
 Se pensa que se trata dun erro, [[$1|contacte con nós]]',
 	'regexblock-reason-regex' => 'A este nome de usuario estalle prohibido editar debido a vandalismo ou outras actividades negativas por parte dun usuario cun nome semellante.
@@ -2951,7 +2952,7 @@ $messages['sl'] = array(
 	'regexblock-form-reason' => 'Razlog:',
 );
 
-/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Sasa Stefanovic
  * @author Жељко Тодоровић
@@ -2961,13 +2962,13 @@ $messages['sr-ec'] = array(
 	'regexblock-block-success' => 'Приступ је забрањен',
 	'regexblock-currently-blocked' => 'Тренутно блокиране адресе:',
 	'regexblock-page-title-1' => 'Блокирај адресе користећи регуларне изразе',
-	'regexblock-form-username' => 'IP адреса или корисничко име:',
+	'regexblock-form-username' => 'ИП адреса или корисничко име:',
 	'regexblock-form-reason' => 'Разлог:',
 	'regexblock-form-expiry' => 'Истек:',
 	'regexblock-form-match' => 'Тачно поклапање',
 	'regexblock-form-submit' => 'Блокирај овог корисника',
 	'regexblock-view-all' => 'Све',
-	'regexblock-view-go' => 'Пређи',
+	'regexblock-view-go' => 'Иди',
 	'regexblock-view-reason' => 'разлог: $1',
 	'regexblock-view-reason-default' => 'генерички разлог',
 	'regexblock-view-block-infinite' => 'трајан блок',
