@@ -79,6 +79,7 @@ Probably there is no such user.',
  * @author SPQRobin
  * @author Siebrand
  * @author The Evil IP address
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
 	'regexblock-already-blocked' => '{{Identical|$1 is already blocked}}',
@@ -107,7 +108,7 @@ $messages['qqq'] = array(
 	'regexblock-view-time' => '* $1 is a date/time
 * $2 is a date (optional)
 * $3 is a time (optional)',
-	'right-regexblock' => '{{doc-right}}',
+	'right-regexblock' => '{{doc-right|regexblock}}',
 );
 
 /** Niuean (ko e vagahau Niuē)
@@ -649,6 +650,7 @@ $messages['da'] = array(
  * @author Melancholie
  * @author Purodha
  * @author Revolus
+ * @author SVG
  * @author Umherirrender
  */
 $messages['de'] = array(
@@ -706,7 +708,7 @@ Vermutlich gibt es keinen solchen Benutzer.',
 	'regexblock-view-stats' => 'Statistiken',
 	'regexblock-view-empty' => 'Die Liste der gesperrten Namen und Adressen ist leer.',
 	'regexblock-view-time' => 'am $2, $3 Uhr',
-	'right-regexblock' => 'Entzieht Benutzern das Recht auf allen Wikis der Wiki-Farm Bearbeitungen zu tätigen',
+	'right-regexblock' => 'Benutzer auf allen Wikis der Wiki-Farm sperren',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
@@ -2959,23 +2961,23 @@ $messages['sl'] = array(
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
-	'regexblock-block-success' => 'Приступ је забрањен',
+	'regexblock-block-success' => 'Блокирање је успело',
 	'regexblock-currently-blocked' => 'Тренутно блокиране адресе:',
-	'regexblock-page-title-1' => 'Блокирај адресе користећи регуларне изразе',
+	'regexblock-page-title-1' => 'Блокирај адресу користећи регуларне изразе',
 	'regexblock-form-username' => 'ИП адреса или корисничко име:',
 	'regexblock-form-reason' => 'Разлог:',
-	'regexblock-form-expiry' => 'Истек:',
+	'regexblock-form-expiry' => 'Истиче:',
 	'regexblock-form-match' => 'Тачно поклапање',
 	'regexblock-form-submit' => 'Блокирај овог корисника',
 	'regexblock-view-all' => 'Све',
 	'regexblock-view-go' => 'Иди',
 	'regexblock-view-reason' => 'разлог: $1',
-	'regexblock-view-reason-default' => 'генерички разлог',
-	'regexblock-view-block-infinite' => 'трајан блок',
+	'regexblock-view-reason-default' => 'општи разлог',
+	'regexblock-view-block-infinite' => 'трајна блокада',
 	'regexblock-view-block-by' => 'блокирао:',
 	'regexblock-view-block-unblock' => 'деблокирај',
 	'regexblock-view-stats' => 'статистике',
-	'regexblock-view-time' => 'у $1',
+	'regexblock-view-time' => '$2 у $3',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬)
