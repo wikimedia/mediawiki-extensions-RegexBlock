@@ -1000,19 +1000,19 @@ Todennäköisesti kyseistä käyttäjää ei ole olemassa.',
  * @author Verdy p
  */
 $messages['fr'] = array(
-	'regexblock' => 'Expressions régulières pour bloquer un utilisateur ou une IP',
+	'regexblock' => 'Expressions rationnelles pour bloquer un utilisateur ou une IP',
 	'regexblock-already-blocked' => '$1 est déjà bloqué.',
 	'regexblock-block-log' => "L’Utilisateur ou l’adresse IP '''$1''' a été bloqué.",
 	'regexblock-block-success' => 'Le blocage a réussi',
 	'regexblock-currently-blocked' => 'Adresses actuellement bloquées :',
-	'regexblock-desc' => 'Extension utilisée pour bloquer des utilisateurs ou des adresses IP avec des expressions régulières. Contient à la fois un mécanisme de blocage ainsi qu’[[Special:Regexblock|une page]] pouvant ajouter et gérer les blocages',
+	'regexblock-desc' => 'Extension utilisée pour bloquer des utilisateurs ou des adresses IP avec des expressions rationnelles. Contient à la fois un mécanisme de blocage ainsi qu’[[Special:Regexblock|une page]] pouvant ajouter et gérer les blocages.',
 	'regexblock-expire-duration' => '1 heure,2 heures,4 heures,6 hours,1 jour,3 jours,1 semaine,2 semaines,1 mois,3 mois,6 mois,1 and,infini',
-	'regexblock-page-title' => 'Blocage d’un nom par une expression régulière',
-	'regexblockstats' => 'Statistiques sur les blocages par expressions régulières',
+	'regexblock-page-title' => 'Blocage d’un nom par une expression rationnelle',
+	'regexblockstats' => 'Statistiques sur les blocages par expressions rationnelles',
 	'regexblock-help' => "Utilisez le formulaire ci-dessous pour bloquer l’accès en écriture d’une adresse IP ou d’un nom d’utilisateur.
 Ceci doit être fait uniquement pour éviter tout vandalisme et conformément aux règles prescrites sur le projet.
 ''Cette page vous permet même de bloquer des utilisateurs non enregistrés et ceux présentant des noms similaires au nom donné : par exemple, « Test » sera bloqué en même temps que « Test 2 » etc. Vous pouvez aussi bloquer des adresses IP complètes, ce qui signifie que personne connecté depuis celles-ci ne pourra modifier des pages. Note : des adresses IP partielles seront considérées comme des noms d’utilisateur lors du blocage. Si aucun motif n’est indiqué en commentaire, un motif par défaut sera indiqué.''",
-	'regexblock-page-title-1' => 'Blocage d’une adresse utilisant une expression régulière',
+	'regexblock-page-title-1' => 'Blocage d’une adresse utilisant une expression rationnelle',
 	'regexblock-reason-ip' => 'Cette adresse IP n’a pas les droits de modification pour cause de vandalisme ou autres méfaits analogues commis par vous ou quelqu’un d’autre partageant cette adresse IP.
 Si vous êtes persuadé{{GENDER:||e|(e)}} qu’il s’agit d’une erreur, [[$1|contactez-nous]].',
 	'regexblock-reason-name' => 'Cet utilisateur n’a pas les droits de modification pour cause de vandalisme ou autres méfaits analogues.
@@ -1025,12 +1025,12 @@ Si vous êtes persuadé{{GENDER:||e|(e)}} qu’il s’agit d’une erreur, [[$1|
 	'regexblock-form-account-block' => 'Interdire la création d’un nouveau compte.',
 	'regexblock-form-submit' => 'Bloquer cet utilisateur',
 	'regexblock-form-submit-empty' => 'Indiquez un nom d’utilisateur ou une adresse IP à bloquer.',
-	'regexblock-form-submit-regex' => 'Expression régulière incorrecte.',
+	'regexblock-form-submit-regex' => 'Expression rationnelle incorrecte.',
 	'regexblock-form-submit-expiry' => 'Précisez une période d’expiration.',
 	'regexblock-link' => 'bloquer avec un expression rationnelle',
 	'regexblock-match-stats-record' => '$1 a bloqué « $2 » le « $3 » à « $4 », connecté depuis l’adresse « $5 »',
 	'regexblock-nodata-found' => 'Aucune donnée trouvée',
-	'regexblock-stats-title' => 'Statistiques des blocages par expressions régulières',
+	'regexblock-stats-title' => 'Statistiques des blocages par expressions rationnelles',
 	'regexblock-unblock-success' => 'Le déblocage a réussi',
 	'regexblock-unblock-log' => "L’utilisateur ou l’adresse IP '''$1''' a été débloqué.",
 	'regexblock-unblock-error' => 'Erreur de déblocage de $1. L’utilisateur n’existe probablement pas.',
@@ -1039,7 +1039,7 @@ Si vous êtes persuadé{{GENDER:||e|(e)}} qu’il s’agit d’une erreur, [[$1|
 	'regexblock-view-all' => 'Tous',
 	'regexblock-view-go' => 'Lancer',
 	'regexblock-view-match' => '(terme exact)',
-	'regexblock-view-regex' => '(expression régulière)',
+	'regexblock-view-regex' => '(expression rationnelle)',
 	'regexblock-view-account' => '(création des comptes bloquée)',
 	'regexblock-view-reason' => 'motif : $1',
 	'regexblock-view-reason-default' => 'aucun motif indiqué',
