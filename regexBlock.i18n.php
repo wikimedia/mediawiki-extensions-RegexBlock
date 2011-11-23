@@ -1165,7 +1165,7 @@ Cree un nome de usuario diferente ou [[$1|contacte con nós]] para falar sobre o
  * @author Jocke Pirat
  */
 $messages['got'] = array(
-	'regexblock-form-reason' => 'Faírina:',
+	'regexblock-form-reason' => '𐍆𐌰𐌹𐍂𐌹𐌽𐌰:',
 );
 
 /** Ancient Greek (Ἀρχαία ἑλληνικὴ)
@@ -2980,7 +2980,7 @@ $messages['sr-ec'] = array(
 	'regexblock-view-time' => '$2 у $3',
 );
 
-/** Serbian Latin ekavian (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪Srpski (latinica)‬)
  * @author Michaello
  * @author Жељко Тодоровић
  */
@@ -3134,7 +3134,7 @@ $messages['tet'] = array(
 	'regexblock-view-reason' => 'motivu: $1',
 );
 
-/** Tajik (Cyrillic) (Тоҷикӣ (Cyrillic))
+/** Tajik (Cyrillic script) (Тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -3169,7 +3169,7 @@ $messages['tg-cyrl'] = array(
 	'regexblock-view-time' => 'дар $1',
 );
 
-/** Tajik (Latin) (Тоҷикӣ (Latin))
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -3312,14 +3312,14 @@ $messages['tr'] = array(
 	'regexblock-view-empty' => 'Engellenmiş ad ve adres listesi boş.',
 );
 
-/** ئۇيغۇرچە (ئۇيغۇرچە)
+/** Uyghur (Arabic script) (ئۇيغۇرچە)
  * @author Alfredie
  */
 $messages['ug-arab'] = array(
 	'regexblock-view-go' => 'كۆچۈش',
 );
 
-/** Uighur (Latin) (ئۇيغۇرچە / Uyghurche‎ (Latin))
+/** Uyghur (Latin script) (Uyghurche‎)
  * @author Jose77
  */
 $messages['ug-latn'] = array(
