@@ -59,7 +59,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
 	'name' => 'regexBlock',
 	'author' => array( 'Bartek Łapiński', 'Tomasz Klim', 'Piotr Molski', 'Adrian Wieczorek', 'Alexandre Emsenhuber', 'Jack Phoenix' ),
-	'url' => 'http://www.mediawiki.org/wiki/Extension:RegexBlock',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:RegexBlock',
 	'version' => '1.2.1',
 	'descriptionmsg' => 'regexblock-desc',
 );
