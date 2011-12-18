@@ -71,7 +71,7 @@ $wgHooks['GetBlockedStatus'][] = 'RegexBlock::check';
 // Set up the new special page
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['RegexBlock'] = $dir . 'regexBlock.i18n.php';
-$wgExtensionAliasesFiles['RegexBlock'] = $dir . 'regexBlock.alias.php';
+$wgExtensionMessagesFiles['RegexBlockAliases'] = $dir . 'regexBlock.alias.php';
 $wgAutoloadClasses['RegexBlock'] = $dir . 'regexBlockCore.php';
 $wgAutoloadClasses['RegexBlockForm'] = $dir . 'SpecialRegexBlock.php';
 $wgSpecialPages['RegexBlock'] = 'RegexBlockForm';
