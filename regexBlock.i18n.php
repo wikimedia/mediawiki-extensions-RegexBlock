@@ -956,6 +956,40 @@ $messages['eu'] = array(
 	'regexblock-view-reason' => 'arrazoia: $1',
 );
 
+/** Persian (فارسی)
+ * @author Zack90
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'regexblock' => 'مسدودکردن با عبارت باقاعده',
+	'regexblock-already-blocked' => '$1 در حال حاضر مسدود شده‌است.',
+	'regexblock-block-log' => "نام کاربری یا نشانی آی‌پی '''$1''' مسدود شده‌است.",
+	'regexblock-block-success' => 'مسدودکردن با موفقیت انجام شد',
+	'regexblock-currently-blocked' => 'نشانی‌هایی که در حال حاضر مسدود شده‌اند:',
+	'regexblock-expire-duration' => '۱ ساعت,۲ ساعت,۴ ساعت,۶ ساعت,۱ روز,۳ روز,۱ هفته,۲ هفته,۱ ماه,۳ ماه,۶ ماه,۱ سال,بی‌پایان',
+	'regexblock-form-username' => 'نشانی آی‌پی یا نام کاربری:',
+	'regexblock-form-reason' => 'دلیل:',
+	'regexblock-form-expiry' => 'زمان سرآمدن:',
+	'regexblock-form-match' => 'تطبیق دقیق',
+	'regexblock-form-account-block' => 'مسدودکردن ایجاد حساب‌های کاربری جدید',
+	'regexblock-form-submit' => 'مسدودکردن این کاربر',
+	'regexblock-form-submit-empty' => 'یک نام کاربری یا نشانی آی‌پی برای مسدودشدن بدهید.',
+	'regexblock-form-submit-regex' => 'عبارت باقاعدهٔ نامعتبر',
+	'regexblock-link' => 'مسدود کردن با استفاده از عبارت باقاعده',
+	'regexblock-nodata-found' => 'هیچ داده‌ای یافت نشد',
+	'regexblock-regex-filter' => ' یا مقدار عبارت باقاعده:',
+	'regexblock-view-blocked' => 'نمایش مسدوده‌شده‌ها توسط:',
+	'regexblock-view-all' => 'همه',
+	'regexblock-view-go' => 'رفتن',
+	'regexblock-view-reason' => 'دلیل: $1',
+	'regexblock-view-reason-default' => 'دلیل عمومی',
+	'regexblock-view-block-infinite' => 'مسدودکردن دائم',
+	'regexblock-view-block-by' => 'مسدودکننده:',
+	'regexblock-view-block-unblock' => 'آزادسازی',
+	'regexblock-view-stats' => 'آمار',
+	'regexblock-view-time' => 'در $1',
+);
+
 /** Finnish (Suomi)
  * @author Crt
  * @author Option
