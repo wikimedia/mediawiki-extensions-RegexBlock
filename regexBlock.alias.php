@@ -38,6 +38,11 @@ $specialPageAliases['dsb'] = array(
 	'RegexBlock' => array( 'Blokěrowanje regularnych wurazow' ),
 );
 
+/** Persian (فارسی) */
+$specialPageAliases['fa'] = array(
+	'RegexBlock' => array( 'بخش_ریجکس' ),
+);
+
 /** Upper Sorbian (Hornjoserbsce) */
 $specialPageAliases['hsb'] = array(
 	'RegexBlock' => array( 'Blokowanje regularnych wurazow' ),
@@ -68,6 +73,11 @@ $specialPageAliases['mk'] = array(
 	'RegexBlock' => array( 'БлокирањеНаРегуларниИзрази' ),
 );
 
+/** Norwegian Bokmål (‪Norsk (bokmål)‬) */
+$specialPageAliases['nb'] = array(
+	'RegexBlock' => array( 'Regex-blokkering' ),
+);
+
 /** Nedersaksisch (Nedersaksisch) */
 $specialPageAliases['nds-nl'] = array(
 	'RegexBlock' => array( 'Regexblokkering' ),
@@ -76,11 +86,6 @@ $specialPageAliases['nds-nl'] = array(
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = array(
 	'RegexBlock' => array( 'RegexBlokkade' ),
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬) */
-$specialPageAliases['nb'] = array(
-	'RegexBlock' => array( 'Regex-blokkering' ),
 );
 
 /** Slovak (Slovenčina) */
@@ -92,8 +97,3 @@ $specialPageAliases['sk'] = array(
 $specialPageAliases['tl'] = array(
 	'RegexBlock' => array( 'Paghadlang sa karaniwang pagsasaad' ),
 );
-
-/**
- * For backwards compatibility with MediaWiki 1.15 and earlier.
- */
-$aliases =& $specialPageAliases;
