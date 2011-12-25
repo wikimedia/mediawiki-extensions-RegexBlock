@@ -2366,7 +2366,7 @@ Truleg finst det ingen brukar med dette namnet.',
  * @author Jon Harald Søby
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'regexblock' => 'Regex-blokkering',
 	'regexblock-already-blocked' => '«$1» er allerede blokkert',
 	'regexblock-block-log' => "Brukeren '''$1''' har blitt blokkert.",
