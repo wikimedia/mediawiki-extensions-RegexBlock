@@ -981,6 +981,7 @@ $messages['fa'] = array(
 	'regexblock-view-blocked' => 'نمایش مسدوده‌شده‌ها توسط:',
 	'regexblock-view-all' => 'همه',
 	'regexblock-view-go' => 'رفتن',
+	'regexblock-view-account' => '(مسدودکردن ایجاد حساب)',
 	'regexblock-view-reason' => 'دلیل: $1',
 	'regexblock-view-reason-default' => 'دلیل عمومی',
 	'regexblock-view-block-infinite' => 'مسدودکردن دائم',
