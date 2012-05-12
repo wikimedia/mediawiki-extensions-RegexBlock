@@ -1098,7 +1098,7 @@ $messages['frp'] = array(
 	'regexblock-currently-blocked' => 'Adrèces blocâs houé :',
 	'regexblock-page-title' => 'Blocâjo d’un nom per una èxprèssion racionèla',
 	'regexblockstats' => 'Statistiques des blocâjos per èxprèssions racionèles',
-	'regexblock-form-username' => 'Adrèce IP ou ben nom d’utilisator :',
+	'regexblock-form-username' => 'Adrèce IP ou ben nom d’usanciér :',
 	'regexblock-form-reason' => 'Rêson :',
 	'regexblock-form-expiry' => 'Èxpiracion :&#160;',
 	'regexblock-form-match' => 'Corrèspondance justa',
@@ -1809,7 +1809,7 @@ $messages['ja'] = array(
 	'regexblock-view-stats' => '統計',
 	'regexblock-view-empty' => 'ブロックされた利用者名とアドレスの一覧には項目がありません。',
 	'regexblock-view-time' => '$1',
-	'right-regexblock' => '利用者をウィキファーム上のすべてのウィキで投稿ブロックする',
+	'right-regexblock' => '利用者をウィキファーム上のすべてのウィキで投稿ブロック',
 );
 
 /** Javanese (Basa Jawa)
@@ -2366,6 +2366,7 @@ Kies een andere gebruikersnaam of [[$1|neem contact met ons op]] over het proble
 /** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Jon Harald Søby
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
 	'regexblock' => 'Regex-blokkering',
@@ -3212,7 +3213,7 @@ $messages['tg-cyrl'] = array(
 	'regexblock-view-time' => 'дар $1',
 );
 
-/** Tajik (Latin script) (tojikī)
+/** Tajik (Latin script) (Tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -3363,7 +3364,7 @@ $messages['ug-arab'] = array(
 	'regexblock-view-go' => 'كۆچۈش',
 );
 
-/** Uyghur (Latin script) (Uyghurche‎)
+/** Uyghur (Latin script) (Uyghurche)
  * @author Jose77
  */
 $messages['ug-latn'] = array(
@@ -3387,7 +3388,7 @@ $messages['ur'] = array(
 	'regexblock-form-reason' => 'وجہ:',
 );
 
-/** Veps (Vepsan kel')
+/** Veps (Vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
