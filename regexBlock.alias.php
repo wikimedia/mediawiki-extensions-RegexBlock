@@ -30,7 +30,7 @@ $specialPageAliases['bg'] = array(
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
-	'RegexBlock' => array( 'Reguläre_Ausdrücke-Sperrung' ),
+	'RegexBlock' => array( 'Sperrung_regulärer_Ausdrücke', 'Regex-Sperrung', 'Reguläre-Ausdrücke-Sperrung' ),
 );
 
 /** Lower Sorbian (Dolnoserbski) */
@@ -41,6 +41,11 @@ $specialPageAliases['dsb'] = array(
 /** Persian (فارسی) */
 $specialPageAliases['fa'] = array(
 	'RegexBlock' => array( 'بخش_ریجکس' ),
+);
+
+/** Swiss German (Alemannisch) */
+$specialPageAliases['gsw'] = array(
+	'RegexBlock' => array( 'Reguläri_Ussdrügg-Sperrig' ),
 );
 
 /** Upper Sorbian (Hornjoserbsce) */
