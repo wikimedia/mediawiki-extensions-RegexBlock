@@ -1180,7 +1180,7 @@ Cree un nome de usuario diferente ou [[$1|contacte con nós]] para falar sobre o
 	'regexblock-regex-filter' => '  ou o valor regex:',
 	'regexblock-view-blocked' => 'Ver bloqueado por:',
 	'regexblock-view-all' => 'Todo',
-	'regexblock-view-go' => 'Adiante',
+	'regexblock-view-go' => 'Continuar',
 	'regexblock-view-match' => '(procura exacta)',
 	'regexblock-view-regex' => '(coincidencia regex)',
 	'regexblock-view-account' => '(bloqueo de creación de contas)',
