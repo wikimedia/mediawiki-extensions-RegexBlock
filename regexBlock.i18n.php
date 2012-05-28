@@ -2998,6 +2998,7 @@ $messages['sl'] = array(
 );
 
 /** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+ * @author FriedrickMILBarbarossa
  * @author Rancher
  * @author Sasa Stefanovic
  * @author Жељко Тодоровић
@@ -3018,12 +3019,13 @@ $messages['sr-ec'] = array(
 	'regexblock-view-reason-default' => 'општи разлог',
 	'regexblock-view-block-infinite' => 'трајна блокада',
 	'regexblock-view-block-by' => 'блокирао:',
-	'regexblock-view-block-unblock' => 'деблокирај',
+	'regexblock-view-block-unblock' => 'одблокирај',
 	'regexblock-view-stats' => 'статистике',
 	'regexblock-view-time' => '$2 у $3',
 );
 
 /** Serbian (Latin script) (‪Srpski (latinica)‬)
+ * @author FriedrickMILBarbarossa
  * @author Michaello
  * @author Rancher
  * @author Жељко Тодоровић
@@ -3043,7 +3045,7 @@ $messages['sr-el'] = array(
 	'regexblock-view-reason-default' => 'opšti razlog',
 	'regexblock-view-block-infinite' => 'trajna blokada',
 	'regexblock-view-block-by' => 'blokirao:',
-	'regexblock-view-block-unblock' => 'deblokiraj',
+	'regexblock-view-block-unblock' => 'odblokiraj',
 	'regexblock-view-stats' => 'statistike',
 	'regexblock-view-time' => '$2 u $3',
 );
