@@ -2997,7 +2997,7 @@ $messages['sl'] = array(
 	'regexblock-form-reason' => 'Razlog:',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author FriedrickMILBarbarossa
  * @author Rancher
  * @author Sasa Stefanovic
@@ -3024,7 +3024,7 @@ $messages['sr-ec'] = array(
 	'regexblock-view-time' => '$2 у $3',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author FriedrickMILBarbarossa
  * @author Michaello
  * @author Rancher
