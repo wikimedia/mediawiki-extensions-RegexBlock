@@ -1184,7 +1184,7 @@ Cree un nome de usuario diferente ou [[$1|contacte con nós]] para falar sobre o
 	'regexblock-view-match' => '(procura exacta)',
 	'regexblock-view-regex' => '(coincidencia regex)',
 	'regexblock-view-account' => '(bloqueo de creación de contas)',
-	'regexblock-view-reason' => 'razón: $1',
+	'regexblock-view-reason' => 'motivo: $1',
 	'regexblock-view-reason-default' => 'razón xenérica',
 	'regexblock-view-block-infinite' => 'bloqueo permanente',
 	'regexblock-view-block-by' => 'bloqueado por:',
