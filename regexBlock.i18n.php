@@ -1793,7 +1793,8 @@ $messages['ja'] = array(
 	'regexblock-stats-title' => '正規表現ブロックの統計',
 	'regexblock-unblock-success' => 'ブロックの解除に成功しました',
 	'regexblock-unblock-log' => "利用者名またはIPアドレス '''$1''' のブロックを解除しました。",
-	'regexblock-unblock-error' => '$1 のブロック解除エラー。おそらく、その利用者は存在しません。',
+	'regexblock-unblock-error' => '$1 のブロック解除のエラーです。
+おそらく、利用者が存在しません。',
 	'regexblock-regex-filter' => ' あるいは正規表現:',
 	'regexblock-view-blocked' => '指定した利用者によるブロックを表示:',
 	'regexblock-view-all' => 'すべて',
@@ -1960,7 +1961,7 @@ Wann de meins, dat es nit en Odenung, [[$1|lohß et uns weße]], odder nemm janz
 	'regexblock-view-match' => '(akkeraat jetroffe)',
 	'regexblock-view-regex' => '(<i lang="en">regular expression</i> jetroffe)',
 	'regexblock-view-account' => '(Neu Aanmelde verbodde)',
-	'regexblock-view-reason' => 'Jrund: $1',
+	'regexblock-view-reason' => 'Jrond: $1',
 	'regexblock-view-reason-default' => '— keine Jrund aanjejovve —',
 	'regexblock-view-block-infinite' => 'för iewisch jesperrt',
 	'regexblock-view-block-by' => 'Jesperrt vum:',
