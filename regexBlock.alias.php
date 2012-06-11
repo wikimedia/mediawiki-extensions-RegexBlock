@@ -23,7 +23,7 @@ $specialPageAliases['arz'] = array(
 	'RegexBlock' => array( 'بلوك_Regex' ),
 );
 
-/** Bulgarian (Български) */
+/** Bulgarian (български) */
 $specialPageAliases['bg'] = array(
 	'RegexBlock' => array( 'Блокиране_по_регулярни_изрази' ),
 );
@@ -31,6 +31,11 @@ $specialPageAliases['bg'] = array(
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'RegexBlock' => array( 'Sperrung_regulärer_Ausdrücke', 'Regex-Sperrung', 'Reguläre-Ausdrücke-Sperrung' ),
+);
+
+/** Zazaki (Zazaki) */
+$specialPageAliases['diq'] = array(
+	'RegexBlock' => array( 'Regexbloqe' ),
 );
 
 /** Lower Sorbian (Dolnoserbski) */
@@ -53,7 +58,7 @@ $specialPageAliases['hsb'] = array(
 	'RegexBlock' => array( 'Blokowanje regularnych wurazow' ),
 );
 
-/** Interlingua (Interlingua) */
+/** Interlingua (interlingua) */
 $specialPageAliases['ia'] = array(
 	'RegexBlock' => array( 'Blocar_con_regex' ),
 );
@@ -68,17 +73,22 @@ $specialPageAliases['ja'] = array(
 	'RegexBlock' => array( '正規表現ブロック' ),
 );
 
+/** Korean (한국어) */
+$specialPageAliases['ko'] = array(
+	'RegexBlock' => array( '정규식블록' ),
+);
+
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'RegexBlock' => array( 'Regex_Spär' ),
 );
 
-/** Macedonian (Македонски) */
+/** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'RegexBlock' => array( 'БлокирањеНаРегуларниИзрази' ),
 );
 
-/** Norwegian Bokmål (‪Norsk (bokmål)‬) */
+/** Norwegian Bokmål (‪norsk (bokmål)‬) */
 $specialPageAliases['nb'] = array(
 	'RegexBlock' => array( 'Regex-blokkering' ),
 );
@@ -93,7 +103,7 @@ $specialPageAliases['nl'] = array(
 	'RegexBlock' => array( 'RegexBlokkade' ),
 );
 
-/** Slovak (Slovenčina) */
+/** Slovak (slovenčina) */
 $specialPageAliases['sk'] = array(
 	'RegexBlock' => array( 'BlokovanieRegVýrazom' ),
 );
