@@ -323,7 +323,7 @@ $messages['arz'] = array(
 	'right-regexblock' => 'منع المستخدمين من التعديل فى كل الويكيات فى مزرعة الويكى',
 );
 
-/** Azerbaijani (Azərbaycanca)
+/** Azerbaijani (azərbaycanca)
  * @author Cekli829
  */
 $messages['az'] = array(
@@ -331,7 +331,7 @@ $messages['az'] = array(
 	'regexblock-view-all' => 'Hamısı',
 );
 
-/** Belarusian (Беларуская)
+/** Belarusian (беларуская)
  * @author Тест
  */
 $messages['be'] = array(
@@ -400,7 +400,7 @@ $messages['be-tarask'] = array(
 	'right-regexblock' => 'блякаваньне удзельнікаў ад рэдагаваньня ва ўсіх вікі гэтай вікі-фэрмы',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author DCLXVI
  */
 $messages['bg'] = array(
@@ -458,7 +458,7 @@ $messages['bn'] = array(
 	'regexblock-view-stats' => 'পরিসংখ্যান',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fohanno
  * @author Fulup
  * @author Y-M D
@@ -520,7 +520,7 @@ Sur a-walc'h n'eus ket eus an implijer-mañ.",
 	'right-regexblock' => 'Mirout a ra ouzh an implijerien da zegas kemmoù war an holl wikioù zo er feurm wiki.',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -581,7 +581,7 @@ Moguće da ne postoji takav korisnik.',
 	'right-regexblock' => 'Blokiranje korisnika od uređivanja na svim wikijima na wiki farmi',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author SMP
  * @author Solde
  */
@@ -603,13 +603,13 @@ $messages['ch'] = array(
 	'regexblock-view-go' => 'Hånao',
 );
 
-/** Sorani (کوردی) */
+/** Sorani Kurdish (کوردی) */
 $messages['ckb'] = array(
 	'regexblock-form-reason' => 'هۆکار:',
 	'regexblock-view-go' => 'بڕۆ',
 );
 
-/** Czech (Česky) */
+/** Czech (česky) */
 $messages['cs'] = array(
 	'regexblock-form-username' => 'IP adresa nebo uživatelské jméno:',
 	'regexblock-form-reason' => 'Důvod:',
@@ -634,7 +634,7 @@ $messages['cy'] = array(
 	'regexblock-view-all' => 'Oll',
 );
 
-/** Danish (Dansk)
+/** Danish (dansk)
  * @author Byrial
  * @author Jon Harald Søby
  */
@@ -790,7 +790,7 @@ Nejskerjej taki wužywaŕ njejo.',
 	'right-regexblock' => 'Zawoborujo wužywarjam wobźěłowanje na wšych wikijach na wikijowej farmje',
 );
 
-/** Ewe (Eʋegbe)
+/** Ewe (eʋegbe)
  * @author Natsubee
  */
 $messages['ee'] = array(
@@ -868,7 +868,7 @@ Verŝajne ne estas uzanto kun tiu nomo.',
 	'regexblock-view-time' => 'je $1',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  * @author Hamilton Abreu
  * @author Imre
@@ -935,14 +935,14 @@ Probablemente no existe tal usuario.',
 	'right-regexblock' => 'Bloquea el permiso de usuario de editar en todas las wikis de la granja wiki',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Pikne
  */
 $messages['et'] = array(
 	'regexblock-expire-duration' => '1 tund,2 tundi,4 tundi,6 tundi,1 päev,3 päeva,1 nädal,2 nädalat,1 kuu,3 kuud,6 kuud,1 aasta,igavene',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author An13sa
  * @author Kobazulo
  */
@@ -991,7 +991,7 @@ $messages['fa'] = array(
 	'regexblock-view-time' => 'در $1',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Crt
  * @author Option
  * @author Str4nd
@@ -1028,7 +1028,7 @@ Todennäköisesti kyseistä käyttäjää ei ole olemassa.',
 	'right-regexblock' => 'Estää käyttäjiä muokkaamasta kaikissa wikifarmin wikeissä',
 );
 
-/** French (Français)
+/** French (français)
  * @author Crochet.david
  * @author IAlex
  * @author Urhixidur
@@ -1087,7 +1087,7 @@ Si vous êtes persuadé{{GENDER:||e|(e)}} qu’il s’agit d’une erreur, [[$1|
 	'right-regexblock' => 'Bloquer en écriture les utilisateurs sur tout les wikis de la ferme wiki',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author Cedric31
  * @author ChrisPtDe
  */
@@ -1412,7 +1412,7 @@ $messages['hil'] = array(
 	'regexblock-view-go' => 'Lakat',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Dnik
  * @author Ex13
  * @author Herr Mlinka
@@ -1516,7 +1516,7 @@ $messages['hsb'] = array(
 	'right-regexblock' => 'Wužiwarjam wobdźěłowanje na wšěch wikijach na wikijowej farmje zadźěwać',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  * @author Glanthor Reviol
  */
@@ -1578,7 +1578,7 @@ Lehetséges hogy nincs ilyen felhasználó.',
 	'right-regexblock' => 'Felhasználók blokkolása az wikifarmon található összes wikin',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -1721,7 +1721,7 @@ $messages['io'] = array(
 	'regexblock-form-expiry' => 'Expiro:',
 );
 
-/** Icelandic (Íslenska)
+/** Icelandic (íslenska)
  * @author S.Örvarr.S
  */
 $messages['is'] = array(
@@ -1729,7 +1729,7 @@ $messages['is'] = array(
 	'regexblock-form-reason' => 'Ástæða:',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Beta16
  * @author Darth Kule
  */
@@ -1846,7 +1846,7 @@ $messages['ka'] = array(
 	'regexblock-form-reason' => 'მიზეზი:',
 );
 
-/** Kalaallisut (Kalaallisut)
+/** Kalaallisut (kalaallisut)
  * @author Qaqqalik
  */
 $messages['kl'] = array(
@@ -2019,7 +2019,7 @@ Warscheinlech gëtt et esou e Benotzer net.',
 	'right-regexblock' => 'Spär Benotzer fir Ännerungen op alle Wikiën vun der Wiki-Farm',
 );
 
-/** Latgalian (Latgaļu)
+/** Latgalian (latgaļu)
  * @author Dark Eagle
  */
 $messages['ltg'] = array(
@@ -2041,7 +2041,7 @@ $messages['mhr'] = array(
 	'regexblock-form-reason' => 'Амал:',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -2139,7 +2139,7 @@ $messages['ml'] = array(
 	'regexblock-view-time' => '$1 ന്‌',
 );
 
-/** Mongolian (Монгол)
+/** Mongolian (монгол)
  * @author Chinneeb
  */
 $messages['mn'] = array(
@@ -2364,7 +2364,7 @@ Kies een andere gebruikersnaam of [[$1|neem contact met ons op]] over het proble
 	'right-regexblock' => "Rechten om te bewerken intrekken voor gebruikers in alle wiki's van een wikifarm",
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Harald Khan
  * @author Jon Harald Søby
  * @author Njardarlogar
@@ -2446,7 +2446,7 @@ $messages['nso'] = array(
 	'regexblock-view-block-by' => 'thibilwe ke:',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -2525,7 +2525,7 @@ $messages['pdc'] = array(
 	'regexblock-view-reason' => 'Grund: $1',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Derbeth
  * @author Maikking
  * @author McMonster
@@ -2674,7 +2674,7 @@ $messages['ps'] = array(
 	'regexblock-view-block-unblock' => 'بنديز لرې کول',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  * @author Lijealso
  * @author Malafaya
@@ -2736,7 +2736,7 @@ Por favor, crie um nome de utilizador alternativo ou [[$1|avise-nos]] sobre o pr
 	'right-regexblock' => 'Bloquear a edição aos utilizadores de todas as wikis da fazenda',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  * @author Giro720
  */
@@ -2818,7 +2818,7 @@ $messages['rif'] = array(
 	'regexblock-view-go' => 'Raḥ ɣa',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author Firilacroco
  * @author KlaudiuMihaila
  * @author Minisarm
@@ -2847,7 +2847,7 @@ $messages['ro'] = array(
 	'regexblock-view-empty' => 'Lista de nume și adrese blocate este goală.',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -2856,7 +2856,7 @@ $messages['roa-tara'] = array(
 	'regexblock-view-go' => 'Veje',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Ferrer
  * @author Innv
  * @author MaxSem
@@ -2939,7 +2939,7 @@ $messages['sdc'] = array(
 	'regexblock-already-blocked' => '$1 è già broccaddu.',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -2991,7 +2991,7 @@ $messages['sk'] = array(
 	'right-regexblock' => 'Zablokovať úpravy používateľov na všetkých wiki z tejto wiki farmy',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  */
 $messages['sl'] = array(
@@ -3059,7 +3059,7 @@ $messages['su'] = array(
 	'regexblock-form-reason' => 'Alesan:',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Fluff
  * @author M.M.S.
  * @author Najami
@@ -3171,7 +3171,7 @@ $messages['te'] = array(
 	'regexblock-view-time' => '$1 నాడు',
 );
 
-/** Tetum (Tetun)
+/** Tetum (tetun)
  * @author MF-Warburg
  */
 $messages['tet'] = array(
@@ -3181,7 +3181,7 @@ $messages['tet'] = array(
 	'regexblock-view-reason' => 'motivu: $1',
 );
 
-/** Tajik (Cyrillic script) (Тоҷикӣ)
+/** Tajik (Cyrillic script) (тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -3216,7 +3216,7 @@ $messages['tg-cyrl'] = array(
 	'regexblock-view-time' => 'дар $1',
 );
 
-/** Tajik (Latin script) (Tojikī)
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -3374,7 +3374,7 @@ $messages['ug-latn'] = array(
 	'regexblock-view-go' => 'Köchüsh',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Prima klasy4na
  * @author Тест
  */
@@ -3510,7 +3510,7 @@ $messages['yi'] = array(
 	'regexblock-view-go' => 'גיין',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Gzdavidwong
  * @author Liangent
  * @author Xiaomingyan
@@ -3532,7 +3532,7 @@ $messages['zh-hans'] = array(
 	'regexblock-view-stats' => '统计',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Gzdavidwong
  * @author Mark85296341
  * @author Wrightbus
