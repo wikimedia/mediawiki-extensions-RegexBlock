@@ -38,7 +38,7 @@ $specialPageAliases['diq'] = array(
 	'RegexBlock' => array( 'Regexbloqe' ),
 );
 
-/** Lower Sorbian (Dolnoserbski) */
+/** Lower Sorbian (dolnoserbski) */
 $specialPageAliases['dsb'] = array(
 	'RegexBlock' => array( 'Blokěrowanje regularnych wurazow' ),
 );
@@ -53,7 +53,7 @@ $specialPageAliases['gsw'] = array(
 	'RegexBlock' => array( 'Reguläri_Ussdrügg-Sperrig' ),
 );
 
-/** Upper Sorbian (Hornjoserbsce) */
+/** Upper Sorbian (hornjoserbsce) */
 $specialPageAliases['hsb'] = array(
 	'RegexBlock' => array( 'Blokowanje regularnych wurazow' ),
 );
