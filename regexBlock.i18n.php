@@ -177,7 +177,7 @@ $messages['am'] = array(
 	'regexblock-view-all' => 'ሁሉ',
 );
 
-/** Aragonese (Aragonés)
+/** Aragonese (aragonés)
  * @author Juanpabl
  */
 $messages['an'] = array(
@@ -338,7 +338,7 @@ $messages['be'] = array(
 	'regexblock-form-reason' => 'Прычына:',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -620,7 +620,7 @@ $messages['cs'] = array(
 	'regexblock-view-reason' => 'důvod: $1',
 );
 
-/** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
+/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
 $messages['cu'] = array(
@@ -732,7 +732,7 @@ Bitte melden Sie sich mit einem anderen Benutzernamen an oder [[$1|nehmen Sie Ko
 	'regexblock-form-submit-expiry' => 'Bitte wählen Sie einen Ablaufzeitraum.',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -1136,7 +1136,7 @@ $messages['fy'] = array(
 	'regexblock-view-all' => 'Alles',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Alma
  * @author Toliño
  * @author Xosé
@@ -1464,7 +1464,7 @@ Ukoliko mislite da je posrijedi greška, molimo [[$1|kontaktirajte nas]]',
 	'regexblock-view-time' => 'u $1',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
@@ -2236,6 +2236,13 @@ $messages['myv'] = array(
 	'regexblock-view-go' => 'Адя',
 );
 
+/** Mazanderani (مازِرونی)
+ * @author محک
+ */
+$messages['mzn'] = array(
+	'regexblock-expire-duration' => '۱ ساعت,۲ ساعت,۴ ساعت,۶ ساعت,۱ روز,۳ روز,۱ هفته,۲ هفته,۱ ماه,۳ ماه,۶ ماه,۱ سال,بی‌پایون',
+);
+
 /** Nahuatl (Nāhuatl)
  * @author Fluence
  */
@@ -2920,7 +2927,7 @@ $messages['ru'] = array(
 	'right-regexblock' => 'Запретить участникам редактировать во всех вики этой вики-фермы',
 );
 
-/** Rusyn (Русиньскый)
+/** Rusyn (русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
@@ -3123,7 +3130,7 @@ Troligen så finns det ingen användare med det namnet.',
 	'right-regexblock' => 'Blockerar användare från att redigera på alla wikis i wikisamlingen',
 );
 
-/** Silesian (Ślůnski)
+/** Silesian (ślůnski)
  * @author Herr Kriss
  */
 $messages['szl'] = array(
