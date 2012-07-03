@@ -732,6 +732,13 @@ Bitte melden Sie sich mit einem anderen Benutzernamen an oder [[$1|nehmen Sie Ko
 	'regexblock-form-submit-expiry' => 'Bitte wählen Sie einen Ablaufzeitraum.',
 );
 
+/** Zazaki (Zazaki)
+ * @author Erdemaslancan
+ */
+$messages['diq'] = array(
+	'regexblock-block-log' => "Namey karberi yana IP adresi '''$1''' kerda bloqe.",
+);
+
 /** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
