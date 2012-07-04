@@ -734,9 +734,10 @@ Bitte melden Sie sich mit einem anderen Benutzernamen an oder [[$1|nehmen Sie Ko
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Mirzali
  */
 $messages['diq'] = array(
-	'regexblock-block-log' => "Namey karberi yana IP adresi '''$1''' kerda bloqe.",
+	'regexblock-block-log' => "Nameyê karberi ya zi adresa IPê '''$1'''  kılit biya.",
 );
 
 /** Lower Sorbian (dolnoserbski)
