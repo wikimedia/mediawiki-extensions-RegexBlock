@@ -110,5 +110,5 @@ $specialPageAliases['sk'] = array(
 
 /** Tagalog (Tagalog) */
 $specialPageAliases['tl'] = array(
-	'RegexBlock' => array( 'Paghadlang sa karaniwang pagsasaad' ),
+	'RegexBlock' => array( 'Paghadlang_sa_karaniwang_pagsasaad' ),
 );
