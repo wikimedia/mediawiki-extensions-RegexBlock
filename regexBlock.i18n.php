@@ -591,7 +591,7 @@ $messages['ca'] = array(
 	'regexblock-view-go' => 'Vés-hi',
 );
 
-/** Chechen (Нохчийн) */
+/** Chechen (нохчийн) */
 $messages['ce'] = array(
 	'regexblock-form-reason' => 'Бахьан:',
 );
@@ -2034,7 +2034,7 @@ $messages['ltg'] = array(
 	'regexblock-view-all' => 'Vysi',
 );
 
-/** Moksha (Мокшень)
+/** Moksha (мокшень)
  * @author Jarmanj Turtash
  * @author Khazar II
  */
@@ -2042,7 +2042,7 @@ $messages['mdf'] = array(
 	'regexblock-already-blocked' => '"$1" сёлкфоль ни',
 );
 
-/** Eastern Mari (Олык Марий)
+/** Eastern Mari (олык марий)
  * @author Сай
  */
 $messages['mhr'] = array(
@@ -2233,7 +2233,7 @@ $messages['mt'] = array(
 	'regexblock-view-go' => 'Mur',
 );
 
-/** Erzya (Эрзянь)
+/** Erzya (эрзянь)
  * @author Botuzhaleny-sodamo
  */
 $messages['myv'] = array(
@@ -2267,9 +2267,8 @@ $messages['nah'] = array(
 	'regexblock-view-time' => 'īpan $1',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Audun
- * @author Jon Harald Søby
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -3406,7 +3405,7 @@ $messages['ur'] = array(
 	'regexblock-form-reason' => 'وجہ:',
 );
 
-/** Veps (Vepsän kel’)
+/** Veps (vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
