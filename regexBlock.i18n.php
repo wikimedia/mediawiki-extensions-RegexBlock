@@ -738,6 +738,7 @@ Bitte melden Sie sich mit einem anderen Benutzernamen an oder [[$1|nehmen Sie Ko
  */
 $messages['diq'] = array(
 	'regexblock-block-log' => "Nameyê karberi ya zi adresa IPê '''$1'''  kılit biya.",
+	'regexblock-form-username' => 'Adresa IP yana namey karberi:',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -3340,6 +3341,13 @@ Marahal ay walang ganyang tagagamit.',
 	'regexblock-view-empty' => 'Walang laman ang talaan ng hinadlangang mga pangalan at mga adres.',
 	'regexblock-view-time' => 'noong $1',
 	'right-regexblock' => 'Hadlangan ang mga tagagamit na makagawa ng mga pagbabago sa lahat ng mga wiki na nasa linangan ("bukid") ng wiki',
+);
+
+/** толышә зывон (толышә зывон)
+ * @author Erdemaslancan
+ */
+$messages['tly'] = array(
+	'regexblock-view-go' => 'Давард',
 );
 
 /** Turkish (Türkçe)
