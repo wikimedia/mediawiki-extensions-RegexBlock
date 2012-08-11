@@ -1880,10 +1880,14 @@ Yèn ora ana alesan sing diwènèhaké, sawijining alesan umum baku bakal diengg
 );
 
 /** Georgian (ქართული)
+ * @author David1010
  * @author Malafaya
  */
 $messages['ka'] = array(
+	'regexblock-form-username' => 'IP მისამართი ან მომხმარებლის სახელი:',
 	'regexblock-form-reason' => 'მიზეზი:',
+	'regexblock-form-expiry' => 'იწურება:',
+	'regexblock-form-submit' => 'ამ მომხმარებლის დაბლოკვა',
 );
 
 /** Kalaallisut (kalaallisut)
@@ -2868,6 +2872,7 @@ $messages['rif'] = array(
  * @author Firilacroco
  * @author KlaudiuMihaila
  * @author Minisarm
+ * @author Stelistcristi
  */
 $messages['ro'] = array(
 	'regexblock' => 'Blocare regex',
@@ -2891,6 +2896,7 @@ $messages['ro'] = array(
 	'regexblock-view-block-unblock' => 'deblocare',
 	'regexblock-view-stats' => 'statistici',
 	'regexblock-view-empty' => 'Lista de nume și adrese blocate este goală.',
+	'regexblock-view-time' => 'pe $1',
 );
 
 /** tarandíne (tarandíne)
