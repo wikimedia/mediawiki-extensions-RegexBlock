@@ -1888,6 +1888,11 @@ $messages['ka'] = array(
 	'regexblock-form-reason' => 'მიზეზი:',
 	'regexblock-form-expiry' => 'იწურება:',
 	'regexblock-form-submit' => 'ამ მომხმარებლის დაბლოკვა',
+	'regexblock-view-all' => 'ყველა',
+	'regexblock-view-go' => 'მიდი',
+	'regexblock-view-match' => '(ზუსტი შესაბამისობა)',
+	'regexblock-view-reason' => 'მიზეზი: $1',
+	'regexblock-view-block-unblock' => 'ბლოკის მოხსნა',
 );
 
 /** Kalaallisut (kalaallisut)
