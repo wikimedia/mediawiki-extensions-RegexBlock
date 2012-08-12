@@ -1888,11 +1888,13 @@ $messages['ka'] = array(
 	'regexblock-form-reason' => 'მიზეზი:',
 	'regexblock-form-expiry' => 'იწურება:',
 	'regexblock-form-submit' => 'ამ მომხმარებლის დაბლოკვა',
+	'regexblock-nodata-found' => 'მონაცემი ვერ მოიძებნა',
 	'regexblock-view-all' => 'ყველა',
 	'regexblock-view-go' => 'მიდი',
 	'regexblock-view-match' => '(ზუსტი შესაბამისობა)',
 	'regexblock-view-reason' => 'მიზეზი: $1',
 	'regexblock-view-block-unblock' => 'ბლოკის მოხსნა',
+	'regexblock-view-stats' => 'სტატისტიკა',
 );
 
 /** Kalaallisut (kalaallisut)
@@ -3197,11 +3199,31 @@ $messages['szl'] = array(
 );
 
 /** Tamil (தமிழ்)
+ * @author Karthi.dr
+ * @author Shanmugamp7
  * @author TRYPPN
  * @author Trengarasu
  */
 $messages['ta'] = array(
+	'regexblock-form-username' => 'ஐ.பி. முகவரி அல்லது பயனர் பெயர்:',
+	'regexblock-form-reason' => 'காரணம்:',
+	'regexblock-form-expiry' => 'காலாவதி:',
+	'regexblock-form-match' => 'மிகச்சரியான பொருத்தம்',
+	'regexblock-form-account-block' => 'புதிய கணக்குகள் உருவாக்குவதை தடு',
+	'regexblock-form-submit' => 'இந்தப் பயனரைத் தடைசெய்',
+	'regexblock-form-submit-empty' => 'தடை செய்யப்பட வேண்டிய பயனர் பெயர் அல்லது ஐ.பி. முகவரியைத் தரவும்',
 	'regexblock-view-all' => 'அனைத்தும்',
+	'regexblock-view-go' => 'செல்',
+	'regexblock-view-match' => '(மிகச்சரியான பொருத்தம்)',
+	'regexblock-view-account' => '(கணக்கு உருவாக்குதல் தடை)',
+	'regexblock-view-reason' => 'காரணம்: $1',
+	'regexblock-view-reason-default' => '(பொதுவான காரணம்)',
+	'regexblock-view-block-infinite' => 'நிரந்தரத் தடை',
+	'regexblock-view-block-by' => 'தடுத்தவர்:',
+	'regexblock-view-block-unblock' => 'தடை நீக்கு',
+	'regexblock-view-stats' => 'புள்ளிவிவரங்கள்',
+	'regexblock-view-empty' => 'தடை செய்யப்பட்ட பெயர்கள் மற்றும் முகவரிகள் பட்டியல் வெற்றாக உள்ளது.',
+	'regexblock-view-time' => '$1 அன்று',
 );
 
 /** Telugu (తెలుగు)
