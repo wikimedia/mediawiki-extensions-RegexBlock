@@ -962,10 +962,15 @@ Probablemente no existe tal usuario.',
 );
 
 /** Estonian (eesti)
+ * @author Avjoska
  * @author Pikne
  */
 $messages['et'] = array(
 	'regexblock-expire-duration' => '1 tund,2 tundi,4 tundi,6 tundi,1 päev,3 päeva,1 nädal,2 nädalat,1 kuu,3 kuud,6 kuud,1 aasta,igavene',
+	'regexblock-form-username' => 'IP-aadress või kasutajanimi:',
+	'regexblock-form-reason' => 'Põhjus:',
+	'regexblock-form-expiry' => 'Aegub:',
+	'regexblock-form-submit' => 'Blokeeri see kasutaja',
 );
 
 /** Basque (euskara)
@@ -1943,6 +1948,13 @@ $messages['kn'] = array(
 	'regexblock-form-reason' => 'ಕಾರಣ:',
 	'regexblock-view-all' => 'ಎಲ್ಲಾ',
 	'regexblock-view-go' => 'ಹೋಗು',
+);
+
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'regexblock-form-username' => 'IP 주소 또는 사용자 이름:',
 );
 
 /** Krio (Krio)
@@ -3190,6 +3202,17 @@ Troligen så finns det ingen användare med det namnet.',
 	'right-regexblock' => 'Blockerar användare från att redigera på alla wikis i wikisamlingen',
 );
 
+/** Swahili (Kiswahili)
+ * @author Stephenwanjau
+ */
+$messages['sw'] = array(
+	'regexblock-form-reason' => 'Sababu:',
+	'regexblock-form-submit' => 'Zuia mtumiaji huyu',
+	'regexblock-view-all' => 'Zote',
+	'regexblock-view-go' => 'Enda',
+	'regexblock-view-reason' => 'sababu: $1',
+);
+
 /** Silesian (ślůnski)
  * @author Herr Kriss
  */
@@ -3212,6 +3235,9 @@ $messages['ta'] = array(
 	'regexblock-form-account-block' => 'புதிய கணக்குகள் உருவாக்குவதை தடு',
 	'regexblock-form-submit' => 'இந்தப் பயனரைத் தடைசெய்',
 	'regexblock-form-submit-empty' => 'தடை செய்யப்பட வேண்டிய பயனர் பெயர் அல்லது ஐ.பி. முகவரியைத் தரவும்',
+	'regexblock-nodata-found' => 'தரவு ஏதும் காணப்படவில்லை',
+	'regexblock-unblock-success' => 'தடை நீக்கல் வெற்றியடைந்தது',
+	'regexblock-unblock-log' => "பயனர் பெயர் அல்லது ஐபி முகவரி '''$1''' ன் தடை நீக்கப்பட்டது",
 	'regexblock-view-all' => 'அனைத்தும்',
 	'regexblock-view-go' => 'செல்',
 	'regexblock-view-match' => '(மிகச்சரியான பொருத்தம்)',
