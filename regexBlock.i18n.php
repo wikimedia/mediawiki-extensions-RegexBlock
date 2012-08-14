@@ -3206,11 +3206,14 @@ Troligen så finns det ingen användare med det namnet.',
  * @author Stephenwanjau
  */
 $messages['sw'] = array(
+	'regexblock-already-blocked' => '$1 tayari amezuiwa',
 	'regexblock-form-reason' => 'Sababu:',
 	'regexblock-form-submit' => 'Zuia mtumiaji huyu',
+	'regexblock-nodata-found' => 'Hakuna takwimu imepatikana',
 	'regexblock-view-all' => 'Zote',
 	'regexblock-view-go' => 'Enda',
 	'regexblock-view-reason' => 'sababu: $1',
+	'regexblock-view-time' => 'kwa $1',
 );
 
 /** Silesian (ślůnski)
