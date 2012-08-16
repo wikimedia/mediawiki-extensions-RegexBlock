@@ -976,10 +976,12 @@ $messages['et'] = array(
 /** Basque (euskara)
  * @author An13sa
  * @author Kobazulo
+ * @author පසිඳු කාවින්ද
  */
 $messages['eu'] = array(
 	'regexblock-form-username' => 'IP helbidea edo lankide izena:',
 	'regexblock-form-reason' => 'Arrazoia:',
+	'regexblock-form-expiry' => 'Iraungipena:',
 	'regexblock-form-submit' => 'Erabiltzaile hau blokeatu',
 	'regexblock-nodata-found' => 'Ez da daturik aurkitu',
 	'regexblock-view-all' => 'Dena',
@@ -1165,6 +1167,16 @@ $messages['fy'] = array(
 	'regexblock-already-blocked' => '$1 is al útsluten.',
 	'regexblock-form-expiry' => 'Ferrint nei:',
 	'regexblock-view-all' => 'Alles',
+);
+
+/** Irish (Gaeilge)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ga'] = array(
+	'regexblock-form-reason' => 'Fáth:',
+	'regexblock-form-expiry' => 'Am éaga:',
+	'regexblock-view-all' => 'An t-iomlán',
+	'regexblock-view-go' => 'Gabh',
 );
 
 /** Galician (galego)
@@ -1763,6 +1775,7 @@ $messages['is'] = array(
 /** Italian (italiano)
  * @author Beta16
  * @author Darth Kule
+ * @author F. Cosoleto
  */
 $messages['it'] = array(
 	'regexblock' => 'Blocco Regex',
@@ -1783,6 +1796,7 @@ $messages['it'] = array(
 	'regexblock-form-submit-regex' => 'Espressione regolare non valida.',
 	'regexblock-form-submit-expiry' => 'Si prega di specificare un periodo di scadenza.',
 	'regexblock-link' => 'bloccare con espressioni regolari',
+	'regexblock-nodata-found' => 'Nessun dato trovato',
 	'regexblock-stats-title' => 'Statistiche di blocco regex',
 	'regexblock-unblock-success' => 'Sblocco eseguito',
 	'regexblock-unblock-log' => "Il nome utente o indirizzo IP '''$1''' è stato sbloccato.",
@@ -1790,6 +1804,7 @@ $messages['it'] = array(
 	'regexblock-view-go' => 'Vai',
 	'regexblock-view-match' => '(corrispondenza esatta)',
 	'regexblock-view-reason' => 'motivo: $1',
+	'regexblock-view-reason-default' => 'motivazione generica',
 	'regexblock-view-block-infinite' => 'blocco permanente',
 	'regexblock-view-block-by' => 'bloccato da:',
 	'regexblock-view-block-unblock' => 'sblocca',
