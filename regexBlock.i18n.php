@@ -3524,9 +3524,16 @@ $messages['uk'] = array(
 	'regexblock-view-all' => 'Усі',
 );
 
-/** Urdu (اردو) */
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
 $messages['ur'] = array(
 	'regexblock-form-reason' => 'وجہ:',
+	'regexblock-form-expiry' => 'ختم:',
+	'regexblock-form-match' => 'عین مطابق میچ',
+	'regexblock-form-submit' => 'یہ بلاک',
+	'regexblock-view-all' => 'سب',
+	'regexblock-view-go' => 'جانا',
 );
 
 /** Veps (vepsän kel’)
