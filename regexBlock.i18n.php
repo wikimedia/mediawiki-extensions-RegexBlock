@@ -1202,7 +1202,7 @@ Isto debería facerse só para previr vandalismo, e segundo a política e normas
 Se pensa que se trata dun erro, [[$1|póñase en contacto con nós]]',
 	'regexblock-reason-name' => 'A este nome de usuario estalle prohibido editar debido a vandalismo ou outras actividades negativas.
 Se pensa que se trata dun erro, [[$1|contacte con nós]]',
-	'regexblock-reason-regex' => 'A este nome de usuario estalle prohibido editar debido a vandalismo ou outras actividades negativas por parte dun usuario cun nome semellante.
+	'regexblock-reason-regex' => 'A este nome de usuario estalle prohibido editar debido a vandalismo ou outras actividades negativas realizadas por parte dun usuario cun nome semellante.
 Cree un nome de usuario diferente ou [[$1|contacte con nós]] para falar sobre o problema',
 	'regexblock-form-username' => 'Enderezo IP ou nome de usuario:',
 	'regexblock-form-reason' => 'Motivo:',
