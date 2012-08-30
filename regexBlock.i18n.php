@@ -2413,7 +2413,7 @@ Als u denk dat dit ten onrechte is, [[$1|neem dan contact met ons op]].',
 	'regexblock-reason-name' => 'Deze gebruiker mag niet bewerken wegens vandalisme of verstoring.
 Als u denkt dat dit ten onrechte is, [[$1|neem dan contact met ons op]]',
 	'regexblock-reason-regex' => 'Deze gebruiker mag niet bewerken wegens vandalisme of verstoring door een gebruiker met een gelijkluidende naam.
-Kies een andere gebruikersnaam of [[$1|neem contact met ons op]] over het probleem',
+Kies een andere gebruikersnaam of [[$1|neem contact met ons op]] over het probleem.',
 	'regexblock-form-username' => 'IP-adres of gebruikersnaam:',
 	'regexblock-form-reason' => 'Reden:',
 	'regexblock-form-expiry' => 'Vervalt:',
@@ -2441,7 +2441,7 @@ Kies een andere gebruikersnaam of [[$1|neem contact met ons op]] over het proble
 	'regexblock-view-reason-default' => 'algemene reden',
 	'regexblock-view-block-infinite' => 'permanente blokkade',
 	'regexblock-view-block-by' => 'geblokkeerd door:',
-	'regexblock-view-block-unblock' => 'deblokkeren',
+	'regexblock-view-block-unblock' => 'blokkade opheffen',
 	'regexblock-view-stats' => 'statistieken',
 	'regexblock-view-empty' => 'De lijst van geblokkeerde namen en IP-adressen is leeg.',
 	'regexblock-view-time' => 'op $1',
