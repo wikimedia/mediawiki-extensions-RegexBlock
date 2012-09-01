@@ -756,6 +756,7 @@ Bitte melden Sie sich mit einem anderen Benutzernamen an oder [[$1|nehmen Sie Ko
 $messages['diq'] = array(
 	'regexblock-block-log' => "Nameyê karberi ya zi adresa IPê '''$1'''  kılit biya.",
 	'regexblock-form-username' => 'Adresa IP yana namey karberi:',
+	'regexblock-view-all' => 'Pêro',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -1786,6 +1787,7 @@ $messages['it'] = array(
 	'regexblock-desc' => 'Estensione utilizzata per bloccare i nomi utente e gli indirizzi IP con le espressioni regolari. Contiene il meccanismo di blocco e una [[Special:Regexblock|pagina speciale]] per aggiungere/gestire i blocchi',
 	'regexblock-expire-duration' => '1 ora, 2 ore, 4 ore, 6 ore, 1 giorno, 3 giorni, 1 settimana, 2 settimane, 1 mese, 3 mesi, 6 mesi, 1 anno, infinito',
 	'regexblockstats' => 'Statistiche di blocco regex',
+	'regexblock-page-title-1' => 'Blocco indirizzo utilizzando le espressioni regolari',
 	'regexblock-form-username' => 'Indirizzo IP o nome utente:',
 	'regexblock-form-reason' => 'Motivo:',
 	'regexblock-form-expiry' => 'Scadenza del blocco:',
@@ -1796,19 +1798,29 @@ $messages['it'] = array(
 	'regexblock-form-submit-regex' => 'Espressione regolare non valida.',
 	'regexblock-form-submit-expiry' => 'Si prega di specificare un periodo di scadenza.',
 	'regexblock-link' => 'bloccare con espressioni regolari',
+	'regexblock-match-stats-record' => '$1 ha bloccato "$2" su "$3" il $6 alle $7, connesso dall\'indirizzo "$5"',
 	'regexblock-nodata-found' => 'Nessun dato trovato',
 	'regexblock-stats-title' => 'Statistiche di blocco regex',
 	'regexblock-unblock-success' => 'Sblocco eseguito',
 	'regexblock-unblock-log' => "Il nome utente o indirizzo IP '''$1''' è stato sbloccato.",
+	'regexblock-unblock-error' => "Errore nello sblocco di $1.
+Probabilmente non c'è nessun utente con questo nome.",
+	'regexblock-regex-filter' => " o valore dell'espressione regolare:",
+	'regexblock-view-blocked' => 'Visualizza bloccati da:',
 	'regexblock-view-all' => 'Tutti',
 	'regexblock-view-go' => 'Vai',
 	'regexblock-view-match' => '(corrispondenza esatta)',
+	'regexblock-view-regex' => '(corrispondenza espressione regolare)',
+	'regexblock-view-account' => '(blocco creazione utenze)',
 	'regexblock-view-reason' => 'motivo: $1',
 	'regexblock-view-reason-default' => 'motivazione generica',
 	'regexblock-view-block-infinite' => 'blocco permanente',
 	'regexblock-view-block-by' => 'bloccato da:',
 	'regexblock-view-block-unblock' => 'sblocca',
 	'regexblock-view-stats' => 'statistiche',
+	'regexblock-view-empty' => "L'elenco dei nomi e degli indirizzi bloccati è vuoto.",
+	'regexblock-view-time' => 'il $2 alle $3',
+	'right-regexblock' => 'Blocca utenti in scrittura su tutti i siti della wiki farm',
 );
 
 /** Japanese (日本語)
