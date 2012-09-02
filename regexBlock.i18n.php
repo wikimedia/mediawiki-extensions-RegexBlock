@@ -664,6 +664,7 @@ $messages['da'] = array(
  * @author ChrisiPK
  * @author Church of emacs
  * @author Imre
+ * @author Kghbln
  * @author Melancholie
  * @author Purodha
  * @author Revolus
@@ -673,80 +674,77 @@ $messages['da'] = array(
 $messages['de'] = array(
 	'regexblock' => 'Regex-Sperre',
 	'regexblock-already-blocked' => '$1 ist bereits gesperrt.',
-	'regexblock-block-log' => "Benutzername oder IP-Adresse '''$1''' wurde gesperrt.",
-	'regexblock-block-success' => 'Sperrung erfolgreich',
+	'regexblock-block-log' => "Benutzername oder IP-Adresse '''$1''' wurde gesperrt",
+	'regexblock-block-success' => 'Die Sperrung war erfolgreich.',
 	'regexblock-currently-blocked' => 'Derzeit gesperrte Adressen:',
-	'regexblock-desc' => 'Erweiterung zum Sperren von Benutzernamen und IP-Adressen mit regulären Ausdrücken. Enthält den Sperrmechanismus und eine [[Special:Regexblock|Spezialseite]] um Sperren hinzuzufügen und zu verwalten',
-	'regexblock-expire-duration' => '1 hour,2 hours,4 hours,6 hours,1 day,3 days,1 week,2 weeks,1 month,3 months,6 months,1 year,infinite',
-	'regexblock-page-title' => 'Namenssperre mit regulären Ausdrücken',
+	'regexblock-desc' => 'Ermöglicht das Sperren von Benutzernamen und IP-Adressen mit Hilfe regulärer Ausdrücke. Es wird ein Sperrmechanismus bereitgestellt sowie eine [[Special:Regexblock|Spezialseite]] zum Hinzufügen und Verwalten von Sperrungen ergänzt',
+	'regexblock-expire-duration' => '1 Stunde,2 Stunden,4 Stunden,6 Stunden,1 Tag,3 Tage,1 Woche,2 Wochen,1 Monat,3 Monate,6 Monate,1 Jahr,unbegrenzt',
+	'regexblock-page-title' => 'Sperre von Benutzerkonten anhand regulärer Ausdrücke',
 	'regexblockstats' => 'Regex-Sperrstatistiken',
-	'regexblock-help' => "Verwende das folgende Formular um eine IP-Adresse oder einen angemeldeten Benutzer zu sperren.
-Diese Funktion sollte nur zur Verhinderung von Vandalismus und gemäß der Richtlinien eingesetzt werden.
-''Diese Seite erlaubt es auch nicht existierende Benutzerkonten zu sperren, sowie solche, die ähnliche Namen zu bestehenden Konten haben, zum Beispiel eine Sperre von „Test” sperrt auch „Test 2“ usw.
-Du kannst auch ganze IP-Adressen sperren, so dass niemand der sich unter diesen IP-Adressen anmeldet, Seiten bearbeiten kann.
-Achtung: Teile von IP-Adressen werden als Benutzernamen beim Sperren aufgefasst.
-Falls kein Sperrgrund angegeben ist, wird eine Standard-Begründung verwendet.''",
+	'regexblock-help' => "Verwende das folgende Formular, um den Schreibzugriff einer bestimmten IP-Adresse oder eines Benutzerkontos zu sperren.
+
+Diese Funktion sollte nur zur Verhinderung von Vandalismus und anderem Fehlverhalten, gemäß der bestehenden Richtlinien, eingesetzt werden. ''Diese Seite ermöglicht es auch, nicht vorhandene Benutzerkonten zu sperren, sowie solche, die einen ähnliche Namen zu bestehenden Benutzerkonten haben. Beispielsweise bewirkt die Sperre von „Test” auch die Sperre von „Test 2“, usw.
+
+Du kannst auch IP-Adressen sperren, so dass niemand, der sich unter der entsprechenden IP-Adressen anmeldet, Seiten bearbeiten kann. Achtung: Teile von IP-Adressen werden beim Sperren als Benutzername aufgefasst.
+
+Falls kein Sperrgrund angegeben wird, wird eine Standardbegründung verwendet.''",
 	'regexblock-page-title-1' => 'Sperre Adressen anhand regulärer Ausdrücke',
-	'regexblock-reason-ip' => 'Dieser IP-Adresse ist es verboten, Seiten zu bearbeiten, da von dieser IP-Adresse – von dir oder jemandem mit derselben IP-Adresse – Vandalismus oder schädliches Verhalten ausging.
-Wenn du denkst, dass es sich hierbei um einen Fehler handelt, [[$1|nimm bitte Kontakt mit uns auf]].',
-	'regexblock-reason-name' => 'Diesem Benutzernamen ist es, aufgrund von Vandalismus oder anderem schändlichem verhalten, verboten, Seiten zu bearbeiten.
-Wenn du denkst, dass es sich hierbei um einen Fehler handelt, [[$1|nimm bitte Kontakt mit uns auf]].',
-	'regexblock-reason-regex' => 'Diesem Benutzernamen ist es, aufgrund von Vandalismus oder anderem schändlichem Verhalten eines Benutzers mit einem ähnliches Benutzernamen, verboten, Seiten zu bearbeiten.
-Bitte melde dich mit einem anderen Benutzernamen an oder [[$1|nimm Kontakt mit uns auf]].',
+	'regexblock-reason-ip' => 'Aufgrund von Vandalismus oder anderem Fehlverhalten durch dich oder jemanden, der diese IP-Adresse mitbenutzt, wurde dieser IP-Adresse das Schreibrecht entzogen. [[$1|Kontaktiere uns]] bitte, sofern du denkst, dass es sich hierbei um einen Fehler handelt.',
+	'regexblock-reason-name' => 'Aufgrund von Vandalismus oder anderem Fehlverhalten wurde diesem Benutzernamen das Schreibrecht entzogen. [[$1|Kontaktiere uns]] bitte, sofern du denkst, dass es sich hierbei um einen Fehler handelt.',
+	'regexblock-reason-regex' => 'Aufgrund von Vandalismus oder anderem Fehlverhalten durch einen Benutzer mit einem ähnlichen Benutzernamen, wurde diesem Benutzernamen das Schreibrecht entzogen. Bitte erstelle entweder ein Benutzerkonto mit einem anderen Benutzernamen oder [[$1|kontaktiere uns]] bezüglich dieses Problems.',
 	'regexblock-form-username' => 'IP-Adresse oder Benutzername:',
 	'regexblock-form-reason' => 'Grund:',
-	'regexblock-form-expiry' => 'Ablaufdatum:',
+	'regexblock-form-expiry' => 'Sperrdauer:',
 	'regexblock-form-match' => 'Genauer Treffer',
-	'regexblock-form-account-block' => 'Sperre die Erstellung neuer Accounts',
-	'regexblock-form-submit' => 'Sperre diesen Benutzer',
-	'regexblock-form-submit-empty' => 'Einen Benutzernamen oder eine IP-Adresse für die Sperrung angeben.',
-	'regexblock-form-submit-regex' => 'Ungültiger regulärer Ausdruck.',
-	'regexblock-form-submit-expiry' => 'Bitte wähle einen Ablaufzeitraum.',
+	'regexblock-form-account-block' => 'Das Erstellen neuer Benutzerkonten blockieren',
+	'regexblock-form-submit' => 'IP-Adresse/Benutzer sperren',
+	'regexblock-form-submit-empty' => 'Bitte gib einen Benutzernamen oder eine IP-Adresse für die Sperrung an.',
+	'regexblock-form-submit-regex' => 'Dies ist ein ungültiger regulärer Ausdruck.',
+	'regexblock-form-submit-expiry' => 'Bitte gib einen Sperrzeitraum an.',
 	'regexblock-link' => 'mit regulärem Ausdruck sperren',
-	'regexblock-match-stats-record' => '$1 sperrte „$2“ auf „$3“ am $6 um $7 Uhr, angemeldet von Adresse „$5“',
-	'regexblock-nodata-found' => 'Keine Daten gefunden',
+	'regexblock-match-stats-record' => '$1 sperrte „$2“ auf „$3“ am $6 um $7 Uhr, angemeldet über Adresse „$5“',
+	'regexblock-nodata-found' => 'Es wurden keine Daten gefunden.',
 	'regexblock-stats-title' => 'Regex-Sperrstatistiken',
-	'regexblock-unblock-success' => 'Entsperrung erfolgreich',
-	'regexblock-unblock-log' => "Benutzername oder IP-Adresse '''$1''' wurde entsperrt.",
-	'regexblock-unblock-error' => 'Fehler beim Entsperren von $1.
-Vermutlich gibt es keinen solchen Benutzer.',
-	'regexblock-regex-filter' => '  oder regulärer Ausdruck:',
+	'regexblock-unblock-success' => 'Die Entsperrung war erfolgreich.',
+	'regexblock-unblock-log' => "Benutzername oder IP-Adresse '''$1''' wurde entsperrt",
+	'regexblock-unblock-error' => 'Beim Entsperren von $1 ist ein Fehler aufgetreten. Vermutlich gibt es keinen solchen Benutzer.',
+	'regexblock-regex-filter' => ' oder regulärer Ausdruck:',
 	'regexblock-view-blocked' => 'Ansicht gesperrt von:',
 	'regexblock-view-all' => 'Alle',
 	'regexblock-view-go' => 'Los',
 	'regexblock-view-match' => '(genauer Treffer)',
 	'regexblock-view-regex' => '(Regex-Treffer)',
-	'regexblock-view-account' => '(Accounterstellung gesperrt)',
+	'regexblock-view-account' => '(Benutzerkontenerstellung blockiert)',
 	'regexblock-view-reason' => 'Grund: $1',
 	'regexblock-view-reason-default' => 'allgemeiner Grund',
 	'regexblock-view-block-infinite' => 'permanente Sperrung',
 	'regexblock-view-block-by' => 'gesperrt von:',
 	'regexblock-view-block-unblock' => 'entsperren',
 	'regexblock-view-stats' => 'Statistiken',
-	'regexblock-view-empty' => 'Die Liste der gesperrten Namen und Adressen ist leer.',
-	'regexblock-view-time' => 'am $2, $3 Uhr',
-	'right-regexblock' => 'Benutzer auf allen Wikis der Wiki-Farm sperren',
+	'regexblock-view-empty' => 'Die Liste der gesperrten Benutzernamen und IP-Adressen ist leer.',
+	'regexblock-view-time' => 'am $2 um $3 Uhr',
+	'right-regexblock' => 'Benutzer auf allen Wikis der Wikifarm sperren',
 );
 
 /** German (formal address) (‪Deutsch (Sie-Form)‬)
  * @author Imre
+ * @author Kghbln
  * @author Revolus
  * @author Umherirrender
  */
 $messages['de-formal'] = array(
-	'regexblock-help' => "Verwenden Sie das folgende Formular um eine IP-Adresse oder einen angemeldeten Benutzer zu sperren.
-Diese Funktion sollte nur zur Verhinderung von Vandalismus und gemäß der Richtlinien eingesetzt werden.
-''Diese Seite erlaubt es auch nicht existierende Benutzerkonten zu sperren, sowie solche, die ähnliche Namen zu bestehenden Konten haben, zum Beispiel eine Sperre von „Test” sperrt auch „Test 2“ usw.
-Sie können auch ganze IP-Adressen sperren, so dass niemand der sich unter diesen IP-Adressen anmeldet, Seiten bearbeiten kann.
-Achtung: Teile von IP-Adressen werden als Benutzernamen beim Sperren aufgefasst.
-Falls kein Sperrgrund angegeben ist, wird eine Standard-Begründung verwendet.''",
-	'regexblock-reason-ip' => 'Dieser IP-Adresse ist es verboten zu, Seiten zu bearbeiten, da von dieser IP-Adresse – von Ihnen oder jemandem mit derselben IP-Adresse – Vandalismus oder schädliches Verhalten ausging.
-Wenn Sie denken, dass es sich hierbei um einen Fehler handelt, [[$1|nehmen Sie bitte Kontakt mit uns auf]].',
-	'regexblock-reason-name' => 'Diesem Benutzernamen ist es, aufgrund von Vandalismus oder anderem schändlichem Verhalten, verboten, Seiten zu bearbeiten.
-Wenn Sie denken, dass es sich hierbei um einen Fehler handelt, [[$1|nehmen Sie bitte Kontakt mit uns auf]].',
-	'regexblock-reason-regex' => 'Diesem Benutzernamen ist es, aufgrund von Vandalismus oder anderem schändlichem Verhalten eines Benutzers mit einem ähnliches Benutzernamen, verboten, Seiten zu bearbeiten.
-Bitte melden Sie sich mit einem anderen Benutzernamen an oder [[$1|nehmen Sie Kontakt mit uns auf]].',
-	'regexblock-form-submit-expiry' => 'Bitte wählen Sie einen Ablaufzeitraum.',
+	'regexblock-help' => "Verwenden Sie das folgende Formular, um den Schreibzugriff einer bestimmten IP-Adresse oder eines Benutzerkontos zu sperren.
+
+Diese Funktion sollte nur zur Verhinderung von Vandalismus und anderem Fehlverhalten, gemäß der bestehenden Richtlinien, eingesetzt werden. ''Diese Seite ermöglicht es auch, nicht vorhandene Benutzerkonten zu sperren, sowie solche, die einen ähnliche Namen zu bestehenden Benutzerkonten haben. Beispielsweise bewirkt die Sperre von „Test” auch die Sperre von „Test 2“, usw.
+
+Sie können auch IP-Adressen sperren, so dass niemand, der sich unter der entsprechenden IP-Adressen anmeldet, Seiten bearbeiten kann. Achtung: Teile von IP-Adressen werden beim Sperren als Benutzername aufgefasst.
+
+Falls kein Sperrgrund angegeben wird, wird eine Standardbegründung verwendet.''",
+	'regexblock-reason-ip' => 'Aufgrund von Vandalismus oder anderem Fehlverhalten durch Sie oder jemanden, der diese IP-Adresse mitbenutzt, wurde dieser IP-Adresse das Schreibrecht entzogen. [[$1|Kontaktiere Sie uns]] bitte, sofern Sie denken, dass es sich hierbei um einen Fehler handelt.',
+	'regexblock-reason-name' => 'Aufgrund von Vandalismus oder anderem Fehlverhalten wurde diesem Benutzernamen das Schreibrecht entzogen. [[$1|Kontaktieren Sie uns]] bitte, sofern Sie denken, dass es sich hierbei um einen Fehler handelt.',
+	'regexblock-reason-regex' => 'Aufgrund von Vandalismus oder anderem Fehlverhalten durch einen Benutzer mit einem ähnlichen Benutzernamen, wurde diesem Benutzernamen das Schreibrecht entzogen. Bitte erstellen Sie entweder ein Benutzerkonto mit einem anderen Benutzernamen oder [[$1|kontaktieren Sie uns]] bezüglich dieses Problems.',
+	'regexblock-form-submit-empty' => 'Bitte geben Sie einen Benutzernamen oder eine IP-Adresse für die Sperrung an.',
+	'regexblock-form-submit-expiry' => 'Bitte geben Sie einen Sperrzeitraum an.',
 );
 
 /** Zazaki (Zazaki)
