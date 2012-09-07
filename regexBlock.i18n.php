@@ -755,6 +755,7 @@ $messages['diq'] = array(
 	'regexblock-block-log' => "Nameyê karberi ya zi adresa IPê '''$1'''  kılit biya.",
 	'regexblock-form-username' => 'Adresa IP yana namey karberi:',
 	'regexblock-view-all' => 'Pêro',
+	'regexblock-view-go' => 'Şo',
 );
 
 /** Lower Sorbian (dolnoserbski)
