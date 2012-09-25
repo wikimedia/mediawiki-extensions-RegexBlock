@@ -88,7 +88,7 @@ $specialPageAliases['mk'] = array(
 	'RegexBlock' => array( 'БлокирањеНаРегуларниИзрази' ),
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬) */
+/** Norwegian Bokmål (norsk (bokmål)‎) */
 $specialPageAliases['nb'] = array(
 	'RegexBlock' => array( 'Regex-blokkering' ),
 );
