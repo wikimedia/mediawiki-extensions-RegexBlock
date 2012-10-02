@@ -338,7 +338,7 @@ $messages['be'] = array(
 	'regexblock-form-reason' => 'Прычына:',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -726,7 +726,7 @@ Falls kein Sperrgrund angegeben wird, wird eine Standardbegründung verwendet.''
 	'right-regexblock' => 'Benutzer auf allen Wikis der Wikifarm sperren',
 );
 
-/** German (formal address) (‪Deutsch (Sie-Form)‬)
+/** German (formal address) (Deutsch (Sie-Form)‎)
  * @author Imre
  * @author Kghbln
  * @author Revolus
@@ -1328,7 +1328,7 @@ $messages['gv'] = array(
 	'regexblock-view-reason' => 'fa: $1',
 );
 
-/** Hausa (هَوُسَ) */
+/** Hausa (Hausa) */
 $messages['ha'] = array(
 	'regexblock-form-reason' => 'Dalili:',
 	'regexblock-view-all' => 'Duka',
@@ -2348,7 +2348,7 @@ $messages['nah'] = array(
 	'regexblock-view-time' => 'īpan $1',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Audun
  * @author Nghtwlkr
  */
@@ -2459,7 +2459,7 @@ Kies een andere gebruikersnaam of [[$1|neem contact met ons op]] over het proble
 	'right-regexblock' => "Rechten om te bewerken intrekken voor gebruikers in alle wiki's van een wikifarm",
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Harald Khan
  * @author Jon Harald Søby
  * @author Njardarlogar
@@ -3103,7 +3103,7 @@ $messages['sl'] = array(
 	'regexblock-form-reason' => 'Razlog:',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author FriedrickMILBarbarossa
  * @author Rancher
  * @author Sasa Stefanovic
@@ -3130,7 +3130,7 @@ $messages['sr-ec'] = array(
 	'regexblock-view-time' => '$2 у $3',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author FriedrickMILBarbarossa
  * @author Michaello
  * @author Rancher
@@ -3666,7 +3666,7 @@ $messages['yi'] = array(
 	'regexblock-view-go' => 'גיין',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Gzdavidwong
  * @author Liangent
  * @author Xiaomingyan
@@ -3688,7 +3688,7 @@ $messages['zh-hans'] = array(
 	'regexblock-view-stats' => '统计',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Gzdavidwong
  * @author Mark85296341
  * @author Wrightbus
