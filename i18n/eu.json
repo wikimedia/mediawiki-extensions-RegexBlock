@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"An13sa",
+			"Kobazulo",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"regexblock-form-username": "IP helbidea edo lankide izena:",
+	"regexblock-form-reason": "Arrazoia:",
+	"regexblock-form-expiry": "Iraungipena:",
+	"regexblock-form-submit": "Erabiltzaile hau blokeatu",
+	"regexblock-nodata-found": "Ez da daturik aurkitu",
+	"regexblock-view-all": "Dena",
+	"regexblock-view-go": "Joan",
+	"regexblock-view-reason": "arrazoia: $1"
+}

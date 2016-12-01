@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Malafaya",
+			"Smeira"
+		]
+	},
+	"regexblock-already-blocked": "$1 ya peblokon.",
+	"regexblock-block-log": "Gebananem/Ladet-IP: '''$1''' peblokon.",
+	"regexblock-block-success": "Blokam eplöpon",
+	"regexblock-currently-blocked": "Ladets-IP pebloköl:",
+	"regexblock-expire-duration": "düp 1,düps 2,düps 4,düps 6,del 1,dels 3,vig 1,vigs 2,mul 1,muls 3,muls 6,yel 1,nenfinik",
+	"regexblock-form-username": "Ladet-IP u gebananem:",
+	"regexblock-form-reason": "Kod:",
+	"regexblock-form-expiry": "Dul jü:",
+	"regexblock-form-account-block": "Blokön jafami kalas nulik",
+	"regexblock-form-submit": "Blokön gebani at",
+	"regexblock-form-submit-empty": "Penolös gebananemi u ladeti-IP ad blokön.",
+	"regexblock-match-stats-record": "Geban: $1 äblokon eli „$2“ su „$3“ tü „$4“, se ladet: „$5“",
+	"regexblock-nodata-found": "Nünods nonik petuvons",
+	"regexblock-unblock-success": "Säblokam eplöpon",
+	"regexblock-unblock-log": "Gebananem/Ladet-IP: '''$1''' pesäblokon.",
+	"regexblock-view-all": "Valik",
+	"regexblock-view-go": "Ledunön",
+	"regexblock-view-reason": "kod: $1",
+	"regexblock-view-block-infinite": "blokam laidüpik",
+	"regexblock-view-block-by": "peblokon fa:",
+	"regexblock-view-block-unblock": "säblokön",
+	"regexblock-view-stats": "statits",
+	"regexblock-view-empty": "Lised gebananemas e ladetas-IP peblokölas vagon.",
+	"regexblock-view-time": "in $1",
+	"right-regexblock": "Blokön gebanis in vüks valik vükafarma"
+}

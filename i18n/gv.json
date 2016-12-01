@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"MacTire02"
+		]
+	},
+	"regexblock-form-username": "Enmys IP ny ennym ymmydeyr:",
+	"regexblock-form-reason": "Fa:",
+	"regexblock-view-go": "Gow",
+	"regexblock-view-reason": "fa: $1"
+}

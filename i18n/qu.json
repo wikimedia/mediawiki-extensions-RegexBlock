@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"AlimanRuna"
+		]
+	},
+	"regexblock-reason-regex": "Kay ruraqpa sutinqa llamk'apuymanta hark'asqam, yaqa kaqlla sutiyuq ruraq wandaluchaptinmi, millaykunata ruraptinmi. Ama hina kaspa, huk ruraqpa sutiykita kamariy icha [[$1|qillqarimuwayku]] kay sasachakuymanta rimanakunanchikpaq",
+	"regexblock-form-submit": "Kay ruraqta hark'ay",
+	"regexblock-match-stats-record": "$1 sutiyuqqa '$2' sutiyuqta hark'an '$3' p'unchawpi '$4' pachapi, '$5' tiyaymanta hallch'aspa\n<!--\nstructure:\n\"hark'an\" = \"blocked\"\n\"$1 sutiyuqqa\" = \"the one who has the name $1\" and so on\n-->"
+}

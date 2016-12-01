@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ibrahim"
+		]
+	},
+	"regexblock-already-blocked": "\"$1\" аллакай баста шудааст.",
+	"regexblock-block-log": "Номи корбарӣ ё нишонаи '''$1''' баста шуд.",
+	"regexblock-block-success": "Бастан муваффақ шуд",
+	"regexblock-currently-blocked": "Нишонаҳои басташудаи кунунӣ:",
+	"regexblock-form-username": "Нишонаи IP ё номи корбарӣ:",
+	"regexblock-form-reason": "Далел:",
+	"regexblock-form-match": "Мутобиқати дақиқ",
+	"regexblock-form-account-block": "Эҷоди бастани ҳисобҳои ҷадид",
+	"regexblock-form-submit": "Бастани ин Корбар",
+	"regexblock-form-submit-empty": "Барои бастан номи корбарӣ ё нишонаи IP диҳед.",
+	"regexblock-form-submit-regex": "Ибораи оддии номӯътабар.",
+	"regexblock-form-submit-expiry": "Лутфан давраи ба хотимарасиро мушаххас кунед.",
+	"regexblock-stats-title": "Омори Бастани Regex",
+	"regexblock-unblock-success": "Боз кардан аз бастан муваффақ шуд",
+	"regexblock-unblock-log": "Номи корбарӣ ё нишонаи IP '''$1''' аз бастан боз шуд.",
+	"regexblock-unblock-error": "Хато дар боз кардани $1.\nЭҳтимолан чунин корбаре нест.",
+	"regexblock-view-all": "Ҳама",
+	"regexblock-view-go": "Бирав",
+	"regexblock-view-match": "(мутобиқати дақиқ)",
+	"regexblock-view-account": "(бастани эҷоди ҳисоби ҷадид)",
+	"regexblock-view-reason": "далел: $1",
+	"regexblock-view-reason-default": "далели умумӣ",
+	"regexblock-view-block-infinite": "бастани доимӣ",
+	"regexblock-view-block-by": "баста шуд тавассути",
+	"regexblock-view-block-unblock": "боз кардан",
+	"regexblock-view-stats": "омор",
+	"regexblock-view-empty": "Феҳристи номҳо ва нишонаҳои баста шуда холӣ аст.",
+	"regexblock-view-time": "дар $1"
+}

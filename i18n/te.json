@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Veeven"
+		]
+	},
+	"regexblock-already-blocked": "$1ని ఇదివరకే నిషేధించారు.",
+	"regexblock-block-log": "'''$1''' అనే వాడుకరిపేరు లేదా ఐపీ చిరునామాని నిరోధించాం.",
+	"regexblock-block-success": "నిరోధం విజయవంతమైంది",
+	"regexblock-currently-blocked": "ప్రస్తుతం నిరోధంలో ఉన్న చిరునామాలు:",
+	"regexblock-form-username": "IP చిరునామా లేదా వాడుకరి పేరు:",
+	"regexblock-form-reason": "కారణం:",
+	"regexblock-form-expiry": "కాలపరిమితి:",
+	"regexblock-form-account-block": "కొత్త ఖాతాలు సృష్టించడం నిరోధించు",
+	"regexblock-form-submit": "ఈ వాడుకరిని నిరోధించండి",
+	"regexblock-form-submit-empty": "నిరోధించాల్సిన వాడుకరి పేరు లేదా ఐపీ చిరునామా ఇవ్వండి.",
+	"regexblock-form-submit-regex": "తప్పుడు రెగ్యులర్ ఎక్స్&zwnj;ప్రెషన్.",
+	"regexblock-form-submit-expiry": "దయచేసి ఓ కాలపరిమితి ఇవ్వండి.",
+	"regexblock-nodata-found": "భోగట్టా ఏమీ దొరకలేదు",
+	"regexblock-unblock-success": "నిరోధపు ఎత్తివేత విజయవంతమైంది",
+	"regexblock-unblock-log": "'''$1''' అనే వాడుకరి పేరు లేదా ఐపీ చిరునామాపై నిరోధం ఎత్తివేసారు.",
+	"regexblock-view-all": "అన్నీ",
+	"regexblock-view-go": "వెళ్ళు",
+	"regexblock-view-account": "(ఖాతా సృష్టింపు నిరోధం)",
+	"regexblock-view-reason": "కారణం: $1",
+	"regexblock-view-reason-default": "సాధారణ కారణం",
+	"regexblock-view-block-infinite": "శాశ్వత నిరోధం",
+	"regexblock-view-block-by": "నిరోధించినది:",
+	"regexblock-view-block-unblock": "నిరోధం ఎత్తివేయండి",
+	"regexblock-view-stats": "గణాంకాలు",
+	"regexblock-view-empty": "నిరోధించిన పేర్లు మరియు చిరునామాల జాబితా ఖాళీగా ఉంది.",
+	"regexblock-view-time": "$1 నాడు"
+}

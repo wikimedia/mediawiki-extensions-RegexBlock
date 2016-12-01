@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Aurora"
+		]
+	},
+	"regexblock-form-reason": "Sebab:",
+	"regexblock-form-expiry": "Tamat:",
+	"regexblock-view-all": "Semua",
+	"regexblock-view-go": "Pergi"
+}

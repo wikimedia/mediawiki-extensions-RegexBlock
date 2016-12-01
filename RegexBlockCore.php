@@ -6,42 +6,59 @@
  *
  * @file
  * @ingroup Extensions
+ * @author Bartek Łapiński <bartek at wikia-inc.com>
+ * @author Tomasz Klim
+ * @author Piotr Molski <moli@wikia-inc.com>
+ * @author Adrian 'ADi' Wieczorek <adi(at)wikia-inc.com>
+ * @author Alexandre Emsenhuber
+ * @author Jack Phoenix <jack@countervandalism.net>
+ * @copyright Copyright © 2007, Wikia Inc.
+ * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 class RegexBlock {
 
 	/**
 	 * Prepare data by getting blockers
-	 * @param $current_user User: current user
+	 *
+	 * @param User $current_user Current user
+	 * @return bool
 	 */
 	public static function check( $current_user ) {
-		wfProfileIn( __METHOD__ );
+		global $wgRequest;
 
-		$ip_to_check = wfGetIP();
+		if ( $current_user->isAllowed( 'regexblock-exempt' ) ) {
+			// Users with superhuman powers (staff) should not be blocked in any case
+			return true;
+		}
+
+		$ip_to_check = $wgRequest->getIP();
 
 		/* First check cache */
 		$blocked = self::isBlockedCheck( $current_user, $ip_to_check );
 		if ( $blocked ) {
-			wfProfileOut( __METHOD__ );
 			return true;
 		}
+
 		$blockers_array = self::getBlockers();
 		$block_data = self::blockedData( $current_user, $blockers_array );
 
 		/* check user for each blocker */
-		foreach( $blockers_array as $blocker ) {
+		foreach ( $blockers_array as $blocker ) {
 			$blocker_block_data = isset( $block_data[$blocker] ) ? $block_data[$blocker] : null;
 			self::blocked( $blocker, $blocker_block_data, $current_user, $ip_to_check );
 		}
 
-		wfProfileOut( __METHOD__ );
 		return true;
 	}
 
 	/**
 	 * Get a database object
+	 *
+	 * @param int Either DB_SLAVE (for reads) or DB_MASTER (for writes)
+	 * @return Database
 	 */
-	public static function getDB( $db ){
+	public static function getDB( $db ) {
 		global $wgRegexBlockDatabase;
 		return wfGetDB( $db, array(), $wgRegexBlockDatabase );
 	}
@@ -53,7 +70,7 @@ class RegexBlock {
 	public static function memcKey( /* ... */ ) {
 		global $wgRegexBlockDatabase;
 		$args = func_get_args();
-		if( $wgRegexBlockDatabase === false ) {
+		if ( $wgRegexBlockDatabase === false ) {
 			return call_user_func_array( 'wfMemcKey', $args );
 		} else {
 			$newArgs = array_merge( wfSplitWikiID( $wgRegexBlockDatabase ), $args );
@@ -63,53 +80,53 @@ class RegexBlock {
 
 	/**
 	 * Get blockers
+	 *
+	 * @param bool $master Use DB_MASTER for reading?
+	 * @return array
 	 */
 	public static function getBlockers( $master = false ) {
 		global $wgMemc;
 
-		wfProfileIn( __METHOD__ );
-
-		$key = self::memcKey( REGEXBLOCK_BLOCKERS_KEY );
+		$key = self::memcKey( 'regex_blockers' );
 		$cached = $wgMemc->get( $key );
 		$blockers_array = array();
 
 		if ( !is_array( $cached ) ) {
 			/* get from database */
 			$dbr = self::getDB( $master ? DB_MASTER : DB_SLAVE );
-			$res = $dbr->select( REGEXBLOCK_TABLE,
+			$res = $dbr->select(
+				'blockedby',
 				array( 'blckby_blocker' ),
 				array( "blckby_blocker <> ''" ),
 				__METHOD__,
 				array( 'GROUP BY' => 'blckby_blocker' )
 			);
-			while( $row = $res->fetchObject() ) {
+			while ( $row = $res->fetchObject() ) {
 				$blockers_array[] = $row->blckby_blocker;
 			}
 			$res->free();
-			$wgMemc->set( $key, $blockers_array, REGEXBLOCK_EXPIRE );
+			$wgMemc->set( $key, $blockers_array, 0 /* 0 = infinite */ );
 		} else {
 			/* get from cache */
 			$blockers_array = $cached;
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $blockers_array;
 	}
 
 	/**
-	 * Check if user is blocked
+	 * Check if the given user is blocked
 	 *
-	 * @param $user User
-	 * @param $ip
-	 * @return Array: an array of arrays to run a regex match against
+	 * @param User $user The user (object) who we're checking
+	 * @param string $ip The user's IP address
+	 * @return array An array of arrays to run a regex match against
 	 */
 	public static function isBlockedCheck( $user, $ip ) {
 		global $wgMemc;
 
-		wfProfileIn( __METHOD__ );
 		$result = false;
 
-		$key = self::memcKey( REGEXBLOCK_USER_KEY, str_replace( ' ', '_', $user->getName() ) );
+		$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $user->getName() ) );
 		$cached = $wgMemc->get( $key );
 
 		if ( is_object( $cached ) ) {
@@ -122,7 +139,7 @@ class RegexBlock {
 		}
 
 		if ( ( $result === false ) && ( $ip != $user->getName() ) ) {
-			$key = self::memcKey( REGEXBLOCK_USER_KEY, str_replace( ' ', '_', $ip ) );
+			$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $ip ) );
 			$cached = $wgMemc->get( $key );
 			if ( is_object( $cached ) ) {
 				$ret = self::expireNameCheck( $cached );
@@ -134,13 +151,10 @@ class RegexBlock {
 			}
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $result;
 	}
 
 	public static function buildExpression( $lines, $exact = 0, $batchSize = 4096 ) {
-		wfProfileIn( __METHOD__ );
-
 		/* Make regex */
 		$regexes = array();
 		$regexStart = ( $exact ) ? '/^(' : '/(';
@@ -153,10 +167,10 @@ class RegexBlock {
 			$regexEnd = ')/i';
 		}
 		$build = false;
-		foreach( $lines as $line ) {
-			if( $build == '' ) {
+		foreach ( $lines as $line ) {
+			if ( $build == '' ) {
 				$build = $line;
-			} elseif( strlen( $build ) + strlen( $line ) > $batchSize ) {
+			} elseif ( strlen( $build ) + strlen( $line ) > $batchSize ) {
 				$regexes[] = /*$regexStart . */str_replace( '/', '\/', preg_replace( '|\\\*/|', '/', $build ) ) /*. $regexEnd*/;
 				$build = $line;
 			} else {
@@ -165,11 +179,10 @@ class RegexBlock {
 			}
 		}
 
-		if( $build !== false ) {
+		if ( $build !== false ) {
 			$regexes[] = /*$regexStart . */str_replace( '/', '\/', preg_replace( '|\\\*/|', '/', $build ) ) /*. $regexEnd*/;
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $regexes;
 	}
 
@@ -179,9 +192,9 @@ class RegexBlock {
 			$result = true;
 		} else {
 			$loop = 0;
-			$names = array('ips' => '', 'exact' => '', 'regex' => '');
-			foreach( $names as $key => $value ) {
-				if ( array_key_exists($key, $cached) && ( !empty( $cached[$key] ) ) ) {
+			$names = array( 'ips' => '', 'exact' => '', 'regex' => '' );
+			foreach ( $names as $key => $value ) {
+				if ( array_key_exists( $key, $cached ) && !empty( $cached[$key] ) ) {
 					$loop++;
 				}
 			}
@@ -195,14 +208,13 @@ class RegexBlock {
 	/**
 	 * Fetch usernames or IP addresses to run a match against
 	 *
-	 * @param $user User: current user
-	 * @param $blockers Array: list of admins who blocked
-	 * @return Array: an array of arrays to run a regex match against
+	 * @param User $user Current user
+	 * @param array $blockers List of admins who blocked
+	 * @return array An array of arrays to run a regex match against
 	 */
 	public static function blockedData( $user, $blockers, $master = false ) {
 		global $wgMemc;
 
-		wfProfileIn( __METHOD__ );
 		$blockData = array();
 
 		/**
@@ -210,22 +222,21 @@ class RegexBlock {
 		 * we will store entire array of regex strings here
 		 */
 		if ( !( $user instanceof User ) ) {
-			wfProfileOut( __METHOD__ );
 			return false;
 		}
 
-		$memkey = self::memcKey( REGEXBLOCK_BLOCKERS_KEY, "All-In-One" );
+		$memkey = self::memcKey( 'regex_blockers', 'All-In-One' );
 		$cached = $wgMemc->get( $memkey );
 
 		if ( empty( $cached ) ) {
 			/* Fetch data from DB, concatenate into one string, then fill cache */
 			$dbr = self::getDB( $master ? DB_MASTER : DB_SLAVE );
 
-			foreach( $blockers as $blocker ) {
+			foreach ( $blockers as $blocker ) {
 				$res = $dbr->select(
-					REGEXBLOCK_TABLE,
+					'blockedby',
 					array( 'blckby_id', 'blckby_name', 'blckby_exact' ),
-					array( "blckby_blocker = {$dbr->addQuotes($blocker)}" ),
+					array( 'blckby_blocker' => $blocker ),
 					__METHOD__
 				);
 
@@ -233,7 +244,7 @@ class RegexBlock {
 				$names = array( 'ips' => '', 'exact' => '', 'regex' => '' );
 				while ( $row = $res->fetchObject() ) {
 					$key = 'regex';
-					if ( $user->isIP($row->blckby_name) != 0 ) {
+					if ( $user->isIP( $row->blckby_name ) != 0 ) {
 						$key = 'ips';
 					} elseif ( $row->blckby_exact != 0 ) {
 						$key = 'exact';
@@ -247,40 +258,36 @@ class RegexBlock {
 					$blockData[$blocker] = $names;
 				}
 			}
-			$wgMemc->set( $memkey, $blockData, REGEXBLOCK_EXPIRE );
+			$wgMemc->set( $memkey, $blockData, 0 /* 0 = infinite */ );
 		} else {
 			/* take it from cache */
 			$blockData = $cached;
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $blockData;
 	}
 
 	/**
 	 * Perform a match against all given values
 	 *
-	 * @param $matching Array: array of strings containing list of values
-	 * @param $value String: a given value to run a match against
-	 * @param $exact Boolean: whether or not perform an exact match
-	 * @return Array of matched values or false
+	 * @param array $matching Array of strings containing list of values
+	 * @param string $value A given value to run a match against
+	 * @return array|bool Array of matched values or boolean false
 	 */
 	public static function performMatch( $matching, $value ) {
-		wfProfileIn( __METHOD__ );
 		$matched = array();
 
 		if ( !is_array( $matching ) ) {
 			/* empty? begone! */
-			wfProfileOut( __METHOD__ );
 			return false;
 		}
 
 		/* normalise for regex */
 		$loop = 0;
 		$match = array();
-		foreach( $matching as $one ) {
+		foreach ( $matching as $one ) {
 			/* the real deal */
-			$found = preg_match('/'.$one.'/i', $value, $match);
+			$found = preg_match( '/' . $one . '/i', $value, $match );
 			if ( $found ) {
 				if ( is_array( $match ) && ( !empty( $match[0] ) ) ) {
 					$matched[] = $one;
@@ -289,26 +296,23 @@ class RegexBlock {
 			}
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $matched;
 	}
 
 	/**
 	 * Check if the block expired or not (AFTER we found an existing block)
 	 *
-	 * @param $user User: current user object
-	 * @param $array_match Boolean
-	 * @param $names Array: matched names
-	 * @param $ips Array: matched ips
-	 * @return Array or false
+	 * @param User $user Current User object
+	 * @param bool $array_match
+	 * @param int $ips Matched IP addresses
+	 * @param int $iregex Use exact matching instead of regex matching?
+	 * @return array|bool
 	 */
 	public static function expireCheck( $user, $array_match = null, $ips = 0, $iregex = 0 ) {
 		global $wgMemc;
 
-		wfProfileIn( __METHOD__ );
 		/* I will use memcached, with the key being particular block */
 		if ( empty( $array_match ) ) {
-			wfProfileOut( __METHOD__ );
 			return false;
 		}
 
@@ -319,19 +323,25 @@ class RegexBlock {
 		  * moreover, expired blocks will be consequently deleted
 		 */
 		$blocked = '';
-		foreach( $array_match as $single ) {
-			$key = self::memcKey( REGEXBLOCK_USER_KEY, str_replace( ' ', '_', $single ) );
+		foreach ( $array_match as $single ) {
+			$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $single ) );
 			$blocked = null;
 			$cached = $wgMemc->get( $key );
 			if ( empty( $cached ) || ( !is_object( $cached ) ) ) {
 				/* get from database */
 				$dbr = self::getDB( DB_MASTER );
-				$where = array( "blckby_name LIKE '%{$single}%'" );
+				$any = $dbr->anyString();
+				$where = array( 'blckby_name ' . $dbr->buildLike( $any, $single, $any ) );
 				if ( !empty( $iregex ) ) {
-					$where = array( "blckby_name = " . $dbr->addQuotes( $single ) );
+					$where = array( 'blckby_name' => $single );
 				}
-				$res = $dbr->select( REGEXBLOCK_TABLE,
-					array( 'blckby_id', 'blckby_timestamp', 'blckby_expire', 'blckby_blocker', 'blckby_create', 'blckby_exact', 'blckby_reason' ),
+				$res = $dbr->select(
+					'blockedby',
+					array(
+						'blckby_id', 'blckby_timestamp', 'blckby_expire',
+						'blckby_blocker', 'blckby_create', 'blckby_exact',
+						'blckby_reason'
+					),
 					$where,
 					__METHOD__
 				);
@@ -352,7 +362,6 @@ class RegexBlock {
 					$ret['match'] = $single;
 					$ret['ip'] = $ips;
 					$wgMemc->set( $key, $blocked );
-					wfProfileOut( __METHOD__ );
 					return $ret;
 				} else {
 					/* clean up an obsolete block */
@@ -361,82 +370,84 @@ class RegexBlock {
 			}
 		}
 
-		wfProfileOut( __METHOD__ );
 		return false;
 	}
 
 	/**
 	 * Check if the USER block expired or not (AFTER we found an existing block)
 	 *
-	 * @param $blocked: block object
-	 * @return Array or false
+	 * @param Block $blocked Block object
+	 * @return array|bool
 	 */
 	public static function expireNameCheck( $blocked ) {
 		$ret = false;
-		wfProfileIn( __METHOD__ );
-		if( is_object( $blocked ) ) {
-			if ( ( wfTimestampNow () <= $blocked->blckby_expire ) || ( 'infinite' == $blocked->blckby_expire ) ) {
+
+		if ( is_object( $blocked ) ) {
+			if (
+				( wfTimestampNow () <= $blocked->blckby_expire ) ||
+				( $blocked->blckby_expire == 'infinite' )
+			)
+			{
 				$ret = array(
 					'blckid' => $blocked->blckby_id,
 					'create' => $blocked->blckby_create,
 					'exact'  => $blocked->blckby_exact,
 					'reason' => $blocked->blckby_reason,
 					'expire' => $blocked->blckby_expire,
-					'blocker'=> $blocked->blckby_blocker,
+					'blocker' => $blocked->blckby_blocker,
 					'timestamp' => $blocked->blckby_timestamp
 				);
 			}
 		}
-		wfProfileOut( __METHOD__ );
+
 		return $ret;
 	}
 
 	/**
 	 * Clean up an existing expired block
 	 *
-	 * @param $username String: name of the user
-	 * @param $blocker String: name of the blocker
+	 * @param string $username Name of the user
+	 * @param string $blocker Name of the blocker
 	 */
 	function clearExpired( $username, $blocker ) {
-		wfProfileIn( __METHOD__ );
 		$result = false;
 
 		$dbw = self::getDB( DB_MASTER );
 
-		$dbw->delete( REGEXBLOCK_TABLE,
-			array("blckby_name = {$dbw->addQuotes($username)}"),
+		$dbw->delete(
+			'blockedby',
+			array( 'blckby_name' => $username ),
 			__METHOD__
 		);
 
 		if ( $dbw->affectedRows() ) {
-			/* success, remember to delete cache key  */
+			/* success, remember to delete cache key */
 			self::unsetKeys( $username );
 			$result = true;
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $result;
 	}
 
 	/**
 	 * Put the stats about block into database
 	 *
-	 * @param $username String
-	 * @param $user_ip String: IP of the current user
-	 * @param $blocker String
+	 * @param string $username
+	 * @param string $user_ip IP address of the current user
+	 * @param string $blocker
 	 * @param $match
-	 * @param $blckid
+	 * @param int $blckid
 	 */
 	public static function updateStats( $user, $user_ip, $blocker, $match, $blckid ) {
 		global $wgDBname;
 
 		$result = false;
-		wfProfileIn( __METHOD__ );
 
 		$dbw = self::getDB( DB_MASTER );
-		$dbw->insert( REGEXBLOCK_STATS_TABLE,
+		$dbw->insert(
+			'stats_blockedby',
 			array(
-				'stats_id' => 'null',
+				'stats_id' => null,
 				'stats_blckby_id' => $blckid,
 				'stats_user' => $user->getName(),
 				'stats_ip' => $user_ip,
@@ -452,24 +463,20 @@ class RegexBlock {
 			$result = true;
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $result;
 	}
 
 	/**
 	 * The actual blocking goes here, for each blocker
 	 *
-	 * @param $blocker String
-	 * @param $blocker_block_data
-	 * @param $user User
-	 * @param $user_ip String
+	 * @param string $blocker
+	 * @param array $blocker_block_data
+	 * @param User $user
+	 * @param string $user_ip
 	 */
 	function blocked( $blocker, $blocker_block_data, $user, $user_ip ) {
-		wfProfileIn( __METHOD__ );
-
-		if( $blocker_block_data == null ) {
+		if ( $blocker_block_data == null ) {
 			// no data for given blocker, aborting...
-			wfProfileOut( __METHOD__ );
 			return false;
 		}
 
@@ -480,25 +487,25 @@ class RegexBlock {
 		$result = $blocker_block_data;
 
 		/* check IPs */
-		if ( ( !empty( $ips ) ) && ( in_array( $user_ip, $ips ) ) ) {
+		if ( !empty( $ips ) && in_array( $user_ip, $ips ) ) {
 			$result['ips']['matches'] = array( $user_ip );
-			wfDebugLog( 'RegexBlock', "Found some IPs to block: ". implode( ",", $result['ips']['matches'] ). "\n" );
+			wfDebugLog( 'RegexBlock', 'Found some IPs to block: ' . implode( ',', $result['ips']['matches'] ) . "\n" );
 		}
 
 		/* check regexes */
-		if ( ( !empty( $result['regex'] ) ) && ( is_array( $result['regex'] ) ) ) {
+		if ( !empty( $result['regex'] ) && is_array( $result['regex'] ) ) {
 			$result['regex']['matches'] = self::performMatch( $result['regex'], $user->getName() );
-			if( !empty( $result['regex']['matches'] ) ) {
-				wfDebugLog( 'RegexBlock', "Found some regexes to block: ". implode( ",", $result['regex']['matches'] ). "\n" );
+			if ( !empty( $result['regex']['matches'] ) ) {
+				wfDebugLog( 'RegexBlock', 'Found some regexes to block: ' . implode( ',', $result['regex']['matches'] ) . "\n" );
 			}
 		}
 
 		/* check names of user */
 		$exact = ( is_array( $exact ) ) ? $exact : array( $exact );
-		if ( ( !empty( $exact ) ) && ( in_array( $user->getName(), $exact ) ) ) {
+		if ( !empty( $exact ) && in_array( $user->getName(), $exact ) ) {
 			$key = array_search( $user->getName(), $exact );
-			$result['exact']['matches'] = array($exact[$key]);
-			wfDebugLog( 'RegexBlock', "Found some users to block: ". implode( ",", $result['exact']['matches'] ). "\n" );
+			$result['exact']['matches'] = array( $exact[$key] );
+			wfDebugLog( 'RegexBlock', 'Found some users to block: ' . implode( ',', $result['exact']['matches'] ) . "\n" );
 		}
 
 		unset( $ips );
@@ -511,12 +518,12 @@ class RegexBlock {
 		 * a first successful match means the block is applied
 		 */
 		$valid = false;
-		foreach( $result as $key => $value ) {
-			$is_ip = ("ips" == $key) ? 1 : 0;
-			$is_regex = ("regex" == $key) ? 1 : 0;
+		foreach ( $result as $key => $value ) {
+			$isIP = ( $key == 'ips' ) ? 1 : 0;
+			$isRegex = ( $key == 'regex' ) ? 1 : 0;
 			/* check if this block hasn't expired already  */
 			if ( !empty( $result[$key]['matches'] ) ) {
-				$valid = self::expireCheck( $user, $result[$key]['matches'], $is_ip, $is_regex );
+				$valid = self::expireCheck( $user, $result[$key]['matches'], $isIP, $isRegex );
 				if ( is_array( $valid ) ) {
 					break;
 				}
@@ -527,109 +534,154 @@ class RegexBlock {
 			self::setUserData( $user, $user_ip, $blocker, $valid );
 		}
 
-		wfProfileOut( __METHOD__ );
 		return true;
 	}
 
 	/**
 	 * Update user structure
 	 *
-	 * @param $user User
-	 * @param $user_ip String
-	 * @param $blocker String
-	 * @param $valid: blocked info
+	 * @param User $user User who is being blocked
+	 * @param string $user_ip IP of the user who is being blocker
+	 * @param string $blocker User name of the person who placed this block
+	 * @param array $valid Block info
 	 */
 	public static function setUserData( &$user, $user_ip, $blocker, $valid ) {
-		global $wgContactLink;
-		wfProfileIn( __METHOD__ );
+		global $wgContactLink, $wgRequest;
+
 		$result = false;
 
 		if ( !( $user instanceof User ) ) {
-			wfProfileOut( __METHOD__ );
 			return $result;
 		}
 
 		if ( is_array( $valid ) ) {
 			$user->mBlockedby = User::idFromName( $blocker );
+			// Need to construct a new Block object here and load it into the
+			// User object in order for the block to actually, y'know, work...
+			if ( $user->mBlock === null ) {
+				$user->mBlock = new Block( [
+					'address'         => ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName(),
+					'by'              => User::idFromName( $blocker ),
+					'reason'          => $valid['reason'],
+					'timestamp'       => $valid['timestamp'],
+					'auto'            => false,
+					'expiry'          => $valid['expire'],
+					'anonOnly'        => false,
+					'createAccount'   => (bool)( $valid['create'] == 1 ),
+					'enableAutoblock' => true,
+					'hideName'        => false,
+					'blockEmail'      => true,
+					'allowUsertalk'   => false,
+					'byText'          => $blocker,
+				] );
+			}
+
 			if ( $valid['reason'] != '' ) {
 				/* a reason was given, display it */
-				$user->mBlockreason = $valid['reason'];
+				$user->getBlock()->mReason = $valid['reason'];
 			} else {
 				/**
 				 * Display generic reasons
 				 * By default we blocked by regex match
 				 */
-				$user->mBlockreason = wfMsg( 'regexblock-reason-regex', $wgContactLink );
+				$user->getBlock()->mReason = wfMessage( 'regexblock-reason-regex', $wgContactLink )->text();
 				if ( $valid['ip'] == 1 ) {
 					/* we blocked by IP */
-					$user->mBlockreason = wfMsg( 'regexblock-reason-ip', $wgContactLink );
-				} elseif( $valid['exact'] == 1 ) {
+					$user->getBlock()->mReason = wfMessage( 'regexblock-reason-ip', $wgContactLink )->text();
+				} elseif ( $valid['exact'] == 1 ) {
 					/* we blocked by username exact match */
-					$user->mBlockreason = wfMsg( 'regexblock-reason-name', $wgContactLink );
+					$user->getBlock()->mReason = wfMessage( 'regexblock-reason-name', $wgContactLink )->text();
 				}
 			}
+
 			/* account creation check goes through the same hook... */
 			if ( $valid['create'] == 1 ) {
-				if ( $user->mBlock ) {
-					$user->mBlock->prevents( 'createaccount', true );
+				if ( $user->getBlock() ) {
+					$user->getBlock()->prevents( 'createaccount', true );
 				}
 			}
+
 			/* set expiry information */
-			if ( $user->mBlock ) {
-				# $user->mBlock->mId = $valid['blckid']; FIXME: why does this want to do this?
-				$user->mBlock->mExpiry = $valid['expire'];
-				$user->mBlock->mTimestamp = $valid['timestamp'];
-				$user->mBlock->setTarget( ($valid['ip'] == 1) ? wfGetIP() : $user->getName() );
+			if ( $user->getBlock() ) {
+				/* FIXME: why does this want to do this?
+				 * ANSWER: to set the block ID so that it displays correctly on the "you are blocked" msg.
+				 * w/o this it displays "your block ID is #." which is confusing to the end-users.
+				 * As of MW 1.28 it is not possible for an extension to set this (Block::$mId is protected).
+				 * Wikia had patched core to add a setId() method to the Block class to hack around this.
+				$user->getBlock()->mId = $valid['blckid'];
+				*/
+				$user->getBlock()->mExpiry = $valid['expire'];
+				$user->getBlock()->mTimestamp = $valid['timestamp'];
+				$user->getBlock()->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
 			}
 
-			$result = self::updateStats( $user, $user_ip, $blocker, $valid['match'], $valid['blckid'] );
+			if ( wfReadOnly() ) {
+				$result = true;
+			} else {
+				$result = self::updateStats( $user, $user_ip, $blocker, $valid['match'], $valid['blckid'] );
+			}
 		}
 
-		wfProfileOut( __METHOD__ );
 		return $result;
 	}
 
 	/**
 	 * Clean the memcached keys
 	 *
-	 * @param $username name of username
+	 * @param string $username Name of the user
 	 */
 	public static function unsetKeys( $username ) {
 		global $wgMemc, $wgUser;
-		wfProfileIn( __METHOD__ );
 
 		$readMaster = 1;
-		$key = self::memcKey( REGEXBLOCK_SPECIAL_KEY, REGEXBLOCK_SPECIAL_NUM_RECORD );
+		$key = self::memcKey( 'regexBlockSpecial', 'number_records' );
 		$wgMemc->delete( $key );
 		/* main cache of user-block data */
-		$key = self::memcKey( REGEXBLOCK_USER_KEY, str_replace( ' ', '_', $username ) );
+		$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $username ) );
 		$wgMemc->delete( $key );
 		/* blockers */
-		$key = self::memcKey( REGEXBLOCK_BLOCKERS_KEY );
+		$key = self::memcKey( 'regex_blockers' );
 		$wgMemc->delete( $key );
 		$blockers_array = self::getBlockers( $readMaster );
 		/* blocker's matches */
-		$key = self::memcKey( REGEXBLOCK_BLOCKERS_KEY, "All-In-One" );
+		$key = self::memcKey( 'regex_blockers', 'All-In-One' );
 		$wgMemc->delete( $key );
 		self::blockedData( $wgUser, $blockers_array, $readMaster );
-
-		wfProfileOut( __METHOD__ );
 	}
 
 	/**
 	 * Add a link to Special:RegexBlock on Special:Contributions/USERNAME
 	 * pages if the user has 'regexblock' permission
-	 * @return true
+	 *
+	 * @param int $id
+	 * @param Title $nt
+	 * @param array $links Other existing contributions links
+	 * @return bool
 	 */
-	public static function loadContribsLink( $id, $nt, &$links ){
+	public static function loadContribsLink( $id, $nt, &$links ) {
 		global $wgUser;
-		if( $wgUser->isAllowed( 'regexblock' ) ) {
-			$links[] = $wgUser->getSkin()->makeKnownLinkObj(
+		if ( $wgUser->isAllowed( 'regexblock' ) ) {
+			$links[] = Linker::linkKnown(
 				SpecialPage::getTitleFor( 'RegexBlock' ),
-				wfMsgHtml( 'regexblock-link' ),
-				'&ip=' . urlencode( $nt->getText() )
+				wfMessage( 'regexblock-link' )->escaped(),
+				array(),
+				array( 'ip' => $nt->getText() )
 			);
 		}
+		return true;
+	}
+
+	/**
+	 * Creates the necessary database tables when the user runs
+	 * maintenance/update.php.
+	 *
+	 * @param DatabaseUpdater $updater
+	 * @return bool
+	 */
+	public static function onLoadExtensionSchemaUpdates( $updater ) {
+		$file = __DIR__ . '/regexblock_schema.sql';
+		$updater->addExtensionUpdate( array( 'addTable', 'blockedby', $file, true ) );
+		$updater->addExtensionUpdate( array( 'addTable', 'stats_blockedby', $file, true ) );
 		return true;
 	}
 

@@ -1,16 +1,18 @@
-This is the readme file for regexBlock extension.
+This is the readme file for RegexBlock extension.
 
 ==Authors==
-regexBlock was written by Bartek Łapiński, Tomasz Klim, Piotr Molski and Adrian Wieczorek for Wikia, Inc.
+RegexBlock was written by Bartek Łapiński, Tomasz Klim, Piotr Molski and Adrian Wieczorek for Wikia, Inc.
+
+Their work has been further enhanced by Alexandre Emsenhuber and Jack Phoenix.
 
 ==License==
-regexBlock is licensed under GNU General Public License 2.0 or later.
+RegexBlock is licensed under GNU General Public License 2.0 or later.
 See http://www.gnu.org/copyleft/gpl.html for more details.
 
-==Installing regexBlock==
+==Installing RegexBlock==
 Installation instructions and more details can be found on the extension's infopage:
-http://www.mediawiki.org/wiki/Extension:RegexBlock
+https://www.mediawiki.org/wiki/Extension:RegexBlock
 
 ==Bugs==
-Bugs and issues can be reported on the extension's talk page:
-http://www.mediawiki.org/w/index.php?title=Extension_talk:RegexBlock&action=edit&section=new
+Bugs and issues can be reported on Phabricator:
+https://phabricator.wikimedia.org/

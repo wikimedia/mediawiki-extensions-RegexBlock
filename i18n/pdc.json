@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xqt"
+		]
+	},
+	"regexblock-form-username": "IP-Adress odder Yuusernaame:",
+	"regexblock-form-reason": "Grund:",
+	"regexblock-view-all": "All",
+	"regexblock-view-go": "Geh los",
+	"regexblock-view-reason": "Grund: $1"
+}

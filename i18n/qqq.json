@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Jon Harald Søby",
+			"Purodha",
+			"Raymond",
+			"SPQRobin",
+			"Siebrand",
+			"The Evil IP address",
+			"Umherirrender"
+		]
+	},
+	"regexblock-already-blocked": "{{Identical|$1 is already blocked}}",
+	"regexblock-desc": "{{desc}}",
+	"regexblock-expire-duration": "{{Identical|Infinite}}",
+	"regexblock-reason-ip": "Parameter $1 is <tt>$wgContactLink</tt>, which is by default \"<tt>Special:Contact</tt>\".",
+	"regexblock-reason-name": "Parameter $1 is <tt>$wgContactLink</tt>, which is by default \"<tt>Special:Contact</tt>\".",
+	"regexblock-reason-regex": "Parameter $1 is <tt>$wgContactLink</tt>, which is by default \"<tt>Special:Contact</tt>\".",
+	"regexblock-form-username": "{{Identical/IP address or username}}",
+	"regexblock-form-reason": "{{Identical|Reason}}",
+	"regexblock-form-expiry": "{{Identical|Expiry}}",
+	"regexblock-form-match": "{{Identical|Exact match}}",
+	"regexblock-match-stats-record": "Parameters are:\n* $1: regex match\n* $2: username\n* $3: database name\n* $4: date/time\n* $5: IP address\n* $6: isolated date of $4\n* $7: isolated time of $4",
+	"regexblock-regex-filter": "This is a field name for a text field in a form. In the field a user is expected to type a regex filter. If a regex filter is present, the field is prefilled with it.",
+	"regexblock-view-blocked": "This is a label followed by a dropdown list of all users who have ever used regexBlock on the wiki, allowing the viewer to filter down the list of regexBlocks, i.e. see all blocks performed by User:X if users X, Y and Z have used regexBlock tool. There is [[mw:File:RegexBlock.png|a screenshot]].",
+	"regexblock-view-all": "{{Identical|All}}",
+	"regexblock-view-go": "{{Identical|Go}}",
+	"regexblock-view-match": "{{Identical|Exact match}}",
+	"regexblock-view-time": "* $1 is a date/time\n* $2 is a date (optional)\n* $3 is a time (optional)",
+	"right-regexblock": "{{doc-right|regexblock}}"
+}

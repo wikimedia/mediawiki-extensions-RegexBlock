@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Juanpabl"
+		]
+	},
+	"regexblock-already-blocked": "$1 ya yera bloqueyato.",
+	"regexblock-form-username": "Adreza IP u nombre d'usuario:",
+	"regexblock-form-reason": "Razón:",
+	"regexblock-view-all": "Todas"
+}

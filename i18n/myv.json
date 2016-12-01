@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Botuzhaleny-sodamo"
+		]
+	},
+	"regexblock-already-blocked": "\"$1\" уш саймас саезь.",
+	"regexblock-form-reason": "Тувталось:",
+	"regexblock-form-expiry": "Таштомома шказо:",
+	"regexblock-view-all": "Весе",
+	"regexblock-view-go": "Адя"
+}

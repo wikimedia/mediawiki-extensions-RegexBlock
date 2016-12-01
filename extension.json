@@ -1,0 +1,69 @@
+{
+	"name": "RegexBlock",
+	"version": "1.3",
+	"author": [
+		"Bartek Łapiński",
+		"Tomasz Klim",
+		"Piotr Molski",
+		"Adrian Wieczorek",
+		"Alexandre Emsenhuber",
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0+",
+	"url": "https://www.mediawiki.org/wiki/Extension:RegexBlock",
+	"descriptionmsg": "regexblock-desc",
+	"type": "specialpage",
+	"config": {
+		"ContactLink": "Special:Contact",
+		"RegexBlockDatabase": false
+	},
+	"SpecialPages": {
+		"RegexBlock": "RegexBlockForm"
+	},
+	"MessagesDirs": {
+		"RegexBlock": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"RegexBlockAliases": "RegexBlock.alias.php"
+	},
+	"AutoloadClasses": {
+		"RegexBlock": "RegexBlockCore.php",
+		"RegexBlockData": "SpecialRegexBlock.php",
+		"RegexBlockForm": "SpecialRegexBlock.php",
+		"RegexBlockUITemplate": "RegexBlockUITemplate.php"
+	},
+	"Hooks": {
+		"ContributionsToolLinks": [
+			"RegexBlock::loadContribsLink"
+		],
+		"GetBlockedStatus": [
+			"RegexBlock::check"
+		],
+		"LoadExtensionSchemaUpdates": [
+			"RegexBlock::onLoadExtensionSchemaUpdates"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "RegexBlock"
+	},
+	"ResourceModules": {
+		"ext.regexBlock.styles": {
+			"styles": "regexblock.css",
+			"position": "top"
+		}
+	},
+	"AvailableRights": [
+		"regexblock",
+		"regexblock-exempt"
+	],
+	"GroupPermissions": {
+		"staff": {
+			"regexblock": true,
+			"regexblock-exempt": true
+		}
+	},
+	"manifest_version": 1
+}

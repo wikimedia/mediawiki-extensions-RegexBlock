@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Basharh"
+		]
+	},
+	"regexblock-form-reason": "ܥܠܬܐ:",
+	"regexblock-view-all": "ܟܠ",
+	"regexblock-view-go": "ܙܠ",
+	"regexblock-view-reason": "ܥܠܬܐ: $1",
+	"regexblock-view-block-by": "ܚܪܝܡܐ ܒܝܕ:",
+	"regexblock-view-block-unblock": "ܛܥܘܢ ܚܪܡܐ"
+}

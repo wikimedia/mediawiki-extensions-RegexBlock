@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chmee2"
+		]
+	},
+	"regexblock-form-username": "IP adresa nebo uživatelské jméno:",
+	"regexblock-form-reason": "Důvod:",
+	"regexblock-form-expiry": "Čas vypršení:",
+	"regexblock-form-match": "Přesná shoda",
+	"regexblock-form-account-block": "Blokovat vytvoření nových účtů",
+	"regexblock-form-submit": "Zablokovat tohoto uživatele",
+	"regexblock-nodata-found": "Nebyly nalezeny žádné údaje",
+	"regexblock-stats-title": "Statistika regex blokování",
+	"regexblock-unblock-success": "Odblokování úspěšné.",
+	"regexblock-unblock-log": "Uživatelské jméno nebo IP adresa ''' $1 ''' bylo odblokováno.",
+	"regexblock-view-blocked": "Zobrazit blokování od:",
+	"regexblock-view-all": "Všechny",
+	"regexblock-view-go": "Jít na",
+	"regexblock-view-match": "(přesná shoda)",
+	"regexblock-view-regex": "(vyhovuje reg. výrazu)",
+	"regexblock-view-account": "(blokování tvorby účtu)",
+	"regexblock-view-reason": "důvod: $1",
+	"regexblock-view-reason-default": "Obecný důvod",
+	"regexblock-view-block-infinite": "Trvalý blok",
+	"regexblock-view-block-by": "Zablokován:",
+	"regexblock-view-block-unblock": "Zrušit blokování",
+	"regexblock-view-stats": "Statistiky"
+}

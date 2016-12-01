@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Octahedron80"
+		]
+	},
+	"regexblock-expire-duration": "1 ชั่วโมง,2 ชั่วโมง,4 ชั่วโมง,6 ชั่วโมง,1 วัน,3 วัน,1 สัปดาห์,2 สัปดาห์,1 เดือน,3 เดือน,6 เดือน,1 ปี,ตลอดกาล",
+	"regexblock-form-reason": "เหตุผล:",
+	"regexblock-view-all": "ทั้งหมด"
+}

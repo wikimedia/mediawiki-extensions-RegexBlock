@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Firilacroco",
+			"KlaudiuMihaila",
+			"Minisarm",
+			"Stelistcristi"
+		]
+	},
+	"regexblock": "Blocare regex",
+	"regexblock-already-blocked": "$1 este deja blocat.",
+	"regexblock-currently-blocked": "Adrese blocate în prezent:",
+	"regexblock-form-username": "Adresă IP sau nume de utilizator:",
+	"regexblock-form-reason": "Motiv:",
+	"regexblock-form-expiry": "Expirare:",
+	"regexblock-form-account-block": "Blochează crearea de conturi noi",
+	"regexblock-form-submit": "Blochează acest utilizator",
+	"regexblock-form-submit-regex": "Expresie regulată incorectă.",
+	"regexblock-unblock-success": "Deblocare cu succes",
+	"regexblock-unblock-log": "Utilizatorul sau adresa IP '''$1''' a fost deblocat.",
+	"regexblock-view-all": "Toți",
+	"regexblock-view-go": "Mergeți",
+	"regexblock-view-account": "(blocare creare conturi)",
+	"regexblock-view-reason": "motiv: $1",
+	"regexblock-view-reason-default": "motiv generic",
+	"regexblock-view-block-infinite": "blocare permanentă",
+	"regexblock-view-block-by": "blocat de către:",
+	"regexblock-view-block-unblock": "deblocare",
+	"regexblock-view-stats": "statistici",
+	"regexblock-view-empty": "Lista de nume și adrese blocate este goală.",
+	"regexblock-view-time": "pe $1"
+}

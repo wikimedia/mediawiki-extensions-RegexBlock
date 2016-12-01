@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"S.Örvarr.S"
+		]
+	},
+	"regexblock-already-blocked": "$1 er nú þegar í banni.",
+	"regexblock-form-reason": "Ástæða:"
+}

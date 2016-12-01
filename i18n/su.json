@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Irwangatot"
+		]
+	},
+	"regexblock-already-blocked": "$1 geus dipeungpeuk.",
+	"regexblock-form-reason": "Alesan:"
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"MF-Warburg"
+		]
+	},
+	"regexblock-form-reason": "Motivu:",
+	"regexblock-view-all": "Hotu",
+	"regexblock-view-go": "Bá",
+	"regexblock-view-reason": "motivu: $1"
+}

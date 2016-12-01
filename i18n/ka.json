@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010",
+			"Malafaya"
+		]
+	},
+	"regexblock-form-username": "IP მისამართი ან მომხმარებლის სახელი:",
+	"regexblock-form-reason": "მიზეზი:",
+	"regexblock-form-expiry": "იწურება:",
+	"regexblock-form-submit": "ამ მომხმარებლის დაბლოკვა",
+	"regexblock-nodata-found": "მონაცემი ვერ მოიძებნა",
+	"regexblock-view-all": "ყველა",
+	"regexblock-view-go": "მიდი",
+	"regexblock-view-match": "(ზუსტი შესაბამისობა)",
+	"regexblock-view-reason": "მიზეზი: $1",
+	"regexblock-view-block-unblock": "ბლოკის მოხსნა",
+	"regexblock-view-stats": "სტატისტიკა"
+}

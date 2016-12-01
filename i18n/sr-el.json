@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"FriedrickMILBarbarossa",
+			"Michaello",
+			"Rancher",
+			"Жељко Тодоровић"
+		]
+	},
+	"regexblock-block-success": "Blokiranje je uspelo",
+	"regexblock-currently-blocked": "Trenutno blokirane adrese:",
+	"regexblock-page-title-1": "Blokiraj adresu koristeći regularne izraze",
+	"regexblock-form-username": "IP adresa ili korisničko ime:",
+	"regexblock-form-reason": "Razlog:",
+	"regexblock-form-expiry": "Ističe:",
+	"regexblock-form-match": "Tačno poklapanje",
+	"regexblock-form-submit": "Blokiraj ovog korisnika",
+	"regexblock-view-all": "Sve",
+	"regexblock-view-go": "Idi",
+	"regexblock-view-reason": "razlog: $1",
+	"regexblock-view-reason-default": "opšti razlog",
+	"regexblock-view-block-infinite": "trajna blokada",
+	"regexblock-view-block-by": "blokirao:",
+	"regexblock-view-block-unblock": "odblokiraj",
+	"regexblock-view-stats": "statistike",
+	"regexblock-view-time": "$2 u $3"
+}

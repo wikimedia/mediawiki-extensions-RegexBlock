@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ukabia"
+		]
+	},
+	"regexblock-form-reason": "Mgbághapụtà:",
+	"regexblock-form-expiry": "Gbá okà:",
+	"regexblock-view-all": "Haníle",
+	"regexblock-view-go": "Gá",
+	"regexblock-view-reason": "mgbáhàpụtá: $1",
+	"regexblock-view-time": "na $1"
+}

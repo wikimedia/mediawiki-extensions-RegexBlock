@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"SMP",
+			"Solde"
+		]
+	},
+	"regexblock-already-blocked": "$1 ja està blocat.",
+	"regexblock-form-reason": "Motiu:",
+	"regexblock-view-go": "Vés-hi"
+}

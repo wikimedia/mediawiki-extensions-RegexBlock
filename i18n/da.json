@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Byrial",
+			"Jon Harald Søby"
+		]
+	},
+	"regexblock-form-reason": "Begrundelse:",
+	"regexblock-view-blocked": "Vis blokerede af:"
+}
