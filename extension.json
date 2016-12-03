@@ -30,7 +30,7 @@
 	},
 	"AutoloadClasses": {
 		"RegexBlock": "RegexBlockCore.php",
-		"RegexBlockData": "SpecialRegexBlock.php",
+		"RegexBlockData": "RegexBlockData.php",
 		"RegexBlockForm": "SpecialRegexBlock.php",
 		"RegexBlockUITemplate": "RegexBlockUITemplate.php"
 	},
