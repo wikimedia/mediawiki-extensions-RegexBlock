@@ -19,7 +19,7 @@
 class RegexBlockForm extends SpecialPage {
 	public $numResults = 0;
 	public $numStatResults = 0;
-	public $mPosted, $mAction;
+	public $mAction;
 	public $mFilter, $mRegexFilter;
 	public $mLimit;
 	public $mOffset;
@@ -29,7 +29,6 @@ class RegexBlockForm extends SpecialPage {
 	 * Constructor -- set up the new, restricted special page
 	 */
 	public function __construct() {
-		$this->mPosted = false;
 		$this->mAction = '';
 		$this->mFilter = $this->mRegexFilter = '';
 		$this->mError = $this->mMsg = '';
@@ -79,7 +78,6 @@ class RegexBlockForm extends SpecialPage {
 		$this->setHeaders();
 		$out->setPageTitle( $this->msg( 'regexblock-page-title' ) );
 
-		$this->mPosted = $request->wasPosted();
 		$this->mAction = $request->getVal( 'action' );
 		$this->mFilter = $request->getVal( 'filter' );
 		$this->mRegexFilter = $request->getVal( 'rfilter' );
