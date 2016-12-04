@@ -32,7 +32,11 @@ class RegexBlock {
 			return true;
 		}
 
-		$ip_to_check = $wgRequest->getIP();
+		// sanitizeIP() check is needed for IPv6 -- upon saving a RegexBlock,
+		// IPv6 IPs like ::1 (localhost) are expanded to 0:0:0:0:0:0:0:1, but
+		// $wgRequest->getIP() contains just "::1" so the checks fail and
+		// blocked IPv6 IPs would still be able to edit
+		$ip_to_check = IP::sanitizeIP( $wgRequest->getIP() );
 
 		/* First check cache */
 		$blocked = self::isBlockedCheck( $current_user, $ip_to_check );
@@ -244,7 +248,7 @@ class RegexBlock {
 				$names = array( 'ips' => '', 'exact' => '', 'regex' => '' );
 				while ( $row = $res->fetchObject() ) {
 					$key = 'regex';
-					if ( $user->isIP( $row->blckby_name ) != 0 ) {
+					if ( User::isIP( $row->blckby_name ) != 0 ) {
 						$key = 'ips';
 					} elseif ( $row->blckby_exact != 0 ) {
 						$key = 'exact';
@@ -365,7 +369,7 @@ class RegexBlock {
 					return $ret;
 				} else {
 					/* clean up an obsolete block */
-					self::clearExpired( $single, $blocked->blckby_blocker );
+					self::removeBlock( $single, $blocked->blckby_blocker );
 				}
 			}
 		}
@@ -404,25 +408,26 @@ class RegexBlock {
 	}
 
 	/**
-	 * Clean up an existing expired block
+	 * Remove a block from the blockedby DB table.
 	 *
-	 * @param string $username Name of the user
-	 * @param string $blocker Name of the blocker
+	 * @param string $regex Username or regular expression to unblock
+	 * @param string $blocker Name of the blocker [unused - remove?]
+	 * @return bool True if unblocked succeeded, otherwise false
 	 */
-	function clearExpired( $username, $blocker ) {
+	public static function removeBlock( $regex, $blocker ) {
 		$result = false;
 
 		$dbw = self::getDB( DB_MASTER );
 
 		$dbw->delete(
 			'blockedby',
-			array( 'blckby_name' => $username ),
+			array( 'blckby_name' => $regex ),
 			__METHOD__
 		);
 
 		if ( $dbw->affectedRows() ) {
 			/* success, remember to delete cache key */
-			self::unsetKeys( $username );
+			self::unsetKeys( $regex );
 			$result = true;
 		}
 
@@ -469,10 +474,10 @@ class RegexBlock {
 	/**
 	 * The actual blocking goes here, for each blocker
 	 *
-	 * @param string $blocker
+	 * @param string $blocker User name of the person who placed the block
 	 * @param array $blocker_block_data
-	 * @param User $user
-	 * @param string $user_ip
+	 * @param User $user User who is being blocked
+	 * @param string $user_ip IP address of the user who is being blocked
 	 */
 	function blocked( $blocker, $blocker_block_data, $user, $user_ip ) {
 		if ( $blocker_block_data == null ) {
@@ -684,5 +689,4 @@ class RegexBlock {
 		$updater->addExtensionUpdate( array( 'addTable', 'stats_blockedby', $file, true ) );
 		return true;
 	}
-
 }

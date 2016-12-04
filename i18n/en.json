@@ -22,7 +22,6 @@
 	"regexblock-reason-regex": "This username is prevented from editing due to vandalism or other disruption by a user with a similar name.\nPlease create an alternate user name or [[$1|contact us]] about the problem",
 	"regexblock-form-username": "IP address or username:",
 	"regexblock-form-reason": "Reason:",
-	"regexblock-form-expiry": "Expiry:",
 	"regexblock-form-match": "Exact match",
 	"regexblock-form-account-block": "Block creation of new accounts",
 	"regexblock-form-submit": "Block this user",

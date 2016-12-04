@@ -280,6 +280,6 @@ class RegexBlockData {
 	 * @return bool
 	 */
 	public static function isValidRegex( $text ) {
-		return ( sprintf( "%s", @preg_match( "/{$text}/", 'regex' ) ) === '' );
+		return ( sprintf( '%s', @preg_match( "/{$text}/", 'regex' ) ) !== '' );
 	}
 }
