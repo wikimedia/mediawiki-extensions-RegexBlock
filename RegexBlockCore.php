@@ -158,38 +158,6 @@ class RegexBlock {
 		return $result;
 	}
 
-	public static function buildExpression( $lines, $exact = 0, $batchSize = 4096 ) {
-		/* Make regex */
-		$regexes = array();
-		$regexStart = ( $exact ) ? '/^(' : '/(';
-		$regexEnd = '';
-		if ( !empty( $exact ) ) {
-			$regexEnd = ')$/';
-		} elseif ( $batchSize > 0 ) {
-			$regexEnd = ')/Si';
-		} else {
-			$regexEnd = ')/i';
-		}
-		$build = false;
-		foreach ( $lines as $line ) {
-			if ( $build == '' ) {
-				$build = $line;
-			} elseif ( strlen( $build ) + strlen( $line ) > $batchSize ) {
-				$regexes[] = /*$regexStart . */str_replace( '/', '\/', preg_replace( '|\\\*/|', '/', $build ) ) /*. $regexEnd*/;
-				$build = $line;
-			} else {
-				$build .= '|';
-				$build .= $line;
-			}
-		}
-
-		if ( $build !== false ) {
-			$regexes[] = /*$regexStart . */str_replace( '/', '\/', preg_replace( '|\\\*/|', '/', $build ) ) /*. $regexEnd*/;
-		}
-
-		return $regexes;
-	}
-
 	public static function isCorrectCacheValue( $cached ) {
 		$result = false;
 		if ( empty( $cached ) ) {
