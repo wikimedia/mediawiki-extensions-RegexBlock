@@ -638,7 +638,7 @@ class RegexBlock {
 				SpecialPage::getTitleFor( 'RegexBlock' ),
 				wfMessage( 'regexblock-link' )->escaped(),
 				array(),
-				array( 'ip' => $nt->getText() )
+				array( 'wpTarget' => $nt->getText() )
 			);
 		}
 		return true;
