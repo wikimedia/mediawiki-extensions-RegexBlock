@@ -196,7 +196,7 @@ class RegexBlockForm extends FormSpecialPage {
 			foreach ( $blocker_list as $id => $row ) {
 				$loop++;
 				$color_expire = '%s';
-				if ( $row['expiry'] == 'infinite' ) {
+				if ( $row['expiry'] == 'infinite' || $row['expiry'] == 'infinity' ) {
 					$row['expiry'] = $this->msg( 'regexblock-view-block-infinite' )->text();
 				} else {
 					if ( wfTimestampNow() > $row['expiry'] ) {
