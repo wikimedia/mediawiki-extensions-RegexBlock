@@ -12,7 +12,6 @@
 	"regexblock-block-success": "Block succedeed",
 	"regexblock-currently-blocked": "Currently blocked addresses:",
 	"regexblock-desc": "Extension used for blocking users names and IP addresses with regular expressions. Contains both the blocking mechanism and a [[Special:RegexBlock|special page]] to add/manage blocks",
-	"regexblock-expire-duration": "1 hour,2 hours,4 hours,6 hours,1 day,3 days,1 week,2 weeks,1 month,3 months,6 months,1 year,infinite",
 	"regexblock-page-title": "Regular expression name block",
 	"regexblockstats": "Regex block statistics",
 	"regexblock-help": "Use the form below to block write access from a specific IP address or username.\nThis should be done only to prevent vandalism, and in accordance with policy.\n''This page will allow you to block even non-existing users, and will also block users with names similar to given, i.e. \"Test\" will be blocked along with \"Test 2\" etc.\nYou can also block full IP addresses, meaning that no one logging in from them will be able to edit pages.\nNote: partial IP addresses will be treated as usernames in determining blocking.\nIf no reason is specified, a default generic reason will be used.''",

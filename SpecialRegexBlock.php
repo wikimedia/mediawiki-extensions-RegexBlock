@@ -193,16 +193,18 @@ class RegexBlockForm extends FormSpecialPage {
 			$out->addHTML( '<ul id="regexblock_blocks">' );
 			$loop = 0;
 			$comma = ' <b>&#183;</b> '; // the spaces here are intentional
+			$dbr = wfGetDB( DB_REPLICA );
 			foreach ( $blocker_list as $id => $row ) {
 				$loop++;
 				$color_expire = '%s';
-				if ( $row['expiry'] == 'infinite' || $row['expiry'] == 'infinity' ) {
-					$row['expiry'] = $this->msg( 'regexblock-view-block-infinite' )->text();
+				$expiry = $dbr->decodeExpiry( $row['expiry'] );
+				if ( $expiry == 'infinity' ) {
+					$expiry = $this->msg( 'regexblock-view-block-infinite' )->text();
 				} else {
-					if ( wfTimestampNow() > $row['expiry'] ) {
+					if ( wfTimestampNow() > $expiry ) {
 						$color_expire = '<span class="regexblock-expired">%s</span>';
 					}
-					$row['expiry'] = sprintf( $color_expire, $lang->timeanddate( wfTimestamp( TS_MW, $row['expiry'] ), true ) );
+					$expiry = sprintf( $color_expire, $lang->timeanddate( wfTimestamp( TS_MW, $expiry ), true ) );
 				}
 
 				$exact_match = ( ( $row['exact_match'] ) ? $this->msg( 'regexblock-view-match' )->text() : $this->msg( 'regexblock-view-regex' )->text() );
@@ -231,7 +233,7 @@ class RegexBlockForm extends FormSpecialPage {
 					<code class="regexblock-target">' . $row['blckby_name'] . '</code><b>' . $comma . $exact_match . $space . $create_block . '</b>' . $comma . '
 					(' . $this->msg( 'regexblock-view-block-by' )->text() . ' <b>' . $row['blocker'] . '</b>, ' . $reason . ') ' .
 					 $this->msg( 'regexblock-view-time', $row['datim'], $row['date'], $row['time'] )->text() . $comma .
-					'(' . $unblock_link . ') ' . $comma . $row['expiry'] . $comma . ' (' . $stats_link . ')
+					'(' . $unblock_link . ') ' . $comma . $expiry . $comma . ' (' . $stats_link . ')
 					</li>'
 				);
 			}

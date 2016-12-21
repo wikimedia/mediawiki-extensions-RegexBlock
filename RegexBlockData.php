@@ -127,7 +127,7 @@ class RegexBlockData {
 				'time' => $time,
 				'ublock_ip'	=> $ublock_ip,
 				'ublock_blocker' => $ublock_blocker,
-				'expiry' => $row->blckby_expire,
+				'expiry' => $dbr->decodeExpiry( $row->blckby_expire ),
 				'blckid' => $row->blckby_id
 			);
 		}
@@ -226,10 +226,10 @@ class RegexBlockData {
 	/**
 	 * Insert a block record to the blockedby database table
 	 *
-	 * @param $address
+	 * @param string $address User name, IP address or regular expression being blocked
 	 * @param $expiry Expiry time of the block
-	 * @param int $exact
-	 * @param int $creation
+	 * @param int $exact Is this an exact block?
+	 * @param int $creation Was account creation blocked?
 	 * @param string $reason Given block reason, which will be displayed to the regexblocked user
 	 */
 	public static function blockUser( $address, $expiry, $exact, $creation, $reason ) {
@@ -247,7 +247,7 @@ class RegexBlockData {
 				'blckby_name' => $address,
 				'blckby_blocker' => $name,
 				'blckby_timestamp' => wfTimestampNow(),
-				'blckby_expire' => $expiry,
+				'blckby_expire' => $dbw->encodeExpiry( $expiry ),
 				'blckby_exact' => intval( $exact ),
 				'blckby_create' => intval( $creation ),
 				'blckby_reason' => $reason
@@ -255,22 +255,16 @@ class RegexBlockData {
 			__METHOD__
 		);
 
+		// Change user login token to force them to be logged out.
+		if ( $exact ) {
+			$targetUser = User::newFromName( $address );
+			if ( $targetUser instanceof User ) {
+				$targetUser->setToken();
+				$targetUser->saveSettings();
+			}
+		}
+
 		return true;
-	}
-
-	/**
-	 * Gets and returns the expiry time values
-	 *
-	 * @return array Array of block expiry times
-	 */
-	public static function getExpireValues() {
-		$expiry_values = explode( ',', wfMessage( 'regexblock-expire-duration' )->text() );
-		$expiry_text = array(
-			'1 hour', '2 hours', '4 hours', '6 hours', '1 day', '3 days', '1 week',
-			'2 weeks', '1 month', '3 months', '6 months', '1 year', 'infinite'
-		);
-
-		return array_combine( $expiry_text, $expiry_values );
 	}
 
 	/**

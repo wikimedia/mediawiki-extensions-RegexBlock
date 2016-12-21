@@ -45,7 +45,7 @@ class RegexBlock {
 		}
 
 		$blockers_array = self::getBlockers();
-		$block_data = self::blockedData( $current_user, $blockers_array );
+		$block_data = self::getBlockData( $current_user, $blockers_array );
 
 		/* check user for each blocker */
 		foreach ( $blockers_array as $blocker ) {
@@ -123,7 +123,8 @@ class RegexBlock {
 	 *
 	 * @param User $user The user (object) who we're checking
 	 * @param string $ip The user's IP address
-	 * @return array An array of arrays to run a regex match against
+	 * @return array|bool An array of arrays to run a regex match against or
+	 *                    bool false if target isn't blocked
 	 */
 	public static function isBlockedCheck( $user, $ip ) {
 		global $wgMemc;
@@ -158,25 +159,6 @@ class RegexBlock {
 		return $result;
 	}
 
-	public static function isCorrectCacheValue( $cached ) {
-		$result = false;
-		if ( empty( $cached ) ) {
-			$result = true;
-		} else {
-			$loop = 0;
-			$names = array( 'ips' => '', 'exact' => '', 'regex' => '' );
-			foreach ( $names as $key => $value ) {
-				if ( array_key_exists( $key, $cached ) && !empty( $cached[$key] ) ) {
-					$loop++;
-				}
-			}
-			if ( $loop == 0 ) {
-				$result = true;
-			}
-		}
-		return $result;
-	}
-
 	/**
 	 * Fetch usernames or IP addresses to run a match against
 	 *
@@ -184,7 +166,7 @@ class RegexBlock {
 	 * @param array $blockers List of admins who blocked
 	 * @return array An array of arrays to run a regex match against
 	 */
-	public static function blockedData( $user, $blockers, $master = false ) {
+	public static function getBlockData( $user, $blockers, $master = false ) {
 		global $wgMemc;
 
 		$blockData = array();
@@ -348,7 +330,7 @@ class RegexBlock {
 	/**
 	 * Check if the USER block expired or not (AFTER we found an existing block)
 	 *
-	 * @param Block $blocked Block object
+	 * @param ResultWrapper $blocked Array of information about the block
 	 * @return array|bool
 	 */
 	public static function expireNameCheck( $blocked ) {
@@ -356,8 +338,8 @@ class RegexBlock {
 
 		if ( is_object( $blocked ) ) {
 			if (
-				( wfTimestampNow () <= $blocked->blckby_expire ) ||
-				( $blocked->blckby_expire == 'infinite' )
+				( wfTimestampNow() <= $blocked->blckby_expire ) ||
+				( $blocked->blckby_expire == 'infinity' )
 			)
 			{
 				$ret = array(
@@ -583,7 +565,7 @@ class RegexBlock {
 				 * Wikia had patched core to add a setId() method to the Block class to hack around this.
 				$user->getBlock()->mId = $valid['blckid'];
 				*/
-				$user->getBlock()->mExpiry = $valid['expire'];
+				$user->getBlock()->mExpiry = wfGetDB( DB_REPLICA )->decodeExpiry( $valid['expire'] );
 				$user->getBlock()->mTimestamp = $valid['timestamp'];
 				$user->getBlock()->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
 			}
@@ -619,7 +601,7 @@ class RegexBlock {
 		/* blocker's matches */
 		$key = self::memcKey( 'regex_blockers', 'All-In-One' );
 		$wgMemc->delete( $key );
-		self::blockedData( $wgUser, $blockers_array, $readMaster );
+		self::getBlockData( $wgUser, $blockers_array, $readMaster );
 	}
 
 	/**
