@@ -429,7 +429,7 @@ class RegexBlock {
 	 * @param User $user User who is being blocked
 	 * @param string $user_ip IP address of the user who is being blocked
 	 */
-	function blocked( $blocker, $blocker_block_data, $user, $user_ip ) {
+	public static function blocked( $blocker, $blocker_block_data, $user, $user_ip ) {
 		if ( $blocker_block_data == null ) {
 			// no data for given blocker, aborting...
 			return false;
