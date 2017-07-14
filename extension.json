@@ -1,6 +1,6 @@
 {
 	"name": "RegexBlock",
-	"version": "1.4",
+	"version": "1.4.1",
 	"author": [
 		"Bartek Łapiński",
 		"Tomasz Klim",
@@ -12,7 +12,7 @@
 	"license-name": "GPL-2.0+",
 	"url": "https://www.mediawiki.org/wiki/Extension:RegexBlock",
 	"descriptionmsg": "regexblock-desc",
-	"type": "specialpage",
+	"type": "antispam",
 	"config": {
 		"ContactLink": "Special:Contact",
 		"RegexBlockDatabase": false
