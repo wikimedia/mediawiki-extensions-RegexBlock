@@ -318,9 +318,14 @@ class RegexBlockForm extends FormSpecialPage {
 			$stats_list = $regexData->getStatsData( $blckid, $this->mLimit, $this->mOffset );
 		}
 
-		$blocker_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_blocker, array(), array( 'filter' => $blockInfo->blckby_blocker ) );
-		$blockername_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_name, array(), array( 'rfilter' => $blockInfo->blckby_name ) );
-		if ( $blockInfo->blckby_reason ) {
+		$blocker_link = $blockername_link = '';
+		if ( isset( $blockInfo->blckby_blocker ) && $blockInfo->blckby_blocker ) {
+			$blocker_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_blocker, array(), array( 'filter' => $blockInfo->blckby_blocker ) );
+		}
+		if ( isset( $blockInfo->blckby_name ) && $blockInfo->blckby_name ) {
+			$blockername_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_name, array(), array( 'rfilter' => $blockInfo->blckby_name ) );
+		}
+		if ( isset( $blockInfo->blckby_reason ) && $blockInfo->blckby_reason ) {
 			$blockReason = $this->msg( 'regexblock-form-reason' ) . $blockInfo->blckby_reason;
 		} else {
 			$blockReason = $this->msg( 'regexblock-view-reason-default' )->text();
