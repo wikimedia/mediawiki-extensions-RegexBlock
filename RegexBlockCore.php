@@ -59,7 +59,7 @@ class RegexBlock {
 	/**
 	 * Get a database object
 	 *
-	 * @param int Either DB_SLAVE (for reads) or DB_MASTER (for writes)
+	 * @param int Either DB_REPLICA (for reads) or DB_MASTER (for writes)
 	 * @return Database
 	 */
 	public static function getDB( $db ) {
@@ -97,7 +97,7 @@ class RegexBlock {
 
 		if ( !is_array( $cached ) ) {
 			/* get from database */
-			$dbr = self::getDB( $master ? DB_MASTER : DB_SLAVE );
+			$dbr = self::getDB( $master ? DB_MASTER : DB_REPLICA );
 			$res = $dbr->select(
 				'blockedby',
 				array( 'blckby_blocker' ),
@@ -184,7 +184,7 @@ class RegexBlock {
 
 		if ( empty( $cached ) ) {
 			/* Fetch data from DB, concatenate into one string, then fill cache */
-			$dbr = self::getDB( $master ? DB_MASTER : DB_SLAVE );
+			$dbr = self::getDB( $master ? DB_MASTER : DB_REPLICA );
 
 			foreach ( $blockers as $blocker ) {
 				$res = $dbr->select(

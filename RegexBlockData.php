@@ -144,7 +144,7 @@ class RegexBlockData {
 	public function fetchNbrStatResults( $id ) {
 		$nbrStats = 0;
 
-		$dbr = RegexBlock::getDB( DB_SLAVE );
+		$dbr = RegexBlock::getDB( DB_REPLICA );
 		$res = $dbr->select(
 			'stats_blockedby',
 			array( 'COUNT(*) AS cnt' ),
@@ -172,7 +172,7 @@ class RegexBlockData {
 		$stats = array();
 
 		/* from database */
-		$dbr = RegexBlock::getDB( DB_SLAVE );
+		$dbr = RegexBlock::getDB( DB_REPLICA );
 		$res = $dbr->select(
 			'stats_blockedby',
 			array(
