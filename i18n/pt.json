@@ -4,7 +4,8 @@
 			"Hamilton Abreu",
 			"Lijealso",
 			"Malafaya",
-			"Waldir"
+			"Waldir",
+			"Vitorvicentevalente"
 		]
 	},
 	"regexblock": "Bloqueio de expressões regulares",
@@ -13,7 +14,6 @@
 	"regexblock-block-success": "Bloqueio com sucesso",
 	"regexblock-currently-blocked": "Endereços actualmente bloqueados:",
 	"regexblock-desc": "Extensão usada para bloquear nomes de utilizador ou endereços IP através de expressões regulares. Contém o mecanismo e uma [[Special:Regexblock|página especial]] para adicionar/gerir os bloqueios",
-	"regexblock-expire-duration": "1 hora,2 horas,4 horas,6 horas,1 dia,3 dias,1 semana,2 semanas,1 mês,3 meses,6 meses,1 ano,infinito",
 	"regexblock-page-title": "Bloqueio de nomes de expressões regulares",
 	"regexblockstats": "Estatísticas de bloqueio de expressões regulares",
 	"regexblock-help": "Use o formulário abaixo para bloquear o acesso de escrita a um endereço IP ou nome de utilizador específicos.\nIsto deverá ser feito apenas para prevenir vandalismo, e de acordo com as normas.\n''Esta página permitir-lhe-á bloquear até mesmo utilizadores não existentes, e também bloqueará utilizadores com nomes semelhantes ao dado, isto é, \"Teste\" será bloqueado juntamente com \"Teste 2\", etc.\nTambém pode bloquear endereços IP completos, significando isto que ninguém proveniente deles poderá editar páginas.\nNota: endereços IP parciais serão tratados como nomes de utilizador na determinação do bloqueio.\nSe nenhum motivo for especificado, será usado um motivo genérico predefinido.''",
@@ -23,7 +23,6 @@
 	"regexblock-reason-regex": "Este nome de utilizador está impedido de editar devido a vandalismo ou outra perturbação por um utilizador com um nome semelhante.\nPor favor, crie um nome de utilizador alternativo ou [[$1|avise-nos]] sobre o problema",
 	"regexblock-form-username": "Endereço IP ou nome de utilizador:",
 	"regexblock-form-reason": "Motivo:",
-	"regexblock-form-expiry": "Validade:",
 	"regexblock-form-match": "Correspondência exata",
 	"regexblock-form-account-block": "Bloquear criação de novas contas",
 	"regexblock-form-submit": "Bloquear este Utilizador",

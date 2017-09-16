@@ -13,7 +13,6 @@
 	"regexblock-page-title-1": "Блокирај адресу користећи регуларне изразе",
 	"regexblock-form-username": "ИП адреса или корисничко име:",
 	"regexblock-form-reason": "Разлог:",
-	"regexblock-form-expiry": "Истиче:",
 	"regexblock-form-match": "Тачно поклапање",
 	"regexblock-form-submit": "Блокирај овог корисника",
 	"regexblock-view-all": "Све",

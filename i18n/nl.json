@@ -4,7 +4,8 @@
 			"Meno25",
 			"SPQRobin",
 			"Siebrand",
-			"Tvdm"
+			"Tvdm",
+			"Mainframe98"
 		]
 	},
 	"regexblock": "RegexBlokkeren",
@@ -13,7 +14,6 @@
 	"regexblock-block-success": "Het blokkeren is gelukt",
 	"regexblock-currently-blocked": "Op dit moment geblokkeerde IP-adressen:",
 	"regexblock-desc": "Uitbreiding die wordt gebruikt voor het blokkeren van gebruikers en IP-adress met een reguliere expressie. Bevat zowel een blokkademechanisme als een [[Special:Regexblock|speciale pagina]] voor het toevoegen en beheren van blokkades",
-	"regexblock-expire-duration": "1 uur,2 uur,4 uur,6 uur,1 dag,3 dagen,1 week,2 weken,1 maand,3 maanden,6 maanden,1 jaar,onbepaald",
 	"regexblock-page-title": "Namen blokkeren met reguliere uitdrukkingen",
 	"regexblockstats": "Statistieken van regex-blokkeren",
 	"regexblock-help": "Gebruik het onderstaande formulier om schrijftoegang voor een IP-adres of gebruiker te ontzeggen. Dit hoort eigenlijk alleen te gebeuren om vandalisme te voorkomen, en dient in overeenstemming te zijn met het beleid. ''U kunt zelfs gebruikers die nog niet bestaan blokkeren. Daarnaast worden ook gebruikers met gelijkende namen geblokkeerd. \"Test\" wordt samen met \"Test 2\", enzovoort geblokkeerd. U kunt ook een IP-adres blokkeren, wat betekent dat niemand van dat IP-adres pagina's kan bewerken. Opmerking: IP-adressen worden behandeld als gebruikersnamen bij het bepalen van blokkades. Als er geen reden is opgegeven, dan wordt er een standaard reden gebruikt.''",
@@ -23,7 +23,6 @@
 	"regexblock-reason-regex": "Deze gebruiker mag niet bewerken wegens vandalisme of verstoring door een gebruiker met een gelijkluidende naam.\nKies een andere gebruikersnaam of [[$1|neem contact met ons op]] over het probleem.",
 	"regexblock-form-username": "IP-adres of gebruikersnaam:",
 	"regexblock-form-reason": "Reden:",
-	"regexblock-form-expiry": "Vervalt:",
 	"regexblock-form-match": "Voldoet precies",
 	"regexblock-form-account-block": "Het aanmaken van nieuwe gebruikers blokkeren",
 	"regexblock-form-submit": "Deze gebruiker blokkeren",
@@ -39,6 +38,7 @@
 	"regexblock-unblock-error": "Een fout bij het deblokkeren van $1. Waarschijnlijk bestaat er geen gebruiker met die naam.",
 	"regexblock-regex-filter": "of reguliere expressiewaarde:",
 	"regexblock-view-blocked": "Blokkades weergeven door:",
+	"regexblock-view-block-id": "Toon blokkade ID:",
 	"regexblock-view-all": "Alles",
 	"regexblock-view-go": "OK",
 	"regexblock-view-match": "(voldoet precies)",
@@ -52,5 +52,7 @@
 	"regexblock-view-stats": "statistieken",
 	"regexblock-view-empty": "De lijst van geblokkeerde namen en IP-adressen is leeg.",
 	"regexblock-view-time": "op $1",
-	"right-regexblock": "Rechten om te bewerken intrekken voor gebruikers in alle wiki's van een wikifarm"
+	"action-regexblock": "gebruikers te blokkeren op alle wiki's op de wikifamilie",
+	"right-regexblock": "Rechten om te bewerken intrekken voor gebruikers in alle wiki's van een wikifarm",
+	"right-regexblock-exempt": "Uitgezonderd van globale blokkades"
 }
