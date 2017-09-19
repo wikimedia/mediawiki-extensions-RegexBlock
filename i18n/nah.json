@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fluence"
+			"Fluence",
+			"Akapochtli"
 		]
 	},
 	"regexblock-form-username": "IP nozo tlatequitiltilīltōcāitl:",
@@ -9,7 +10,7 @@
 	"regexblock-form-account-block": "Ticquīxtīz yancuīc cuentah ītlachīhualiz",
 	"regexblock-form-submit": "Ticquīxtīz inīn tlatequitiltilīlli",
 	"regexblock-view-all": "Mochīntīn",
-	"regexblock-view-go": "Yāuh",
+	"regexblock-view-go": "Yauh",
 	"regexblock-view-reason": "īxtlamatiliztli: $1",
 	"regexblock-view-stats": "tlapōhualli",
 	"regexblock-view-time": "īpan $1"

@@ -4,7 +4,8 @@
 			"Crochet.david",
 			"IAlex",
 			"Urhixidur",
-			"Verdy p"
+			"Verdy p",
+			"Gomoko"
 		]
 	},
 	"regexblock": "Expressions rationnelles pour bloquer un utilisateur ou une IP",
@@ -13,7 +14,6 @@
 	"regexblock-block-success": "Le blocage a réussi",
 	"regexblock-currently-blocked": "Adresses actuellement bloquées :",
 	"regexblock-desc": "Extension utilisée pour bloquer des utilisateurs ou des adresses IP avec des expressions rationnelles. Contient à la fois un mécanisme de blocage ainsi qu’[[Special:Regexblock|une page]] pouvant ajouter et gérer les blocages.",
-	"regexblock-expire-duration": "1 heure,2 heures,4 heures,6 hours,1 jour,3 jours,1 semaine,2 semaines,1 mois,3 mois,6 mois,1 and,infini",
 	"regexblock-page-title": "Blocage d’un nom par une expression rationnelle",
 	"regexblockstats": "Statistiques sur les blocages par expressions rationnelles",
 	"regexblock-help": "Utilisez le formulaire ci-dessous pour bloquer l’accès en écriture d’une adresse IP ou d’un nom d’utilisateur.\nCeci doit être fait uniquement pour éviter tout vandalisme et conformément aux règles prescrites sur le projet.\n''Cette page vous permet même de bloquer des utilisateurs non enregistrés et ceux présentant des noms similaires au nom donné : par exemple, « Test » sera bloqué en même temps que « Test 2 » etc. Vous pouvez aussi bloquer des adresses IP complètes, ce qui signifie que personne connecté depuis celles-ci ne pourra modifier des pages. Note : des adresses IP partielles seront considérées comme des noms d’utilisateur lors du blocage. Si aucun motif n’est indiqué en commentaire, un motif par défaut sera indiqué.''",
@@ -23,7 +23,6 @@
 	"regexblock-reason-regex": "Cet utilisateur est écarté de toute modification pour cause de vandalisme ou autres faits analogues commis par un utilisateur ayant un nom similaire. Veuillez créer un autre compte ou [[$1|contactez-nous]] pour signaler le problème.",
 	"regexblock-form-username": "Adresse IP ou Utilisateur :",
 	"regexblock-form-reason": "Motif :",
-	"regexblock-form-expiry": "Expiration :",
 	"regexblock-form-match": "Terme exact",
 	"regexblock-form-account-block": "Interdire la création d’un nouveau compte.",
 	"regexblock-form-submit": "Bloquer cet utilisateur",
@@ -39,6 +38,7 @@
 	"regexblock-unblock-error": "Erreur de déblocage de $1. L’utilisateur n’existe probablement pas.",
 	"regexblock-regex-filter": "  ou une expression rationnelle :",
 	"regexblock-view-blocked": "Voir les blocages par :",
+	"regexblock-view-block-id": "Afficher l’ID de blocage :",
 	"regexblock-view-all": "Tous",
 	"regexblock-view-go": "Lancer",
 	"regexblock-view-match": "(terme exact)",
@@ -52,5 +52,6 @@
 	"regexblock-view-stats": "statistiques",
 	"regexblock-view-empty": "La liste des utilisateurs et des adresses IP bloqués est vide.",
 	"regexblock-view-time": "le $1",
+	"action-regexblock": "empêcher les utilisateurs de faire des modifications sur tous les wikis de la ferme",
 	"right-regexblock": "Bloquer en écriture les utilisateurs sur tout les wikis de la ferme wiki"
 }

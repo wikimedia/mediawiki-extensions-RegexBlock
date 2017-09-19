@@ -2,12 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Bellayet",
-			"Wikitanvir"
+			"Wikitanvir",
+			"Aftabuzzaman"
 		]
 	},
+	"regexblock": "রেজেক্স বাধা",
+	"regexblock-already-blocked": "$1 ইতিমধ্যে বাধাপ্রাপ্ত।",
+	"regexblockstats": "রেজেক্স বাধার পরিসংখ্যান",
 	"regexblock-form-username": "আইপি ঠিকানা বা ব্যবহারকারীর নাম:",
 	"regexblock-form-reason": "কারণ:",
-	"regexblock-form-expiry": "যখন মেয়াদোত্তীর্ণ হবে:",
+	"regexblock-form-match": "একদম মিল",
 	"regexblock-form-account-block": "নতুন অ্যাকাউন্ট তৈরিতে বাধা দাও",
 	"regexblock-form-submit": "এই ব্যবহারকারীকে বাধা দাও",
 	"regexblock-form-submit-empty": "বাধা প্রদানের জন্য একটি ব্যবহারকারী নাম বা আইপি ঠিকানা দিন",
@@ -15,8 +19,20 @@
 	"regexblock-form-submit-expiry": "অনুগ্রহপূর্বক মেয়াদ উত্তীর্ণের সময়সীমা উল্লেখ করুন।",
 	"regexblock-link": "রেগুলার এক্সপ্রেশনসহ বাধাদান",
 	"regexblock-nodata-found": "কোনো ডেটা খুঁজে পাওয়া যায়নি",
+	"regexblock-stats-title": "রেজেক্স বাধার পরিসংখ্যান",
 	"regexblock-unblock-success": "সফলভাবে বাধা তুলে নেওয়া হয়েছে",
+	"regexblock-regex-filter": "বা রেজেক্স মান:",
 	"regexblock-view-all": "সমস্ত",
 	"regexblock-view-go": "যাও",
-	"regexblock-view-stats": "পরিসংখ্যান"
+	"regexblock-view-match": "(একদম মিল)",
+	"regexblock-view-regex": "(রেজেক্স মিল)",
+	"regexblock-view-reason": "কারণ: $1",
+	"regexblock-view-reason-default": "সাধারণ কারণ",
+	"regexblock-view-block-infinite": "স্থায়ী বাধা",
+	"regexblock-view-block-by": "অবরুদ্ধ করেছেন:",
+	"regexblock-view-block-unblock": "বাধা তুলুন",
+	"regexblock-view-stats": "পরিসংখ্যান",
+	"regexblock-view-time": "$1-এ",
+	"action-regexblock": "উইকি ফার্মের সকল উইকিতে ব্যবহারকারীদের সম্পাদনা থেকে অবরুদ্ধ করার",
+	"right-regexblock": "উইকি ফার্মের সকল উইকিতে ব্যবহারকারীদের সম্পাদনা থেকে অবরুদ্ধ করা"
 }
