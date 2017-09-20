@@ -53,5 +53,6 @@
 	"regexblock-view-empty": "La liste des utilisateurs et des adresses IP bloqués est vide.",
 	"regexblock-view-time": "le $1",
 	"action-regexblock": "empêcher les utilisateurs de faire des modifications sur tous les wikis de la ferme",
-	"right-regexblock": "Bloquer en écriture les utilisateurs sur tout les wikis de la ferme wiki"
+	"right-regexblock": "Bloquer en écriture les utilisateurs sur tout les wikis de la ferme wiki",
+	"right-regexblock-exempt": "Exempter des blocages globaux"
 }
