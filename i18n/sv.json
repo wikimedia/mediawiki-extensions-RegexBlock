@@ -4,7 +4,9 @@
 			"Fluff",
 			"M.M.S.",
 			"Najami",
-			"Sertion"
+			"Sertion",
+			"Bengtsson96",
+			"WikiPhoenix"
 		]
 	},
 	"regexblock": "Regex-blockering",
@@ -19,7 +21,7 @@
 	"regexblock-page-title-1": "Blockera adress med hjälp av reguljära uttryck",
 	"regexblock-reason-ip": "Den här IP-adressen är blockerad från att redigera på grund av vandalism eller annan förstörelse av dig eller någon annan som använder samma IP-adress.\nOm du anser att detta är fel, var god [[$1|kontakta oss]]",
 	"regexblock-reason-name": "Det här användarnamnet är blockerat från att redigera på grund av vandalism eller annan förstörelse.\nOm du anser att detta är fel, var god [[$1|kontakta oss]]",
-	"regexblock-reason-regex": "Den här IP-adressen är blockerad från att redigera på grund av vandalism eller annan förstörelse av en användare med liknande namn.\nVar god skapa ett annat användarnamn eller [[$1|kontakta oss]] om problemet.",
+	"regexblock-reason-regex": "Den här användaren är blockerad från att redigera på grund av vandalism eller annan förstörelse av en användare med liknande namn.\nSkapa gärna ett annat användarnamn eller [[$1|kontakta oss]] angående problemet.",
 	"regexblock-form-username": "IP adress eller användarnamn:",
 	"regexblock-form-reason": "Anledning:",
 	"regexblock-form-match": "Exakt träff",
@@ -37,6 +39,7 @@
 	"regexblock-unblock-error": "Fel under avblockering av $1.\nTroligen så finns det ingen användare med det namnet.",
 	"regexblock-regex-filter": " eller det reguljära uttrycket:",
 	"regexblock-view-blocked": "Visa de blockerade efter:",
+	"regexblock-view-block-id": "Visa blockerings-ID:",
 	"regexblock-view-all": "Alla",
 	"regexblock-view-go": "Gå",
 	"regexblock-view-match": "(exakt träff)",
@@ -50,5 +53,7 @@
 	"regexblock-view-stats": "statistik",
 	"regexblock-view-empty": "Listan över blockerade namn och adresser är tom.",
 	"regexblock-view-time": "på $1",
-	"right-regexblock": "Blockerar användare från att redigera på alla wikis i wikisamlingen"
+	"action-regexblock": "blockera användare från att redigera på alla wikier i wikifarmen",
+	"right-regexblock": "Blockerar användare från att redigera på alla wikis i wikisamlingen",
+	"right-regexblock-exempt": "Undanta från globala blockeringar"
 }
