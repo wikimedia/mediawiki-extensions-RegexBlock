@@ -1,6 +1,6 @@
 {
 	"name": "RegexBlock",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"author": [
 		"Bartek Łapiński",
 		"Tomasz Klim",
@@ -31,18 +31,13 @@
 	"AutoloadClasses": {
 		"RegexBlock": "RegexBlockCore.php",
 		"RegexBlockData": "RegexBlockData.php",
-		"RegexBlockForm": "SpecialRegexBlock.php"
+		"RegexBlockForm": "SpecialRegexBlock.php",
+		"RegexBlockHooks": "RegexBlockHooks.php"
 	},
 	"Hooks": {
-		"ContributionsToolLinks": [
-			"RegexBlock::loadContribsLink"
-		],
-		"GetBlockedStatus": [
-			"RegexBlock::check"
-		],
-		"LoadExtensionSchemaUpdates": [
-			"RegexBlock::onLoadExtensionSchemaUpdates"
-		]
+		"ContributionsToolLinks": "RegexBlockHooks::onContributionsToolLinks",
+		"GetBlockedStatus": "RegexBlockHooks::onGetBlockedStatus",
+		"LoadExtensionSchemaUpdates": "RegexBlockHooks::onLoadExtensionSchemaUpdates"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
