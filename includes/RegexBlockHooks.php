@@ -69,7 +69,7 @@ class RegexBlockHooks {
 	 * @return bool
 	 */
 	public static function onLoadExtensionSchemaUpdates( $updater ) {
-		$file = __DIR__ . '/regexblock_schema.sql';
+		$file = __DIR__ . '/../sql/regexblock_schema.sql';
 		$updater->addExtensionUpdate( array( 'addTable', 'blockedby', $file, true ) );
 		$updater->addExtensionUpdate( array( 'addTable', 'stats_blockedby', $file, true ) );
 		return true;
