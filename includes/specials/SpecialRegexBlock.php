@@ -11,7 +11,7 @@
  * @author Piotr Molski <moli@wikia-inc.com>
  * @author Adrian 'ADi' Wieczorek <adi(at)wikia-inc.com>
  * @author Alexandre Emsenhuber
- * @author Jack Phoenix <jack@countervandalism.net>
+ * @author Jack Phoenix
  * @copyright Copyright © 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  * @note This file heavily reuses GPL-licensed code from MediaWiki core special
