@@ -12,7 +12,6 @@
 	"regexblock-currently-blocked": "Adrese blocate în prezent:",
 	"regexblock-form-username": "Adresă IP sau nume de utilizator:",
 	"regexblock-form-reason": "Motiv:",
-	"regexblock-form-expiry": "Expirare:",
 	"regexblock-form-account-block": "Blochează crearea de conturi noi",
 	"regexblock-form-submit": "Blochează acest utilizator",
 	"regexblock-form-submit-regex": "Expresie regulată incorectă.",

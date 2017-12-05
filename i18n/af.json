@@ -7,10 +7,8 @@
 		]
 	},
 	"regexblock-already-blocked": "$1 is reeds geblok.",
-	"regexblock-expire-duration": "1 uur,2 uur,4 uur,6 uur,1 dag,3 dae,1 week,2 weke,1 maand,3 maande,6 maande,1 jaar,onbepaald",
 	"regexblock-form-username": "IP-adres of gebruikersnaam:",
 	"regexblock-form-reason": "Rede:",
-	"regexblock-form-expiry": "Verval:",
 	"regexblock-form-match": "Presiese resultaat",
 	"regexblock-form-submit": "Blokkeer die gebruiker",
 	"regexblock-nodata-found": "Geen data gevind nie",

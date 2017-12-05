@@ -7,7 +7,6 @@
 	},
 	"regexblock-form-username": "IP მისამართი ან მომხმარებლის სახელი:",
 	"regexblock-form-reason": "მიზეზი:",
-	"regexblock-form-expiry": "იწურება:",
 	"regexblock-form-submit": "ამ მომხმარებლის დაბლოკვა",
 	"regexblock-nodata-found": "მონაცემი ვერ მოიძებნა",
 	"regexblock-view-all": "ყველა",

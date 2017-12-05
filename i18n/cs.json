@@ -6,7 +6,6 @@
 	},
 	"regexblock-form-username": "IP adresa nebo uživatelské jméno:",
 	"regexblock-form-reason": "Důvod:",
-	"regexblock-form-expiry": "Čas vypršení:",
 	"regexblock-form-match": "Přesná shoda",
 	"regexblock-form-account-block": "Blokovat vytvoření nových účtů",
 	"regexblock-form-submit": "Zablokovat tohoto uživatele",

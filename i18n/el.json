@@ -15,7 +15,6 @@
 	"regexblockstats": "Τακτική έκφραση στατιστικών φραγής",
 	"regexblock-form-username": "Διεύθυνση IP ή όνομα χρήστη",
 	"regexblock-form-reason": "Λόγος:",
-	"regexblock-form-expiry": "Λήξη:",
 	"regexblock-form-match": "Ακριβής αντιστοιχία",
 	"regexblock-form-account-block": "Φραγή δημιουργίας νέων λογαριασμών",
 	"regexblock-form-submit": "Φραγή αυτού του χρήστη",

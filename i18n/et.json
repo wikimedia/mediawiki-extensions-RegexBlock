@@ -5,9 +5,7 @@
 			"Pikne"
 		]
 	},
-	"regexblock-expire-duration": "1 tund,2 tundi,4 tundi,6 tundi,1 päev,3 päeva,1 nädal,2 nädalat,1 kuu,3 kuud,6 kuud,1 aasta,igavene",
 	"regexblock-form-username": "IP-aadress või kasutajanimi:",
 	"regexblock-form-reason": "Põhjus:",
-	"regexblock-form-expiry": "Aegub:",
 	"regexblock-form-submit": "Blokeeri see kasutaja"
 }

@@ -13,7 +13,6 @@
 	"regexblock-currently-blocked": "អាសយដ្ឋានដែលត្រូវបានហាមឃាត់បច្ចុប្បន្ន៖",
 	"regexblock-form-username": "អាសយដ្ឋានIP ឬអត្តនាម៖",
 	"regexblock-form-reason": "មូលហេតុ៖",
-	"regexblock-form-expiry": "ផុតកំណត់:",
 	"regexblock-form-account-block": "រាំងខ្ទប់​ការបង្កើត​គណនី​ថ្មី",
 	"regexblock-form-submit": "ហាមឃាត់អ្នកប្រើប្រាស់នេះ",
 	"regexblock-form-submit-empty": "ផ្តល់អត្តនាមឬអាសយដ្ឋានIPដើម្បីហាមឃាត់។",

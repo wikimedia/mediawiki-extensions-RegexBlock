@@ -4,7 +4,8 @@
 			"Fryed-peach",
 			"Hosiryuhosi",
 			"Shirayuki",
-			"青子守歌"
+			"青子守歌",
+			"Rxy"
 		]
 	},
 	"regexblock": "正規表現ブロック",
@@ -13,7 +14,6 @@
 	"regexblock-block-success": "ブロックに成功しました",
 	"regexblock-currently-blocked": "現在ブロックされているアドレス:",
 	"regexblock-desc": "利用者名やIPアドレスを正規表現を使ってブロックするための拡張機能。ブロック機構とブロックを追加・管理するための[[Special:Regexblock|特別ページ]]の両方を含む",
-	"regexblock-expire-duration": "1時間,2時間,4時間,6時間,1日,3日,1週間,2週間,1か月,3か月,6か月,1年,無期限",
 	"regexblock-page-title": "正規表現による利用者名のブロック",
 	"regexblockstats": "正規表現ブロック統計",
 	"regexblock-help": "以下のフォームを使用して特定のIPアドレスまたは利用者名からの書き込みアクセスをブロックします。\nこれは荒らしを防ぐ目的のみに使用するべきであり、方針と合致しているべきです。\n''このページを使用するとまだ存在していない利用者さえブロックできます。\nまた、指定した名前に類似した利用者もブロックします。つまり、\"Test\" をブロックすると \"Test 2\" もブロックされます。\nさらに、完全なIPアドレスもブロックできます。つまり、そこからログインしているすべての人が編集できないようにできるということです。\n注：部分的なIPアドレスの場合は、ブロックの判定の際にそれを利用者名として処理します。\n理由を指定しなかった場合は、既定の一般的な理由を使用します。''",
@@ -23,7 +23,6 @@
 	"regexblock-reason-regex": "類似した名前の利用者による荒らしなどの破壊行為のため、この利用者名は編集が禁止されています。別の名前でアカウントを作成されるか、この問題について[[$1|我々に連絡]]してください",
 	"regexblock-form-username": "IPアドレスまたは利用者名:",
 	"regexblock-form-reason": "理由：",
-	"regexblock-form-expiry": "有効期限：",
 	"regexblock-form-match": "完全一致",
 	"regexblock-form-account-block": "新規アカウントの作成をブロックする",
 	"regexblock-form-submit": "この利用者をブロックする",

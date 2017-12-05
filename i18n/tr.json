@@ -13,7 +13,6 @@
 	"regexblockstats": "Regex blok istatistikleri",
 	"regexblock-form-username": "IP adresi veya kullanıcı adı:",
 	"regexblock-form-reason": "Neden:",
-	"regexblock-form-expiry": "Bitiş tarihi:",
 	"regexblock-form-match": "Tam eşleşme",
 	"regexblock-form-account-block": "Yeni hesap oluşturulmasını engelle",
 	"regexblock-form-submit": "Bu kullanıcıyı engelle",

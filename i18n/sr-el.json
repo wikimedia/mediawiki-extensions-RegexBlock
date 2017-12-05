@@ -12,7 +12,6 @@
 	"regexblock-page-title-1": "Blokiraj adresu koristeći regularne izraze",
 	"regexblock-form-username": "IP adresa ili korisničko ime:",
 	"regexblock-form-reason": "Razlog:",
-	"regexblock-form-expiry": "Ističe:",
 	"regexblock-form-match": "Tačno poklapanje",
 	"regexblock-form-submit": "Blokiraj ovog korisnika",
 	"regexblock-view-all": "Sve",

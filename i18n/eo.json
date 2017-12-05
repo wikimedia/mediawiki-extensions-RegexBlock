@@ -12,7 +12,6 @@
 	"regexblock-currently-blocked": "Nune forbaritaj adresoj:",
 	"regexblock-form-username": "IP Adreso aŭ salutnomo:",
 	"regexblock-form-reason": "Kialo:",
-	"regexblock-form-expiry": "Findato:",
 	"regexblock-form-match": "Preciza kongruo",
 	"regexblock-form-submit": "Bloki la uzanton",
 	"regexblock-form-submit-regex": "Malvalida regulara esprimo.",

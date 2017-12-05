@@ -10,7 +10,6 @@
 	"regexblock-currently-blocked": "ప్రస్తుతం నిరోధంలో ఉన్న చిరునామాలు:",
 	"regexblock-form-username": "IP చిరునామా లేదా వాడుకరి పేరు:",
 	"regexblock-form-reason": "కారణం:",
-	"regexblock-form-expiry": "కాలపరిమితి:",
 	"regexblock-form-account-block": "కొత్త ఖాతాలు సృష్టించడం నిరోధించు",
 	"regexblock-form-submit": "ఈ వాడుకరిని నిరోధించండి",
 	"regexblock-form-submit-empty": "నిరోధించాల్సిన వాడుకరి పేరు లేదా ఐపీ చిరునామా ఇవ్వండి.",
