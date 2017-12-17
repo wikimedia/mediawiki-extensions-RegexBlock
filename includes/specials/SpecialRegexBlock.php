@@ -676,7 +676,7 @@ class RegexBlockForm extends FormSpecialPage {
 				Block::TYPE_IP
 			];
 
-		} elseif ( IP::isValidBlock( $target ) ) {
+		} elseif ( IP::isValidRange( $target ) ) {
 			# Can't create a User from an IP range
 			return [ IP::sanitizeRange( $target ), Block::TYPE_RANGE ];
 		}
