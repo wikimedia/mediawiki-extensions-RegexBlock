@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"DCLXVI"
+			"DCLXVI",
+			"StanProg"
 		]
 	},
 	"regexblock-already-blocked": "$1 е вече блокиран.",
@@ -28,7 +29,7 @@
 	"regexblock-view-match": "(пълно съвпадение)",
 	"regexblock-view-reason": "причина: $1",
 	"regexblock-view-block-infinite": "перманентно блокиране",
-	"regexblock-view-block-by": "блокиран от",
+	"regexblock-view-block-by": "блокиран от:",
 	"regexblock-view-block-unblock": "отблокиране",
 	"regexblock-view-stats": "статистики",
 	"regexblock-view-empty": "Списъкът на блокирани имена и адреси е празен.",
