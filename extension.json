@@ -1,6 +1,6 @@
 {
 	"name": "RegexBlock",
-	"version": "1.4.4",
+	"version": "1.4.5",
 	"author": [
 		"Bartek Łapiński",
 		"Tomasz Klim",
@@ -13,6 +13,9 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:RegexBlock",
 	"descriptionmsg": "regexblock-desc",
 	"type": "antispam",
+	"requires": {
+		"MediaWiki": ">= 1.30.0"
+	},
 	"config": {
 		"ContactLink": "Special:Contact",
 		"RegexBlockDatabase": false
