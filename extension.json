@@ -48,8 +48,7 @@
 	},
 	"ResourceModules": {
 		"ext.regexBlock.styles": {
-			"styles": "resources/css/regexblock.css",
-			"position": "top"
+			"styles": "resources/css/regexblock.css"
 		}
 	},
 	"AvailableRights": [
