@@ -277,7 +277,7 @@ class RegexBlock {
 				if ( $ret !== false ) {
 					$ret['match'] = $single;
 					$ret['ip'] = $ips;
-					$wgMemc->set( $key, $blocked );
+					$wgMemc->set( $key, $blocked, 30 * 86400 );
 					return $ret;
 				} else {
 					/* clean up an obsolete block */
