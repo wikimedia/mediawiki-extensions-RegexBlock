@@ -4,7 +4,8 @@
 			"Ferrer",
 			"Innv",
 			"MaxSem",
-			"Александр Сигачёв"
+			"Александр Сигачёв",
+			"Mouse21"
 		]
 	},
 	"regexblock": "RegexBlock",
@@ -37,6 +38,7 @@
 	"regexblock-unblock-error": "Ошибка разблокировки $1.\nВозможно, такого участника не существует.",
 	"regexblock-regex-filter": "  или значение регулярного выражения:",
 	"regexblock-view-blocked": "Просмотреть заблокированных:",
+	"regexblock-view-block-id": "Просмотреть идентификатор блока:",
 	"regexblock-view-all": "Все",
 	"regexblock-view-go": "Выполнить",
 	"regexblock-view-match": "(точное соответствие)",
@@ -50,5 +52,7 @@
 	"regexblock-view-stats": "статистика",
 	"regexblock-view-empty": "Список заблокированных имён и адресов пуст.",
 	"regexblock-view-time": "$1",
-	"right-regexblock": "Запретить участникам редактировать во всех вики этой вики-фермы"
+	"action-regexblock": "блокировать пользователей от редактирования на всех вики-сайтах в ферме вики",
+	"right-regexblock": "Запретить участникам редактировать во всех вики этой вики-фермы",
+	"right-regexblock-exempt": "Освобожден от глобальных блоков"
 }
