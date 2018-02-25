@@ -8,7 +8,8 @@
 			"SPQRobin",
 			"Siebrand",
 			"The Evil IP address",
-			"Umherirrender"
+			"Umherirrender",
+			"Liuxinyu970226"
 		]
 	},
 	"regexblock": "{{name}}",
@@ -54,7 +55,7 @@
 	"regexblock-view-block-unblock": "Used as link text on Special:RegexBlock",
 	"regexblock-view-stats": "Used as link text on Special:RegexBlock",
 	"regexblock-view-empty": "Used when there are no data on Special:RegexBlock",
-	"regexblock-view-time": "* $1 is a date/time\n* $2 is a date (optional)\n* $3 is a time (optional)",
+	"regexblock-view-time": "* $1 is a date/time\n* $2 is a date (optional)\n* $3 is a time (optional)\n{{Identical|On}}",
 	"action-regexblock": "{{doc-action|regexblock}}",
 	"right-regexblock": "{{doc-right|regexblock}}",
 	"right-regexblock-exempt": "{{doc-right|regexblock-exempt}}"
