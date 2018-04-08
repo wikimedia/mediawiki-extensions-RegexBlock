@@ -4,7 +4,8 @@
 			"Derbeth",
 			"Maikking",
 			"McMonster",
-			"Sp5uhe"
+			"Sp5uhe",
+			"Railfail536"
 		]
 	},
 	"regexblock": "Blokada z użyciem wyrażenia regularnego",
@@ -37,6 +38,7 @@
 	"regexblock-unblock-error": "Błąd przy odblokowaniu $1.\nPrawdopodobnie brak takiego użytkownika.",
 	"regexblock-regex-filter": " lub wyrażenie regularne",
 	"regexblock-view-blocked": "Pokaż zablokowanych, posortowanych według",
+	"regexblock-view-block-id": "Zobacz ID blokady:",
 	"regexblock-view-all": "Wszystkie",
 	"regexblock-view-go": "Przejdź",
 	"regexblock-view-match": "(dokładnie)",
@@ -50,5 +52,7 @@
 	"regexblock-view-stats": "statystyki",
 	"regexblock-view-empty": "Lista zablokowanych nazw i adresów jest pusta.",
 	"regexblock-view-time": "$1",
-	"right-regexblock": "Blokowanie użytkownikom możliwości edycji na wszystkich wiki w obrębie farmy"
+	"action-regexblock": "zablokuj użytkownikom możliwość edytowania na wszystkich wiki w obrębie farmy",
+	"right-regexblock": "Blokowanie użytkownikom możliwości edycji na wszystkich wiki w obrębie farmy",
+	"right-regexblock-exempt": "Obejście globalnych blokad"
 }
