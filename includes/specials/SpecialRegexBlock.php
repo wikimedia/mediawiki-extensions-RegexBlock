@@ -426,14 +426,13 @@ class RegexBlockForm extends FormSpecialPage {
 
 		$a = [
 			'Target' => [ // @note Formerly called wpRegexBlockedAddress
-				'type' => 'text',
+				'type' => 'user',
 				'label-message' => 'regexblock-form-username', // 'ipaddressorusername',
 				'id' => 'mw-bi-target',
 				'size' => '45',
 				'autofocus' => true,
 				'required' => true,
 				'validation-callback' => [ __CLASS__, 'validateTargetField' ],
-				'cssclass' => 'mw-autocomplete-user', // used by mediawiki.userSuggest
 			],
 			'Expiry' => [
 				'type' => !count( $suggestedDurations ) ? 'text' : 'selectorother',
@@ -506,7 +505,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * @return string
 	 */
 	protected function preText() {
-		$this->getOutput()->addModules( [ 'mediawiki.special.block', 'mediawiki.userSuggest' ] );
+		$this->getOutput()->addModules( [ 'mediawiki.special.block' ] );
 
 		$blockCIDRLimit = $this->getConfig()->get( 'BlockCIDRLimit' );
 		// @note Originally used 'blockiptext'
