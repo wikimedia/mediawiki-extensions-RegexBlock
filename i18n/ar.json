@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
-			"OsamaK"
+			"OsamaK",
+			"ديفيد"
 		]
 	},
 	"regexblock": "تعبير منتظم لمنع",
@@ -35,6 +36,7 @@
 	"regexblock-unblock-error": "خطأ أثناء رفع المنع عن $1.\nعلى الأرجح لا يوجد مستخدم بهذا الاسم.",
 	"regexblock-regex-filter": "  أو قيمة الريجيكس:",
 	"regexblock-view-blocked": "عرض الممنوع بواسطة:",
+	"regexblock-view-block-id": "عرض معرف المنع:",
 	"regexblock-view-all": "الكل",
 	"regexblock-view-go": "اذهب",
 	"regexblock-view-match": "(تطابق تام)",
@@ -48,5 +50,7 @@
 	"regexblock-view-stats": "إحصاءات",
 	"regexblock-view-empty": "قائمة الأسماء والعناوين الممنوعة فارغة.",
 	"regexblock-view-time": "في $1",
-	"right-regexblock": "منع المستخدمين من التعديل في كل الويكيات في مزرعة الويكي"
+	"action-regexblock": "منع المستخدمين من التحرير في جميع الويكيات في مزرعة الويكي",
+	"right-regexblock": "منع المستخدمين من التعديل في كل الويكيات في مزرعة الويكي",
+	"right-regexblock-exempt": "معفى من المنع العالمي"
 }
