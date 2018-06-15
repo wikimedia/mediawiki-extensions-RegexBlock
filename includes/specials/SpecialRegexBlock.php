@@ -797,7 +797,7 @@ class RegexBlockForm extends FormSpecialPage {
 			$data['RegexBlockedExact'],
 			$data['RegexBlockedCreation'],
 			# Truncate reason for whole multibyte characters
-			$wgContLang->truncate( $data['Reason'][0], 255 )
+			$wgContLang->truncateForDatabase( $data['Reason'][0], 255 )
 		);
 
 		// clear memcached
