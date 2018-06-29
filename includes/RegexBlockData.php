@@ -28,8 +28,8 @@ class RegexBlockData {
 
 			$res = $dbr->select(
 				'blockedby',
-				array( 'COUNT(*) AS cnt' ),
-				array( "blckby_blocker <> ''" ),
+				[ 'COUNT(*) AS cnt' ],
+				[ "blckby_blocker <> ''" ],
 				__METHOD__
 			);
 
@@ -73,34 +73,34 @@ class RegexBlockData {
 	public function getBlockersData( $current = '', $username = '', $limit, $offset ) {
 		global $wgLang;
 
-		$blocker_list = array();
+		$blocker_list = [];
 		/* get data and play with data */
 		$dbr = RegexBlock::getDB( DB_MASTER );
-		$conds = array( "blckby_blocker <> ''" );
+		$conds = [ "blckby_blocker <> ''" ];
 
 		if ( !empty( $current ) ) {
-			$conds = array( 'blckby_blocker' => $current );
+			$conds = [ 'blckby_blocker' => $current ];
 		}
 
 		if ( !empty( $username ) ) {
 			$any = $dbr->anyString();
-			$conds = array( 'blckby_name ' . $dbr->buildLike( $any, $username, $any ) );
+			$conds = [ 'blckby_name ' . $dbr->buildLike( $any, $username, $any ) ];
 		}
 
 		$res = $dbr->select(
 			'blockedby',
-			array(
+			[
 				'blckby_id', 'blckby_name', 'blckby_blocker',
 				'blckby_timestamp', 'blckby_expire', 'blckby_create',
 				'blckby_exact', 'blckby_reason'
-			),
+			],
 			$conds,
 			__METHOD__,
-			array(
+			[
 				'LIMIT' => $limit,
 				'OFFSET' => $offset,
 				'ORDER BY' => 'blckby_id DESC'
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -116,7 +116,7 @@ class RegexBlockData {
 			$time = $wgLang->time( wfTimestamp( TS_MW, $row->blckby_timestamp ), true );
 
 			/* put data to array */
-			$blocker_list[] = array(
+			$blocker_list[] = [
 				'blckby_name' => $row->blckby_name,
 				'exact_match' => $row->blckby_exact,
 				'create_block' => $row->blckby_create,
@@ -129,7 +129,7 @@ class RegexBlockData {
 				'ublock_blocker' => $ublock_blocker,
 				'expiry' => $dbr->decodeExpiry( $row->blckby_expire ),
 				'blckid' => $row->blckby_id
-			);
+			];
 		}
 
 		return $blocker_list;
@@ -147,8 +147,8 @@ class RegexBlockData {
 		$dbr = RegexBlock::getDB( DB_REPLICA );
 		$res = $dbr->select(
 			'stats_blockedby',
-			array( 'COUNT(*) AS cnt' ),
-			array( 'stats_blckby_id' => intval( $id ) ),
+			[ 'COUNT(*) AS cnt' ],
+			[ 'stats_blckby_id' => intval( $id ) ],
 			__METHOD__
 		);
 
@@ -169,23 +169,23 @@ class RegexBlockData {
 	 * @return $stats
 	 */
 	public function getStatsData( $id, $limit = 50, $offset = 0 ) {
-		$stats = array();
+		$stats = [];
 
 		/* from database */
 		$dbr = RegexBlock::getDB( DB_REPLICA );
 		$res = $dbr->select(
 			'stats_blockedby',
-			array(
+			[
 				'stats_blckby_id', 'stats_user', 'stats_blocker',
 				'stats_timestamp', 'stats_ip', 'stats_match', 'stats_dbname'
-			),
-			array( 'stats_blckby_id' => intval( $id ) ),
+			],
+			[ 'stats_blckby_id' => intval( $id ) ],
 			__METHOD__,
-			array(
+			[
 				'LIMIT' => $limit,
 				'OFFSET' => $offset,
 				'ORDER BY' => 'stats_timestamp DESC'
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {
@@ -207,11 +207,11 @@ class RegexBlockData {
 		$dbr = RegexBlock::getDB( DB_MASTER );
 		$res = $dbr->select(
 			'blockedby',
-			array(
+			[
 				'blckby_id', 'blckby_name', 'blckby_blocker', 'blckby_timestamp',
 				'blckby_expire', 'blckby_create', 'blckby_exact', 'blckby_reason'
-			),
-			array( 'blckby_id' => intval( $id ) ),
+			],
+			[ 'blckby_id' => intval( $id ) ],
 			__METHOD__
 		);
 
@@ -241,8 +241,8 @@ class RegexBlockData {
 
 		$res = $dbw->replace(
 			'blockedby',
-			array( 'blckby_id', 'blckby_name' ),
-			array(
+			[ 'blckby_id', 'blckby_name' ],
+			[
 				'blckby_id' => null,
 				'blckby_name' => $address,
 				'blckby_blocker' => $name,
@@ -251,7 +251,7 @@ class RegexBlockData {
 				'blckby_exact' => intval( $exact ),
 				'blckby_create' => intval( $creation ),
 				'blckby_reason' => $reason
-			),
+			],
 			__METHOD__
 		);
 

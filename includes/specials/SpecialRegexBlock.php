@@ -117,7 +117,7 @@ class RegexBlockForm extends FormSpecialPage {
 				break;
 		}
 
-		if ( !in_array( $this->mAction, array( 'submit', 'stats' ) ) ) {
+		if ( !in_array( $this->mAction, [ 'submit', 'stats' ] ) ) {
 			$form = $this->getForm();
 			if ( $form->show() ) {
 				$this->onSuccess();
@@ -141,16 +141,16 @@ class RegexBlockForm extends FormSpecialPage {
 			SpecialPage::getTitleFor( 'RegexBlock' ),
 			$this->mOffset,
 			$this->mLimit,
-			array(
+			[
 				'filter' => $this->mFilter,
 				'rfilter' => $this->mRegexFilter
-			),
+			],
 			( $this->numResults - $this->mOffset ) <= $this->mLimit
 		);
 
 		/* allow display by specific blockers only */
 		$blockers = $regexData->fetchBlockers();
-		$blocker_list = array();
+		$blocker_list = [];
 		if ( !empty( $blockers ) ) {
 			$blocker_list = $regexData->getBlockersData( $this->mFilter, $this->mRegexFilter, $this->mLimit, $this->mOffset );
 		}
@@ -213,19 +213,19 @@ class RegexBlockForm extends FormSpecialPage {
 				$stats_link = Linker::linkKnown(
 					$this->mTitle,
 					$this->msg( 'regexblock-view-stats' )->text(),
-					array(),
-					array( 'action' => 'stats', 'blckid' => $row['blckid'] )
+					[],
+					[ 'action' => 'stats', 'blckid' => $row['blckid'] ]
 				);
 				$space = $this->msg( 'word-separator' )->text();
 				$unblock_link = Linker::linkKnown(
 					$this->mTitle,
 					$this->msg( 'regexblock-view-block-unblock' )->text(),
-					array(),
-					array(
+					[],
+					[
 						'action' => 'delete',
 						'ip' => $row['ublock_ip'],
 						'blocker' => $row['ublock_blocker']
-					) + $this->makeListUrlParams()
+					] + $this->makeListUrlParams()
 				);
 
 				$out->addHTML(
@@ -249,7 +249,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 */
 	private function makeListUrlParams( $noLimit = false ) {
 		$request = $this->getRequest();
-		$pieces = array();
+		$pieces = [];
 		if ( !$noLimit ) {
 			$pieces['limit'] = $this->mLimit;
 			$pieces['offset'] = $this->mOffset;
@@ -272,15 +272,15 @@ class RegexBlockForm extends FormSpecialPage {
 		$result = RegexBlock::removeBlock( $ip, $blocker );
 
 		if ( $result === true ) {
-			$this->getOutput()->redirect( $this->mTitle->getFullURL( array(
+			$this->getOutput()->redirect( $this->mTitle->getFullURL( [
 				'action' => 'success_unblock',
 				'ip' => $ip
-			) + $this->makeListUrlParams() ) );
+			] + $this->makeListUrlParams() ) );
 		} else {
-			$this->getOutput()->redirect( $this->mTitle->getFullURL( array(
+			$this->getOutput()->redirect( $this->mTitle->getFullURL( [
 				'action' => 'failure_unblock',
 				'ip' => $ip
-			) + $this->makeListUrlParams() ) );
+			] + $this->makeListUrlParams() ) );
 		}
 
 		return;
@@ -303,27 +303,27 @@ class RegexBlockForm extends FormSpecialPage {
 			SpecialPage::getTitleFor( 'RegexBlock' ),
 			$this->mOffset,
 			$this->mLimit,
-			array(
+			[
 				'action' => 'stats',
 				'filter' => $this->mFilter,
 				'blckid' => $blckid
-			),
+			],
 			( $this->numStatResults - $this->mOffset ) <= $this->mLimit
 		);
 
 		/* allow display by specific blockers only */
 		$blockInfo = $regexData->getRegexBlockById( $blckid );
-		$stats_list = array();
+		$stats_list = [];
 		if ( !empty( $blockInfo ) && ( is_object( $blockInfo ) ) ) {
 			$stats_list = $regexData->getStatsData( $blckid, $this->mLimit, $this->mOffset );
 		}
 
 		$blocker_link = $blockername_link = '';
 		if ( isset( $blockInfo->blckby_blocker ) && $blockInfo->blckby_blocker ) {
-			$blocker_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_blocker, array(), array( 'filter' => $blockInfo->blckby_blocker ) );
+			$blocker_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_blocker, [], [ 'filter' => $blockInfo->blckby_blocker ] );
 		}
 		if ( isset( $blockInfo->blckby_name ) && $blockInfo->blckby_name ) {
-			$blockername_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_name, array(), array( 'rfilter' => $blockInfo->blckby_name ) );
+			$blockername_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_name, [], [ 'rfilter' => $blockInfo->blckby_name ] );
 		}
 		if ( isset( $blockInfo->blckby_reason ) && $blockInfo->blckby_reason ) {
 			$blockReason = $this->msg( 'regexblock-form-reason' ) . $blockInfo->blckby_reason;
@@ -343,7 +343,7 @@ class RegexBlockForm extends FormSpecialPage {
 				$out->addHTML(
 					'<li>' .
 					$this->msg( 'regexblock-match-stats-record',
-						array(
+						[
 							$row->stats_match,
 							$row->stats_user,
 							htmlspecialchars( $row->stats_dbname ),
@@ -351,7 +351,7 @@ class RegexBlockForm extends FormSpecialPage {
 							$row->stats_ip,
 							$lang->date( wfTimestamp( TS_MW, $row->stats_timestamp ), true ),
 							$lang->time( wfTimestamp( TS_MW, $row->stats_timestamp ), true )
-						)
+						]
 					)->text() .
 					'</li>'
 				);
@@ -359,8 +359,8 @@ class RegexBlockForm extends FormSpecialPage {
 			$unblockLink = Linker::linkKnown(
 				$this->mTitle,
 				$this->msg( 'regexblock-view-block-unblock' ),
-				array(),
-				array( 'action' => 'delete', 'blckid' => $blockInfo->blckby_id )
+				[],
+				[ 'action' => 'delete', 'blckid' => $blockInfo->blckby_id ]
 			);
 			$out->addHTML( '</ul>' . $unblockLink . '<br />
 				<p>' . $pager . '</p>' );
@@ -893,10 +893,10 @@ class RegexBlockForm extends FormSpecialPage {
 	 */
 	public function onSuccess() {
 		$out = $this->getOutput();
-		$this->getOutput()->redirect( $this->getPageTitle()->getFullURL( array(
+		$this->getOutput()->redirect( $this->getPageTitle()->getFullURL( [
 			'action' => 'success_block',
 			'ip' => $this->target
-		) + $this->makeListUrlParams() ) );
+		] + $this->makeListUrlParams() ) );
 	}
 
 	/**

@@ -54,8 +54,8 @@ class RegexBlockHooks {
 			$links[] = Linker::linkKnown(
 				SpecialPage::getTitleFor( 'RegexBlock' ),
 				wfMessage( 'regexblock-link' )->escaped(),
-				array(),
-				array( 'wpTarget' => $nt->getText() )
+				[],
+				[ 'wpTarget' => $nt->getText() ]
 			);
 		}
 		return true;

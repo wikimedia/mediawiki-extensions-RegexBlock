@@ -26,7 +26,7 @@ class RegexBlock {
 	 */
 	public static function getDB( $db ) {
 		global $wgRegexBlockDatabase;
-		return wfGetDB( $db, array(), $wgRegexBlockDatabase );
+		return wfGetDB( $db, [], $wgRegexBlockDatabase );
 	}
 
 	/**
@@ -55,17 +55,17 @@ class RegexBlock {
 
 		$key = self::memcKey( 'regex_blockers' );
 		$cached = $wgMemc->get( $key );
-		$blockers_array = array();
+		$blockers_array = [];
 
 		if ( !is_array( $cached ) ) {
 			/* get from database */
 			$dbr = self::getDB( $master ? DB_MASTER : DB_REPLICA );
 			$res = $dbr->select(
 				'blockedby',
-				array( 'blckby_blocker' ),
-				array( "blckby_blocker <> ''" ),
+				[ 'blckby_blocker' ],
+				[ "blckby_blocker <> ''" ],
 				__METHOD__,
-				array( 'GROUP BY' => 'blckby_blocker' )
+				[ 'GROUP BY' => 'blckby_blocker' ]
 			);
 			while ( $row = $res->fetchObject() ) {
 				$blockers_array[] = $row->blckby_blocker;
@@ -131,7 +131,7 @@ class RegexBlock {
 	public static function getBlockData( $user, $blockers, $master = false ) {
 		global $wgMemc;
 
-		$blockData = array();
+		$blockData = [];
 
 		/**
 		 * First, check if regex strings are already stored in memcached
@@ -151,13 +151,17 @@ class RegexBlock {
 			foreach ( $blockers as $blocker ) {
 				$res = $dbr->select(
 					'blockedby',
-					array( 'blckby_id', 'blckby_name', 'blckby_exact' ),
-					array( 'blckby_blocker' => $blocker ),
+					[ 'blckby_id', 'blckby_name', 'blckby_exact' ],
+					[ 'blckby_blocker' => $blocker ],
 					__METHOD__
 				);
 
 				$loop = 0;
-				$names = array( 'ips' => '', 'exact' => '', 'regex' => '' );
+				$names = [
+					'ips' => '',
+					'exact' => '',
+					'regex' => ''
+				];
 				while ( $row = $res->fetchObject() ) {
 					$key = 'regex';
 					if ( User::isIP( $row->blckby_name ) != 0 ) {
@@ -191,7 +195,7 @@ class RegexBlock {
 	 * @return array|bool Array of matched values or boolean false
 	 */
 	public static function performMatch( $matching, $value ) {
-		$matched = array();
+		$matched = [];
 
 		if ( !is_array( $matching ) ) {
 			/* empty? begone! */
@@ -200,7 +204,7 @@ class RegexBlock {
 
 		/* normalise for regex */
 		$loop = 0;
-		$match = array();
+		$match = [];
 		foreach ( $matching as $one ) {
 			/* the real deal */
 			$found = preg_match( '/' . $one . '/i', $value, $match );
@@ -232,7 +236,7 @@ class RegexBlock {
 			return false;
 		}
 
-		$ret = array();
+		$ret = [];
 		/**
 		 * For EACH match check whether timestamp expired until found VALID timestamp
 		 * but: only for a BLOCKED user, and it will be memcached
@@ -247,17 +251,17 @@ class RegexBlock {
 				/* get from database */
 				$dbr = self::getDB( DB_MASTER );
 				$any = $dbr->anyString();
-				$where = array( 'blckby_name ' . $dbr->buildLike( $any, $single, $any ) );
+				$where = [ 'blckby_name ' . $dbr->buildLike( $any, $single, $any ) ];
 				if ( !empty( $iregex ) ) {
-					$where = array( 'blckby_name' => $single );
+					$where = [ 'blckby_name' => $single ];
 				}
 				$res = $dbr->select(
 					'blockedby',
-					array(
+					[
 						'blckby_id', 'blckby_timestamp', 'blckby_expire',
 						'blckby_blocker', 'blckby_create', 'blckby_exact',
 						'blckby_reason'
-					),
+					],
 					$where,
 					__METHOD__
 				);
@@ -304,7 +308,7 @@ class RegexBlock {
 				( $blocked->blckby_expire == 'infinity' )
 			)
 			{
-				$ret = array(
+				$ret = [
 					'blckid' => $blocked->blckby_id,
 					'create' => $blocked->blckby_create,
 					'exact'  => $blocked->blckby_exact,
@@ -312,7 +316,7 @@ class RegexBlock {
 					'expire' => $blocked->blckby_expire,
 					'blocker' => $blocked->blckby_blocker,
 					'timestamp' => $blocked->blckby_timestamp
-				);
+				];
 			}
 		}
 
@@ -333,7 +337,7 @@ class RegexBlock {
 
 		$dbw->delete(
 			'blockedby',
-			array( 'blckby_name' => $regex ),
+			[ 'blckby_name' => $regex ],
 			__METHOD__
 		);
 
@@ -363,7 +367,7 @@ class RegexBlock {
 		$dbw = self::getDB( DB_MASTER );
 		$dbw->insert(
 			'stats_blockedby',
-			array(
+			[
 				'stats_id' => null,
 				'stats_blckby_id' => $blckid,
 				'stats_user' => $user->getName(),
@@ -372,7 +376,7 @@ class RegexBlock {
 				'stats_timestamp' => wfTimestampNow(),
 				'stats_match' => $match,
 				'stats_dbname' => $wgDBname
-			),
+			],
 			__METHOD__
 		);
 
@@ -405,7 +409,7 @@ class RegexBlock {
 
 		/* check IPs */
 		if ( !empty( $ips ) && in_array( $user_ip, $ips ) ) {
-			$result['ips']['matches'] = array( $user_ip );
+			$result['ips']['matches'] = [ $user_ip ];
 			wfDebugLog( 'RegexBlock', 'Found some IPs to block: ' . implode( ',', $result['ips']['matches'] ) . "\n" );
 		}
 
@@ -418,10 +422,10 @@ class RegexBlock {
 		}
 
 		/* check names of user */
-		$exact = ( is_array( $exact ) ) ? $exact : array( $exact );
+		$exact = ( is_array( $exact ) ) ? $exact : [ $exact ];
 		if ( !empty( $exact ) && in_array( $user->getName(), $exact ) ) {
 			$key = array_search( $user->getName(), $exact );
-			$result['exact']['matches'] = array( $exact[$key] );
+			$result['exact']['matches'] = [ $exact[$key] ];
 			wfDebugLog( 'RegexBlock', 'Found some users to block: ' . implode( ',', $result['exact']['matches'] ) . "\n" );
 		}
 

@@ -6,109 +6,109 @@
  * @ingroup Extensions
  */
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
-/** English (English) */
-$specialPageAliases['en'] = array(
-	'RegexBlock' => array( 'RegexBlock' ),
-);
+/** English */
+$specialPageAliases['en'] = [
+	'RegexBlock' => [ 'RegexBlock' ],
+];
 
 /** Arabic (العربية) */
-$specialPageAliases['ar'] = array(
-	'RegexBlock' => array( 'منع_ريجيكس' ),
-);
+$specialPageAliases['ar'] = [
+	'RegexBlock' => [ 'منع_ريجيكس' ],
+];
 
 /** Egyptian Spoken Arabic (مصرى) */
-$specialPageAliases['arz'] = array(
-	'RegexBlock' => array( 'بلوك_Regex' ),
-);
+$specialPageAliases['arz'] = [
+	'RegexBlock' => [ 'بلوك_Regex' ],
+];
 
 /** Bulgarian (български) */
-$specialPageAliases['bg'] = array(
-	'RegexBlock' => array( 'Блокиране_по_регулярни_изрази' ),
-);
+$specialPageAliases['bg'] = [
+	'RegexBlock' => [ 'Блокиране_по_регулярни_изрази' ],
+];
 
 /** German (Deutsch) */
-$specialPageAliases['de'] = array(
-	'RegexBlock' => array( 'Sperrung_regulärer_Ausdrücke', 'Regex-Sperrung', 'Reguläre-Ausdrücke-Sperrung' ),
-);
+$specialPageAliases['de'] = [
+	'RegexBlock' => [ 'Sperrung_regulärer_Ausdrücke', 'Regex-Sperrung', 'Reguläre-Ausdrücke-Sperrung' ],
+];
 
 /** Zazaki (Zazaki) */
-$specialPageAliases['diq'] = array(
-	'RegexBlock' => array( 'Regexbloqe' ),
-);
+$specialPageAliases['diq'] = [
+	'RegexBlock' => [ 'Regexbloqe' ],
+];
 
 /** Lower Sorbian (dolnoserbski) */
-$specialPageAliases['dsb'] = array(
-	'RegexBlock' => array( 'Blokěrowanje regularnych wurazow' ),
-);
+$specialPageAliases['dsb'] = [
+	'RegexBlock' => [ 'Blokěrowanje regularnych wurazow' ],
+];
 
 /** Persian (فارسی) */
-$specialPageAliases['fa'] = array(
-	'RegexBlock' => array( 'بخش_ریجکس' ),
-);
+$specialPageAliases['fa'] = [
+	'RegexBlock' => [ 'بخش_ریجکس' ],
+];
 
 /** Swiss German (Alemannisch) */
-$specialPageAliases['gsw'] = array(
-	'RegexBlock' => array( 'Reguläri_Ussdrügg-Sperrig' ),
-);
+$specialPageAliases['gsw'] = [
+	'RegexBlock' => [ 'Reguläri_Ussdrügg-Sperrig' ],
+];
 
 /** Upper Sorbian (hornjoserbsce) */
-$specialPageAliases['hsb'] = array(
-	'RegexBlock' => array( 'Blokowanje regularnych wurazow' ),
-);
+$specialPageAliases['hsb'] = [
+	'RegexBlock' => [ 'Blokowanje regularnych wurazow' ],
+];
 
 /** Interlingua (interlingua) */
-$specialPageAliases['ia'] = array(
-	'RegexBlock' => array( 'Blocar_con_regex' ),
-);
+$specialPageAliases['ia'] = [
+	'RegexBlock' => [ 'Blocar_con_regex' ],
+];
 
 /** Indonesian (Bahasa Indonesia) */
-$specialPageAliases['id'] = array(
-	'RegexBlock' => array( 'Blokir_regex', 'BlokirRegex' ),
-);
+$specialPageAliases['id'] = [
+	'RegexBlock' => [ 'Blokir_regex', 'BlokirRegex' ],
+];
 
 /** Japanese (日本語) */
-$specialPageAliases['ja'] = array(
-	'RegexBlock' => array( '正規表現ブロック' ),
-);
+$specialPageAliases['ja'] = [
+	'RegexBlock' => [ '正規表現ブロック' ],
+];
 
 /** Korean (한국어) */
-$specialPageAliases['ko'] = array(
-	'RegexBlock' => array( '정규식블록' ),
-);
+$specialPageAliases['ko'] = [
+	'RegexBlock' => [ '정규식블록' ],
+];
 
 /** Luxembourgish (Lëtzebuergesch) */
-$specialPageAliases['lb'] = array(
-	'RegexBlock' => array( 'Regex_Spär' ),
-);
+$specialPageAliases['lb'] = [
+	'RegexBlock' => [ 'Regex_Spär' ],
+];
 
 /** Macedonian (македонски) */
-$specialPageAliases['mk'] = array(
-	'RegexBlock' => array( 'БлокирањеНаРегуларниИзрази' ),
-);
+$specialPageAliases['mk'] = [
+	'RegexBlock' => [ 'БлокирањеНаРегуларниИзрази' ],
+];
 
 /** Norwegian Bokmål (norsk (bokmål)‎) */
-$specialPageAliases['nb'] = array(
-	'RegexBlock' => array( 'Regex-blokkering' ),
-);
+$specialPageAliases['nb'] = [
+	'RegexBlock' => [ 'Regex-blokkering' ],
+];
 
 /** Nedersaksisch (Nedersaksisch) */
-$specialPageAliases['nds-nl'] = array(
-	'RegexBlock' => array( 'Regexblokkering' ),
-);
+$specialPageAliases['nds-nl'] = [
+	'RegexBlock' => [ 'Regexblokkering' ],
+];
 
 /** Dutch (Nederlands) */
-$specialPageAliases['nl'] = array(
-	'RegexBlock' => array( 'RegexBlokkade' ),
-);
+$specialPageAliases['nl'] = [
+	'RegexBlock' => [ 'RegexBlokkade' ],
+];
 
 /** Slovak (slovenčina) */
-$specialPageAliases['sk'] = array(
-	'RegexBlock' => array( 'BlokovanieRegVýrazom' ),
-);
+$specialPageAliases['sk'] = [
+	'RegexBlock' => [ 'BlokovanieRegVýrazom' ],
+];
 
 /** Tagalog (Tagalog) */
-$specialPageAliases['tl'] = array(
-	'RegexBlock' => array( 'Paghadlang_sa_karaniwang_pagsasaad' ),
-);
+$specialPageAliases['tl'] = [
+	'RegexBlock' => [ 'Paghadlang_sa_karaniwang_pagsasaad' ],
+];
