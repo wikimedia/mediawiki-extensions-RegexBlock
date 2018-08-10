@@ -5,13 +5,14 @@
 			"Rancher",
 			"Sasa Stefanovic",
 			"Жељко Тодоровић",
-			"Михајло Анђелковић"
+			"Михајло Анђелковић",
+			"BadDog"
 		]
 	},
 	"regexblock-block-success": "Блокирање је успело",
 	"regexblock-currently-blocked": "Тренутно блокиране адресе:",
 	"regexblock-page-title-1": "Блокирај адресу користећи регуларне изразе",
-	"regexblock-form-username": "ИП адреса или корисничко име:",
+	"regexblock-form-username": "IP адреса или корисничко име:",
 	"regexblock-form-reason": "Разлог:",
 	"regexblock-form-match": "Тачно поклапање",
 	"regexblock-form-submit": "Блокирај овог корисника",
