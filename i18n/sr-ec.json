@@ -10,7 +10,7 @@
 		]
 	},
 	"regexblock-block-success": "Блокирање је успело",
-	"regexblock-currently-blocked": "Тренутно блокиране адресе:",
+	"regexblock-currently-blocked": "Актуелно блокиране адресе:",
 	"regexblock-page-title-1": "Блокирај адресу користећи регуларне изразе",
 	"regexblock-form-username": "IP адреса или корисничко име:",
 	"regexblock-form-reason": "Разлог:",
