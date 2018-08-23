@@ -396,7 +396,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * @param HTMLForm $form
 	 */
 	protected function alterForm( HTMLForm $form ) {
-		$form->setWrapperLegendMsg( 'blockip-legend' );
+		$form->setWrapperLegendMsg( 'block' );
 		$form->setHeaderText( '' );
 		$form->setSubmitDestructive();
 
