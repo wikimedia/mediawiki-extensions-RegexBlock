@@ -11,7 +11,7 @@
 	"regexblock-block-log": "Nome de usuário ou endereço IP '''$1''' foi bloqueado.",
 	"regexblock-block-success": "Bloqueio com sucesso",
 	"regexblock-currently-blocked": "Endereços bloqueados atualmente:",
-	"regexblock-desc": "Extensão usada para bloquear nomes de usuários ou endereços IP através de expressões regulares. Contém o mecanismo e uma [[Special:Regexblock|página especial]] para adicionar/gerenciar os bloqueios.",
+	"regexblock-desc": "Extensão usada para bloquear nomes de usuário ou endereços IP através de expressões regulares. Contém o mecanismo e uma [[Special:RegexBlock|special page]] para adicionar/gerir os bloqueios",
 	"regexblock-page-title": "Bloqueio de nomes por expressões regulares",
 	"regexblockstats": "Estatísticas de bloqueio por expressões regulares",
 	"regexblock-help": "Use o formulário abaixo para bloquear o acesso de escrita a um endereço IP ou nome de utilizador específicos.\nIsto deverá ser feito apenas para prevenir vandalismo, e de acordo com as políticas.\n''Esta página lhe permitirá bloquear até mesmo utilizadores não existentes, e também bloqueará utilizadores com nomes semelhantes ao dado, p. ex. \"Teste\" será bloqueado juntamente com \"Teste 2\", etc.\nVocê pode também bloquear endereços IP completos, significando isto que ninguém proveniente deles poderá editar páginas.\nNota: endereços IP parciais serão tratados como nomes de utilizadores na determinação do bloqueio.\nSe nenhum motivo for especificado, um motivo genérico padrão será usado.''",
