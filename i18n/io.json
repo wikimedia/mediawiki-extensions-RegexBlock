@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Malafaya"
+			"Malafaya",
+			"Joao Xavier"
 		]
 	},
-	"regexblock-form-expiry": "Expiro:"
+	"regexblock-view-all": "Omna"
 }
