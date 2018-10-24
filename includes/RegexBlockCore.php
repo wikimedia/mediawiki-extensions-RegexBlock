@@ -34,14 +34,15 @@ class RegexBlock {
 	 * @return string
 	 */
 	public static function memcKey( /* ... */ ) {
-		global $wgRegexBlockDatabase;
-		$args = func_get_args();
-		if ( $wgRegexBlockDatabase === false ) {
-			return call_user_func_array( 'wfMemcKey', $args );
-		} else {
-			$newArgs = array_merge( wfSplitWikiID( $wgRegexBlockDatabase ), $args );
-			return call_user_func_array( 'wfForeignMemcKey', $newArgs );
-		}
+		global $wgRegexBlockDatabase, $wgMemc;
+
+		$wiki = ( $wgRegexBlockDatabase !== false ) ? $wgRegexBlockDatabase : wfWikiID();
+		$newArgs = array_merge( [ $wiki ], func_get_args() );
+
+		return call_user_func_array(
+			[ $wgMemc, 'makeGlobalKey' ],
+			$newArgs
+		);
 	}
 
 	/**
