@@ -23,7 +23,7 @@
 	"regexblock-form-reason": "السبب:",
 	"regexblock-form-match": "تطابق تام",
 	"regexblock-form-account-block": "منع إنشاء الحسابات الجديدة",
-	"regexblock-form-submit": "امنع هذا المستخدم",
+	"regexblock-form-submit": "منع هذا المستخدم",
 	"regexblock-form-submit-empty": "أعط اسم مستخدم أو عنوان أيبي للمنع.",
 	"regexblock-form-submit-regex": "تعبير منتظم غير صحيح.",
 	"regexblock-form-submit-expiry": "من فضلك حدد تاريخ انتهاء.",
