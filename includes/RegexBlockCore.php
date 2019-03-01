@@ -159,9 +159,9 @@ class RegexBlock {
 
 				$loop = 0;
 				$names = [
-					'ips' => '',
-					'exact' => '',
-					'regex' => ''
+					'ips' => [],
+					'exact' => [],
+					'regex' => []
 				];
 				while ( $row = $res->fetchObject() ) {
 					$key = 'regex';
