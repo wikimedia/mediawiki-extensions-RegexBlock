@@ -519,7 +519,7 @@ class RegexBlock {
 			/* account creation check goes through the same hook... */
 			if ( $valid['create'] == 1 ) {
 				if ( $user->getBlock() ) {
-					$user->getBlock()->prevents( 'createaccount', true );
+					$user->getBlock()->isCreateAccountBlocked( true );
 				}
 			}
 
