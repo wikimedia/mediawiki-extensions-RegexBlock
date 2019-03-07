@@ -339,29 +339,41 @@ class RegexBlockForm extends FormSpecialPage {
 
 		if ( !empty( $stats_list ) ) {
 			$out->addHTML( '<p>' . $pager . '</p><br /><ul id="regexblock_triggers">' );
+
+			$messageKey = 'regexblock-match-stats-record';
+
 			foreach ( $stats_list as $id => $row ) {
+				$params = [
+					$row->stats_match,
+					$row->stats_user,
+					htmlspecialchars( $row->stats_dbname ),
+					$lang->timeanddate( wfTimestamp( TS_MW, $row->stats_timestamp ), true ),
+					$row->stats_ip,
+					$lang->date( wfTimestamp( TS_MW, $row->stats_timestamp ), true ),
+					$lang->time( wfTimestamp( TS_MW, $row->stats_timestamp ), true )
+				];
+
+				// Run a hook to allow altering the display of an individual entry
+				// This is mainly because by default the database name ($row->stats_dbname)
+				// is used in the message, but on ShoutWiki we want to change that to a
+				// clickable link as well as change the displayed text from a DB name to
+				// the wiki's site name
+				Hooks::run( 'RegexBlockShowStatsListFormatRecord', [ &$messageKey, &$params, $row ] );
+
 				$out->addHTML(
 					'<li>' .
-					$this->msg( 'regexblock-match-stats-record',
-						[
-							$row->stats_match,
-							$row->stats_user,
-							htmlspecialchars( $row->stats_dbname ),
-							$lang->timeanddate( wfTimestamp( TS_MW, $row->stats_timestamp ), true ),
-							$row->stats_ip,
-							$lang->date( wfTimestamp( TS_MW, $row->stats_timestamp ), true ),
-							$lang->time( wfTimestamp( TS_MW, $row->stats_timestamp ), true )
-						]
-					)->text() .
+					$this->msg( $messageKey, $params )->text() .
 					'</li>'
 				);
 			}
+
 			$unblockLink = Linker::linkKnown(
 				$this->mTitle,
 				$this->msg( 'regexblock-view-block-unblock' ),
 				[],
 				[ 'action' => 'delete', 'blckid' => $blockInfo->blckby_id ]
 			);
+
 			$out->addHTML( '</ul>' . $unblockLink . '<br />
 				<p>' . $pager . '</p>' );
 		} else {
@@ -548,6 +560,9 @@ class RegexBlockForm extends FormSpecialPage {
 				[ 'action' => 'edit' ]
 			);
 		}
+
+		// A hook point for ShoutWiki
+		Hooks::run( 'RegexBlockFormPostText', [ &$links, $this ] );
 
 		$text = Html::rawElement(
 			'p',
