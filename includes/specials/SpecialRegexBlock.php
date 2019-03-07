@@ -676,6 +676,8 @@ class RegexBlockForm extends FormSpecialPage {
 		if ( $target instanceof User ) {
 			if ( IP::isValid( $target->getName() ) ) {
 				return [ $target, self::TYPE_IP ];
+			} elseif ( RegexBlockData::isValidRegex( $target->getName() ) ) {
+				return [ $target, 6 /* Block::TYPE_ constants are numbered 1-5, so using 6 here is safe for now */ ];
 			} else {
 				return [ $target, self::TYPE_USER ];
 			}
@@ -706,13 +708,18 @@ class RegexBlockForm extends FormSpecialPage {
 		}
 
 		$userObj = User::newFromName( $target );
-		if ( $userObj instanceof User ) {
+		// Give regexness priority because "SpamUser.*" is also a valid username as-is,
+		// but our first and foremost concern is with regexes here
+		// @todo FIXME: actually this is dumb. Only in case of an invalid regex we'd
+		// move onto the next conditional; we'll always return [ $target, 6 ] for regexes
+		// here now.
+		if ( RegexBlockData::isValidRegex( $target ) ) {
+			return [ $target, 6 /* Block::TYPE_ constants are numbered 1-5, so using 6 here is safe for now */ ];
+		} elseif ( $userObj instanceof User ) {
 			# Note that since numbers are valid usernames, a $target of "12345" will be
 			# considered a User.  If you want to pass a block ID, prepend a hash "#12345",
 			# since hash characters are not valid in usernames or titles generally.
 			return [ $userObj, Block::TYPE_USER ];
-		} elseif ( RegexBlockData::isValidRegex( $target ) ) {
-			return [ $target, 6 /* Block::TYPE_ constants are numbered 1-5, so using 6 here is safe for now */ ];
 		} else {
 			# WTF?
 			return [ null, null ];

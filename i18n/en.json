@@ -6,6 +6,18 @@
 			"Tomasz Klim"
 		]
 	},
+	"apihelp-regexblock-summary": "Block users' names and IP addresses via regular expressions.",
+	"apihelp-regexblock-example-ip-exact-simple": "Block the exact IP address \"192.0.2.5\" for three days with the reason \"First strike\"",
+	"apihelp-regexblock-example-user-regex-complex": "Block the regular expression \"SpamUser.*\" permanently, which blocks any and all users whose user name matches that expression, such as \"SpamUser65\", with the reason \"Bad username\" and also prevent any and all users whose user name matches the regular expression from creating new user accounts.",
+	"apihelp-regexblock-param-regex": "The regular expression to block. Note that when the \"exact\" param is given in the URL, this is not treated as a regular expression but rather as a simple string.",
+	"apihelp-regexblock-param-expiry": "Expiry time. May be relative (e.g. <kbd>5 months</kbd> or <kbd>2 weeks</kbd>) or absolute (e.g. <kbd>2014-09-18T12:34:56Z</kbd>). If set to <kbd>infinite</kbd>, <kbd>indefinite</kbd>, or <kbd>never</kbd>, the block will never expire.",
+	"apihelp-regexblock-param-reason": "Reason for block.",
+	"apihelp-regexblock-param-nocreate": "Prevent account creation.",
+	"apihelp-regexblock-param-exact": "Use exact matching to block the given name precisely as given (as opposed to treating it as a regular expression).",
+	"apihelp-regexunblock-summary": "Unblock users' names and IP addresses via regular expressions.",
+	"apihelp-regexunblock-param-regex": "The blocked regular expression to unblock (may not actually be a true regular expression when exact blocking is used).",
+	"apihelp-regexunblock-example-ip": "Unblock \"192.0.2.5\" (which was presumably blocked with the \"exact\" option to block only that IP address from editing)",
+	"apihelp-regexunblock-example-regex": "Unblock the regular expression \"SpamUser.*\" so that accounts like \"SpamUser66\" may be created and existing accounts with such names can edit the site.",
 	"regexblock": "Regex block",
 	"regexblock-already-blocked": "$1 is already blocked.",
 	"regexblock-block-log": "User name or IP address '''$1''' has been blocked.",

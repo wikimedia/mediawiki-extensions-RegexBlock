@@ -12,6 +12,18 @@
 			"Liuxinyu970226"
 		]
 	},
+	"apihelp-regexblock-summary": "{{doc-apihelp-summary|regexblock}}",
+	"apihelp-regexblock-example-ip-exact-simple": "{{doc-apihelp-example|regexblock}}",
+	"apihelp-regexblock-example-user-regex-complex": "{{doc-apihelp-example|regexblock}}",
+	"apihelp-regexblock-param-regex": "{{doc-apihelp-param|regexblock|regex}}\n{{doc-important|Do not translate \"exact\"!}}",
+	"apihelp-regexblock-param-expiry": "{{doc-apihelp-param|regexblock|expiry}}\n{{doc-important|Do not translate \"5 months\", \"2 weeks\", \"infinite\", \"indefinite\" or \"never\"!}}\n* See also {{msg-mw|apihelp-block-param-expiry}}",
+	"apihelp-regexblock-param-reason": "{{doc-apihelp-param|regexblock|reason}}\n* See also {{msg-mw|apihelp-block-param-reason}}",
+	"apihelp-regexblock-param-nocreate": "{{doc-apihelp-param|regexblock|nocreate}}\n* See also {{msg-mw|ipbcreateaccount}} and {{msg-mw|apihelp-block-param-nocreate}}",
+	"apihelp-regexblock-param-exact": "{{doc-apihelp-param|regexblock|exact}}",
+	"apihelp-regexunblock-summary": "{{doc-apihelp-summary|regexunblock}}",
+	"apihelp-regexunblock-param-regex": "{{doc-apihelp-param|regexunblock|regex}}",
+	"apihelp-regexunblock-example-ip": "{{doc-apihelp-example|regexunblock}}",
+	"apihelp-regexunblock-example-regex": "{{doc-apihelp-example|regexunblock}}",
 	"regexblock": "{{name}}",
 	"regexblock-already-blocked": "{{Identical|$1 is already blocked}}",
 	"regexblock-block-log": "Used on Special:RegexBlock",

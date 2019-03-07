@@ -1,6 +1,6 @@
 {
 	"name": "RegexBlock",
-	"version": "1.5.0",
+	"version": "1.6.0",
 	"author": [
 		"Bartek Łapiński",
 		"Tomasz Klim",
@@ -31,7 +31,13 @@
 	"ExtensionMessagesFiles": {
 		"RegexBlockAliases": "RegexBlock.alias.php"
 	},
+	"APIModules": {
+		"regexblock": "ApiRegexBlock",
+		"regexunblock": "ApiRegexUnblock"
+	},
 	"AutoloadClasses": {
+		"ApiRegexBlock": "includes/api/ApiRegexBlock.php",
+		"ApiRegexUnblock": "includes/api/ApiRegexUnblock.php",
 		"RegexBlock": "includes/RegexBlockCore.php",
 		"RegexBlockData": "includes/RegexBlockData.php",
 		"RegexBlockForm": "includes/specials/SpecialRegexBlock.php",
