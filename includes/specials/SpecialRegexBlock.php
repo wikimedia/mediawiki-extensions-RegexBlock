@@ -267,9 +267,8 @@ class RegexBlockForm extends FormSpecialPage {
 		$request = $this->getRequest();
 
 		$ip = urldecode( $request->getVal( 'ip' ) );
-		$blocker = $request->getVal( 'blocker' );
 
-		$result = RegexBlock::removeBlock( $ip, $blocker );
+		$result = RegexBlock::removeBlock( $ip );
 
 		if ( $result === true ) {
 			$this->getOutput()->redirect( $this->mTitle->getFullURL( [

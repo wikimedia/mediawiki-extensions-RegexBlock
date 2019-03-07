@@ -286,7 +286,7 @@ class RegexBlock {
 					return $ret;
 				} else {
 					/* clean up an obsolete block */
-					self::removeBlock( $single, $blocked->blckby_blocker );
+					self::removeBlock( $single );
 				}
 			}
 		}
@@ -328,10 +328,9 @@ class RegexBlock {
 	 * Remove a block from the blockedby DB table.
 	 *
 	 * @param string $regex Username or regular expression to unblock
-	 * @param string $blocker Name of the blocker [unused - remove?]
-	 * @return bool True if unblocked succeeded, otherwise false
+	 * @return bool True if unblocking succeeded, otherwise false
 	 */
-	public static function removeBlock( $regex, $blocker ) {
+	public static function removeBlock( $regex ) {
 		$result = false;
 
 		$dbw = self::getDB( DB_MASTER );
