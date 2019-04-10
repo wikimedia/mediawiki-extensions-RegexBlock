@@ -4,6 +4,8 @@
 			"Robby"
 		]
 	},
+	"apihelp-regexblock-param-reason": "Grond fir d'Spär",
+	"apihelp-regexblock-param-nocreate": "Uleeë vun engem Benotzerkont verhënneren.",
 	"regexblock": "Begrëffer fir e Benotzer oder eng IP-Adress ze spären",
 	"regexblock-already-blocked": "$1 ass scho gespaart.",
 	"regexblock-block-log": "De Benotzer oder d'IP-Adress '''$1''' gouf gespaart.",

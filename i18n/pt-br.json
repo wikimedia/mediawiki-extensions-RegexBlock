@@ -6,6 +6,18 @@
 			"Eduardo Addad de Oliveira"
 		]
 	},
+	"apihelp-regexblock-summary": "Bloqueie os nomes dos usuários e os endereços IP por meio de expressões regulares.",
+	"apihelp-regexblock-example-ip-exact-simple": "Bloqueie o endereço IP exato \"192.0.2.5\" por três dias com o motivo \"Primeiro contato\"",
+	"apihelp-regexblock-example-user-regex-complex": "Bloqueie a expressão regular \"SpamUser.*\" Permanentemente, bloqueando todos os usuários cujo nome de usuário corresponda a essa expressão, como \"SpamUser65\", com o motivo \"Nome de usuário incorreto\" e também impeça todos os usuários cujo nome de usuário corresponda ao padrão expressão da criação de novas contas de usuário.",
+	"apihelp-regexblock-param-regex": "A expressão regular para bloquear. Observe que quando o parâmetro \"exato\" é fornecido na URL, isso não é tratado como uma expressão regular, mas como uma string simples.",
+	"apihelp-regexblock-param-expiry": "Tempo de expiração. Pode ser relativo (por exemplo <kbd>5 meses</kbd> ou <kbd>2 semanas</kbd>) ou absoluto (por exemplo <kbd>2014-09-18T12:34:56Z</kbd>). Se definido para <kbd>infinite</kbd>, <kbd>indefinite</kbd> ou <kbd>never</kbd>, o bloqueio nunca irá expirar.",
+	"apihelp-regexblock-param-reason": "Razão do bloqueio.",
+	"apihelp-regexblock-param-nocreate": "Prevenir a criação de conta.",
+	"apihelp-regexblock-param-exact": "Use correspondência exata para bloquear o nome dado precisamente como determinado (em oposição a tratá-lo como uma expressão regular).",
+	"apihelp-regexunblock-summary": "Desbloquear os nomes dos usuários e endereços IP através de expressões regulares.",
+	"apihelp-regexunblock-param-regex": "A expressão bloqueio regular para desbloquear (pode não ser realmente uma expressão regular verdadeira quando o bloqueio exato é usado).",
+	"apihelp-regexunblock-example-ip": "Desbloquear \"192.0.2.5\" (que foi presumivelmente bloqueado com a opção \"exata\" para bloquear apenas esse endereço IP de edição)",
+	"apihelp-regexunblock-example-regex": "Desbloqueie a expressão regular \"SpamUser.*\" Para que contas como \"SpamUser66\" possam ser criadas e contas existentes com esses nomes possam editar o site.",
 	"regexblock": "Bloqueio por expressões regulares",
 	"regexblock-already-blocked": "$1 já está bloqueada.",
 	"regexblock-block-log": "Nome de usuário ou endereço IP '''$1''' foi bloqueado.",
