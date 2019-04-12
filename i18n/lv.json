@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Papuass"
+		]
+	},
+	"apihelp-regexblock-param-reason": "Bloķēšanas iemesls.",
+	"apihelp-regexblock-param-nocreate": "Liegt kontu veidošanu."
+}

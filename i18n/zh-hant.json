@@ -7,6 +7,11 @@
 			"Kly"
 		]
 	},
+	"apihelp-regexblock-summary": "透過正規表達式封禁使用者名稱和 IP 位址。",
+	"apihelp-regexblock-param-expiry": "期限時間。可以是相對時間（例如：<kbd>5 months</kbd> 或 <kbd>2 weeks</kbd>）或是絕對時間（例如：<kbd>2014-09-18T12:34:56Z</kbd>）。如果設定成 <kbd>infinite</kbd>、<kbd>indefinite</kbd>、或 <kbd>never</kbd>，封鎖將會無期限。",
+	"apihelp-regexblock-param-reason": "封鎖原因。",
+	"apihelp-regexblock-param-nocreate": "禁止建立帳號。",
+	"apihelp-regexunblock-summary": "透過正規表達式解封使用者名稱和 IP 位址。",
 	"regexblock": "正規表達式封禁",
 	"regexblock-already-blocked": "$1 已被封禁。",
 	"regexblock-block-log": "使用者名稱或 IP 位址 '''$1''' 已被封禁。",

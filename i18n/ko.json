@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"아라"
+			"아라",
+			"Ykhwong"
 		]
 	},
+	"apihelp-regexblock-param-reason": "차단 이유입니다.",
 	"regexblock-form-username": "IP 주소 또는 사용자 이름:"
 }

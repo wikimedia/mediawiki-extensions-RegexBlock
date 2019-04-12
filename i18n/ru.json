@@ -5,9 +5,11 @@
 			"Innv",
 			"MaxSem",
 			"Александр Сигачёв",
-			"Mouse21"
+			"Mouse21",
+			"Kareyac"
 		]
 	},
+	"apihelp-regexblock-param-reason": "Причина блокировки.",
 	"regexblock": "RegexBlock",
 	"regexblock-already-blocked": "$1 уже заблокирован.",
 	"regexblock-block-log": "Имя участника или IP-адрес '''$1''' заблокирован.",
