@@ -70,5 +70,6 @@
 	"regexblock-view-time": "* $1 is a date/time\n* $2 is a date (optional)\n* $3 is a time (optional)\n{{Identical|On}}",
 	"action-regexblock": "{{doc-action|regexblock}}",
 	"right-regexblock": "{{doc-right|regexblock}}",
+	"action-regexblock-exempt": "{{doc-action|regexblock-exempt}}",
 	"right-regexblock-exempt": "{{doc-right|regexblock-exempt}}"
 }

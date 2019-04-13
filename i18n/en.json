@@ -64,5 +64,6 @@
 	"regexblock-view-time": "on $1",
 	"action-regexblock": "block users from editing on all wikis on the wiki farm",
 	"right-regexblock": "Block users from editing on all wikis on the wiki farm",
+	"action-regexblock-exempt": "exempt from global blocks",
 	"right-regexblock-exempt": "Exempt from global blocks"
 }
