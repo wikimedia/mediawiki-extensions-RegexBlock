@@ -51,5 +51,6 @@
 	"regexblock-view-stats": "統計",
 	"regexblock-view-empty": "ブロックされた利用者名とアドレスの一覧には項目がありません。",
 	"regexblock-view-time": "$1",
+	"action-regexblock": "利用者に対するウィキファーム上のすべてのウィキでの投稿ブロック",
 	"right-regexblock": "利用者をウィキファーム上のすべてのウィキで投稿ブロック"
 }

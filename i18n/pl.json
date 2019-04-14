@@ -54,5 +54,6 @@
 	"regexblock-view-time": "$1",
 	"action-regexblock": "zablokuj użytkownikom możliwość edytowania na wszystkich wiki w obrębie farmy",
 	"right-regexblock": "Blokowanie użytkownikom możliwości edycji na wszystkich wiki w obrębie farmy",
+	"action-regexblock-exempt": "bycia wykluczonym z blokad globalnych",
 	"right-regexblock-exempt": "Obejście globalnych blokad"
 }

@@ -64,5 +64,6 @@
 	"regexblock-view-time": "في $1",
 	"action-regexblock": "منع المستخدمين من التحرير في جميع الويكيات في مزرعة الويكي",
 	"right-regexblock": "منع المستخدمين من التعديل في كل الويكيات في مزرعة الويكي",
+	"action-regexblock-exempt": "مستثنى من المنع العالمي",
 	"right-regexblock-exempt": "معفى من المنع العالمي"
 }
