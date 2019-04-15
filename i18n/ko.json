@@ -6,5 +6,6 @@
 		]
 	},
 	"apihelp-regexblock-param-reason": "차단 이유입니다.",
+	"apihelp-regexblock-param-nocreate": "계정 생성을 막습니다.",
 	"regexblock-form-username": "IP 주소 또는 사용자 이름:"
 }
