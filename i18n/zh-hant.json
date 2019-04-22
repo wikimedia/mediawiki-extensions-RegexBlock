@@ -8,6 +8,7 @@
 		]
 	},
 	"apihelp-regexblock-summary": "透過正規表達式封禁使用者名稱和 IP 位址。",
+	"apihelp-regexblock-example-ip-exact-simple": "以「First strike」為原因來封禁符合「192.0.2.5」的 IP 位址三天",
 	"apihelp-regexblock-param-expiry": "期限時間。可以是相對時間（例如：<kbd>5 months</kbd> 或 <kbd>2 weeks</kbd>）或是絕對時間（例如：<kbd>2014-09-18T12:34:56Z</kbd>）。如果設定成 <kbd>infinite</kbd>、<kbd>indefinite</kbd>、或 <kbd>never</kbd>，封鎖將會無期限。",
 	"apihelp-regexblock-param-reason": "封鎖原因。",
 	"apihelp-regexblock-param-nocreate": "禁止建立帳號。",

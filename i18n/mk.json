@@ -4,6 +4,10 @@
 			"Bjankuloski06"
 		]
 	},
+	"apihelp-regexblock-summary": "Блокирање на кориснички имиња и IP-адреси по пат на регуларни изрази.",
+	"apihelp-regexblock-example-ip-exact-simple": "Блокирај ја точната IP-адреса „192.0.2.5“ со времетраење од три дена и причината „Прва казна“",
+	"apihelp-regexblock-param-reason": "Причина за блокирање.",
+	"apihelp-regexblock-param-nocreate": "Оневозможи создавање кориснички сметки.",
 	"regexblock": "Блок по регуларен израз",
 	"regexblock-already-blocked": "$1 е веќе блокиран.",
 	"regexblock-block-log": "Корисничкото име или IP-адресата '''$1''' е блокирана.",

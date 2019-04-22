@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dr Lotus Black"
+		]
+	},
+	"apihelp-regexblock-param-reason": "ပိတ်ပင်တားဆီးရသည့် အကြောင်းရင်း",
+	"apihelp-regexblock-param-nocreate": "အကောင့်ဖန်တီးခြင်းကို တားဆီးရန်"
+}

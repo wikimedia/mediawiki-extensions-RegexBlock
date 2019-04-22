@@ -9,6 +9,8 @@
 			"WikiPhoenix"
 		]
 	},
+	"apihelp-regexblock-param-reason": "Orsak till blockering.",
+	"apihelp-regexblock-param-nocreate": "Förhindra registrering av konton.",
 	"regexblock": "Regex-blockering",
 	"regexblock-already-blocked": "\"$1\" är redan blockerad.",
 	"regexblock-block-log": "Användarnamnet eller IP-adressen '''$1''' har blockerats.",
