@@ -54,5 +54,6 @@
 	"regexblock-view-time": "op $1",
 	"action-regexblock": "gebruikers te blokkeren op alle wiki's op de wikifamilie",
 	"right-regexblock": "Rechten om te bewerken intrekken voor gebruikers in alle wiki's van een wikifarm",
+	"action-regexblock-exempt": "uitgezonderd te zijn van globale blokkades",
 	"right-regexblock-exempt": "Uitgezonderd van globale blokkades"
 }
