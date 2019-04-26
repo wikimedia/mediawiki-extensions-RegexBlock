@@ -7,8 +7,10 @@
 			"Vlad5250"
 		]
 	},
+	"apihelp-regexblock-summary": "Блокувати імена користувачів та IP-адреси за допомогою регулярних виразів.",
 	"apihelp-regexblock-param-reason": "Причина блокування.",
 	"apihelp-regexblock-param-nocreate": "Заборонити створення облікових записів.",
+	"apihelp-regexunblock-summary": "Розблокувати імена користувачів та IP-адреси за допомогою регулярних виразів.",
 	"regexblock": "Блокування через регулярні вирази",
 	"regexblock-already-blocked": "$1 вже заблокований.",
 	"regexblock-block-log": "Ім'я користувача або IP-адресу '''$1''' заблоковано.",
