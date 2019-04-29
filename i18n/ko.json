@@ -5,7 +5,9 @@
 			"Ykhwong"
 		]
 	},
+	"apihelp-regexblock-summary": "정규 표현식으로 사용자의 이름과 IP 주소를 차단합니다.",
 	"apihelp-regexblock-param-reason": "차단 이유입니다.",
 	"apihelp-regexblock-param-nocreate": "계정 생성을 막습니다.",
+	"apihelp-regexunblock-summary": "정규 표현식으로 사용자 이름과 IP 주소의 차단을 해제합니다.",
 	"regexblock-form-username": "IP 주소 또는 사용자 이름:"
 }
