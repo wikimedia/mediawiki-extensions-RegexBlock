@@ -13,6 +13,8 @@
 			"Metalhead64"
 		]
 	},
+	"apihelp-regexblock-param-reason": "Grund für die Sperre.",
+	"apihelp-regexblock-param-nocreate": "Erstellung von Benutzerkonten verhindern.",
 	"regexblock": "Regex-Sperre",
 	"regexblock-already-blocked": "$1 ist bereits gesperrt.",
 	"regexblock-block-log": "Benutzername oder IP-Adresse '''$1''' wurde gesperrt",
