@@ -29,6 +29,8 @@
  */
 class ApiRegexBlock extends ApiBase {
 
+	use ApiBlockInfoTrait;
+
 	/**
 	 * Blocks the user specified in the parameters for the given expiry, with the
 	 * given reason, and with all other settings provided in the params. If the block
@@ -48,7 +50,7 @@ class ApiRegexBlock extends ApiBase {
 				$this->dieWithError(
 					$status,
 					null,
-					[ 'blockinfo' => ApiQueryUserInfo::getBlockInfo( $user->getBlock() ) ]
+					[ 'blockinfo' => $this->getBlockInfo( $user->getBlock() ) ]
 				);
 			}
 		}

@@ -29,6 +29,8 @@
  */
 class ApiRegexUnblock extends ApiBase {
 
+	use ApiBlockInfoTrait;
+
 	/**
 	 * Unblocks the specified regular expression or provides the reason the unblock failed.
 	 */
@@ -47,7 +49,7 @@ class ApiRegexUnblock extends ApiBase {
 				$this->dieWithError(
 					$status,
 					null,
-					[ 'blockinfo' => ApiQueryUserInfo::getBlockInfo( $user->getBlock() ) ]
+					[ 'blockinfo' => $this->getBlockInfo( $user->getBlock() ) ]
 				);
 			}
 		}
