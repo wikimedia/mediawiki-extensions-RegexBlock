@@ -137,8 +137,7 @@ class RegexBlockForm extends FormSpecialPage {
 		$regexData = new RegexBlockData();
 		$lang = $this->getLanguage();
 		$this->numResults = $regexData->fetchNbrResults();
-		$pager = $lang->viewPrevNext(
-			SpecialPage::getTitleFor( 'RegexBlock' ),
+		$pager = $this->buildPrevNextNavigation(
 			$this->mOffset,
 			$this->mLimit,
 			[
@@ -298,8 +297,7 @@ class RegexBlockForm extends FormSpecialPage {
 		$regexData = new RegexBlockData();
 		$lang = $this->getLanguage();
 		$this->numStatResults = $regexData->fetchNbrStatResults( $blckid );
-		$pager = $lang->viewPrevNext(
-			SpecialPage::getTitleFor( 'RegexBlock' ),
+		$pager = $this->buildPrevNextNavigation(
 			$this->mOffset,
 			$this->mLimit,
 			[
