@@ -15,6 +15,7 @@
  * @copyright Copyright © 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
+use Wikimedia\Rdbms\IResultWrapper;
 
 class RegexBlock {
 
@@ -297,7 +298,7 @@ class RegexBlock {
 	/**
 	 * Check if the USER block expired or not (AFTER we found an existing block)
 	 *
-	 * @param ResultWrapper $blocked Array of information about the block
+	 * @param IResultWrapper $blocked Array of information about the block
 	 * @return array|bool
 	 */
 	public static function expireNameCheck( $blocked ) {
