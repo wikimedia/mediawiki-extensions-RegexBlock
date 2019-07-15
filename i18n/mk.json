@@ -1,13 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bjankuloski06"
+			"Bjankuloski06",
+			"Vlad5250"
 		]
 	},
 	"apihelp-regexblock-summary": "Блокирање на кориснички имиња и IP-адреси по пат на регуларни изрази.",
 	"apihelp-regexblock-example-ip-exact-simple": "Блокирај ја точната IP-адреса „192.0.2.5“ со времетраење од три дена и причината „Прва казна“",
+	"apihelp-regexblock-param-expiry": "Време на истек. Може да биде релативно (на пр. <kbd>5 months</kbd> или <kbd>2 weeks</kbd>) или пак апсолутно (на пр. <kbd>2014-09-18T12:34:56Z</kbd>). Ако го зададете <kbd>infinite</kbd>, <kbd>indefinite</kbd> или <kbd>never</kbd>, блокот ќе трае засекогаш.",
 	"apihelp-regexblock-param-reason": "Причина за блокирање.",
 	"apihelp-regexblock-param-nocreate": "Оневозможи создавање кориснички сметки.",
+	"apihelp-regexunblock-summary": "Одблокирање на кориснички имиња и IP-адреси преку регуларни изрази.",
 	"regexblock": "Блок по регуларен израз",
 	"regexblock-already-blocked": "$1 е веќе блокиран.",
 	"regexblock-block-log": "Корисничкото име или IP-адресата '''$1''' е блокирана.",
@@ -54,5 +57,6 @@
 	"regexblock-view-time": "на $1",
 	"action-regexblock": "блокирање на корисници од уредување на сите викија на викифармата",
 	"right-regexblock": "Блокирање на корисници од уредување на сите викија на вики-фармата",
+	"action-regexblock-exempt": "изземен од глобални блокови",
 	"right-regexblock-exempt": "Изземеност од блобални блокови"
 }
