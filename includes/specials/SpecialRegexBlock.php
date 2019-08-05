@@ -730,7 +730,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * @param string $value User-supplied value to check for validity
 	 * @param array $alldata
 	 * @param HTMLForm $form
-	 * @return Message
+	 * @return bool|Message
 	 */
 	public static function validateTargetField( $value, $alldata, $form ) {
 		if ( RegexBlockData::isValidRegex( $value ) ) {
@@ -744,15 +744,13 @@ class RegexBlockForm extends FormSpecialPage {
 	}
 
 	/**
-	 * Given the form data, actually implement a block.<s>This is also called from ApiBlock.</s>
+	 * Given the form data, actually implement a block. This is also called from ApiRegexBlock.
 	 *
 	 * @param array $data
 	 * @param IContextSource $context
 	 * @return bool|string
 	 */
 	public static function processForm( array $data, IContextSource $context ) {
-		global $wgContLang;
-
 		$performer = $context->getUser();
 
 		// Handled by field validator callback
@@ -814,13 +812,14 @@ class RegexBlockForm extends FormSpecialPage {
 			return [ 'ipb_expiry_old' ];
 		}
 
+		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
 		$result = RegexBlockData::blockUser(
 			$target,
 			$expiryTime,
 			$data['RegexBlockedExact'],
 			$data['RegexBlockedCreation'],
 			# Truncate reason for whole multibyte characters
-			$wgContLang->truncateForDatabase( $data['Reason'][0], 255 )
+			$contLang->truncateForDatabase( $data['Reason'][0], 255 )
 		);
 
 		// clear memcached
