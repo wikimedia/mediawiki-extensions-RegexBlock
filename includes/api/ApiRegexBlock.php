@@ -136,6 +136,6 @@ class ApiRegexBlock extends ApiBase {
 	}
 
 	public function getHelpUrls() {
-		return 'https://www.mediawiki.org/wiki/Extension:RegexBlock/API';
+		return 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexBlock';
 	}
 }
