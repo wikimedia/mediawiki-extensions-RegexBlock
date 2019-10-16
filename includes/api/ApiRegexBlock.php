@@ -50,7 +50,7 @@ class ApiRegexBlock extends ApiBase {
 				$this->dieWithError(
 					$status,
 					null,
-					[ 'blockinfo' => $this->getBlockInfo( $user->getBlock() ) ]
+					[ 'blockinfo' => $this->getBlockDetails( $user->getBlock() ) ]
 				);
 			}
 		}
