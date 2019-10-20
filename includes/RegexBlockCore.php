@@ -500,19 +500,19 @@ class RegexBlock {
 
 			if ( $valid['reason'] != '' ) {
 				/* a reason was given, display it */
-				$user->getBlock()->mReason = $valid['reason'];
+				$user->getBlock()->setReason( $valid['reason'] );
 			} else {
 				/**
 				 * Display generic reasons
 				 * By default we blocked by regex match
 				 */
-				$user->getBlock()->mReason = wfMessage( 'regexblock-reason-regex', $wgContactLink )->text();
+				$user->getBlock()->setReason( wfMessage( 'regexblock-reason-regex', $wgContactLink ) );
 				if ( $valid['ip'] == 1 ) {
 					/* we blocked by IP */
-					$user->getBlock()->mReason = wfMessage( 'regexblock-reason-ip', $wgContactLink )->text();
+					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-ip', $wgContactLink ) );
 				} elseif ( $valid['exact'] == 1 ) {
 					/* we blocked by username exact match */
-					$user->getBlock()->mReason = wfMessage( 'regexblock-reason-name', $wgContactLink )->text();
+					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-name', $wgContactLink ) );
 				}
 			}
 
@@ -532,8 +532,8 @@ class RegexBlock {
 				 * Wikia had patched core to add a setId() method to the Block class to hack around this.
 				$user->getBlock()->mId = $valid['blckid'];
 				*/
-				$user->getBlock()->mExpiry = wfGetDB( DB_REPLICA )->decodeExpiry( $valid['expire'] );
-				$user->getBlock()->mTimestamp = $valid['timestamp'];
+				$user->getBlock()->setExpiry( wfGetDB( DB_REPLICA )->decodeExpiry( $valid['expire'] ) );
+				$user->getBlock()->setTimestamp( $valid['timestamp'] );
 				$user->getBlock()->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
 			}
 
