@@ -45,7 +45,7 @@
 	},
 	"Hooks": {
 		"ContributionsToolLinks": "RegexBlockHooks::onContributionsToolLinks",
-		"GetBlockedStatus": "RegexBlockHooks::onGetBlockedStatus",
+		"GetUserBlock": "RegexBlockHooks::onGetUserBlock",
 		"LoadExtensionSchemaUpdates": "RegexBlockHooks::onLoadExtensionSchemaUpdates"
 	},
 	"ResourceFileModulePaths": {
