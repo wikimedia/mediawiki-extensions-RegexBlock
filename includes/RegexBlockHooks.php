@@ -4,15 +4,13 @@ class RegexBlockHooks {
 	/**
 	 * Prepare data by getting blockers
 	 *
-	 * @param User $user
-	 * @param string|null $ip
-	 * @param AbstractBlock $block
+	 * @param User $current_user Current user
 	 * @return bool
 	 */
-	public static function onGetUserBlock( $user, $ip, $block ) {
+	public static function onGetBlockedStatus( $current_user ) {
 		global $wgRequest;
 
-		if ( $user->isAllowed( 'regexblock-exempt' ) ) {
+		if ( $current_user->isAllowed( 'regexblock-exempt' ) ) {
 			// Users with superhuman powers (staff) should not be blocked in any case
 			return true;
 		}
@@ -24,18 +22,18 @@ class RegexBlockHooks {
 		$ip_to_check = IP::sanitizeIP( $wgRequest->getIP() );
 
 		/* First check cache */
-		$blocked = RegexBlock::isBlockedCheck( $user, $ip_to_check );
+		$blocked = RegexBlock::isBlockedCheck( $current_user, $ip_to_check );
 		if ( $blocked ) {
 			return true;
 		}
 
 		$blockers_array = RegexBlock::getBlockers();
-		$block_data = RegexBlock::getBlockData( $user, $blockers_array );
+		$block_data = RegexBlock::getBlockData( $current_user, $blockers_array );
 
 		/* check user for each blocker */
 		foreach ( $blockers_array as $blocker ) {
 			$blocker_block_data = isset( $block_data[$blocker] ) ? $block_data[$blocker] : null;
-			RegexBlock::blocked( $blocker, $blocker_block_data, $user, $ip_to_check );
+			RegexBlock::blocked( $blocker, $blocker_block_data, $current_user, $ip_to_check );
 		}
 
 		return true;
