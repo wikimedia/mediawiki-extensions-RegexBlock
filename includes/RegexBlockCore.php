@@ -506,13 +506,13 @@ class RegexBlock {
 				 * Display generic reasons
 				 * By default we blocked by regex match
 				 */
-				$user->getBlock()->setReason( wfMessage( 'regexblock-reason-regex', $wgContactLink ) );
+				$user->getBlock()->setReason( wfMessage( 'regexblock-reason-regex', $wgContactLink )->text() );
 				if ( $valid['ip'] == 1 ) {
 					/* we blocked by IP */
-					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-ip', $wgContactLink ) );
+					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-ip', $wgContactLink )->text() );
 				} elseif ( $valid['exact'] == 1 ) {
 					/* we blocked by username exact match */
-					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-name', $wgContactLink ) );
+					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-name', $wgContactLink )->text() );
 				}
 			}
 
