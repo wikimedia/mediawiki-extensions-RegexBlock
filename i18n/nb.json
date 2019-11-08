@@ -6,6 +6,18 @@
 			"Jon Harald Søby"
 		]
 	},
+	"apihelp-regexblock-summary": "Blokkere brukeres navn og IP-adresser via regulære uttrykk.",
+	"apihelp-regexblock-example-ip-exact-simple": "Blokker den eksakte IP-adressa «192.0.2.5» i tre dager med årsak «First strike»",
+	"apihelp-regexblock-example-user-regex-complex": "Blokker det regulære uttrykket «SpamUser.*» permanent, som blokkerer alle brukere med brukernavn som matcher uttrykket, som «SpamUser65», med årsaken «Bad username» og forhindrer alle fra å opprette slike brukernavn.",
+	"apihelp-regexblock-param-regex": "Det regulære uttrykket som skal blokkeres. Merk at når parameteren «exact» gis i URL-en vil ikke dette behandles som et regulært uttrykk, men som en enkel streng.",
+	"apihelp-regexblock-param-expiry": "Utløpstid. Kan være relativ (f.eks. <kbd>5 months</kbd> eller <kbd>2 weeks</kbd>) eller absolutt (f.eks. <kbd>2014-09-18T12:34:56Z</kbd>). Hvis den er satt til <kbd>infinite</kbd>, <kbd>indefinite</kbd> eller <kbd>never</kbd> vil blokkeringen aldri løpe ut.",
+	"apihelp-regexblock-param-reason": "Årsak for blokkering.",
+	"apihelp-regexblock-param-nocreate": "Hindre kontoopprettelse.",
+	"apihelp-regexblock-param-exact": "Bruk eksakt matching for å blokkere det gitte brukernavnet akkurat som det er gitt (i motsetning til å behandle det som et regulært uttrykk).",
+	"apihelp-regexunblock-summary": "Avblokker brukeres navn og IP-adresser via regulære uttrykk.",
+	"apihelp-regexunblock-param-regex": "Det blokkerte regulære uttrykket som skal avblokkeres (er muligens ikke et virkelig regulært uttrykk når eksakt blokkering brukes).",
+	"apihelp-regexunblock-example-ip": "Avblokker «192.0.2.5» (som trolig var blokkert med valget «exact» for å blokkere kun den IP-adressen fra å redigere)",
+	"apihelp-regexunblock-example-regex": "Avblokker det regulære uttrykket «SpamUser.*» så kontoer som «SpamUser66» kan opprettes og eksisterende kontoer med silke navn kan redigere nettstedet.",
 	"regexblock": "Regex-blokkering",
 	"regexblock-already-blocked": "«$1» er allerede blokkert",
 	"regexblock-block-log": "Brukeren '''$1''' har blitt blokkert.",
@@ -52,5 +64,6 @@
 	"regexblock-view-time": "$1",
 	"action-regexblock": "blokkere brukere fra å redigere på alle wikier i wikifarmen",
 	"right-regexblock": "Blokker brukere fra å endre på alle wikier på wiki-farmen",
+	"action-regexblock-exempt": "unntatt fra globale blokkeringer",
 	"right-regexblock-exempt": "Unntatt fra globale blokkeringer"
 }
