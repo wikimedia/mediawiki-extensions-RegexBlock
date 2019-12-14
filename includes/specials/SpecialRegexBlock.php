@@ -449,7 +449,7 @@ class RegexBlockForm extends FormSpecialPage {
 			],
 			'Expiry' => [
 				'type' => !count( $suggestedDurations ) ? 'text' : 'selectorother',
-				'label-message' => 'ipbexpiry',
+				'label-message' => 'block-expiry',
 				'required' => true,
 				'options' => $suggestedDurations,
 				'other' => $this->msg( 'ipbother' )->text(),
