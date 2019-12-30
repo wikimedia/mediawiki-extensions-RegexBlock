@@ -46,7 +46,6 @@ class RegexBlockHooks {
 	 * @param int $id
 	 * @param Title $nt
 	 * @param array $links Other existing contributions links
-	 * @return bool
 	 */
 	public static function onContributionsToolLinks( $id, $nt, &$links ) {
 		global $wgUser;
@@ -58,7 +57,6 @@ class RegexBlockHooks {
 				[ 'wpTarget' => $nt->getText() ]
 			);
 		}
-		return true;
 	}
 
 	/**
@@ -66,12 +64,10 @@ class RegexBlockHooks {
 	 * maintenance/update.php.
 	 *
 	 * @param DatabaseUpdater $updater
-	 * @return bool
 	 */
 	public static function onLoadExtensionSchemaUpdates( $updater ) {
 		$file = __DIR__ . '/../sql/regexblock_schema.sql';
 		$updater->addExtensionTable( 'blockedby', $file );
 		$updater->addExtensionTable( 'stats_blockedby', $file );
-		return true;
 	}
 }
