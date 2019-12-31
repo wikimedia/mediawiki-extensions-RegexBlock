@@ -233,11 +233,9 @@ class RegexBlockData {
 	 * @param string $reason Given block reason, which will be displayed to the regexblocked user
 	 */
 	public static function blockUser( $address, $expiry, $exact, $creation, $reason ) {
-		global $wgUser;
-
 		/* make insert */
 		$dbw = RegexBlock::getDB( DB_MASTER );
-		$name = $wgUser->getName();
+		$name = RequestContext::getMain()->getUser()->getName();
 
 		$res = $dbw->replace(
 			'blockedby',

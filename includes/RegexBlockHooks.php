@@ -48,8 +48,7 @@ class RegexBlockHooks {
 	 * @param array $links Other existing contributions links
 	 */
 	public static function onContributionsToolLinks( $id, $nt, &$links ) {
-		global $wgUser;
-		if ( $wgUser->isAllowed( 'regexblock' ) ) {
+		if ( RequestContext::getMain()->getUser()->isAllowed( 'regexblock' ) ) {
 			$links[] = Linker::linkKnown(
 				SpecialPage::getTitleFor( 'RegexBlock' ),
 				wfMessage( 'regexblock-link' )->escaped(),

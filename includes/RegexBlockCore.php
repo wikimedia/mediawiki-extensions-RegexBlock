@@ -553,7 +553,7 @@ class RegexBlock {
 	 * @param string $username Name of the user
 	 */
 	public static function unsetKeys( $username ) {
-		global $wgMemc, $wgUser;
+		global $wgMemc;
 
 		$readMaster = 1;
 		$key = self::memcKey( 'regexBlockSpecial', 'number_records' );
@@ -568,7 +568,11 @@ class RegexBlock {
 		/* blocker's matches */
 		$key = self::memcKey( 'regex_blockers', 'All-In-One' );
 		$wgMemc->delete( $key );
-		self::getBlockData( $wgUser, $blockers_array, $readMaster );
+		self::getBlockData(
+			RequestContext::getMain()->getUser(),
+			$blockers_array,
+			$readMaster
+		);
 	}
 
 }
