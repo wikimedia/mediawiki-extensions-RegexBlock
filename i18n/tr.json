@@ -20,7 +20,7 @@
 	"apihelp-regexunblock-example-ip": "\"192.0.2.5\" engellemesini kaldırın (muhtemelen yalnızca bu IP adresinin düzenlenmesini engellemek için \"exact\" seçeneğiyle engellendi)",
 	"apihelp-regexunblock-example-regex": "\"SpamUser66\" gibi hesapların oluşturulabilmesi ve bu adlara sahip mevcut hesapların siteyi düzenleyebilmesi için \"SpamUser.*\" normal ifadesinin engellemesini kaldırın.",
 	"regexblock": "Regex bloğu",
-	"regexblock-already-blocked": "$1 zaten engellendi.",
+	"regexblock-already-blocked": "$1 zaten engellenmiş.",
 	"regexblock-block-log": "'''$1''' kullanıcı adı veya IP adresi engellendi.",
 	"regexblock-block-success": "Engel başarılı",
 	"regexblock-currently-blocked": "Halihazırda engellenmiş olan adresler:",
