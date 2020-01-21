@@ -3,14 +3,15 @@
 		"authors": [
 			"LyzTyphone",
 			"Michawiki",
-			"Yekrats"
+			"Yekrats",
+			"Robin van der Vliet"
 		]
 	},
 	"regexblock-already-blocked": "$1 jam estas forbarita.",
 	"regexblock-block-log": "Salutnomo aŭ IP-adreso '''$1''' estis forbarita.",
 	"regexblock-block-success": "Forbaro sukcesis",
 	"regexblock-currently-blocked": "Nune forbaritaj adresoj:",
-	"regexblock-form-username": "IP Adreso aŭ salutnomo:",
+	"regexblock-form-username": "IP-adreso aŭ uzantnomo:",
 	"regexblock-form-reason": "Kialo:",
 	"regexblock-form-match": "Preciza kongruo",
 	"regexblock-form-submit": "Bloki la uzanton",
