@@ -4,14 +4,15 @@
 			"Gzdavidwong",
 			"Mark85296341",
 			"Wrightbus",
-			"Kly"
+			"Kly",
+			"Xiplus"
 		]
 	},
 	"apihelp-regexblock-summary": "透過正規表達式封禁使用者名稱和 IP 位址。",
 	"apihelp-regexblock-example-ip-exact-simple": "以「First strike」為原因來封禁符合「192.0.2.5」的 IP 位址三天",
 	"apihelp-regexblock-example-user-regex-complex": "封禁正規表達式「SpamUser.*」後，將會封禁任何所有符合表達式內容的使用者名稱，例如像是「SpamUser66」這樣的帳號；以「Bad username」做為原因，會另外在建立新使用者帳號時禁止採用任何符合表達式內容的名稱。",
 	"apihelp-regexblock-param-regex": "封禁用的正規表達式。請注意在 URL 裡若有提供「exact」參數時，這不會被視為正規表達式；而是簡單的字串。",
-	"apihelp-regexblock-param-expiry": "期限時間。可以是相對時間（例如：<kbd>5 months</kbd> 或 <kbd>2 weeks</kbd>）或是絕對時間（例如：<kbd>2014-09-18T12:34:56Z</kbd>）。如果設定成 <kbd>infinite</kbd>、<kbd>indefinite</kbd>、或 <kbd>never</kbd>，封鎖將會無期限。",
+	"apihelp-regexblock-param-expiry": "到期時間。可以是相對時間（例如：<kbd>5 months</kbd> 或 <kbd>2 weeks</kbd>）或是絕對時間（例如：<kbd>2014-09-18T12:34:56Z</kbd>）。如果設定成<kbd>infinite</kbd>、<kbd>indefinite</kbd>或<kbd>never</kbd>，封鎖將會無期限。",
 	"apihelp-regexblock-param-reason": "封鎖原因。",
 	"apihelp-regexblock-param-nocreate": "禁止建立帳號。",
 	"apihelp-regexblock-param-exact": "使用精準相配來準確地封禁提供的名稱（而不是將此視為正規表達式）。",
