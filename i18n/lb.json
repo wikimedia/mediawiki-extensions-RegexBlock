@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Soued031"
 		]
 	},
 	"apihelp-regexblock-param-reason": "Grond fir d'Spär",
@@ -15,15 +16,15 @@
 	"regexblock-page-title": "Spär vun engem Numm mat engem regulärem Ausdrock",
 	"regexblockstats": "Regex Spärstatistiken",
 	"regexblock-page-title-1": "Adress spären andem regulär Ausdréck (Regex) benotzt ginn",
-	"regexblock-reason-ip": "Dës IP-Adress ass wéinst Vandalismus oder anerem Schiedlechem Verhalen vun Iech oder engem Aneren dee mat Iech déi selwëscht IP-Adress deelt fir d'Änner vu Säite gespaart. Wann Dir mengt dëst fir e Feeler, da [[$1|kontaktéiert eis]] w.e.g.",
-	"regexblock-reason-name": "Dëse Benotzernumm ass wéinst Vandalismus oder aus ähnlechen Ursaache gespaart an däerf keng Ännerunge maachen.\nWann Dir iwwerzeecht sidd datt et sech ëm ee Feeler handelt, [[$1|kontaktéiert eis w.e.g.]]",
-	"regexblock-reason-regex": "Dëse Benotzernumm ass wéint Vandalismus oder anerem schiedleche Verhale vun engem Benotzer mat engem ähnleche Benotzernumm gespaart fir Ännerungen a Säiten ze maachen. Wielt w.e.g. en anere Benotzernumm oder [[$1|kontaktéiert eis]] wéinst deem Problem.",
+	"regexblock-reason-ip": "Dës IP-Adress ass wéinst Vandalismus oder anerem Schiedlechem Verhalen vun Iech oder engem Aneren dee mat Iech déi selwëscht IP-Adress deelt fir d'Änner vu Säite gespaart. Wann Dir mengt dëst fir e Feeler, da [[$1|kontaktéiert eis]] wgl.",
+	"regexblock-reason-name": "Dëse Benotzernumm ass wéinst Vandalismus oder aus ähnlechen Ursaache gespaart an däerf keng Ännerunge maachen.\nWann Dir iwwerzeecht sidd datt et sech ëm ee Feeler handelt, [[$1|kontaktéiert eis wgl.]]",
+	"regexblock-reason-regex": "Dëse Benotzernumm ass wéint Vandalismus oder anerem schiedleche Verhale vun engem Benotzer mat engem ähnleche Benotzernumm gespaart fir Ännerungen a Säiten ze maachen. Wielt wgl. en anere Benotzernumm oder [[$1|kontaktéiert eis]] wéinst deem Problem.",
 	"regexblock-form-username": "IP-Adress oder Benotzer:",
 	"regexblock-form-reason": "Grond:",
 	"regexblock-form-account-block": "Uleeë vun neie Benotzerkonte spären",
 	"regexblock-form-submit": "Dëse Benotzer spären",
 	"regexblock-form-submit-empty": "Gitt e Benotzernumm oder eng IP-Adress un fir ze spären.",
-	"regexblock-form-submit-expiry": "Gitt w.e.g. en Zäitraum fir d'Spär un.",
+	"regexblock-form-submit-expiry": "Gitt wgl. en Zäitraum fir d'Spär un.",
 	"regexblock-match-stats-record": "$1 huet '$2' de(n) '$3' ëm '$4' gespaart, ageloggt vun der Adress '$5'",
 	"regexblock-nodata-found": "Keng Date fonnt",
 	"regexblock-stats-title": "Regex Spärstatistik",
