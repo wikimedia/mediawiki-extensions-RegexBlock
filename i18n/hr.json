@@ -4,12 +4,13 @@
 			"Dnik",
 			"Ex13",
 			"Herr Mlinka",
-			"SpeedyGonsales"
+			"SpeedyGonsales",
+			"Bugoslav"
 		]
 	},
 	"regexblock": "Blokiranje pomoću regularnih izraza",
 	"regexblock-already-blocked": "$1 je već blokiran.",
-	"regexblock-block-log": "Suradnik ili IP-adresa '''$1''' su blokirani.",
+	"regexblock-block-log": "Suradničko ime ili IP-adresa '''$1''' je blokirana.",
 	"regexblock-block-success": "Blokiranje uspjelo",
 	"regexblock-currently-blocked": "Trenutno blokirane adrese:",
 	"regexblock-page-title": "Blokiranje pomoću regularnih izraza",
