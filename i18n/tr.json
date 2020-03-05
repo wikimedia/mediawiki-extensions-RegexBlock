@@ -63,8 +63,8 @@
 	"regexblock-view-stats": "durumlar",
 	"regexblock-view-empty": "Engellenmiş ad ve adres listesi boş.",
 	"regexblock-view-time": "$1 üzerinde",
-	"action-regexblock": "kullanıcıların wiki çiftliğindeki tüm wikilerde düzenlemelerini engelle",
-	"right-regexblock": "Kullanıcıların wiki çiftliğindeki tüm wikilerde düzenlemelerini engelle",
+	"action-regexblock": "kullanıcıların viki çiftliğindeki tüm vikilerde düzenlemelerini engelle",
+	"right-regexblock": "Kullanıcıların viki çiftliğindeki tüm vikilerde düzenlemelerini engelle",
 	"action-regexblock-exempt": "küresel bloklardan muaf",
 	"right-regexblock-exempt": "Küresel bloklardan muaf"
 }
