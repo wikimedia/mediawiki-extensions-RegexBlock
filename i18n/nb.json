@@ -2,8 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Audun",
-			"Nghtwlkr",
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Nghtwlkr"
 		]
 	},
 	"apihelp-regexblock-summary": "Blokkere brukeres navn og IP-adresser via regulære uttrykk.",

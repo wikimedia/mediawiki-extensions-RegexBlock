@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"아라",
-			"Ykhwong"
+			"Ykhwong",
+			"아라"
 		]
 	},
 	"apihelp-regexblock-summary": "정규 표현식으로 사용자의 이름과 IP 주소를 차단합니다.",

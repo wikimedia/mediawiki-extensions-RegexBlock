@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"BadDog",
 			"FriedrickMILBarbarossa",
 			"Rancher",
 			"Sasa Stefanovic",
 			"Жељко Тодоровић",
-			"Михајло Анђелковић",
-			"BadDog"
+			"Михајло Анђелковић"
 		]
 	},
 	"regexblock-block-success": "Блокирање је успело",

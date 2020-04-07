@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Prima klasy4na",
-			"Тест",
 			"Piramidion",
-			"Vlad5250"
+			"Prima klasy4na",
+			"Vlad5250",
+			"Тест"
 		]
 	},
 	"apihelp-regexblock-summary": "Блокувати імена користувачів та IP-адреси за допомогою регулярних виразів.",

@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bugoslav",
 			"Dnik",
 			"Ex13",
 			"Herr Mlinka",
-			"SpeedyGonsales",
-			"Bugoslav"
+			"SpeedyGonsales"
 		]
 	},
 	"regexblock": "Blokiranje pomoću regularnih izraza",

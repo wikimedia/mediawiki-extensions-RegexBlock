@@ -2,12 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Crochet.david",
+			"Gomoko",
 			"IAlex",
+			"Thibaut120094",
 			"Urhixidur",
 			"Verdy p",
-			"Gomoko",
-			"Wladek92",
-			"Thibaut120094"
+			"Wladek92"
 		]
 	},
 	"apihelp-regexblock-summary": "Bloquer les noms d’utilisateur et les adresses IP via des expressions régulières.",

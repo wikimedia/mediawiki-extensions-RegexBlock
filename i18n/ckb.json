@@ -1,5 +1,7 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": []
+	},
 	"regexblock-form-reason": "هۆکار:",
 	"regexblock-view-go": "بڕۆ"
 }

@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mainframe98",
 			"Meno25",
 			"SPQRobin",
 			"Siebrand",
-			"Tvdm",
-			"Mainframe98"
+			"Tvdm"
 		]
 	},
 	"apihelp-regexblock-param-expiry": "Vervaldatum. Kan relatief zijn (bijv. <kbd>5 months</kbd> of <kbd>2 weeks</kbd>) of absoluut (bijv. <kbd>2014-09-18T12:34:56Z</kbd>). Indien ingesteld op <kbd>infinite</kbd>, <kbd>indefinite</kbd> of <kbd>never</kbd> zal de blokkade nooit verlopen.",

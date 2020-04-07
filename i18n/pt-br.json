@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Eduardo Addad de Oliveira",
 			"Eduardo.mps",
-			"Giro720",
-			"Eduardo Addad de Oliveira"
+			"Giro720"
 		]
 	},
 	"apihelp-regexblock-summary": "Bloqueie os nomes dos usuários e os endereços IP por meio de expressões regulares.",
