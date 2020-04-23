@@ -32,7 +32,7 @@
 	"regexblock-view-reason": "কারণ: $1",
 	"regexblock-view-reason-default": "সাধারণ কারণ",
 	"regexblock-view-block-infinite": "স্থায়ী বাধা",
-	"regexblock-view-block-by": "অবরুদ্ধ করেছেন:",
+	"regexblock-view-block-by": "বাধা দিয়েছেন:",
 	"regexblock-view-block-unblock": "বাধা তুলুন",
 	"regexblock-view-stats": "পরিসংখ্যান",
 	"regexblock-view-time": "$1-এ",
