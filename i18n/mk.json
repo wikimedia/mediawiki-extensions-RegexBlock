@@ -34,7 +34,7 @@
 	"regexblock-form-submit-expiry": "Назначете рок на истекување.",
 	"regexblock-link": "блокирај со регуларен израз",
 	"regexblock-match-stats-record": "$1 го блокираше корисникот „$2“ на „$3“ на „$4“, најавувајќи се од адресата „$5“",
-	"regexblock-nodata-found": "Нема пронајдено податоци",
+	"regexblock-nodata-found": "Не пронајдов податоци",
 	"regexblock-stats-title": "Статистики за блокирање со регуларен израз",
 	"regexblock-unblock-success": "Одблокирањето успеа",
 	"regexblock-unblock-log": "Корисничкото име или IP-адресата '''$1''' е одблокирана.",
