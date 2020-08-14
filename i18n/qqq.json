@@ -24,7 +24,7 @@
 	"apihelp-regexunblock-param-regex": "{{doc-apihelp-param|regexunblock|regex}}",
 	"apihelp-regexunblock-example-ip": "{{doc-apihelp-example|regexunblock}}",
 	"apihelp-regexunblock-example-regex": "{{doc-apihelp-example|regexunblock}}",
-	"regexblock": "{{name}}",
+	"regexblock": "{{doc-special}}",
 	"regexblock-already-blocked": "{{Identical|$1 is already blocked}}",
 	"regexblock-block-log": "Used on Special:RegexBlock",
 	"regexblock-block-success": "Used as subtitle on Special:RegexBlock",
