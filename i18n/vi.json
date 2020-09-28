@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ioe2015",
 			"Minh Nguyen",
 			"Vinhtantran"
 		]
 	},
+	"apihelp-regexblock-summary": "Chặn tên và IP người dùng bằng biểu thức chính quy.",
 	"regexblock": "Cấm bằng biểu thức chính quy",
 	"regexblock-already-blocked": "“$1” đã bị cấm rồi.",
 	"regexblock-block-log": "Tên người dùng hoặc địa chỉ IP '''$1''' đã bị cấm.",
