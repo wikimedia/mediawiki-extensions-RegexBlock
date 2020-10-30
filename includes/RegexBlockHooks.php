@@ -46,12 +46,13 @@ class RegexBlockHooks {
 	 * @param int $id
 	 * @param Title $nt
 	 * @param array $links Other existing contributions links
+	 * @param SpecialContributions $sp
 	 */
-	public static function onContributionsToolLinks( $id, $nt, &$links ) {
-		if ( RequestContext::getMain()->getUser()->isAllowed( 'regexblock' ) ) {
-			$links[] = Linker::linkKnown(
+	public static function onContributionsToolLinks( $id, $nt, &$links, SpecialPage $sp ) {
+		if ( $sp->getUser()->isAllowed( 'regexblock' ) ) {
+			$links[] = $sp->getLinkRenderer()->makeKnownLink(
 				SpecialPage::getTitleFor( 'RegexBlock' ),
-				wfMessage( 'regexblock-link' )->escaped(),
+				$sp->msg( 'regexblock-link' )->text(),
 				[],
 				[ 'wpTarget' => $nt->getText() ]
 			);
