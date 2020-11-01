@@ -244,7 +244,7 @@ class RegexBlockData {
 				'blckby_id' => null,
 				'blckby_name' => $address,
 				'blckby_blocker' => $name,
-				'blckby_timestamp' => wfTimestampNow(),
+				'blckby_timestamp' => $dbw->timestamp( wfTimestampNow() ),
 				'blckby_expire' => $dbw->encodeExpiry( $expiry ),
 				'blckby_exact' => intval( $exact ),
 				'blckby_create' => intval( $creation ),
