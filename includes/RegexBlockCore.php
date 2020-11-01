@@ -374,7 +374,7 @@ class RegexBlock {
 				'stats_user' => $user->getName(),
 				'stats_ip' => $user_ip,
 				'stats_blocker' => $blocker,
-				'stats_timestamp' => wfTimestampNow(),
+				'stats_timestamp' => $dbw->timestamp( wfTimestampNow() ),
 				'stats_match' => $match,
 				'stats_dbname' => $wgDBname
 			],
