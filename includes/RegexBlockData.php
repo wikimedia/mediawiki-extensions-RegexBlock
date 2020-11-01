@@ -1,9 +1,11 @@
 <?php
+use MediaWiki\MediaWikiServices;
 /**
  * @class RegexBlockData
  * helper classes & functions
  */
 class RegexBlockData {
+	/** @var int Amount of results in the blockedby database table */
 	public $mNbrResults;
 
 	public function __construct() {
@@ -16,12 +18,12 @@ class RegexBlockData {
 	 * @return int
 	 */
 	public function fetchNbrResults() {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$this->mNbrResults = 0;
 		/* we use memcached here */
 		$key = RegexBlock::memcKey( 'regexBlockSpecial', 'number_records' );
-		$cached = $wgMemc->get( $key );
+		$cached = $cache->get( $key );
 
 		if ( empty( $cached ) ) {
 			$dbr = RegexBlock::getDB( DB_MASTER );
@@ -38,7 +40,7 @@ class RegexBlockData {
 				$this->mNbrResults = $row->cnt;
 			}
 
-			$wgMemc->set( $key, $this->mNbrResults, 0 /* 0 = infinite */ );
+			$cache->set( $key, $this->mNbrResults, 0 /* 0 = infinite */ );
 		} else {
 			$this->mNbrResults = $cached;
 		}
@@ -47,25 +49,26 @@ class RegexBlockData {
 	}
 
 	/**
-	 * @return int
+	 * @return int Amount of results in the blockedby database table
 	 */
 	public function getNbrResults() {
 		return $this->mNbrResults;
 	}
 
 	/**
-	 * Fetch names of all blockers and write them into select's options
+	 * Fetch names of all users who have blocked something or someone via RegexBlock
 	 *
-	 * @return $blockers_array
+	 * @return array
 	 */
 	public function fetchBlockers() {
 		return RegexBlock::getBlockers();
 	}
 
 	/**
+	 * Get data and play with data
 	 *
-	 * @param string $current
-	 * @param string $username
+	 * @param string $current Blocking user's user name
+	 * @param string $username Target user name or regular expression
 	 * @param int $limit LIMIT for the SQL query
 	 * @param int $offset OFFSET for the SQL query
 	 * @return array
@@ -74,7 +77,6 @@ class RegexBlockData {
 		global $wgLang;
 
 		$blocker_list = [];
-		/* get data and play with data */
 		$dbr = RegexBlock::getDB( DB_MASTER );
 		$conds = [ "blckby_blocker <> ''" ];
 
