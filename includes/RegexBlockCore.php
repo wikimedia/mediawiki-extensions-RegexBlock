@@ -15,12 +15,14 @@
  * @copyright Copyright © 2007, Wikia Inc.
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
+use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\IResultWrapper;
 
 class RegexBlock {
 
 	/**
-	 * Get a database object
+	 * Get a database handle to the database containing RegexBlock tables (if
+	 * different from the current wiki's database)
 	 *
 	 * @param int Either DB_REPLICA (for reads) or DB_MASTER (for writes)
 	 * @return Database
@@ -31,17 +33,19 @@ class RegexBlock {
 	}
 
 	/**
-	 * Get a memcached key
+	 * Get a cache key
+	 *
 	 * @return string
 	 */
 	public static function memcKey( /* ... */ ) {
-		global $wgRegexBlockDatabase, $wgMemc;
+		global $wgRegexBlockDatabase;
 
 		$wiki = ( $wgRegexBlockDatabase !== false ) ? $wgRegexBlockDatabase : wfWikiID();
 		$newArgs = array_merge( [ $wiki ], func_get_args() );
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		return call_user_func_array(
-			[ $wgMemc, 'makeGlobalKey' ],
+			[ $cache, 'makeGlobalKey' ],
 			$newArgs
 		);
 	}
@@ -50,13 +54,13 @@ class RegexBlock {
 	 * Get blockers
 	 *
 	 * @param bool $master Use DB_MASTER for reading?
-	 * @return array
+	 * @return array User names of all users who have ever blocked an expression via RegexBlock
 	 */
 	public static function getBlockers( $master = false ) {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$key = self::memcKey( 'regex_blockers' );
-		$cached = $wgMemc->get( $key );
+		$cached = $cache->get( $key );
 		$blockers_array = [];
 
 		if ( !is_array( $cached ) ) {
@@ -73,7 +77,7 @@ class RegexBlock {
 				$blockers_array[] = $row->blckby_blocker;
 			}
 			$res->free();
-			$wgMemc->set( $key, $blockers_array, 0 /* 0 = infinite */ );
+			$cache->set( $key, $blockers_array, 0 /* 0 = infinite */ );
 		} else {
 			/* get from cache */
 			$blockers_array = $cached;
@@ -87,16 +91,15 @@ class RegexBlock {
 	 *
 	 * @param User $user The user (object) who we're checking
 	 * @param string $ip The user's IP address
-	 * @return array|bool An array of arrays to run a regex match against or
-	 *                    bool false if target isn't blocked
+	 * @return array|bool [ 'match' => 'IP address or username', 'ip' => 1 or 0 ]
+	 *                    on success, bool false if target isn't blocked
 	 */
 	public static function isBlockedCheck( $user, $ip ) {
-		global $wgMemc;
-
 		$result = false;
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $user->getName() ) );
-		$cached = $wgMemc->get( $key );
+		$cached = $cache->get( $key );
 
 		if ( is_object( $cached ) ) {
 			$ret = self::expireNameCheck( $cached );
@@ -109,7 +112,7 @@ class RegexBlock {
 
 		if ( ( $result === false ) && ( $ip != $user->getName() ) ) {
 			$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $ip ) );
-			$cached = $wgMemc->get( $key );
+			$cached = $cache->get( $key );
 			if ( is_object( $cached ) ) {
 				$ret = self::expireNameCheck( $cached );
 				if ( ( $ret !== false ) && ( is_array( $ret ) ) ) {
@@ -131,8 +134,6 @@ class RegexBlock {
 	 * @return array An array of arrays to run a regex match against
 	 */
 	public static function getBlockData( $user, $blockers, $master = false ) {
-		global $wgMemc;
-
 		$blockData = [];
 
 		/**
@@ -143,8 +144,9 @@ class RegexBlock {
 			return false;
 		}
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$memkey = self::memcKey( 'regex_blockers', 'All-In-One' );
-		$cached = $wgMemc->get( $memkey );
+		$cached = $cache->get( $memkey );
 
 		if ( empty( $cached ) ) {
 			/* Fetch data from DB, concatenate into one string, then fill cache */
@@ -164,6 +166,7 @@ class RegexBlock {
 					'exact' => [],
 					'regex' => []
 				];
+
 				while ( $row = $res->fetchObject() ) {
 					$key = 'regex';
 					if ( User::isIP( $row->blckby_name ) != 0 ) {
@@ -171,6 +174,7 @@ class RegexBlock {
 					} elseif ( $row->blckby_exact != 0 ) {
 						$key = 'exact';
 					}
+
 					$names[$key][] = $row->blckby_name;
 					$loop++;
 				}
@@ -180,7 +184,8 @@ class RegexBlock {
 					$blockData[$blocker] = $names;
 				}
 			}
-			$wgMemc->set( $memkey, $blockData, 0 /* 0 = infinite */ );
+
+			$cache->set( $memkey, $blockData, 0 /* 0 = infinite */ );
 		} else {
 			/* take it from cache */
 			$blockData = $cached;
@@ -231,24 +236,24 @@ class RegexBlock {
 	 * @return array|bool
 	 */
 	public static function expireCheck( $user, $array_match = null, $ips = 0, $iregex = 0 ) {
-		global $wgMemc;
-
 		/* I will use memcached, with the key being particular block */
 		if ( empty( $array_match ) ) {
 			return false;
 		}
 
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$ret = [];
 		/**
 		 * For EACH match check whether timestamp expired until found VALID timestamp
 		 * but: only for a BLOCKED user, and it will be memcached
-		  * moreover, expired blocks will be consequently deleted
+		 * moreover, expired blocks will be consequently deleted
 		 */
 		$blocked = '';
 		foreach ( $array_match as $single ) {
 			$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $single ) );
 			$blocked = null;
-			$cached = $wgMemc->get( $key );
+			$cached = $cache->get( $key );
+
 			if ( empty( $cached ) || ( !is_object( $cached ) ) ) {
 				/* get from database */
 				$dbr = self::getDB( DB_MASTER );
@@ -257,6 +262,7 @@ class RegexBlock {
 				if ( !empty( $iregex ) ) {
 					$where = [ 'blckby_name' => $single ];
 				}
+
 				$res = $dbr->select(
 					'blockedby',
 					[
@@ -267,6 +273,7 @@ class RegexBlock {
 					$where,
 					__METHOD__
 				);
+
 				if ( $row = $res->fetchObject() ) {
 					/* if still valid or infinite, ok to block user */
 					$blocked = $row;
@@ -283,7 +290,7 @@ class RegexBlock {
 				if ( $ret !== false ) {
 					$ret['match'] = $single;
 					$ret['ip'] = $ips;
-					$wgMemc->set( $key, $blocked, 30 * 86400 );
+					$cache->set( $key, $blocked, 30 * 86400 );
 					return $ret;
 				} else {
 					/* clean up an obsolete block */
@@ -299,7 +306,9 @@ class RegexBlock {
 	 * Check if the USER block expired or not (AFTER we found an existing block)
 	 *
 	 * @param IResultWrapper $blocked Array of information about the block
-	 * @return array|bool
+	 * @return array|bool If the block is still active, returns array of info about it (the
+	 *   same that was passed to it, but with keys renamed or something); otherwise if the
+	 *   block is expired, returns boolean false (I believe)
 	 */
 	public static function expireNameCheck( $blocked ) {
 		$ret = false;
@@ -354,11 +363,11 @@ class RegexBlock {
 	/**
 	 * Put the stats about block into database
 	 *
-	 * @param string $username
+	 * @param string $user Blocked regular expression
 	 * @param string $user_ip IP address of the current user
-	 * @param string $blocker
-	 * @param $match
-	 * @param int $blckid
+	 * @param string $blocker User name of the person who added the regex block
+	 * @param string $match Matched blocked (regular) expression (blockedby.blckby_name)
+	 * @param int $blckid Block ID from the blockedby DB table
 	 */
 	public static function updateStats( $user, $user_ip, $blocker, $match, $blckid ) {
 		global $wgDBname;
@@ -443,9 +452,11 @@ class RegexBlock {
 		foreach ( $result as $key => $value ) {
 			$isIP = ( $key == 'ips' ) ? 1 : 0;
 			$isRegex = ( $key == 'regex' ) ? 1 : 0;
-			/* check if this block hasn't expired already  */
+
+			/* check if this block hasn't expired already */
 			if ( !empty( $result[$key]['matches'] ) ) {
 				$valid = self::expireCheck( $user, $result[$key]['matches'], $isIP, $isRegex );
+
 				if ( is_array( $valid ) ) {
 					break;
 				}
@@ -548,26 +559,30 @@ class RegexBlock {
 	}
 
 	/**
-	 * Clean the memcached keys
+	 * Clean the cache keys
 	 *
 	 * @param string $username Name of the user
 	 */
 	public static function unsetKeys( $username ) {
-		global $wgMemc;
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$readMaster = 1;
 		$key = self::memcKey( 'regexBlockSpecial', 'number_records' );
-		$wgMemc->delete( $key );
+		$cache->delete( $key );
+
 		/* main cache of user-block data */
 		$key = self::memcKey( 'regex_user_block', str_replace( ' ', '_', $username ) );
-		$wgMemc->delete( $key );
+		$cache->delete( $key );
+
 		/* blockers */
 		$key = self::memcKey( 'regex_blockers' );
-		$wgMemc->delete( $key );
+		$cache->delete( $key );
 		$blockers_array = self::getBlockers( $readMaster );
+
 		/* blocker's matches */
 		$key = self::memcKey( 'regex_blockers', 'All-In-One' );
-		$wgMemc->delete( $key );
+		$cache->delete( $key );
+
 		self::getBlockData(
 			RequestContext::getMain()->getUser(),
 			$blockers_array,
