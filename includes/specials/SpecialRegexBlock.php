@@ -18,6 +18,10 @@
  *       page Special:Block (/includes/specials/SpecialBlock.php).
  */
 
+use MediaWiki\Block\AbstractBlock;
+use MediaWiki\MediaWikiServices;
+use Wikimedia\IPUtils;
+
 class RegexBlockForm extends FormSpecialPage {
 	public $numResults = 0;
 	public $numStatResults = 0;
@@ -30,7 +34,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * or as subpage (Special:Block/Foo) */
 	protected $target;
 
-	/** @var int Block::TYPE_ constant */
+	/** @var int AbstractBlock::TYPE_ constant */
 	protected $type;
 
 	/** @var User|string The previous block target */
@@ -93,7 +97,7 @@ class RegexBlockForm extends FormSpecialPage {
 		$this->mFilter = $request->getVal( 'filter' );
 		$this->mRegexFilter = $request->getVal( 'rfilter' );
 
-		list( $this->mLimit, $this->mOffset ) = $request->getLimitOffset();
+		list( $this->mLimit, $this->mOffset ) = $request->getLimitOffsetForUser( $user );
 
 		/* Actions */
 		switch ( $this->mAction ) {
@@ -310,6 +314,8 @@ class RegexBlockForm extends FormSpecialPage {
 
 		/* allow display by specific blockers only */
 		$blockInfo = $regexData->getRegexBlockById( $blckid );
+		// @todo FIXME: does not display the blocked expression, blocker name or reason properly (yet)
+		// $blockInfo = RegularExpressionDatabaseBlock::newFromID( $blckid );
 		$stats_list = [];
 		if ( !empty( $blockInfo ) && ( is_object( $blockInfo ) ) ) {
 			$stats_list = $regexData->getStatsData( $blckid, $this->mLimit, $this->mOffset );
@@ -396,7 +402,7 @@ class RegexBlockForm extends FormSpecialPage {
 		}
 
 		list( $this->previousTarget, /*...*/ ) =
-			self::parseTarget( $request->getVal( 'wpPreviousTarget' ) );
+			RegularExpressionDatabaseBlock::parseTarget( $request->getVal( 'wpPreviousTarget' ) );
 	}
 
 	/**
@@ -598,7 +604,7 @@ class RegexBlockForm extends FormSpecialPage {
 	protected static function getTargetUserTitle( $target ) {
 		if ( $target instanceof User ) {
 			return $target->getUserPage();
-		} elseif ( IP::isIPAddress( $target ) ) {
+		} elseif ( IPUtils::isIPAddress( $target ) ) {
 			return Title::makeTitleSafe( NS_USER, $target );
 		}
 
@@ -611,7 +617,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * @param string $par Subpage parameter passed to setup, or data value from
 	 *     the HTMLForm
 	 * @param WebRequest $request Optionally try and get data from a request too
-	 * @return array( User|string|null, Block::TYPE_ constant|null )
+	 * @return array( User|string|null, AbstractBlock::TYPE_ constant|null )
 	 */
 	public static function getTargetAndType( $par, WebRequest $request = null ) {
 		$i = 0;
@@ -646,7 +652,7 @@ class RegexBlockForm extends FormSpecialPage {
 					break 2;
 			}
 
-			list( $target, $type ) = self::parseTarget( $target );
+			list( $target, $type ) = RegularExpressionDatabaseBlock::parseTarget( $target );
 
 			if ( $type !== null ) {
 				return [ $target, $type ];
@@ -654,74 +660,6 @@ class RegexBlockForm extends FormSpecialPage {
 		}
 
 		return [ null, null ];
-	}
-
-	/**
-	 * <s>From an existing Block,</s> get the target and the type of target.
-	 * Note that, except for null, it is always safe to treat the target
-	 * as a string; for User objects this will return User::__toString()
-	 * which in turn gives User::getName().
-	 *
-	 * Had to override this to take regexes into account, which SpecialBlock's
-	 * method obviously doesn't, because as of MW 1.28 core doesn't have native
-	 * support for blocking via regexes. One day...
-	 *
-	 * @param string|int|User|null $target
-	 * @return array( User|String|null, Block::TYPE_ constant|null )
-	 */
-	public static function parseTarget( $target ) {
-		# We may have been through this before
-		if ( $target instanceof User ) {
-			if ( IP::isValid( $target->getName() ) ) {
-				return [ $target, self::TYPE_IP ];
-			} elseif ( RegexBlockData::isValidRegex( $target->getName() ) ) {
-				return [ $target, 6 /* Block::TYPE_ constants are numbered 1-5, so using 6 here is safe for now */ ];
-			} else {
-				return [ $target, self::TYPE_USER ];
-			}
-		} elseif ( $target === null ) {
-			return [ null, null ];
-		}
-
-		$target = trim( $target );
-
-		if ( IP::isValid( $target ) ) {
-			# We can still create a User if it's an IP address, but we need to turn
-			# off validation checking (which would exclude IP addresses)
-			return [
-				User::newFromName( IP::sanitizeIP( $target ), false ),
-				Block::TYPE_IP
-			];
-
-		} elseif ( IP::isValidRange( $target ) ) {
-			# Can't create a User from an IP range
-			return [ IP::sanitizeRange( $target ), Block::TYPE_RANGE ];
-		}
-
-		# Consider the possibility that this is not a username at all
-		# but actually an old subpage (bug #29797)
-		if ( strpos( $target, '/' ) !== false ) {
-			# An old subpage, drill down to the user behind it
-			$target = explode( '/', $target )[0];
-		}
-
-		$userObj = User::newFromName( $target );
-		// Give regexness priority because "SpamUser.*" is also a valid username as-is,
-		// but our first and foremost concern is with regexes here
-		// @todo FIXME: actually this is dumb. Only in case of an invalid regex we'd
-		// move onto the next conditional; we'll always return [ $target, 6 ] for regexes
-		// here now.
-		if ( RegexBlockData::isValidRegex( $target ) ) {
-			return [ $target, 6 /* Block::TYPE_ constants are numbered 1-5, so using 6 here is safe for now */ ];
-		} elseif ( $userObj instanceof User ) {
-			# Note that since numbers are valid usernames, a $target of "12345" will be
-			# considered a User.  If you want to pass a block ID, prepend a hash "#12345",
-			# since hash characters are not valid in usernames or titles generally.
-			return [ $userObj, Block::TYPE_USER ];
-		} else {
-			# WTF?
-			return [ null, null ];
-		}
 	}
 
 	/**
@@ -758,7 +696,7 @@ class RegexBlockForm extends FormSpecialPage {
 
 		/** @var User $target */
 		list( $target, $type ) = self::getTargetAndType( $data['Target'] );
-		if ( $type == Block::TYPE_USER ) {
+		if ( $type == AbstractBlock::TYPE_USER ) {
 			$user = $target;
 			$target = $user->getName();
 			$userId = $user->getId();
@@ -775,16 +713,16 @@ class RegexBlockForm extends FormSpecialPage {
 			) {
 				return [ 'ipb-blockingself', 'ipb-confirmaction' ];
 			}
-		} elseif ( $type == Block::TYPE_RANGE ) {
+		} elseif ( $type == AbstractBlock::TYPE_RANGE ) {
 			$user = null;
 			$userId = 0;
-		} elseif ( $type == Block::TYPE_IP ) {
+		} elseif ( $type == AbstractBlock::TYPE_IP ) {
 			$user = null;
 			$target = $target->getName();
 			$userId = 0;
 		} elseif ( $type == 6 /* = our own identifier for regex-based blocks */ ) {
 			// for RegexBlock assume that this case means that the target is
-			// a regular expression, for which there is no Block::TYPE_*
+			// a regular expression, for which there is no AbstractBlock::TYPE_*
 			// constant in MW core, obviously...
 			$user = null;
 			$userId = 0;
@@ -792,6 +730,10 @@ class RegexBlockForm extends FormSpecialPage {
 			# This should have been caught in the form field validation
 			return [ 'badipaddress' ];
 		}
+
+		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
+		// Reason, to be passed to the block object.
+		$blockReason = $contLang->truncateForDatabase( $data['Reason'][0], 255 );
 
 		$expiryTime = SpecialBlock::parseExpiryInput( $data['Expiry'] );
 
@@ -812,7 +754,20 @@ class RegexBlockForm extends FormSpecialPage {
 			return [ 'ipb_expiry_old' ];
 		}
 
-		$contLang = MediaWiki\MediaWikiServices::getInstance()->getContentLanguage();
+		# Create block object.
+		$block = new RegularExpressionDatabaseBlock();
+		$block->setTarget( $target );
+		$block->setBlocker( $performer );
+		$block->setReason( $blockReason );
+		$block->setExpiry( $expiryTime );
+		$block->isCreateAccountBlocked( $data['RegexBlockedCreation'] );
+
+		$block->setExact( $data['RegexBlockedExact'] );
+
+		// We currently don't care about conflicting blocks like how core SpecialBlock.php does.
+		// Should we?
+		$status = $block->insert();
+		/* OLD (pre-1.35) CODE
 		$result = RegexBlockData::blockUser(
 			$target,
 			$expiryTime,
@@ -821,6 +776,7 @@ class RegexBlockForm extends FormSpecialPage {
 			# Truncate reason for whole multibyte characters
 			$contLang->truncateForDatabase( $data['Reason'][0], 255 )
 		);
+		*/
 
 		// clear memcached
 		RegexBlock::unsetKeys( $target );

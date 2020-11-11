@@ -88,10 +88,13 @@ class ApiRegexBlock extends ApiBase {
 		$res['userID'] = $target instanceof User ? $target->getId() : 0;
 
 		$res['expiry'] = ApiResult::formatExpiry( SpecialBlock::parseExpiryInput( $data['Expiry'] ), 'infinite' );
-		// We don't have a clean way of getting it, *and* because there is no easy way to
+		// <s>We don't have a clean way of getting it, *and* because there is no easy way to
 		// set the block ID via the Block class, *and* my patch which introduces a setId()
 		// method to the Block class is permanently stuck in code review limbo@upstream,
-		// we'll just set this to an empty string. Sucks, but whatcha gonna do?
+		// we'll just set this to an empty string. Sucks, but whatcha gonna do?</s>
+		// Could maybe change the return value of RegexBlockForm#processForm so that on success it
+		// somehow reports the block ID? That'd do it, because the new block class
+		// can now properly set and get the block ID.
 		$res['id'] = '';
 
 		$res['reason'] = $params['reason'];
