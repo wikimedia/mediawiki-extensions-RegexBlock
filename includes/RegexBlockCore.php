@@ -404,6 +404,7 @@ class RegexBlock {
 	 * @param array $blocker_block_data
 	 * @param User $user User who is being blocked
 	 * @param string $user_ip IP address of the user who is being blocked
+	 * @return bool|array Array on success (given data matches one or more regex blocks), bool false if no match
 	 */
 	public static function blocked( $blocker, $blocker_block_data, $user, $user_ip ) {
 		if ( $blocker_block_data == null ) {
@@ -465,18 +466,22 @@ class RegexBlock {
 
 		if ( is_array( $valid ) ) {
 			self::setUserData( $user, $user_ip, $blocker, $valid );
+			return $valid;
 		}
 
-		return true;
+		return $valid;
 	}
 
 	/**
 	 * Update user structure
 	 *
+	 * @todo FIXME: Migrate this to the GetUserBlock hook altogether?
+	 *
 	 * @param User $user User who is being blocked
 	 * @param string $user_ip IP of the user who is being blocker
 	 * @param string $blocker User name of the person who placed this block
 	 * @param array $valid Block info
+	 * @return bool Operation status; false on failure of any kind, true on success
 	 */
 	public static function setUserData( &$user, $user_ip, $blocker, $valid ) {
 		global $wgContactLink, $wgRequest;
@@ -489,63 +494,47 @@ class RegexBlock {
 
 		if ( is_array( $valid ) ) {
 			$user->mBlockedby = User::idFromName( $blocker );
-			// Need to construct a new Block object here and load it into the
+			// Need to construct a new DatabaseBlock object here and load it into the
 			// User object in order for the block to actually, y'know, work...
+			// @todo FIXME: how much, if any, of this code do we really need/use?
 			if ( $user->mBlock === null ) {
-				$user->mBlock = new Block( [
-					'address'         => ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName(),
-					'by'              => User::idFromName( $blocker ),
-					'reason'          => $valid['reason'],
-					'timestamp'       => $valid['timestamp'],
-					'auto'            => false,
-					'expiry'          => $valid['expire'],
-					'anonOnly'        => false,
-					'createAccount'   => (bool)( $valid['create'] == 1 ),
-					'enableAutoblock' => true,
-					'hideName'        => false,
-					'blockEmail'      => true,
-					'allowUsertalk'   => false,
-					'byText'          => $blocker,
+				// $block = RegularExpressionDatabaseBlock::newFromID( $valid['blckid'] );
+				$reason = null;
+				if ( $valid['reason'] != '' ) {
+					/* a reason was given, display it */
+					$reason = $valid['reason'];
+				} else {
+					/**
+					 * Display generic reasons
+					 * By default we blocked by regex match
+					 */
+					$reason = wfMessage( 'regexblock-reason-regex', $wgContactLink )->text();
+					if ( $valid['ip'] == 1 ) {
+						/* we blocked by IP */
+						$reason = wfMessage( 'regexblock-reason-ip', $wgContactLink )->text();
+					} elseif ( $valid['exact'] == 1 ) {
+						/* we blocked by username exact match */
+						$reason = wfMessage( 'regexblock-reason-name', $wgContactLink )->text();
+					}
+				}
+
+				$block = new MediaWiki\Block\SystemBlock( [
+					'address' => ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName(),
+					// 'byText' => $blocker, // doesn't seem to work
+					'reason' => $reason,
+					'systemBlock' => 'global-block'
 				] );
-			}
-
-			if ( $valid['reason'] != '' ) {
-				/* a reason was given, display it */
-				$user->getBlock()->setReason( $valid['reason'] );
-			} else {
-				/**
-				 * Display generic reasons
-				 * By default we blocked by regex match
-				 */
-				$user->getBlock()->setReason( wfMessage( 'regexblock-reason-regex', $wgContactLink )->text() );
-				if ( $valid['ip'] == 1 ) {
-					/* we blocked by IP */
-					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-ip', $wgContactLink )->text() );
-				} elseif ( $valid['exact'] == 1 ) {
-					/* we blocked by username exact match */
-					$user->getBlock()->setReason( wfMessage( 'regexblock-reason-name', $wgContactLink )->text() );
+				// ashley 30 October 2020: most of this stuff below does NOT work as long as $block is MediaWiki\Block\SystemBlock
+				// $block->setBlocker( User::newFromName( $blocker ) );
+				/* account creation check goes through the same hook... */
+				if ( $valid['create'] == 1 ) {
+					$block->isCreateAccountBlocked( true );
 				}
-			}
 
-			/* account creation check goes through the same hook... */
-			if ( $valid['create'] == 1 ) {
-				if ( $user->getBlock() ) {
-					$user->getBlock()->isCreateAccountBlocked( true );
-				}
-			}
-
-			/* set expiry information */
-			if ( $user->getBlock() ) {
-				/* FIXME: why does this want to do this?
-				 * ANSWER: to set the block ID so that it displays correctly on the "you are blocked" msg.
-				 * w/o this it displays "your block ID is #." which is confusing to the end-users.
-				 * As of MW 1.28 it is not possible for an extension to set this (Block::$mId is protected).
-				 * Wikia had patched core to add a setId() method to the Block class to hack around this.
-				$user->getBlock()->mId = $valid['blckid'];
-				*/
-				$user->getBlock()->setExpiry( wfGetDB( DB_REPLICA )->decodeExpiry( $valid['expire'] ) );
-				$user->getBlock()->setTimestamp( $valid['timestamp'] );
-				$user->getBlock()->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
+				/* set expiry information */
+				$block->setExpiry( wfGetDB( DB_REPLICA )->decodeExpiry( $valid['expire'] ) );
+				$block->setTimestamp( $valid['timestamp'] );
+				$block->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
 			}
 
 			if ( wfReadOnly() ) {
