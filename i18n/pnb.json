@@ -5,6 +5,7 @@
 		]
 	},
 	"regexblock-form-reason": "وجہ:",
+	"regexblock-nodata-found": "کوئی ڈیٹا نئیں لبھیا",
 	"regexblock-view-reason": "وجہ: $1",
 	"regexblock-view-block-infinite": "مستقل بلاک"
 }
