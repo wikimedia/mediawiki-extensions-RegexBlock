@@ -1,5 +1,7 @@
 <?php
+
 use MediaWiki\MediaWikiServices;
+
 /**
  * @class RegexBlockData
  * helper classes & functions
@@ -200,6 +202,10 @@ class RegexBlockData {
 	/**
 	 * Fetch record for selected identifier of regex block
 	 *
+	 * @todo FIXME: only used once; _should_ ideally be superseded by
+	 * RegularExpressionDatabaseBlock#newFromID, but that doesn't yet work the way
+	 * it should (see the note on RegexBlockForm#showStatsList for details).
+	 *
 	 * @param int $id ID of the regexBlock entry (value of blckby_id column in the stats_blockedby database table)
 	 * @return $record
 	 */
@@ -227,6 +233,8 @@ class RegexBlockData {
 
 	/**
 	 * Insert a block record to the blockedby database table
+	 *
+	 * @todo FIXME: now unused; was used by RegexBlockForm#processForm in SpecialRegexBlock.php
 	 *
 	 * @param string $address User name, IP address or regular expression being blocked
 	 * @param $expiry Expiry time of the block
