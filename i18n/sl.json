@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"regexblock-form-reason": "Razlog:"
+	"regexblock-form-reason": "Razlog:",
+	"regexblock-view-block-infinite": "trajna blokada"
 }
