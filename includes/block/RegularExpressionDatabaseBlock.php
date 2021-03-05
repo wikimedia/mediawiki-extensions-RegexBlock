@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\User\UserIdentity;
 use Wikimedia\Rdbms\Database;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\IPUtils;
@@ -367,7 +368,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		$a = [
 			'blckby_name'          => (string)$this->target,
 			'blckby_blocker'       => (
-				$this->getBlocker() instanceof User ?
+				$this->getBlocker() ?
 					$this->getBlocker()->getName() :
 					User::newSystemUser( 'MediaWiki default', [ 'steal' ] )
 			),
