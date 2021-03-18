@@ -32,7 +32,13 @@
 		"RegexBlockAliases": "RegexBlock.alias.php"
 	},
 	"APIModules": {
-		"regexblock": "ApiRegexBlock",
+		"regexblock": {
+			"class": "ApiRegexBlock",
+			"factory": "RegexBlockHooks::makeApiRegexBlock",
+			"services": [
+				"UserNameUtils"
+			]
+		},
 		"regexunblock": "ApiRegexUnblock"
 	},
 	"AutoloadClasses": {
