@@ -21,6 +21,8 @@
  * @note Based on GPL-licensed core /includes/api/ApiBlock.php file, which is copyright © 2007 Roan Kattouw
  */
 
+ use MediaWiki\User\UserNameUtils;
+
 /**
  * API module that facilitates the blocking of users via regular expressions (regex).
  * Requires API write mode to be enabled.
@@ -30,6 +32,25 @@
 class ApiRegexBlock extends ApiBase {
 
 	use ApiBlockInfoTrait;
+
+	/**
+	 * @var UserNameUtils
+	 */
+	private $userNameUtils;
+
+	/**
+	 * @param ApiMain $mainModule
+	 * @param string $moduleName
+	 * @param UserNameUtils $userNameUtils
+	 */
+	public function __construct(
+		ApiMain $mainModule,
+		$moduleName,
+		UserNameUtils $userNameUtils
+	) {
+		parent::__construct( $mainModule, $moduleName );
+		$this->userNameUtils = $userNameUtils;
+	}
 
 	/**
 	 * Blocks the user specified in the parameters for the given expiry, with the
@@ -60,7 +81,7 @@ class ApiRegexBlock extends ApiBase {
 		// T40633 - if the target is a user (not an IP address), but it
 		// doesn't exist or is unusable, error.
 		if ( $type === Block::TYPE_USER &&
-			( $target->isAnon() /* doesn't exist */ || !User::isUsableName( $params['regex'] ) )
+			( $target->isAnon() /* doesn't exist */ || !$this->userNameUtils->isUsable( $params['regex'] ) )
 		) {
 			$this->dieWithError( [ 'nosuchusershort', $params['regex'] ], 'nosuchuser' );
 		}
