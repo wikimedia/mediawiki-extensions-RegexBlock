@@ -18,7 +18,7 @@
 	"regexblock": "Regex-Sperre",
 	"regexblock-already-blocked": "$1 ist bereits gesperrt.",
 	"regexblock-block-log": "Benutzername oder IP-Adresse '''$1''' wurde gesperrt",
-	"regexblock-block-success": "Die Sperrung war erfolgreich.",
+	"regexblock-block-success": "Die Sperrung war erfolgreich",
 	"regexblock-currently-blocked": "Derzeit gesperrte Adressen:",
 	"regexblock-desc": "Ermöglicht das Sperren von Benutzernamen und IP-Adressen mit Hilfe regulärer Ausdrücke. Es wird ein Sperrmechanismus bereitgestellt sowie eine [[Special:Regexblock|Spezialseite]] zum Hinzufügen und Verwalten von Sperrungen ergänzt",
 	"regexblock-page-title": "Sperre von Benutzerkonten anhand regulärer Ausdrücke",
