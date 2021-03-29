@@ -135,6 +135,7 @@ class RegexBlock {
 	 */
 	public static function getBlockData( $user, $blockers, $master = false ) {
 		$blockData = [];
+		$services = MediaWikiServices::getInstance();
 
 		/**
 		 * First, check if regex strings are already stored in memcached
@@ -144,7 +145,7 @@ class RegexBlock {
 			return false;
 		}
 
-		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
+		$cache = $services->getMainWANObjectCache();
 		$memkey = self::memcKey( 'regex_blockers', 'All-In-One' );
 		$cached = $cache->get( $memkey );
 
@@ -167,9 +168,10 @@ class RegexBlock {
 					'regex' => []
 				];
 
+				$userNameUtils = $services->getUserNameUtils();
 				while ( $row = $res->fetchObject() ) {
 					$key = 'regex';
-					if ( User::isIP( $row->blckby_name ) != 0 ) {
+					if ( $userNameUtils->isIP( $row->blckby_name ) != 0 ) {
 						$key = 'ips';
 					} elseif ( $row->blckby_exact != 0 ) {
 						$key = 'exact';
