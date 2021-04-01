@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\User\UserNameUtils;
 use Wikimedia\IPUtils;
 
 class RegexBlockHooks {
@@ -103,21 +102,5 @@ class RegexBlockHooks {
 		$file = __DIR__ . '/../sql/regexblock_schema.sql';
 		$updater->addExtensionTable( 'blockedby', $file );
 		$updater->addExtensionTable( 'stats_blockedby', $file );
-	}
-
-	/**
-	 * Factory function
-	 *
-	 * @param ApiMain $mainModule
-	 * @param string $moduleName
-	 * @param UserNameUtils $userNameUtils
-	 * @return ApiRegexBlock
-	 */
-	public static function makeApiRegexBlock(
-		ApiMain $mainModule,
-		string $moduleName,
-		UserNameUtils $userNameUtils
-	) : ApiRegexBlock {
-		return new ApiRegexBlock( $mainModule, $moduleName, $userNameUtils );
 	}
 }

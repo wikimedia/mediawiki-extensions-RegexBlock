@@ -34,7 +34,6 @@
 	"APIModules": {
 		"regexblock": {
 			"class": "ApiRegexBlock",
-			"factory": "RegexBlockHooks::makeApiRegexBlock",
 			"services": [
 				"UserNameUtils"
 			]
