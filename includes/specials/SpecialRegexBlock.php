@@ -197,6 +197,8 @@ class RegexBlockForm extends FormSpecialPage {
 			$loop = 0;
 			$comma = ' <b>&#183;</b> '; // the spaces here are intentional
 			$dbr = wfGetDB( DB_REPLICA );
+			$linkRenderer = $this->getLinkRenderer();
+
 			foreach ( $blocker_list as $id => $row ) {
 				$loop++;
 				$color_expire = '%s';
@@ -213,14 +215,14 @@ class RegexBlockForm extends FormSpecialPage {
 				$exact_match = ( ( $row['exact_match'] ) ? $this->msg( 'regexblock-view-match' )->text() : $this->msg( 'regexblock-view-regex' )->text() );
 				$create_block = ( $row['create_block'] ) ? $this->msg( 'regexblock-view-account' )->text() : '';
 				$reason = '<i>' . $row['reason'] . '</i>';
-				$stats_link = Linker::linkKnown(
+				$stats_link = $linkRenderer->makeKnownLink(
 					$this->mTitle,
 					$this->msg( 'regexblock-view-stats' )->text(),
 					[],
 					[ 'action' => 'stats', 'blckid' => $row['blckid'] ]
 				);
 				$space = $this->msg( 'word-separator' )->text();
-				$unblock_link = Linker::linkKnown(
+				$unblock_link = $linkRenderer->makeKnownLink(
 					$this->mTitle,
 					$this->msg( 'regexblock-view-block-unblock' )->text(),
 					[],
@@ -321,12 +323,13 @@ class RegexBlockForm extends FormSpecialPage {
 			$stats_list = $regexData->getStatsData( $blckid, $this->mLimit, $this->mOffset );
 		}
 
+		$linkRenderer = $this->getLinkRenderer();
 		$blocker_link = $blockername_link = '';
 		if ( isset( $blockInfo->blckby_blocker ) && $blockInfo->blckby_blocker ) {
-			$blocker_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_blocker, [], [ 'filter' => $blockInfo->blckby_blocker ] );
+			$blocker_link = $linkRenderer->makeKnownLink( $this->mTitle, $blockInfo->blckby_blocker, [], [ 'filter' => $blockInfo->blckby_blocker ] );
 		}
 		if ( isset( $blockInfo->blckby_name ) && $blockInfo->blckby_name ) {
-			$blockername_link = Linker::linkKnown( $this->mTitle, $blockInfo->blckby_name, [], [ 'rfilter' => $blockInfo->blckby_name ] );
+			$blockername_link = $linkRenderer->makeKnownLink( $this->mTitle, $blockInfo->blckby_name, [], [ 'rfilter' => $blockInfo->blckby_name ] );
 		}
 		if ( isset( $blockInfo->blckby_reason ) && $blockInfo->blckby_reason ) {
 			$blockReason = $this->msg( 'regexblock-form-reason' ) . $blockInfo->blckby_reason;
@@ -370,9 +373,9 @@ class RegexBlockForm extends FormSpecialPage {
 				);
 			}
 
-			$unblockLink = Linker::linkKnown(
+			$unblockLink = $linkRenderer->makeKnownLink(
 				$this->mTitle,
-				$this->msg( 'regexblock-view-block-unblock' ),
+				$this->msg( 'regexblock-view-block-unblock' )->text(),
 				[],
 				[ 'action' => 'delete', 'blckid' => $blockInfo->blckby_id ]
 			);
@@ -543,12 +546,14 @@ class RegexBlockForm extends FormSpecialPage {
 
 		$this->getOutput()->addModuleStyles( 'mediawiki.special' );
 
+		$linkRenderer = $this->getLinkRenderer();
+
 		# Link to the user's contributions, if applicable
 		if ( $this->target instanceof User ) {
 			$contribsPage = SpecialPage::getTitleFor( 'Contributions', $this->target->getName() );
-			$links[] = Linker::link(
+			$links[] = $linkRenderer->makeLink(
 				$contribsPage,
-				$this->msg( 'ipb-blocklist-contribs', $this->target->getName() )->escaped()
+				$this->msg( 'ipb-blocklist-contribs', $this->target->getName() )->text()
 			);
 		}
 
@@ -556,9 +561,9 @@ class RegexBlockForm extends FormSpecialPage {
 
 		# Link to edit the block dropdown reasons, if applicable
 		if ( $user->isAllowed( 'editinterface' ) ) {
-			$links[] = Linker::linkKnown(
+			$links[] = $linkRenderer->makeKnownLink(
 				$this->msg( 'ipbreason-dropdown' )->inContentLanguage()->getTitle(),
-				$this->msg( 'ipb-edit-dropdown' )->escaped(),
+				$this->msg( 'ipb-edit-dropdown' )->text(),
 				[],
 				[ 'action' => 'edit' ]
 			);
