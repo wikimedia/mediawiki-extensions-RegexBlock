@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Les Meloures",
 			"Robby",
 			"Soued031"
 		]
@@ -18,7 +19,7 @@
 	"regexblock-page-title-1": "Adress spären andem regulär Ausdréck (Regex) benotzt ginn",
 	"regexblock-reason-ip": "Dës IP-Adress ass wéinst Vandalismus oder anerem Schiedlechem Verhalen vun Iech oder engem Aneren dee mat Iech déi selwëscht IP-Adress deelt fir d'Änner vu Säite gespaart. Wann Dir mengt dëst fir e Feeler, da [[$1|kontaktéiert eis]] wgl.",
 	"regexblock-reason-name": "Dëse Benotzernumm ass wéinst Vandalismus oder aus änlechen Ursaache gespaart an däerf keng Ännerunge maachen.\nWann Dir iwwerzeegt sidd datt et sech ëm ee Feeler handelt, [[$1|kontaktéiert eis wgl.]]",
-	"regexblock-reason-regex": "Dëse Benotzernumm ass wéinst Vandalismus oder anerem schiedleche Verhale vun engem Benotzer mat engem änleche Benotzernumm gespaart fir Ännerungen a Säiten ze maachen. Wielt wgl. en anere Benotzernumm oder [[$1|kontaktéiert eis]] wéinst deem Problem.",
+	"regexblock-reason-regex": "Dëse Benotzernumm ass wéinst Vandalismus oder anerem schiedleche Verhale vun engem Benotzer mat engem änleche Benotzernumm gespaart fir Ännerungen a Säiten ze maachen. Wielt wgl. en anere Benotzernumm oder [[$1|kontaktéiert eis]] wéinst deem Probleem.",
 	"regexblock-form-username": "IP-Adress oder Benotzer:",
 	"regexblock-form-reason": "Grond:",
 	"regexblock-form-account-block": "Uleeë vun neie Benotzerkonte spären",
