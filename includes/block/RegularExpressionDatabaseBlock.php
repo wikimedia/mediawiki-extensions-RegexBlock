@@ -272,7 +272,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		$dbw->insert( 'blockedby', $row, __METHOD__, [ 'IGNORE' ] );
 		$affected = $dbw->affectedRows();
 		if ( $affected ) {
-			$this->setId( $dbw->insertId() );
+			$this->setBlockId( $dbw->insertId() );
 		}
 
 		# Don't collide with expired blocks.
@@ -294,7 +294,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 				$dbw->delete( 'blockedby', [ 'blckby_id' => $ids ], __METHOD__ );
 				$dbw->insert( 'blockedby', $row, __METHOD__, [ 'IGNORE' ] );
 				$affected = $dbw->affectedRows();
-				$this->setId( $dbw->insertId() );
+				$this->setBlockId( $dbw->insertId() );
 			}
 		}
 
@@ -458,7 +458,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 	 * @param int $blockId
 	 * @return self
 	 */
-	private function setId( $blockId ) {
+	private function setBlockId( $blockId ) {
 		$this->mId = (int)$blockId;
 
 		return $this;
