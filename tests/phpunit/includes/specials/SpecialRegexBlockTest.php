@@ -39,33 +39,33 @@ class SpecialRegexBlockTest extends MediaWikiTestCase {
 		$links = $m[0];
 
 		foreach ( $links as $a ) {
-			$this->assertContains( 'Special:RegexBlock', $a );
-			$this->assertNotContains( 'SSpecial:RegexBlock/', $a );
+			$this->assertStringContainsString( 'Special:RegexBlock', $a );
+			$this->assertStringNotContainsString( 'SSpecial:RegexBlock/', $a );
 		}
 
 		$i = 0;
 
 		if ( $offset > 0 ) {
-			$this->assertContains(
+			$this->assertStringContainsString(
 				'limit=' . $limit . '&amp;offset=' . max( 0, $offset - $limit ) . '&amp;',
 				$links[ $i ]
 			);
-			$this->assertContains( 'class="mw-prevlink"', $links[$i] );
-			$this->assertContains( '>previous ' . $limit . '<', $links[$i] );
+			$this->assertStringContainsString( 'class="mw-prevlink"', $links[$i] );
+			$this->assertStringContainsString( '>previous ' . $limit . '<', $links[$i] );
 			$i += 1;
 		}
 
 		$this->assertCount( 5 + $i, $links );
 
-		$this->assertContains( 'limit=20&amp;offset=' . $offset, $links[$i] );
-		$this->assertContains( 'title="Show 20 results per page"', $links[$i] );
-		$this->assertContains( 'class="mw-numlink"', $links[$i] );
-		$this->assertContains( '>20<', $links[$i] );
+		$this->assertStringContainsString( 'limit=20&amp;offset=' . $offset, $links[$i] );
+		$this->assertStringContainsString( 'title="Show 20 results per page"', $links[$i] );
+		$this->assertStringContainsString( 'class="mw-numlink"', $links[$i] );
+		$this->assertStringContainsString( '>20<', $links[$i] );
 		$i += 4;
 
-		$this->assertContains( 'limit=500&amp;offset=' . $offset, $links[$i] );
-		$this->assertContains( 'title="Show 500 results per page"', $links[$i] );
-		$this->assertContains( 'class="mw-numlink"', $links[$i] );
-		$this->assertContains( '>500<', $links[$i] );
+		$this->assertStringContainsString( 'limit=500&amp;offset=' . $offset, $links[$i] );
+		$this->assertStringContainsString( 'title="Show 500 results per page"', $links[$i] );
+		$this->assertStringContainsString( 'class="mw-numlink"', $links[$i] );
+		$this->assertStringContainsString( '>500<', $links[$i] );
 	}
 }
