@@ -13,7 +13,7 @@
  * @author Alexandre Emsenhuber
  * @author Jack Phoenix
  * @copyright Copyright © 2007, Wikia Inc.
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  */
 use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\IResultWrapper;
@@ -24,7 +24,7 @@ class RegexBlock {
 	 * Get a database handle to the database containing RegexBlock tables (if
 	 * different from the current wiki's database)
 	 *
-	 * @param int Either DB_REPLICA (for reads) or DB_MASTER (for writes)
+	 * @param int $db Either DB_REPLICA (for reads) or DB_MASTER (for writes)
 	 * @return Database
 	 */
 	public static function getDB( $db ) {
@@ -37,7 +37,7 @@ class RegexBlock {
 	 *
 	 * @return string
 	 */
-	public static function memcKey( /* ... */ ) {
+	public static function memcKey() {
 		global $wgRegexBlockDatabase;
 
 		$wiki = ( $wgRegexBlockDatabase !== false ) ? $wgRegexBlockDatabase : wfWikiID();
@@ -131,6 +131,7 @@ class RegexBlock {
 	 *
 	 * @param User $user Current user
 	 * @param array $blockers List of admins who blocked
+	 * @param bool $master
 	 * @return array An array of arrays to run a regex match against
 	 */
 	public static function getBlockData( $user, $blockers, $master = false ) {
@@ -232,7 +233,7 @@ class RegexBlock {
 	 * Check if the block expired or not (AFTER we found an existing block)
 	 *
 	 * @param User $user Current User object
-	 * @param bool $array_match
+	 * @param bool|null $array_match
 	 * @param int $ips Matched IP addresses
 	 * @param int $iregex Use exact matching instead of regex matching?
 	 * @return array|bool
@@ -319,8 +320,7 @@ class RegexBlock {
 			if (
 				( wfTimestampNow() <= $blocked->blckby_expire ) ||
 				( $blocked->blckby_expire == 'infinity' )
-			)
-			{
+			) {
 				$ret = [
 					'blckid' => $blocked->blckby_id,
 					'create' => $blocked->blckby_create,
@@ -370,6 +370,7 @@ class RegexBlock {
 	 * @param string $blocker User name of the person who added the regex block
 	 * @param string $match Matched blocked (regular) expression (blockedby.blckby_name)
 	 * @param int $blckid Block ID from the blockedby DB table
+	 * @return bool
 	 */
 	public static function updateStats( $user, $user_ip, $blocker, $match, $blckid ) {
 		global $wgDBname;
@@ -479,7 +480,7 @@ class RegexBlock {
 	 *
 	 * @todo FIXME: Migrate this to the GetUserBlock hook altogether?
 	 *
-	 * @param User $user User who is being blocked
+	 * @param User &$user User who is being blocked
 	 * @param string $user_ip IP of the user who is being blocker
 	 * @param string $blocker User name of the person who placed this block
 	 * @param array $valid Block info

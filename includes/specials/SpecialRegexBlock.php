@@ -13,7 +13,7 @@
  * @author Alexandre Emsenhuber
  * @author Jack Phoenix
  * @copyright Copyright © 2007, Wikia Inc.
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  * @note This file heavily reuses GPL-licensed code from MediaWiki core special
  *       page Special:Block (/includes/specials/SpecialBlock.php).
  */
@@ -26,12 +26,15 @@ class RegexBlockForm extends FormSpecialPage {
 	public $numResults = 0;
 	public $numStatResults = 0;
 	public $mAction;
-	public $mFilter, $mRegexFilter;
+	public $mFilter;
+	public $mRegexFilter;
 	public $mLimit;
 	public $mOffset;
 
-	/** @var User|string|null User to be blocked, as passed either by parameter (url?wpTarget=Foo)
-	 * or as subpage (Special:Block/Foo) */
+	/**
+	 * @var User|string|null User to be blocked, as passed either by parameter (url?wpTarget=Foo)
+	 * or as subpage (Special:Block/Foo)
+	 */
 	protected $target;
 
 	/** @var int AbstractBlock::TYPE_ constant */
@@ -64,7 +67,11 @@ class RegexBlockForm extends FormSpecialPage {
 		return 'users';
 	}
 
-	// @see https://phabricator.wikimedia.org/T123591
+	/**
+	 * @see https://phabricator.wikimedia.org/T123591
+	 *
+	 * @return bool true
+	 */
 	public function doesWrites() {
 		return true;
 	}
@@ -286,8 +293,6 @@ class RegexBlockForm extends FormSpecialPage {
 				'ip' => $ip
 			] + $this->makeListUrlParams() ) );
 		}
-
-		return;
 	}
 
 	/**
@@ -435,6 +440,7 @@ class RegexBlockForm extends FormSpecialPage {
 		}
 	}
 
+	/** @inheritDoc */
 	protected function getDisplayFormat() {
 		return 'ooui';
 	}
@@ -472,7 +478,7 @@ class RegexBlockForm extends FormSpecialPage {
 			],
 			/*'CreateAccount'*/'RegexBlockedCreation' => [
 				'type' => 'check',
-				'label-message' => 'regexblock-form-account-block', //'ipbcreateaccount',
+				'label-message' => 'regexblock-form-account-block', // 'ipbcreateaccount',
 				'default' => true,
 			],
 			'RegexBlockedExact' => [
@@ -497,7 +503,7 @@ class RegexBlockForm extends FormSpecialPage {
 	/**
 	 * If the user has already been blocked with similar settings, load that block
 	 * and change the defaults for the form fields to match the existing settings.
-	 * @param array $fields HTMLForm descriptor array
+	 * @param array &$fields HTMLForm descriptor array
 	 * @return bool Whether fields were altered (that is, whether the target is
 	 *     already blocked)
 	 */
@@ -621,7 +627,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 *
 	 * @param string $par Subpage parameter passed to setup, or data value from
 	 *     the HTMLForm
-	 * @param WebRequest $request Optionally try and get data from a request too
+	 * @param WebRequest|null $request Optionally try and get data from a request too
 	 * @return array( User|string|null, AbstractBlock::TYPE_ constant|null )
 	 */
 	public static function getTargetAndType( $par, WebRequest $request = null ) {
@@ -863,7 +869,7 @@ class RegexBlockForm extends FormSpecialPage {
 	/**
 	 * Process the form on POST submission.
 	 * @param array $data
-	 * @param HTMLForm $form
+	 * @param HTMLForm|null $form
 	 * @return bool|array True for success, false for didn't-try, array of errors on failure
 	 */
 	public function onSubmit( array $data, HTMLForm $form = null ) {

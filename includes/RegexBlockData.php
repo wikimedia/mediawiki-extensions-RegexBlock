@@ -237,10 +237,12 @@ class RegexBlockData {
 	 * @todo FIXME: now unused; was used by RegexBlockForm#processForm in SpecialRegexBlock.php
 	 *
 	 * @param string $address User name, IP address or regular expression being blocked
-	 * @param $expiry Expiry time of the block
+	 * @param int|null $expiry Expiry time of the block
 	 * @param int $exact Is this an exact block?
 	 * @param int $creation Was account creation blocked?
 	 * @param string $reason Given block reason, which will be displayed to the regexblocked user
+	 *
+	 * @return bool true
 	 */
 	public static function blockUser( $address, $expiry, $exact, $creation, $reason ) {
 		/* make insert */

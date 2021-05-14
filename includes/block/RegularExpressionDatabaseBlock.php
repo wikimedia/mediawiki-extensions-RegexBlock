@@ -1,9 +1,7 @@
 <?php
 
-use MediaWiki\User\UserIdentity;
-use Wikimedia\Rdbms\Database;
-use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\IPUtils;
+use Wikimedia\Rdbms\IDatabase;
 
 /**
  * RegexBlock class for the new (1.34-1.35+) blocking system.
@@ -355,7 +353,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 	 */
 	protected function getDatabaseArray( IDatabase $dbw ) {
 		# @todo FIXME fails w/ "Invalid timestamp - infinity"
-		$expiry = /* $dbw->encodeExpiry( */ $this->getExpiry() /* ) */;
+		$expiry = /* $dbw->encodeExpiry( */ $this->getExpiry(); /* ) */
 
 		/* undefined property is undefined
 		if ( $this->forcedTargetID ) {
@@ -476,33 +474,6 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 	}
 
 	/**
-	 * Purge expired blocks from the blockedby table
-	 * ashley 30 October 2020: maybe? uncomment if/when needed.
-	 *
-	public static function purgeExpired() {
-		if ( wfReadOnly() ) {
-			return;
-		}
-
-		DeferredUpdates::addUpdate( new AutoCommitUpdate(
-			RegexBlock::getDB( DB_MASTER ),
-			__METHOD__,
-			function ( IDatabase $dbw, $fname ) {
-				$ids = $dbw->selectFieldValues(
-					'blockedby',
-					'blckby_id',
-					[ 'blckby_expire < ' . $dbw->addQuotes( $dbw->timestamp() ) ],
-					$fname
-				);
-				if ( $ids ) {
-					$dbw->delete( 'blockedby', [ 'blckby_id' => $ids ], $fname );
-				}
-			}
-		) );
-	}
-	*/
-
-	/**
 	 * @inheritDoc
 	 */
 	public function appliesToTitle( Title $title ) {
@@ -523,7 +494,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		return true;
 	}
 
-	/*** CUSTOM STUFF, i.e. things which are totally our own and not overrides of parent classes' methods */
+	/** CUSTOM STUFF, i.e. things which are totally our own and not overrides of parent classes' methods */
 
 	/**
 	 * Set whether this is an exact username block (true) or a regex match (false)
