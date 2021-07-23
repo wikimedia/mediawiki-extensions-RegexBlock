@@ -13,7 +13,7 @@
 	"regexblock-block-log": "De Benotzer oder d'IP-Adress '''$1''' gouf gespaart.",
 	"regexblock-block-success": "D'Spär ass elo ageschalt",
 	"regexblock-currently-blocked": "Aktuell gespaarten Adressen:",
-	"regexblock-desc": "Erweiderung fir d'Späre vu Benotzernimm an IP-Adressen mat regulären Ausdréck. D'Erweiderung huet esouwuel e Spär-Mechanismus wéi och eng [[Special:RegexBlock|Spezialsäit]] fir Spären dobäizesetzen/ze geréieren",
+	"regexblock-desc": "Erweiderung fir d'Späre vu Benotzernimm an IP-Adressen mat regulären Ausdréck. D'Erweiderung huet esouwuel e Spär-Mechanismus wéi och eng [[Special:RegexBlock|Spezialsäit]] fir Spären derbäizesetzen/ze geréieren",
 	"regexblock-page-title": "Spär vun engem Numm mat engem regulärem Ausdrock",
 	"regexblockstats": "Regex Spärstatistiken",
 	"regexblock-page-title-1": "Adress spären andem regulär Ausdréck (Regex) benotzt ginn",
