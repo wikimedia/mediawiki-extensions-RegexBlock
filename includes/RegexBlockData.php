@@ -28,7 +28,7 @@ class RegexBlockData {
 		$cached = $cache->get( $key );
 
 		if ( empty( $cached ) ) {
-			$dbr = RegexBlock::getDB( DB_MASTER );
+			$dbr = RegexBlock::getDB( DB_PRIMARY );
 
 			$res = $dbr->select(
 				'blockedby',
@@ -79,7 +79,7 @@ class RegexBlockData {
 		global $wgLang;
 
 		$blocker_list = [];
-		$dbr = RegexBlock::getDB( DB_MASTER );
+		$dbr = RegexBlock::getDB( DB_PRIMARY );
 		$conds = [ "blckby_blocker <> ''" ];
 
 		if ( !empty( $current ) ) {
@@ -212,7 +212,7 @@ class RegexBlockData {
 	public function getRegexBlockById( $id ) {
 		$record = null;
 
-		$dbr = RegexBlock::getDB( DB_MASTER );
+		$dbr = RegexBlock::getDB( DB_PRIMARY );
 		$res = $dbr->select(
 			'blockedby',
 			[
@@ -246,7 +246,7 @@ class RegexBlockData {
 	 */
 	public static function blockUser( $address, $expiry, $exact, $creation, $reason ) {
 		/* make insert */
-		$dbw = RegexBlock::getDB( DB_MASTER );
+		$dbw = RegexBlock::getDB( DB_PRIMARY );
 		$name = RequestContext::getMain()->getUser()->getName();
 
 		$res = $dbw->replace(

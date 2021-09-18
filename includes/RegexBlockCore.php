@@ -24,7 +24,7 @@ class RegexBlock {
 	 * Get a database handle to the database containing RegexBlock tables (if
 	 * different from the current wiki's database)
 	 *
-	 * @param int $db Either DB_REPLICA (for reads) or DB_MASTER (for writes)
+	 * @param int $db Either DB_REPLICA (for reads) or DB_PRIMARY (for writes)
 	 * @return Database
 	 */
 	public static function getDB( $db ) {
@@ -53,10 +53,10 @@ class RegexBlock {
 	/**
 	 * Get blockers
 	 *
-	 * @param bool $master Use DB_MASTER for reading?
+	 * @param bool $primary Use DB_PRIMARY for reading?
 	 * @return array User names of all users who have ever blocked an expression via RegexBlock
 	 */
-	public static function getBlockers( $master = false ) {
+	public static function getBlockers( $primary = false ) {
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		$key = self::memcKey( 'regex_blockers' );
@@ -65,7 +65,7 @@ class RegexBlock {
 
 		if ( !is_array( $cached ) ) {
 			/* get from database */
-			$dbr = self::getDB( $master ? DB_MASTER : DB_REPLICA );
+			$dbr = self::getDB( $primary ? DB_PRIMARY : DB_REPLICA );
 			$res = $dbr->select(
 				'blockedby',
 				[ 'blckby_blocker' ],
@@ -131,10 +131,10 @@ class RegexBlock {
 	 *
 	 * @param User $user Current user
 	 * @param array $blockers List of admins who blocked
-	 * @param bool $master
+	 * @param bool $primary
 	 * @return array An array of arrays to run a regex match against
 	 */
-	public static function getBlockData( $user, $blockers, $master = false ) {
+	public static function getBlockData( $user, $blockers, $primary = false ) {
 		$blockData = [];
 		$services = MediaWikiServices::getInstance();
 
@@ -152,7 +152,7 @@ class RegexBlock {
 
 		if ( empty( $cached ) ) {
 			/* Fetch data from DB, concatenate into one string, then fill cache */
-			$dbr = self::getDB( $master ? DB_MASTER : DB_REPLICA );
+			$dbr = self::getDB( $primary ? DB_PRIMARY : DB_REPLICA );
 
 			foreach ( $blockers as $blocker ) {
 				$res = $dbr->select(
@@ -259,7 +259,7 @@ class RegexBlock {
 
 			if ( empty( $cached ) || ( !is_object( $cached ) ) ) {
 				/* get from database */
-				$dbr = self::getDB( DB_MASTER );
+				$dbr = self::getDB( DB_PRIMARY );
 				$any = $dbr->anyString();
 				$where = [ 'blckby_name ' . $dbr->buildLike( $any, $single, $any ) ];
 				if ( !empty( $iregex ) ) {
@@ -345,7 +345,7 @@ class RegexBlock {
 	public static function removeBlock( $regex ) {
 		$result = false;
 
-		$dbw = self::getDB( DB_MASTER );
+		$dbw = self::getDB( DB_PRIMARY );
 
 		$dbw->delete(
 			'blockedby',
@@ -377,7 +377,7 @@ class RegexBlock {
 
 		$result = false;
 
-		$dbw = self::getDB( DB_MASTER );
+		$dbw = self::getDB( DB_PRIMARY );
 		$dbw->insert(
 			'stats_blockedby',
 			[

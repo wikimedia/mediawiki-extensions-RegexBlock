@@ -77,7 +77,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		$fromMaster,
 		$vagueTarget = null
 	) {
-		$db = RegexBlock::getDB( $fromMaster ? DB_MASTER : DB_REPLICA );
+		$db = RegexBlock::getDB( $fromMaster ? DB_PRIMARY : DB_REPLICA );
 
 		if ( $specificType !== null ) {
 			$conds = [ 'blckby_name' => [ (string)$specificTarget ] ];
@@ -227,7 +227,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		}
 
 		// ashley 30 October 2020 TODO: Should this be using blckby_name with (string)$this->target rather than the ID, like the old code?
-		$dbw = RegexBlock::getDB( DB_MASTER );
+		$dbw = RegexBlock::getDB( DB_PRIMARY );
 		$dbw->delete( 'blockedby', [ 'blckby_id' => $this->getId() ], __METHOD__ );
 
 		$result = ( $dbw->affectedRows() > 0 );
@@ -260,7 +260,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		wfDebug( __METHOD__ . "; timestamp {$this->mTimestamp}" );
 
 		if ( $dbw === null ) {
-			$dbw = RegexBlock::getDB( DB_MASTER );
+			$dbw = RegexBlock::getDB( DB_PRIMARY );
 		}
 
 		// ashley 30 October 2020: hol' up...
@@ -322,7 +322,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 	 */
 	public function update() {
 		wfDebug( __METHOD__ . "; timestamp {$this->mTimestamp}" );
-		$dbw = RegexBlock::getDB( DB_MASTER );
+		$dbw = RegexBlock::getDB( DB_PRIMARY );
 
 		$dbw->startAtomic( __METHOD__ );
 
