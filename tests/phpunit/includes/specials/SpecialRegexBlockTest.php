@@ -6,7 +6,7 @@ use Wikimedia\TestingAccessWrapper;
  * @covers RegexBlockForm
  * @group Database
  */
-class SpecialRegexBlockTest extends MediaWikiTestCase {
+class SpecialRegexBlockTest extends MediaWikiIntegrationTestCase {
 
 	public function provideShowRegexList() {
 		yield [ 0, 20 ];
