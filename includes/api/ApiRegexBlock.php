@@ -65,7 +65,7 @@ class ApiRegexBlock extends ApiBase {
 		$params = $this->extractRequestParams();
 
 		# T17810: blocked admins should have limited access here
-		if ( $user->isBlocked() ) {
+		if ( $user->getBlock() ) {
 			$status = SpecialBlock::checkUnblockSelf( $params['regex'], $user );
 			if ( $status !== true ) {
 				$this->dieWithError(
