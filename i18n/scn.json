@@ -4,5 +4,11 @@
 			"Ajeje Brazorf"
 		]
 	},
-	"regexblock-already-blocked": "L'utenti $1 è già bluccatu."
+	"apihelp-regexblock-param-reason": "Mutivu dû bloccu.",
+	"regexblock-already-blocked": "L'utenti $1 è già bluccatu.",
+	"regexblock-form-username": "Nnirizzu IP o nomu utenti:",
+	"regexblock-form-reason": "Mutivu:",
+	"regexblock-view-all": "Tutti",
+	"regexblock-view-reason": "mutivu: $1",
+	"regexblock-view-stats": "statìstichi"
 }
