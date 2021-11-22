@@ -4,6 +4,7 @@
 			"Gzdavidwong",
 			"Kly",
 			"Mark85296341",
+			"Winston Sung",
 			"Wrightbus",
 			"Xiplus"
 		]
@@ -36,7 +37,7 @@
 	"regexblock-form-username": "IP 位址或使用者名稱：",
 	"regexblock-form-reason": "原因：",
 	"regexblock-form-match": "精準符合",
-	"regexblock-form-account-block": "封禁新帳號創建",
+	"regexblock-form-account-block": "封鎖建立新帳號",
 	"regexblock-form-submit": "封禁該名使用者",
 	"regexblock-form-submit-empty": "給予使用者名稱或 IP 位址來封禁。",
 	"regexblock-form-submit-regex": "無效的正規表示式。",
@@ -55,7 +56,7 @@
 	"regexblock-view-go": "提交",
 	"regexblock-view-match": "（精準符合）",
 	"regexblock-view-regex": "（符合正規表達式）",
-	"regexblock-view-account": "（帳號創建封禁）",
+	"regexblock-view-account": "（封鎖建立帳號）",
 	"regexblock-view-reason": "原因：$1",
 	"regexblock-view-reason-default": "一般原因",
 	"regexblock-view-block-infinite": "永久封禁",
