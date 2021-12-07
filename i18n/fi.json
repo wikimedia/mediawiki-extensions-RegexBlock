@@ -6,9 +6,12 @@
 			"Jack Phoenix",
 			"Option",
 			"Str4nd",
-			"Valtlait"
+			"Valtlait",
+			"MITO"
 		]
 	},
+	"apihelp-regexblock-param-reason": "Eston syy.",
+	"apihelp-regexblock-param-nocreate": "Estä tunnusten luonti.",
 	"regexblock-already-blocked": "$1 on jo estetty.",
 	"regexblock-block-log": "Käyttäjänimi tai IP-osoite '''$1''' on nyt estetty.",
 	"regexblock-block-success": "Estäminen onnistui",
@@ -50,5 +53,6 @@
 	"regexblock-view-time": "$1",
 	"action-regexblock": "estää käyttäjiä muokkaamasta kaikissa wikifarmin wikeissä",
 	"right-regexblock": "Estää käyttäjiä muokkaamasta kaikissa wikifarmin wikeissä",
+	"action-regexblock-exempt": "vapautettu järjestelmänlaajuisista estoista",
 	"right-regexblock-exempt": "Erivapaus estoista, jotka koskevat kaikkia wikifarmin käyttäjiä"
 }
