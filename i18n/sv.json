@@ -6,7 +6,8 @@
 			"M.M.S.",
 			"Najami",
 			"Sertion",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Sabelöga"
 		]
 	},
 	"apihelp-regexblock-param-reason": "Orsak till blockering.",
@@ -56,6 +57,6 @@
 	"regexblock-view-empty": "Listan över blockerade namn och adresser är tom.",
 	"regexblock-view-time": "på $1",
 	"action-regexblock": "blockera användare från att redigera på alla wikier i wikifarmen",
-	"right-regexblock": "Blockerar användare från att redigera på alla wikis i wikisamlingen",
+	"right-regexblock": "Blockerar användare från att redigera på alla wikier i wikisamlingen",
 	"right-regexblock-exempt": "Undanta från globala blockeringar"
 }

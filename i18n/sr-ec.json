@@ -9,7 +9,7 @@
 			"Михајло Анђелковић"
 		]
 	},
-	"regexblock-block-success": "Блокирање је успело",
+	"regexblock-block-success": "Успешно блокирање",
 	"regexblock-currently-blocked": "Актуелно блокиране адресе:",
 	"regexblock-page-title-1": "Блокирај адресу користећи регуларне изразе",
 	"regexblock-form-username": "IP адреса или корисничко име:",

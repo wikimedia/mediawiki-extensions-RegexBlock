@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Veeven"
+			"Veeven",
+			"Chaduvari"
 		]
 	},
 	"regexblock-already-blocked": "$1ని ఇదివరకే నిషేధించారు.",
@@ -27,6 +28,6 @@
 	"regexblock-view-block-by": "నిరోధించినది:",
 	"regexblock-view-block-unblock": "నిరోధం ఎత్తివేయండి",
 	"regexblock-view-stats": "గణాంకాలు",
-	"regexblock-view-empty": "నిరోధించిన పేర్లు మరియు చిరునామాల జాబితా ఖాళీగా ఉంది.",
+	"regexblock-view-empty": "నిరోధించిన పేర్లు, చిరునామాల జాబితా ఖాళీగా ఉంది.",
 	"regexblock-view-time": "$1 నాడు"
 }
