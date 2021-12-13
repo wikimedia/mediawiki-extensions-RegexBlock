@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"ZlyiLev",
 			"Тест"
 		]
 	},
-	"regexblock-form-reason": "Прычына:"
+	"regexblock-form-reason": "Прычына:",
+	"regexblock-nodata-found": "Даных не знойдзена"
 }
