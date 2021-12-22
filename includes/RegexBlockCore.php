@@ -40,7 +40,7 @@ class RegexBlock {
 	public static function memcKey() {
 		global $wgRegexBlockDatabase;
 
-		$wiki = ( $wgRegexBlockDatabase !== false ) ? $wgRegexBlockDatabase : wfWikiID();
+		$wiki = ( $wgRegexBlockDatabase !== false ) ? $wgRegexBlockDatabase : WikiMap::getCurrentWikiId();
 		$newArgs = array_merge( [ $wiki ], func_get_args() );
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
