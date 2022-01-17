@@ -5,6 +5,7 @@
 			"Liangent",
 			"Liuxinyu970226",
 			"SolidBlock",
+			"Tranve",
 			"Xiaomingyan"
 		]
 	},
@@ -25,7 +26,7 @@
 	"regexblock-form-username": "IP地址或用户名：",
 	"regexblock-form-reason": "原因：",
 	"regexblock-form-match": "精确匹配",
-	"regexblock-form-account-block": "封禁新账户创建",
+	"regexblock-form-account-block": "封禁新账号创建",
 	"regexblock-form-submit": "封禁这位用户",
 	"regexblock-form-submit-empty": "提供要封禁的用户名或IP地址。",
 	"regexblock-form-submit-regex": "无效的正则表达式。",
@@ -44,7 +45,7 @@
 	"regexblock-view-go": "提交",
 	"regexblock-view-match": "（精确匹配）",
 	"regexblock-view-regex": "（正则表达式匹配）",
-	"regexblock-view-account": "（账户创建封禁）",
+	"regexblock-view-account": "（账号创建封禁）",
 	"regexblock-view-reason": "原因：$1",
 	"regexblock-view-reason-default": "一般原因",
 	"regexblock-view-block-infinite": "无限期封禁",
