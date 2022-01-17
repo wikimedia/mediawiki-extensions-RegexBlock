@@ -4,9 +4,11 @@
 			"Gzdavidwong",
 			"Liangent",
 			"Liuxinyu970226",
-			"Xiaomingyan"
+			"Xiaomingyan",
+			"SolidBlock"
 		]
 	},
+	"apihelp-regexblock-summary": "通过正则表达式封禁用户的名称和IP地址。",
 	"regexblock": "正则表达式封禁",
 	"regexblock-already-blocked": "$1已被封禁。",
 	"regexblock-block-log": "用户名或IP地址'''$1'''已封禁。",
