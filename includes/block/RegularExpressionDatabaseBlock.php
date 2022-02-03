@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IDatabase;
 
@@ -216,7 +217,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 	 * @return bool
 	 */
 	public function delete() {
-		if ( wfReadOnly() ) {
+		if ( MediaWikiServices::getInstance()->getReadOnlyMode()->isReadOnly() ) {
 			return false;
 		}
 

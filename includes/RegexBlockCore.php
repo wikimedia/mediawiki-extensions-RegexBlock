@@ -540,7 +540,7 @@ class RegexBlock {
 				$block->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
 			}
 
-			if ( wfReadOnly() ) {
+			if ( MediaWikiServices::getInstance()->getReadOnlyMode()->isReadOnly() ) {
 				$result = true;
 			} else {
 				$result = self::updateStats( $user, $user_ip, $blocker, $valid['match'], $valid['blckid'] );
