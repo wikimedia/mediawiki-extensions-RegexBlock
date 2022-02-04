@@ -30,14 +30,13 @@ class RegexBlockData {
 		if ( empty( $cached ) ) {
 			$dbr = RegexBlock::getDB( DB_PRIMARY );
 
-			$res = $dbr->select(
+			$row = $dbr->selectRow(
 				'blockedby',
 				[ 'COUNT(*) AS cnt' ],
 				[ "blckby_blocker <> ''" ],
 				__METHOD__
 			);
 
-			$row = $dbr->fetchObject( $res );
 			if ( $row ) {
 				$this->mNbrResults = $row->cnt;
 			}
@@ -149,14 +148,13 @@ class RegexBlockData {
 		$nbrStats = 0;
 
 		$dbr = RegexBlock::getDB( DB_REPLICA );
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			'stats_blockedby',
 			[ 'COUNT(*) AS cnt' ],
 			[ 'stats_blckby_id' => intval( $id ) ],
 			__METHOD__
 		);
 
-		$row = $dbr->fetchObject( $res );
 		if ( $row ) {
 			$nbrStats = $row->cnt;
 		}
@@ -213,7 +211,7 @@ class RegexBlockData {
 		$record = null;
 
 		$dbr = RegexBlock::getDB( DB_PRIMARY );
-		$res = $dbr->select(
+		$row = $dbr->selectRow(
 			'blockedby',
 			[
 				'blckby_id', 'blckby_name', 'blckby_blocker', 'blckby_timestamp',
@@ -223,7 +221,6 @@ class RegexBlockData {
 			__METHOD__
 		);
 
-		$row = $dbr->fetchObject( $res );
 		if ( $row ) {
 			$record = $row;
 		}
