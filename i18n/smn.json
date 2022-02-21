@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Seipinne"
+		]
+	},
+	"regexblock-form-reason": "Suijâ:",
+	"regexblock-view-reason": "suijâ: $1"
+}
