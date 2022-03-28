@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jeeputer",
 			"Zack90",
 			"ZxxZxxZ"
 		]
 	},
+	"apihelp-regexblock-param-nocreate": "جلوگیری از ایجاد حساب",
 	"regexblock": "مسدودکردن با عبارت باقاعده",
 	"regexblock-already-blocked": "$1 در حال حاضر مسدود شده‌است.",
 	"regexblock-block-log": "نام کاربری یا نشانی آی‌پی '''$1''' مسدود شده‌است.",
