@@ -5,6 +5,7 @@
 			"Dnik",
 			"Ex13",
 			"Herr Mlinka",
+			"Ponor",
 			"SpeedyGonsales"
 		]
 	},
@@ -15,10 +16,10 @@
 	"regexblock-currently-blocked": "Trenutno blokirane adrese:",
 	"regexblock-page-title": "Blokiranje pomoću regularnih izraza",
 	"regexblockstats": "Statistika blokiranja regularnim izrazima",
-	"regexblock-help": "Rabite donju formu za blokiranje određenih IP adresa ili suradnika. TO treba činiti samo radi sprječavanja vandalizama, u skladu s pravilima.\n\n''Ova stranica omogućava vam blokiranje suradničkih imena prema uzorku (postojećih i novih), npr. ako blokirate « Test 2», blokirat ćete i « Test » itd. Možete također blokirati IP adrese, što znači da nitko tko se prijavi s njih neće moći uređivati. Napomena: djelomične IP adrese bit će analizirane prema suradničkim imenima u određivanju trajanja bloka. Ukoliko razlog nije dan, bit će navedeno generičko objašnjenje.''",
+	"regexblock-help": "Rabite donju formu za blokiranje određenih IP adresa ili suradnika. To treba činiti samo radi sprječavanja vandalizama, u skladu s pravilima.\n\n''Ova stranica omogućava vam blokiranje suradničkih imena prema uzorku (postojećih i novih), npr. mogu se blokirati i »Test« i »Test 2« itd. Možete također blokirati IP adrese, što znači da nitko tko se prijavi s njih neće moći uređivati. Napomena: djelomične IP adrese bit će analizirane prema suradničkim imenima u određivanju trajanja bloka. Ako razlog nije dan, bit će navedeno generičko objašnjenje.''",
 	"regexblock-page-title-1": "Blokiraj adresu koristeći regularni izraz",
-	"regexblock-reason-ip": "Ova IP adresa je spriječena uređivati stranice zbog vandalizma ili drugog vašeg prekršaja ili nekog s kim dijelite IP adresu.\nUkoliko mislite da je posrijedi greška, molimo [[$1|kontaktirajte nas]]",
-	"regexblock-reason-name": "Ovo je suradničko ime spriječeno uređivati zbog vandalizma ili nekog drugog prekršaja. Ukoliko mislite da je posrijedi greška, molimo [[$1|kontaktirajte nas]]",
+	"regexblock-reason-ip": "Ovoj internetskoj adresi zapriječeno je uređivanje stranice zbog vandalizma ili drugog prekršaja Vas osobno ili nekog s kim dijelite adresu.\nAko smatrate da je posrijedi pogreška, molimo [[$1|javite nam se]].",
+	"regexblock-reason-name": "Ovom je suradničkom imenu zapriječeno uređivanje zbog vandalizma ili nekog drugog prekršaja. Ako smatrate da je posrijedi pogreška, molimo [[$1|javite nam se]].",
 	"regexblock-reason-regex": "Ovo je suradničko ime spriječeno uređivati zbog vandalizma ili nekog drugog prekršaja suradnika sličnog imena. Molimo stvorite drugo suradničko ime ili nas [[$1|kontaktirajte]] o problemu",
 	"regexblock-form-username": "IP-adresa ili ime suradnika:",
 	"regexblock-form-reason": "Razlog:",
