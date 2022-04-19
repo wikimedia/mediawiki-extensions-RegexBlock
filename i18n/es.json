@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Crazymadlover",
+			"DiegoAmbrocio",
 			"Hamilton Abreu",
 			"Imre",
 			"Indiralena",
@@ -11,6 +12,7 @@
 			"Translationista"
 		]
 	},
+	"apihelp-regexblock-param-reason": "Motivo de bloqueo.",
 	"regexblock": "Bloque de expresión regular",
 	"regexblock-already-blocked": "\"$1\" ya está bloqueado.",
 	"regexblock-block-log": "Nombre de usuario o dirección IP '''$1''' ha sido bloqueada.",
@@ -41,6 +43,7 @@
 	"regexblock-unblock-error": "Error desbloqueando $1.\nProbablemente no existe tal usuario.",
 	"regexblock-regex-filter": "o valor de expresión regular:",
 	"regexblock-view-blocked": "Ver bloqueos por:",
+	"regexblock-view-block-id": "Ver ID de bloque:",
 	"regexblock-view-all": "Todos",
 	"regexblock-view-go": "Ir",
 	"regexblock-view-match": "(coincidencia exacta)",
