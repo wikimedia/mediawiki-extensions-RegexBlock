@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Rotemliss",
 			"YaronSh"
 		]
@@ -24,9 +25,9 @@
 	"regexblock-form-account-block": "חסימת יצירת חשבונות חדשים",
 	"regexblock-form-submit": "חסימת משתמש זה",
 	"regexblock-form-submit-empty": "כתבו שם משתמש או כתובת IP לחסימה.",
-	"regexblock-form-submit-regex": "ביטוי רגולרי בלתי תקין.",
-	"regexblock-form-submit-expiry": "אנא ציינו את משך הזמן עד לפקיעת החסימה.",
-	"regexblock-link": "חסימה באמצעות ביטויים רגולאריים",
+	"regexblock-form-submit-regex": "ביטוי רגולרי בלתי־תקין.",
+	"regexblock-form-submit-expiry": "נא לציין את משך הזמן עד לפקיעת החסימה.",
+	"regexblock-link": "חסימה באמצעות ביטויים רגולריים",
 	"regexblock-match-stats-record": "$1 נחסם '$2' ב־'$3' ב־'$4', בעת התחברות מהכתובת '$5'",
 	"regexblock-nodata-found": "לא נמצאו נתונים",
 	"regexblock-stats-title": "סטטיסטיקת הנתונים הרגולריים",
