@@ -6,6 +6,7 @@
 			"YaronSh"
 		]
 	},
+	"apihelp-regexblock-param-reason": "סיבה לחסימה.",
 	"regexblock": "חסימה לפי ביטויים רגולריים",
 	"regexblock-already-blocked": "$1 כבר חסום.",
 	"regexblock-block-log": "כתובת ה־IP או שם המשתמש '''$1''' נחסמו.",
