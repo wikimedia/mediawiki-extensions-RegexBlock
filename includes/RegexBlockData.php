@@ -33,7 +33,7 @@ class RegexBlockData {
 			$row = $dbr->selectRow(
 				'blockedby',
 				[ 'COUNT(*) AS cnt' ],
-				[ "blckby_blocker <> ''" ],
+				[ 'blckby_blocker <> ' . $dbr->addQuotes( '' ) ],
 				__METHOD__
 			);
 
@@ -79,7 +79,7 @@ class RegexBlockData {
 
 		$blocker_list = [];
 		$dbr = RegexBlock::getDB( DB_PRIMARY );
-		$conds = [ "blckby_blocker <> ''" ];
+		$conds = [ 'blckby_blocker <> ' . $dbr->addQuotes( '' ) ];
 
 		if ( !empty( $current ) ) {
 			$conds = [ 'blckby_blocker' => $current ];
