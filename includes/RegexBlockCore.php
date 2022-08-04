@@ -69,7 +69,7 @@ class RegexBlock {
 			$res = $dbr->select(
 				'blockedby',
 				[ 'blckby_blocker' ],
-				[ "blckby_blocker <> ''" ],
+				[ 'blckby_blocker <> ' . $dbr->addQuotes( '' ) ],
 				__METHOD__,
 				[ 'GROUP BY' => 'blckby_blocker' ]
 			);
