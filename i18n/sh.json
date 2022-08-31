@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"action-regexblock": "blokiranje korisnika od uređivanja na svim wikijima na wikifarmi",
+	"right-regexblock": "Blokiranje korisnika od uređivanja na svim wikijima na wiki-farmi"
+}
