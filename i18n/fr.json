@@ -49,7 +49,7 @@
 	"regexblock-stats-title": "Statistiques des blocages par expressions rationnelles",
 	"regexblock-unblock-success": "Le déblocage a réussi",
 	"regexblock-unblock-log": "L’utilisateur ou l’adresse IP '''$1''' a été débloqué.",
-	"regexblock-unblock-error": "Erreur de déblocage de $1. L’utilisateur n’existe probablement pas.",
+	"regexblock-unblock-error": "Erreur de déblocage de « $1 ». L’utilisateur ou l’utilisatrice n’existe probablement pas.",
 	"regexblock-regex-filter": "  ou une expression rationnelle :",
 	"regexblock-view-blocked": "Voir les blocages par :",
 	"regexblock-view-block-id": "Afficher l’ID de blocage :",
