@@ -41,7 +41,7 @@
 	"regexblock-form-submit": "Bloquear este Utilizador",
 	"regexblock-form-submit-empty": "Forneça um nome de utilizador ou um endereço IP para bloquear.",
 	"regexblock-form-submit-regex": "Expressão regular inválida.",
-	"regexblock-form-submit-expiry": "Por favor, seleccione um período de expiração.",
+	"regexblock-form-submit-expiry": "Por favor, selecione um período de expiração.",
 	"regexblock-link": "bloqueio com expressão regular",
 	"regexblock-match-stats-record": "$1 bloqueou '$2' em '$3' em '$4', proveniente do endereço '$5'",
 	"regexblock-nodata-found": "Não foram encontrados dados",
