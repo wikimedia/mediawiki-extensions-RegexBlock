@@ -7,5 +7,6 @@
 	},
 	"regexblock-form-reason": "Razlog:",
 	"regexblock-view-block-infinite": "trajna blokada",
-	"regexblock-view-block-unblock": "odblokiraj"
+	"regexblock-view-block-unblock": "odblokiraj",
+	"regexblock-view-time": "datum: $1"
 }
