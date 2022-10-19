@@ -4,6 +4,18 @@
 			"McDutchie"
 		]
 	},
+	"apihelp-regexblock-summary": "Blocar le nomines e adresses IP de usatores per medio de expressiones regular.",
+	"apihelp-regexblock-example-ip-exact-simple": "Blocar le adresse IP exacte \"192.0.2.5\" durante tres dies con le motivo \"First strike\"",
+	"apihelp-regexblock-example-user-regex-complex": "Blocar permanentemente le expression regular \"SpamUser.*\", le qual bloca omne usator con un nomine correspondente a ille expression, p.ex. \"SpamUser65\", con le motivo \"Mal nomine de usator\" e tamben impedir a omne usator con un nomine correspondente al expression regular de crear nove contos.",
+	"apihelp-regexblock-param-regex": "Le expression regular a blocar. Nota que si le parametro \"exact\" es fornite in le URL, isto non es tractate como expression regular ma como catena de texto simple.",
+	"apihelp-regexblock-param-expiry": "Tempore de expiration. Pote esser relative (p.ex. <kbd>5 months</kbd> o <kbd>2 weeks</kbd>) o absolute (p.ex. <kbd>2014-09-18T12:34:56Z</kbd>). Si es mittite a <kbd>infinite</kbd>, <kbd>indefinite</kbd> o <kbd>never</kbd>, le blocada nunquam expirara.",
+	"apihelp-regexblock-param-reason": "Motivo del blocada.",
+	"apihelp-regexblock-param-nocreate": "Impedir le creation de contos.",
+	"apihelp-regexblock-param-exact": "Usar un comparation exacte pro blocar le nomine precisemente como es specificate (sin tractar lo como expression regular).",
+	"apihelp-regexunblock-summary": "Disblocar le nomines e adresses IP de usatores per medio de expressiones regular.",
+	"apihelp-regexunblock-param-regex": "Le expression regular blocate a disblocar (pote non esser un ver expression regular si es usate le blocage exacte).",
+	"apihelp-regexunblock-example-ip": "Disblocar \"192.0.2.5\" (que se suppone de esser blocate con le option \"exact\" pro blocar solmente le modificationes proveniente de iste adresse IP)",
+	"apihelp-regexunblock-example-regex": "Disblocar le expression regular \"SpamUser.*\" de sorta que es possibile crear contos como \"SpamUser66\" e contos existente con tal nomines pote modificar le sito.",
 	"regexblock": "Blocar con regex",
 	"regexblock-already-blocked": "\"$1\" es ja blocate.",
 	"regexblock-block-log": "Le nomine de usator o adresse IP '''$1''' ha essite blocate.",
@@ -34,6 +46,7 @@
 	"regexblock-unblock-error": "Error durante le disblocada de $1.\nProbabilemente non existe tal usator.",
 	"regexblock-regex-filter": " o valor regex:",
 	"regexblock-view-blocked": "Vider blocadas per:",
+	"regexblock-view-block-id": "Vider le ID de blocage:",
 	"regexblock-view-all": "Totes",
 	"regexblock-view-go": "Va",
 	"regexblock-view-match": "(correspondentia exacte)",
@@ -47,5 +60,8 @@
 	"regexblock-view-stats": "statisticas",
 	"regexblock-view-empty": "Le lista de nomines e adresses blocate es vacue.",
 	"regexblock-view-time": "le $1",
-	"right-regexblock": "Blocar le modification al usatores de tote le wikis del ferma"
+	"action-regexblock": "blocar le modification al usatores de tote le wikis del ferma",
+	"right-regexblock": "Blocar le modification al usatores de tote le wikis del ferma",
+	"action-regexblock-exempt": "esser exempte de blocadas global",
+	"right-regexblock-exempt": "Exempte de blocadas global"
 }
