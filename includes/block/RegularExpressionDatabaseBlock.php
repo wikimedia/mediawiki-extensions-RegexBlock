@@ -180,14 +180,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		// I wish I didn't have to do this
 		$db = wfGetDB( DB_REPLICA );
 		$this->setExpiry( $db->decodeExpiry( $row->blckby_expire ) );
-		$this->setReason(
-			/* doesn't work --ashley, 31 October 2020
-			CommentStore::getStore()
-			// Legacy because $row may have come from self::selectFields()
-				->getCommentLegacy( $db, 'blckby_reason', $row )
-			*/
-			$row->blckby_reason
-		);
+		$this->setReason( $row->blckby_reason );
 
 		$this->isHardblock( true );
 		$this->isAutoblocking( true );
@@ -377,7 +370,6 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 			'blckby_exact'         => (int)$this->getExact(),
 			'blckby_reason'        => $this->getReasonComment()->text
 		];
-		// ] + CommentStore::getStore()->insert( $dbw, 'blckby_reason', $this->getReasonComment() );
 
 		return $a;
 	}
