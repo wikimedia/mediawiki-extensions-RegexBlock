@@ -6,7 +6,8 @@
 			"Mark85296341",
 			"Wrightbus",
 			"Xiplus",
-			"Winston Sung"
+			"Winston Sung",
+			"捍粵者"
 		]
 	},
 	"apihelp-regexblock-summary": "透過正規表達式封禁使用者名稱和 IP 位址。",
@@ -22,7 +23,7 @@
 	"apihelp-regexunblock-example-ip": "解封「192.0.2.5」（想必之前是以「精準」選項，來僅針對 IP 位址封禁編輯操作）",
 	"apihelp-regexunblock-example-regex": "解封正規表達式「SpamUser.*」後便可建立像是「SpamUser66」這樣的帳號，現有帳號若是為上述般名稱則可在網站上做出編輯。",
 	"regexblock": "正規表達式封禁",
-	"regexblock-already-blocked": "$1 已被封禁。",
+	"regexblock-already-blocked": "$1已封禁。",
 	"regexblock-block-log": "使用者名稱或 IP 位址 '''$1''' 已被封禁。",
 	"regexblock-block-success": "封禁成功",
 	"regexblock-currently-blocked": "目前封禁的位址：",
