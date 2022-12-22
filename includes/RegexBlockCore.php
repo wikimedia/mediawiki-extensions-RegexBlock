@@ -496,7 +496,7 @@ class RegexBlock {
 		}
 
 		if ( is_array( $valid ) ) {
-			$user->mBlockedby = User::idFromName( $blocker );
+			$user->mBlockedby = $blocker;
 			// Need to construct a new DatabaseBlock object here and load it into the
 			// User object in order for the block to actually, y'know, work...
 			// @todo FIXME: how much, if any, of this code do we really need/use?
