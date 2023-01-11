@@ -13,6 +13,6 @@
 	"regexblock-unblock-log": "Декъашхочун цӀе йа IP-адрес '''$1''' блоктоьхна.",
 	"regexblock-view-all": "Массо",
 	"regexblock-view-go": "Кхочушдé",
-	"regexblock-view-reason": "бахьна: $1",
+	"regexblock-view-reason": "бахьана: $1",
 	"regexblock-view-block-by": "блоктоьхна:"
 }
