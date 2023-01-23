@@ -6,6 +6,7 @@
 		]
 	},
 	"regexblock-form-reason": "Razlog:",
+	"regexblock-view-all": "Vsi",
 	"regexblock-view-block-infinite": "trajno blokiranje",
 	"regexblock-view-block-unblock": "odblokiraj",
 	"regexblock-view-time": "datum: $1"
