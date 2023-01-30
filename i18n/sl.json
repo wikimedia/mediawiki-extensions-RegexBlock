@@ -9,5 +9,7 @@
 	"regexblock-view-all": "Vsi",
 	"regexblock-view-block-infinite": "trajno blokiranje",
 	"regexblock-view-block-unblock": "odblokiraj",
-	"regexblock-view-time": "datum: $1"
+	"regexblock-view-time": "datum: $1",
+	"action-regexblock-exempt": "izvzetje iz globalnih blokiranj",
+	"right-regexblock-exempt": "Izvzetje iz globalnih blokiranj"
 }
