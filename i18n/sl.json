@@ -7,6 +7,7 @@
 	},
 	"regexblock-already-blocked": "$1 je že blokirano.",
 	"regexblock-form-reason": "Razlog:",
+	"regexblock-link": "blokiranje z regularnim izrazom",
 	"regexblock-view-all": "Vsi",
 	"regexblock-view-block-infinite": "trajno blokiranje",
 	"regexblock-view-block-unblock": "odblokiraj",
