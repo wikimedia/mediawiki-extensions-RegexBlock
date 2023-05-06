@@ -460,9 +460,10 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 	 * Need to define this to get the RegexBlock ID to show up properly in the
 	 * blockedtext i18n msg.
 	 *
+	 * @param string|false $wikiId
 	 * @return int
 	 */
-	public function getIdentifier() {
+	public function getIdentifier( $wikiId = self::LOCAL ) {
 		return (int)$this->mId;
 	}
 
