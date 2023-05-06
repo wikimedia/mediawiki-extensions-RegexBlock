@@ -353,6 +353,7 @@ class RegexBlockForm extends FormSpecialPage {
 
 			$messageKey = 'regexblock-match-stats-record';
 
+			$hookContainer = $this->getHookContainer();
 			foreach ( $stats_list as $id => $row ) {
 				$params = [
 					$row->stats_match,
@@ -369,7 +370,7 @@ class RegexBlockForm extends FormSpecialPage {
 				// is used in the message, but on ShoutWiki we want to change that to a
 				// clickable link as well as change the displayed text from a DB name to
 				// the wiki's site name
-				Hooks::run( 'RegexBlockShowStatsListFormatRecord', [ &$messageKey, &$params, $row ] );
+				$hookContainer->run( 'RegexBlockShowStatsListFormatRecord', [ &$messageKey, &$params, $row ] );
 
 				$out->addHTML(
 					'<li>' .
@@ -576,7 +577,7 @@ class RegexBlockForm extends FormSpecialPage {
 		}
 
 		// A hook point for ShoutWiki
-		Hooks::run( 'RegexBlockFormPostText', [ &$links, $this ] );
+		$this->getHookContainer()->run( 'RegexBlockFormPostText', [ &$links, $this ] );
 
 		$text = Html::rawElement(
 			'p',
