@@ -23,7 +23,7 @@
 	"regexblock-currently-blocked": "Adresses actualmente blocate:",
 	"regexblock-desc": "Extension usate pro blocar le nomines e adresses IP de usatores per medio de expressiones regular. Contine e le mechanismo de blocar e un [[Special:Regexblock|pagina special]] pro adder/gerer blocadas",
 	"regexblock-page-title": "Blocada de un nomine per expression regular",
-	"regexblockstats": "Statisticas super blocadas per expressiones regular",
+	"regexblockstats": "Statisticas sur blocadas per expression regular",
 	"regexblock-help": "Usa le formulario in basso pro blocar le accesso a scriber ab un adresse IP o nomine de usator specific.\nIsto debe facite solmente pro impedir le vandalismo, e in concordantia con le politica in vigor.\n''Iste pagina te permitte blocar mesmo usatores non existente, e pote equalmente blocar usatores con nomines similar al date, i.e. \"Test\" essera blocate insimul con \"Test 2\", etc.\nTu pote tamben blocar adresses IP complete, isto vole dicer que necuno connectente se de istes potera modificar paginas.\nNota: le adresses IP partial essera considerate como nomines de usator in le determination del blocada.\nSi nulle motivo es specificate, un motivo generic predefenite essera usate.''",
 	"regexblock-page-title-1": "Blocar adresses per medio de expressiones regular",
 	"regexblock-reason-ip": "Iste adresse IP es impedite de facer modificationes pro causa de vandalismo o de altere disruption per te o per alcuno altere qui usa un adresse IP in commun con te. Si tu crede que isto es un error, per favor [[$1|contacta nos]].",
