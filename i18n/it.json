@@ -46,5 +46,7 @@
 	"regexblock-view-stats": "statistiche",
 	"regexblock-view-empty": "L'elenco dei nomi e degli indirizzi bloccati è vuoto.",
 	"regexblock-view-time": "il $2 alle $3",
-	"right-regexblock": "Blocca utenti in scrittura su tutti i siti della wiki farm"
+	"right-regexblock": "Blocca utenti in scrittura su tutti i siti della wiki farm",
+	"action-regexblock-exempt": "essere esentati dai blocchi globali",
+	"right-regexblock-exempt": "È esente dai blocchi globali"
 }

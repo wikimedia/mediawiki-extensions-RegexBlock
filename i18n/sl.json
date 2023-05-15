@@ -63,6 +63,6 @@
 	"regexblock-view-time": "datum: $1",
 	"action-regexblock": "blokiranje uporabnikov za urejanje v vseh vikijih vikifarme",
 	"right-regexblock": "Blokiranje uporabnikov za urejanje v vseh vikijih vikifarme",
-	"action-regexblock-exempt": "izvzetje iz globalnih blokiranj",
-	"right-regexblock-exempt": "Izvzetje iz globalnih blokiranj"
+	"action-regexblock-exempt": "biti izvzet iz globalnih blokiranj",
+	"right-regexblock-exempt": "Biti izvzet iz globalnih blokiranj"
 }

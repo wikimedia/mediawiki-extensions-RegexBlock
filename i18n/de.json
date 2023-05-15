@@ -62,5 +62,5 @@
 	"action-regexblock": "Benutzer am Bearbeiten aller Wikis auf der Wikifarm zu hindern",
 	"right-regexblock": "Benutzer auf allen Wikis der Wikifarm sperren",
 	"action-regexblock-exempt": "von globalen Sperren ausgenommen zu sein",
-	"right-regexblock-exempt": "Ausnahme globaler Sperren"
+	"right-regexblock-exempt": "Von den globalen Sperren ausgenommen sein"
 }

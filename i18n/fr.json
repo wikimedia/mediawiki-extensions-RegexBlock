@@ -68,6 +68,6 @@
 	"regexblock-view-time": "le $1",
 	"action-regexblock": "bloquer les utilisateurs pour les empêcher d’effectuer des modifications sur tous les wikis de la ferme wiki",
 	"right-regexblock": "Bloquer les utilisateurs pour les empêcher d’effectuer des modifications sur tous les wikis de la ferme wiki",
-	"action-regexblock-exempt": "exempter des blocages globaux",
-	"right-regexblock-exempt": "Exempter des blocages globaux"
+	"action-regexblock-exempt": "Bénéficier de l’exemption des blocages globaux",
+	"right-regexblock-exempt": "Bénéficier de l’exemption des blocages globaux"
 }
