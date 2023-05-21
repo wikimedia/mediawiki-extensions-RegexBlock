@@ -8,7 +8,7 @@ use Wikimedia\TestingAccessWrapper;
  */
 class SpecialRegexBlockTest extends MediaWikiIntegrationTestCase {
 
-	public function provideShowRegexList() {
+	public static function provideShowRegexList() {
 		yield [ 0, 20 ];
 		yield [ 17, 20 ];
 		yield [ 0, 17 ];
