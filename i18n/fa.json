@@ -33,5 +33,7 @@
 	"regexblock-view-block-by": "مسدودکننده:",
 	"regexblock-view-block-unblock": "آزادسازی",
 	"regexblock-view-stats": "آمار",
-	"regexblock-view-time": "در $1"
+	"regexblock-view-time": "در $1",
+	"action-regexblock-exempt": "معاف شدن از قطع دسترسی‌های سراسری",
+	"right-regexblock-exempt": "معاف شدن از قطع دسترسی‌های سراسری"
 }
