@@ -246,7 +246,7 @@ class RegexBlockData {
 		$dbw = RegexBlock::getDB( DB_PRIMARY );
 		$name = RequestContext::getMain()->getUser()->getName();
 
-		$res = $dbw->replace(
+		$dbw->replace(
 			'blockedby',
 			[ 'blckby_id', 'blckby_name' ],
 			[
