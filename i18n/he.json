@@ -6,7 +6,18 @@
 			"YaronSh"
 		]
 	},
+	"apihelp-regexblock-summary": "חסימת שמות משתמש וכתובות IP באמצעות ביטויים רגולריים.",
+	"apihelp-regexblock-example-ip-exact-simple": "חסימת כתובת ה־IP המדויקת \"192.0.2.5\" למשך שלושה ימים עם הסיבה \"First strike\"",
+	"apihelp-regexblock-example-user-regex-complex": "חסימת הביטוי הרגולרי \"<span dir=\"ltr\">SpamUser.*</span>\" ללא הגבלת זמן, מה שחוסם את כל המשתמשים ששם המשתמש שלהם תואם את הביטוי הזה, כגון \"SpamUser65\", עם הסיבה \"Bad username\" וגם מונע מכל המשתמשים ששם המשתמש שלהם מתאים לביטוי הרגולרי יצירת חשבונות משתמש חדשים.",
+	"apihelp-regexblock-param-regex": "הביטוי הרגולרי לחסום. לתשומת ליבך, כאשר הפרמטר \"exact\" ניתו ב־URL, זה לא מטופל כביטוי רגולרי אלא כמחרוזת פשוטה.",
+	"apihelp-regexblock-param-expiry": "זמן תפוגה. יכול להיות יחסי (למשל <kbd>5 months</kbd> או <kbd>2 weeks</kbd>) או מוחלט (למשל <kbd>2014-09-18T12:34:56Z</kbd>). אם זה מוגדר ל־<kbd>infinite</kbd>‏, <kbd>indefinite</kbd>, או <kbd>never</kbd>, החסימה לא תפוג לעולם.",
 	"apihelp-regexblock-param-reason": "סיבה לחסימה.",
+	"apihelp-regexblock-param-nocreate": "מניעת יצירת חשבונות",
+	"apihelp-regexblock-param-exact": "להשתמש בהתאמה מדויקת כדי לחסום את השם הנתון בדיוק כפי שניתן (בניגוד להתייחסות אליו כביטוי רגולרי).",
+	"apihelp-regexunblock-summary": "שחרור חסימת שמות משתמש וכתובות IP באמצעות ביטויים רגולריים.",
+	"apihelp-regexunblock-param-regex": "הביטוי הרגולרי החסום שצריך לבטל את חסימתו (ייתכן הוא בעצם לא יהיה ביטוי רגולרי אמיתי כאשר נעשה שימוש בחסימה מדויקת).",
+	"apihelp-regexunblock-example-ip": "בטל את החסימה של \"192.0.2.5\" (שכנראה נחסם עם האפשרות \"מדויק\" לחסום רק את כתובת ה־IP הזאת לעריכה)",
+	"apihelp-regexunblock-example-regex": "ביטול חסימת הביטוי הרגולרי \"<span dir=\"ltr\">SpamUser.*</span>\" כך שחשבונות כמו \"SpamUser66\" יכולים להיווצר וחשבונות קיימים עם שמות כאלה יוכלו לערוך את האתר.",
 	"regexblock": "חסימה לפי ביטויים רגולריים",
 	"regexblock-already-blocked": "$1 כבר חסום.",
 	"regexblock-block-log": "כתובת ה־IP או שם המשתמש '''$1''' נחסמו.",
@@ -37,6 +48,7 @@
 	"regexblock-unblock-error": "שגיאה בשחרור $1.\nכנראה שאין משתמש כזה.",
 	"regexblock-regex-filter": "  או ערך ביטוי רגולרי:",
 	"regexblock-view-blocked": "צפייה בחסימות שבוצעו על ידי:",
+	"regexblock-view-block-id": "צפייה במזהה חסימה:",
 	"regexblock-view-all": "כולם",
 	"regexblock-view-go": "הצגה",
 	"regexblock-view-match": "(התאמה מדויקת)",
@@ -50,5 +62,6 @@
 	"regexblock-view-stats": "סטטיסטיקה",
 	"regexblock-view-empty": "רשימת השמות והכתובות החסומים ריקה.",
 	"regexblock-view-time": "ב־$1",
+	"action-regexblock": "לחסום משתמשים מעריכה בכל אתרי הוויקי שבחוות הוויקי",
 	"right-regexblock": "חסימת משתמשים מעריכה בכל אתרי הוויקי שבחוות הוויקי"
 }

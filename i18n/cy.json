@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lloffiwr"
+			"Lloffiwr",
+			"Afalau"
 		]
 	},
-	"regexblock-view-all": "Oll"
+	"regexblock-already-blocked": "Mae \"$1\" eisoes wedi'i flocio",
+	"regexblock-view-all": "Oll",
+	"regexblock-view-block-by": "blociwyd gan:"
 }
