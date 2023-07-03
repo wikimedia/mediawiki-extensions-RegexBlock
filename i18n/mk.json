@@ -63,6 +63,6 @@
 	"regexblock-view-time": "на $1",
 	"action-regexblock": "блокирање на корисници од уредување на сите викија на викифармата",
 	"right-regexblock": "Блокирање на корисници од уредување на сите викија на вики-фармата",
-	"action-regexblock-exempt": "изземен од глобални блокови",
-	"right-regexblock-exempt": "Изземеност од блобални блокови"
+	"action-regexblock-exempt": "изземеност од глобални блокови",
+	"right-regexblock-exempt": "Изземеност од глобални блокови"
 }
