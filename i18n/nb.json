@@ -64,6 +64,6 @@
 	"regexblock-view-time": "$1",
 	"action-regexblock": "blokkere brukere fra å redigere på alle wikier i wikifarmen",
 	"right-regexblock": "Blokker brukere fra å endre på alle wikier på wiki-farmen",
-	"action-regexblock-exempt": "unntatt fra globale blokkeringer",
-	"right-regexblock-exempt": "Unntatt fra globale blokkeringer"
+	"action-regexblock-exempt": "bli unntatt fra globale blokkeringer",
+	"right-regexblock-exempt": "Bli unntatt fra globale blokkeringer"
 }
