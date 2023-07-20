@@ -13,6 +13,11 @@
 			"Umherirrender"
 		]
 	},
+	"apihelp-regexblock-summary": "Sperren von Benutzernamen und IP-Adressen über reguläre Ausdrücke.",
+	"apihelp-regexblock-example-ip-exact-simple": "Die exakte IP-Adresse „192.0.2.5“ für drei Tage mit dem Grund „First strike“ sperren",
+	"apihelp-regexblock-example-user-regex-complex": "Über den regulären „SpamUser.*“ dauerhaft sperren, wodurch alle Benutzer, deren Benutzername mit diesem Ausdruck übereinstimmt, wie z. B. „SpamUser65“, mit der Begründung „Ungeeigneter Benutzername“ gesperrt werden, und außerdem alle Benutzer, deren Benutzername mit dem regulären Ausdruck übereinstimmt, daran hindern, neue Benutzerkonten anzulegen.",
+	"apihelp-regexblock-param-regex": "Der zu sperrende reguläre Ausdruck. Beachte, dass bei Angabe des „exakten“ Parameters in der URL dieser nicht als regulärer Ausdruck, sondern als einfache Zeichenfolge behandelt wird.",
+	"apihelp-regexblock-param-expiry": "Sperrdauer. Kann relativ (z.&nbsp;B. <kbd>5 months</kbd> oder <kbd>2 weeks</kbd>) oder absolut (z.&nbsp;B. <kbd>2014-09-18T12:34:56Z</kbd>) sein. Wenn auf <kbd>infinite</kbd>, <kbd>indefinite</kbd> oder <kbd>never</kbd> gesetzt, ist die Sperre unbegrenzt.",
 	"apihelp-regexblock-param-reason": "Grund für die Sperre.",
 	"apihelp-regexblock-param-nocreate": "Erstellung von Benutzerkonten verhindern.",
 	"regexblock": "Regex-Sperre",
