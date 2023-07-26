@@ -13,8 +13,18 @@
 			"Umherirrender"
 		]
 	},
+	"apihelp-regexblock-summary": "Sperren von Benutzernamen und IP-Adressen über reguläre Ausdrücke.",
+	"apihelp-regexblock-example-ip-exact-simple": "Die exakte IP-Adresse „192.0.2.5“ für drei Tage mit dem Grund „First strike“ sperren",
+	"apihelp-regexblock-example-user-regex-complex": "Über den regulären „SpamUser.*“ dauerhaft sperren, wodurch alle Benutzer, deren Benutzername mit diesem Ausdruck übereinstimmt, wie z. B. „SpamUser65“, mit der Begründung „Ungeeigneter Benutzername“ gesperrt werden, und außerdem alle Benutzer, deren Benutzername mit dem regulären Ausdruck übereinstimmt, daran hindern, neue Benutzerkonten anzulegen.",
+	"apihelp-regexblock-param-regex": "Der zu sperrende reguläre Ausdruck. Beachte, dass bei Angabe des „exakten“ Parameters in der URL dieser nicht als regulärer Ausdruck, sondern als einfache Zeichenfolge behandelt wird.",
+	"apihelp-regexblock-param-expiry": "Sperrdauer. Kann relativ (z.&nbsp;B. <kbd>5 months</kbd> oder <kbd>2 weeks</kbd>) oder absolut (z.&nbsp;B. <kbd>2014-09-18T12:34:56Z</kbd>) sein. Wenn auf <kbd>infinite</kbd>, <kbd>indefinite</kbd> oder <kbd>never</kbd> gesetzt, ist die Sperre unbegrenzt.",
 	"apihelp-regexblock-param-reason": "Grund für die Sperre.",
 	"apihelp-regexblock-param-nocreate": "Erstellung von Benutzerkonten verhindern.",
+	"apihelp-regexblock-param-exact": "Exakte Übereinstimmung verwenden, um den angegebenen Namen genau wie angegeben zu sperren (im Gegensatz zur Behandlung als regulärer Ausdruck).",
+	"apihelp-regexunblock-summary": "Entsperren von Benutzernamen und IP-Adressen über reguläre Ausdrücke.",
+	"apihelp-regexunblock-param-regex": "Der gesperrte reguläre Ausdruck, der entsperrt werden soll (möglicherweise handelt es sich nicht wirklich um einen echten regulären Ausdruck, wenn exakte Sperre verwendet wird).",
+	"apihelp-regexunblock-example-ip": "Entsperren von „192.0.2.5“ (die vermutlich mit der Option „exakt“ gesperrt wurde, um nur diese IP-Adresse für die Bearbeitung zu sperren)",
+	"apihelp-regexunblock-example-regex": "Entsperren des regulären Ausdrucks „SpamUser.*“, damit Konten wie „SpamUser66“ erstellt werden können und bestehende Konten mit solchen Namen die Website bearbeiten können.",
 	"regexblock": "Regex-Sperre",
 	"regexblock-already-blocked": "$1 ist bereits gesperrt.",
 	"regexblock-block-log": "Benutzername oder IP-Adresse '''$1''' wurde gesperrt",
