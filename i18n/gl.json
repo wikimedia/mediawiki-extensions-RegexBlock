@@ -4,7 +4,8 @@
 			"Alma",
 			"Banjo",
 			"Toliño",
-			"Xosé"
+			"Xosé",
+			"Amire80"
 		]
 	},
 	"regexblock": "Bloqueo Regex",
@@ -51,7 +52,7 @@
 	"regexblock-view-stats": "estatísticas",
 	"regexblock-view-empty": "A lista dos nomes e enderezos bloqueados está baleira.",
 	"regexblock-view-time": "en $1",
-	"action-regexblock": "bloquear a edición de usuarios  en tódalas wikis da granxa wiki",
+	"action-regexblock": "bloquear a edición de usuarios en tódalas wikis da granxa wiki",
 	"right-regexblock": "Bloquearlles aos usuarios a edición en todos os wikis na granxa",
 	"right-regexblock-exempt": "Exento de bloqueos globais"
 }
