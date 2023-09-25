@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yupik"
+		]
+	},
+	"regexblock-unblock-success": "Hehttema sihkkun lihkostuvai",
+	"regexblock-unblock-log": "Geavaheaddjinama dahje IP-čujuhusa '''$1''' hehtten lea sihkkojuvvon.",
+	"regexblock-view-block-unblock": "sihko hehttema"
+}
