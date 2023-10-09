@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
-	"regexblock-unblock-success": "Hehttema sihkkun lihkostuvai",
+	"regexblock-unblock-success": "Hehttema fámuhuhttin lihkostuvai",
 	"regexblock-unblock-log": "Geavaheaddjinama dahje IP-čujuhusa '''$1''' hehtten lea sihkkojuvvon.",
-	"regexblock-view-block-unblock": "sihko hehttema"
+	"regexblock-view-block-unblock": "fámuhuhte hehttema"
 }
