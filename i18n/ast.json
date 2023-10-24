@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"regexblock": "Bloquéu Regex",
@@ -9,7 +10,7 @@
 	"regexblock-block-log": "Bloquióse'l nome d'usuariu o dirección IP '''$1'''.",
 	"regexblock-block-success": "Bloquéu fechu correutamente",
 	"regexblock-currently-blocked": "Direiciones bloquiaes anguaño:",
-	"regexblock-desc": "Estensión usada pa bloquiar nomes d'usuariu y direcciones IP con espresiones regulares. Contien el mecanismu de bloquéu y una [[Special:RegexBlock|páxina especial]] p'añadir/alministrar los bloqueos",
+	"regexblock-desc": "Estensión usada pa bloquiar nomes d'usuariu y direcciones IP con espresiones regulares. Contién el mecanismu de bloquéu y una [[Special:RegexBlock|páxina especial]] p'añadir/alministrar los bloqueos",
 	"regexblock-page-title": "Bloquéu de nome por espresión regular",
 	"regexblockstats": "Estadístiques de bloqueos por espresiones regulares",
 	"regexblock-help": "Usa'l formulariu de más abaxo pa bloquiar l'accesu d'escritura d'un usuariu o dirección IP específicos.\nEsto tendría de facese sólo pa prevenir el vandalismu y acordies cola política.\n''Esta páxina te permitirá inclusive bloquiar usuarios que nun esisten, y tamién bloquiará usuarios con nomes asemeyaos al dau. Por casu: \"Prueba\" va bloquiase en xunto con \"Prueba 2\", etc.\nTamién puedes bloquiar direcciones IP completes, polo que naide qu'anicie sesión dende elles podrá editar páxines.\nNota: Les direcciones IP parciales van tratase como nomes d'usuariu na determinación de bloqueos.\nSi nun s'especifica un motivu, utilizaráse un motivu xenéricu predetermináu.''",
