@@ -4,7 +4,8 @@
 			"Karthi.dr",
 			"Shanmugamp7",
 			"TRYPPN",
-			"Trengarasu"
+			"Trengarasu",
+			"Fahimrazick"
 		]
 	},
 	"regexblock-form-username": "ஐ.பி. முகவரி அல்லது பயனர் பெயர்:",
@@ -16,7 +17,7 @@
 	"regexblock-nodata-found": "தரவு ஏதும் காணப்படவில்லை",
 	"regexblock-unblock-success": "தடை நீக்கல் வெற்றியடைந்தது",
 	"regexblock-unblock-log": "பயனர் பெயர் அல்லது ஐபி முகவரி '''$1''' ன் தடை நீக்கப்பட்டது",
-	"regexblock-view-all": "அனைத்தும்",
+	"regexblock-view-all": "யாவும்",
 	"regexblock-view-go": "செல்",
 	"regexblock-view-match": "(மிகச்சரியான பொருத்தம்)",
 	"regexblock-view-account": "(கணக்கு உருவாக்குதல் தடை)",
