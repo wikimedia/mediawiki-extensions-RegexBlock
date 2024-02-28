@@ -5,6 +5,6 @@
 			"Stefán Örvar Sigmundsson"
 		]
 	},
-	"regexblock-already-blocked": "$1 er nú þegar í banni.",
+	"regexblock-already-blocked": "$1 er nú þegar hindraður.",
 	"regexblock-form-reason": "Ástæða:"
 }
