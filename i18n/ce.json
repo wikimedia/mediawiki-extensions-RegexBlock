@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Исмаил Садуев",
 			"Умар"
 		]
 	},
@@ -8,7 +9,7 @@
 	"regexblock-block-log": "Декъашхочун цӀе йа IP-адрес '''$1''' блоктоьхна.",
 	"regexblock-form-reason": "Бахьана:",
 	"regexblock-form-account-block": "Цамагдо дӀаязвалар/ялар",
-	"regexblock-nodata-found": "ХӀума ца карийна",
+	"regexblock-nodata-found": "Хӏумма а ца карийна",
 	"regexblock-unblock-success": "Хьавястина",
 	"regexblock-unblock-log": "Декъашхочун цӀе йа IP-адрес '''$1''' блоктоьхна.",
 	"regexblock-view-all": "Массо",
