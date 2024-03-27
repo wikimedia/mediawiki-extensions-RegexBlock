@@ -4,13 +4,14 @@
 			"Beginneruser",
 			"Jeeputer",
 			"Zack90",
-			"ZxxZxxZ"
+			"ZxxZxxZ",
+			"Ebraminio"
 		]
 	},
 	"apihelp-regexblock-param-nocreate": "جلوگیری از ایجاد حساب",
 	"regexblock": "بستن با عبارت باقاعده",
-	"regexblock-already-blocked": "$1 در حال حاضر مسدود شده‌است.",
-	"regexblock-block-log": "نام کاربری یا نشانی آی‌پی '''$1''' مسدود شده‌است.",
+	"regexblock-already-blocked": "$1 در حال حاضر مسدود شده است.",
+	"regexblock-block-log": "نام کاربری یا نشانی آی‌پی '''$1''' مسدود شده است.",
 	"regexblock-block-success": "بستن دسترسی با موفقیت انجام شد",
 	"regexblock-currently-blocked": "نشانی‌هایی که در حال حاضر مسدود شده‌اند:",
 	"regexblock-form-username": "نشانی آی‌پی یا نام کاربری:",
