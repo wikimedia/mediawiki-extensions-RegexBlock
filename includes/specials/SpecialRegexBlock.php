@@ -104,7 +104,7 @@ class RegexBlockForm extends FormSpecialPage {
 		$this->mFilter = $request->getVal( 'filter' );
 		$this->mRegexFilter = $request->getVal( 'rfilter' );
 
-		list( $this->mLimit, $this->mOffset ) = $request->getLimitOffsetForUser( $user );
+		[ $this->mLimit, $this->mOffset ] = $request->getLimitOffsetForUser( $user );
 
 		/* Actions */
 		switch ( $this->mAction ) {
@@ -403,14 +403,14 @@ class RegexBlockForm extends FormSpecialPage {
 		# need to extract *every* variable from the form just for processing here, but
 		# there are legitimate uses for some variables
 		$request = $this->getRequest();
-		list( $this->target, $this->type ) = self::getTargetAndType( $par, $request );
+		[ $this->target, $this->type ] = self::getTargetAndType( $par, $request );
 		if ( $this->target instanceof User ) {
 			# Set the 'relevant user' in the skin, so it displays links like Contributions,
 			# User logs, UserRights, etc.
 			$this->getSkin()->setRelevantUser( $this->target );
 		}
 
-		list( $this->previousTarget, /*...*/ ) =
+		[ $this->previousTarget, /*...*/ ] =
 			RegularExpressionDatabaseBlock::parseTarget( $request->getVal( 'wpPreviousTarget' ) );
 	}
 
@@ -664,7 +664,7 @@ class RegexBlockForm extends FormSpecialPage {
 					break 2;
 			}
 
-			list( $target, $type ) = RegularExpressionDatabaseBlock::parseTarget( $target );
+			[ $target, $type ] = RegularExpressionDatabaseBlock::parseTarget( $target );
 
 			if ( $type !== null ) {
 				return [ $target, $type ];
@@ -707,7 +707,7 @@ class RegexBlockForm extends FormSpecialPage {
 		// self::validateTargetField( $data['Target'] );
 
 		/** @var User $target */
-		list( $target, $type ) = self::getTargetAndType( $data['Target'] );
+		[ $target, $type ] = self::getTargetAndType( $data['Target'] );
 		if ( $type == AbstractBlock::TYPE_USER ) {
 			$user = $target;
 			$target = $user->getName();
@@ -839,7 +839,7 @@ class RegexBlockForm extends FormSpecialPage {
 				$option = "$option:$option";
 			}
 
-			list( $show, $value ) = explode( ':', $option );
+			[ $show, $value ] = explode( ':', $option );
 			$a[$show] = $value;
 		}
 

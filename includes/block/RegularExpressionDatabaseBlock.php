@@ -89,7 +89,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		# Be aware that the != '' check is explicit, since empty values will be
 		# passed by some callers (T31116)
 		if ( $vagueTarget != '' ) {
-			list( $target, $type ) = self::parseTarget( $vagueTarget );
+			[ $target, $type ] = self::parseTarget( $vagueTarget );
 			switch ( $type ) {
 				case 6: // the de facto "regular expression block" "constant", from SpecialRegexBlock.php
 				case self::TYPE_USER:

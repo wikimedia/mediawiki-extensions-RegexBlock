@@ -76,7 +76,7 @@ class ApiRegexBlock extends ApiBase {
 			}
 		}
 
-		list( $target, $type ) = RegexBlockForm::getTargetAndType( $params['regex'] );
+		[ $target, $type ] = RegexBlockForm::getTargetAndType( $params['regex'] );
 
 		// T40633 - if the target is a user (not an IP address), but it
 		// doesn't exist or is unusable, error.
@@ -104,7 +104,7 @@ class ApiRegexBlock extends ApiBase {
 			$this->dieStatus( $this->errorArrayToStatus( $retval ) );
 		}
 
-		list( $target, /*...*/ ) = RegexBlockForm::getTargetAndType( $params['regex'] );
+		[ $target, /*...*/ ] = RegexBlockForm::getTargetAndType( $params['regex'] );
 		$res['user'] = $params['regex'];
 		$res['userID'] = $target instanceof User ? $target->getId() : 0;
 
