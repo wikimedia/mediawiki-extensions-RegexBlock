@@ -19,7 +19,7 @@
 	"regexblock-already-blocked": "$1已被封禁。",
 	"regexblock-block-log": "用户名或IP地址'''$1'''已封禁。",
 	"regexblock-block-success": "封禁成功",
-	"regexblock-currently-blocked": "当前封禁的地址：",
+	"regexblock-currently-blocked": "目前封禁的地址：",
 	"regexblock-desc": "用于通过正则表达式封禁用户名和IP地址的扩展。包含添加/管理封禁的封禁机制及[[Special:RegexBlock|特殊页面]]",
 	"regexblock-page-title": "正则表达式名封禁",
 	"regexblockstats": "正则表达式统计",
