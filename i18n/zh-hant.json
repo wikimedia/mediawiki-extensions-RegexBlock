@@ -68,6 +68,6 @@
 	"regexblock-view-time": "於 $1",
 	"action-regexblock": "封禁使用者在 wiki 農場上對所有 wiki 做出編輯",
 	"right-regexblock": "封禁使用者在 wiki 農場上對所有 wiki 做出編輯",
-	"action-regexblock-exempt": "全域封禁豁免",
-	"right-regexblock-exempt": "全域封禁豁免"
+	"action-regexblock-exempt": "免受全域封鎖",
+	"right-regexblock-exempt": "免受全域封鎖"
 }
