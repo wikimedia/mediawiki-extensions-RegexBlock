@@ -421,7 +421,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 */
 	protected function alterForm( HTMLForm $form ) {
 		$form->setWrapperLegendMsg( 'block' );
-		$form->setHeaderText( '' );
+		$form->setHeaderHtml( '' );
 		$form->setSubmitDestructive();
 
 		$form->setSubmitTextMsg( 'regexblock-form-submit' );
@@ -432,7 +432,7 @@ class RegexBlockForm extends FormSpecialPage {
 		if ( !$this->getRequest()->wasPosted() && $this->preErrors ) {
 			$s = $form->formatErrors( $this->preErrors );
 			if ( $s ) {
-				$form->addHeaderText( Html::rawElement(
+				$form->addHeaderHtml( Html::rawElement(
 					'div',
 					[ 'class' => 'error' ],
 					$s
@@ -548,7 +548,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * Add footer elements to the form
 	 * @return string
 	 */
-	protected function postText() {
+	protected function postHtml() {
 		$links = [];
 
 		$this->getOutput()->addModuleStyles( 'mediawiki.special' );
