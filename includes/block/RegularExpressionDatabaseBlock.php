@@ -178,7 +178,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 		$this->setBlocker( User::newFromName( $row->blckby_blocker ) );
 
 		// I wish I didn't have to do this
-		$db = wfGetDB( DB_REPLICA );
+		$db = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		$this->setExpiry( $db->decodeExpiry( $row->blckby_expire ) );
 		$this->setReason( $row->blckby_reason );
 
