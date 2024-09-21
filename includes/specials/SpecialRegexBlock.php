@@ -203,7 +203,7 @@ class RegexBlockForm extends FormSpecialPage {
 			$out->addHTML( '<ul id="regexblock_blocks">' );
 			$loop = 0;
 			$comma = ' <b>&#183;</b> '; // the spaces here are intentional
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$linkRenderer = $this->getLinkRenderer();
 
 			foreach ( $blocker_list as $id => $row ) {

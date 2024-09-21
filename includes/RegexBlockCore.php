@@ -29,7 +29,7 @@ class RegexBlock {
 	 */
 	public static function getDB( $db ) {
 		global $wgRegexBlockDatabase;
-		return wfGetDB( $db, [], $wgRegexBlockDatabase );
+		return MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( $db, [], $wgRegexBlockDatabase );
 	}
 
 	/**
@@ -535,7 +535,7 @@ class RegexBlock {
 				}
 
 				/* set expiry information */
-				$block->setExpiry( wfGetDB( DB_REPLICA )->decodeExpiry( $valid['expire'] ) );
+				$block->setExpiry( MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA )->decodeExpiry( $valid['expire'] ) );
 				$block->setTimestamp( $valid['timestamp'] );
 				$block->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
 			}
