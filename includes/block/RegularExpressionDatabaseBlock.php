@@ -244,7 +244,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 	 * @return bool|array False on failure, assoc array on success:
 	 * 	('id' => block ID, 'autoIds' => array of autoblock IDs)
 	 */
-	public function insert( IDatabase $dbw = null ) {
+	public function insert( ?IDatabase $dbw = null ) {
 		global $wgBlockDisablesLogin;
 
 		if ( !$this->getBlocker() || $this->getBlocker()->getName() === '' ) {
