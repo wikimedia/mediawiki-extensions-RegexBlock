@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Lloffiwr",
-			"Afalau"
+			"Afalau",
+			"Ceirios"
 		]
 	},
 	"regexblock-already-blocked": "Mae \"$1\" eisoes wedi'i flocio",
