@@ -50,5 +50,5 @@
 	"regexblock-view-stats": "thống kê",
 	"regexblock-view-empty": "Danh sách các tên và địa chỉ bị cấm đang trống.",
 	"regexblock-view-time": "vào $1",
-	"right-regexblock": "Cấm người dùng không được sửa đổi tại wiki nào trong mạng wiki"
+	"right-regexblock": "Cấm người dùng không được sửa đổi tại wiki nào trong cụm wiki"
 }
