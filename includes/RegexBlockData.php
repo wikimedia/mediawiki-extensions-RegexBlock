@@ -74,7 +74,7 @@ class RegexBlockData {
 	 * @param int $offset OFFSET for the SQL query
 	 * @return array
 	 */
-	public function getBlockersData( $current = '', $username = '', $limit, $offset ) {
+	public function getBlockersData( $current, $username, $limit, $offset ) {
 		global $wgLang;
 
 		$blocker_list = [];
