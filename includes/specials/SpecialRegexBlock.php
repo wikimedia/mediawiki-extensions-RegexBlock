@@ -631,7 +631,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * @param WebRequest|null $request Optionally try and get data from a request too
 	 * @return array( User|string|null, AbstractBlock::TYPE_ constant|null )
 	 */
-	public static function getTargetAndType( $par, WebRequest $request = null ) {
+	public static function getTargetAndType( $par, ?WebRequest $request = null ) {
 		$i = 0;
 		$target = null;
 
@@ -873,7 +873,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * @param HTMLForm|null $form
 	 * @return bool|array True for success, false for didn't-try, array of errors on failure
 	 */
-	public function onSubmit( array $data, HTMLForm $form = null ) {
+	public function onSubmit( array $data, ?HTMLForm $form = null ) {
 		return self::processForm( $data, $form->getContext() );
 	}
 
