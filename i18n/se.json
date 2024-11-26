@@ -5,6 +5,7 @@
 			"Yupik"
 		]
 	},
+	"regexblock-already-blocked": "$1 lea juo hehttejuvvon.",
 	"regexblock-form-submit-regex": "Dohkketmeahttun virolaš cealkka.",
 	"regexblock-unblock-success": "Hehttema fámuhuhttin lihkostuvai",
 	"regexblock-unblock-log": "Geavaheaddjinama dahje IP-čujuhusa '''$1''' hehtten lea sihkkojuvvon.",
