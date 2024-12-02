@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
+	"regexblock-already-blocked": "$1 lii jo estum.",
 	"regexblock-form-reason": "Suijâ:",
 	"regexblock-view-all": "Puoh",
 	"regexblock-view-reason": "suijâ: $1"
