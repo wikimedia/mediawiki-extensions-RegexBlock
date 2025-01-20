@@ -3,7 +3,8 @@
 		"authors": [
 			"Les Meloures",
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"apihelp-regexblock-param-reason": "Grond fir d'Spär",
@@ -25,6 +26,7 @@
 	"regexblock-form-account-block": "Uleeë vun neie Benotzerkonte spären",
 	"regexblock-form-submit": "Dëse Benotzer spären",
 	"regexblock-form-submit-empty": "Gitt e Benotzernumm oder eng IP-Adress un fir ze spären.",
+	"regexblock-form-submit-regex": "Ongültege regulären Ausdrock.",
 	"regexblock-form-submit-expiry": "Gitt wgl. en Zäitraum fir d'Spär un.",
 	"regexblock-match-stats-record": "$1 huet '$2' de(n) '$3' ëm '$4' gespaart, ageloggt vun der Adress '$5'",
 	"regexblock-nodata-found": "Keng Date fonnt",
