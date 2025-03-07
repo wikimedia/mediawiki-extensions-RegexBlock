@@ -6,6 +6,7 @@
 			"Jack Phoenix",
 			"MITO",
 			"Option",
+			"Samoasambia",
 			"Str4nd",
 			"Valtlai",
 			"Valtlait"
@@ -54,6 +55,6 @@
 	"regexblock-view-time": "$1",
 	"action-regexblock": "estää käyttäjiä muokkaamasta kaikissa wikifarmin wikeissä",
 	"right-regexblock": "Estää käyttäjiä muokkaamasta kaikissa wikifarmin wikeissä",
-	"action-regexblock-exempt": "vapautettu järjestelmänlaajuisista estoista",
-	"right-regexblock-exempt": "Erivapaus estoista, jotka koskevat kaikkia wikifarmin käyttäjiä"
+	"action-regexblock-exempt": "saada vapautusta järjestelmänlaajuisista estoista",
+	"right-regexblock-exempt": "Saada vapautus järjestelmänlaajuisista estoista"
 }
