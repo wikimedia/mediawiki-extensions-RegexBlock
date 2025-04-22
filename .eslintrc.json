@@ -3,5 +3,8 @@
 	"extends": [
 		"wikimedia/client-es5",
 		"wikimedia/mediawiki"
-	]
+	],
+	"rules": {
+		"no-undef": "off"
+	}
 }

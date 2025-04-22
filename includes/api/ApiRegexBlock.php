@@ -21,7 +21,12 @@
  * @note Based on GPL-licensed core /includes/api/ApiBlock.php file, which is copyright © 2007 Roan Kattouw
  */
 
- use MediaWiki\User\UserNameUtils;
+use MediaWiki\Api\ApiResult;
+use MediaWiki\Block\Block;
+use MediaWiki\Block\BlockPermissionCheckerFactory;
+use MediaWiki\Block\BlockUser;
+use MediaWiki\User\UserNameUtils;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * API module that facilitates the blocking of users via regular expressions (regex).
@@ -29,27 +34,28 @@
  *
  * @ingroup API
  */
-class ApiRegexBlock extends ApiBase {
+class ApiRegexBlock extends MediaWiki\Api\ApiBase {
 
 	use ApiBlockInfoTrait;
 
-	/**
-	 * @var UserNameUtils
-	 */
-	private $userNameUtils;
+	private UserNameUtils $userNameUtils;
+	private BlockPermissionCheckerFactory $blockPermissionCheckerFactory;
 
 	/**
-	 * @param ApiMain $mainModule
+	 * @param MediaWiki\Api\ApiMain $mainModule
 	 * @param string $moduleName
 	 * @param UserNameUtils $userNameUtils
+	 * @param BlockPermissionCheckerFactory $blockPermissionCheckerFactory
 	 */
 	public function __construct(
-		ApiMain $mainModule,
+		MediaWiki\Api\ApiMain $mainModule,
 		$moduleName,
-		UserNameUtils $userNameUtils
+		UserNameUtils $userNameUtils,
+		BlockPermissionCheckerFactory $blockPermissionCheckerFactory
 	) {
 		parent::__construct( $mainModule, $moduleName );
 		$this->userNameUtils = $userNameUtils;
+		$this->blockPermissionCheckerFactory = $blockPermissionCheckerFactory;
 	}
 
 	/**
@@ -65,15 +71,17 @@ class ApiRegexBlock extends ApiBase {
 		$params = $this->extractRequestParams();
 
 		# T17810: blocked admins should have limited access here
-		if ( $user->getBlock() ) {
-			$status = SpecialBlock::checkUnblockSelf( $params['regex'], $user );
-			if ( $status !== true ) {
-				$this->dieWithError(
-					$status,
-					null,
-					[ 'blockinfo' => $this->getBlockDetails( $user->getBlock() ) ]
-				);
-			}
+		$status = $this->permissionCheckerFactory
+			->newBlockPermissionChecker(
+				$params['regex'],
+				$this->getAuthority()
+			)->checkBlockPermissions();
+		if ( $status !== true ) {
+			$this->dieWithError(
+				$status,
+				null,
+				[ 'blockinfo' => $this->getBlockDetails( $user->getBlock() ) ]
+			);
 		}
 
 		[ $target, $type ] = RegexBlockForm::getTargetAndType( $params['regex'] );
@@ -108,7 +116,7 @@ class ApiRegexBlock extends ApiBase {
 		$res['user'] = $params['regex'];
 		$res['userID'] = $target instanceof User ? $target->getId() : 0;
 
-		$res['expiry'] = ApiResult::formatExpiry( SpecialBlock::parseExpiryInput( $data['Expiry'] ), 'infinite' );
+		$res['expiry'] = ApiResult::formatExpiry( BlockUser::parseExpiryInput( $data['Expiry'] ), 'infinite' );
 		// <s>We don't have a clean way of getting it, *and* because there is no easy way to
 		// set the block ID via the Block class, *and* my patch which introduces a setId()
 		// method to the Block class is permanently stuck in code review limbo@upstream,
@@ -134,8 +142,8 @@ class ApiRegexBlock extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'regex' => [
-				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true
 			],
 			'expiry' => 'never',
 			'reason' => '',

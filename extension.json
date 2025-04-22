@@ -1,6 +1,6 @@
 {
 	"name": "RegexBlock",
-	"version": "1.8.0",
+	"version": "1.9.0",
 	"author": [
 		"Bartek Łapiński",
 		"Tomasz Klim",
@@ -14,14 +14,26 @@
 	"descriptionmsg": "regexblock-desc",
 	"type": "antispam",
 	"requires": {
-		"MediaWiki": ">=1.38"
+		"MediaWiki": ">=1.43"
 	},
 	"config": {
 		"ContactLink": "Special:Contact",
 		"RegexBlockDatabase": false
 	},
 	"SpecialPages": {
-		"RegexBlock": "RegexBlockForm"
+		"RegexBlock": {
+			"class": "RegexBlockForm",
+			"services": [
+				"UserNameUtils",
+				"UserNamePrefixSearch"
+			]
+		},
+		"RegexBlockBatch": {
+			"class": "SpecialRegexBlockBatch",
+			"services": [
+				"ContentLanguage"
+			]
+		}
 	},
 	"MessagesDirs": {
 		"RegexBlock": [
@@ -35,10 +47,16 @@
 		"regexblock": {
 			"class": "ApiRegexBlock",
 			"services": [
-				"UserNameUtils"
+				"UserNameUtils",
+				"BlockPermissionCheckerFactory"
 			]
 		},
-		"regexunblock": "ApiRegexUnblock"
+		"regexunblock": {
+			"class": "ApiRegexUnblock",
+			"services": [
+				"BlockPermissionCheckerFactory"
+			]
+		}
 	},
 	"AutoloadClasses": {
 		"ApiRegexBlock": "includes/api/ApiRegexBlock.php",
@@ -47,7 +65,8 @@
 		"RegexBlock": "includes/RegexBlockCore.php",
 		"RegexBlockData": "includes/RegexBlockData.php",
 		"RegexBlockForm": "includes/specials/SpecialRegexBlock.php",
-		"RegexBlockHooks": "includes/RegexBlockHooks.php"
+		"RegexBlockHooks": "includes/RegexBlockHooks.php",
+		"SpecialRegexBlockBatch": "includes/specials/SpecialRegexBlockBatch.php"
 	},
 	"Hooks": {
 		"ContributionsToolLinks": "RegexBlockHooks::onContributionsToolLinks",
@@ -61,6 +80,22 @@
 	"ResourceModules": {
 		"ext.regexBlock.styles": {
 			"styles": "resources/css/regexblock.css"
+		},
+		"ext.regexBlock.scripts": {
+			"scripts": "resources/js/ext.regexblock.js",
+			"dependencies": [
+				"oojs-ui-core",
+				"oojs-ui.styles.icons-editing-core",
+				"oojs-ui.styles.icons-editing-advanced",
+				"mediawiki.widgets.DateInputWidget",
+				"mediawiki.widgets.SelectWithInputWidget",
+				"mediawiki.widgets.NamespacesMultiselectWidget",
+				"mediawiki.widgets.TitlesMultiselectWidget",
+				"mediawiki.widgets.UserInputWidget",
+				"mediawiki.util",
+				"mediawiki.htmlform",
+				"moment"
+			]
 		}
 	},
 	"AvailableRights": [

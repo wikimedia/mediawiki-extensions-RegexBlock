@@ -21,15 +21,35 @@
  * @note Based on GPL-licensed core /includes/api/ApiUnblock.php file, which is copyright © 2007 Roan Kattouw
  */
 
+use MediaWiki\Block\BlockPermissionCheckerFactory;
+use MediaWiki\Language\RawMessage;
+use Wikimedia\ParamValidator\ParamValidator;
+
 /**
  * API module that facilitates the unblocking of users via regular expressions.
  * Requires API write mode to be enabled.
  *
  * @ingroup API
  */
-class ApiRegexUnblock extends ApiBase {
+class ApiRegexUnblock extends MediaWiki\Api\ApiBase {
 
 	use ApiBlockInfoTrait;
+
+	private BlockPermissionCheckerFactory $permissionCheckerFactory;
+
+	/**
+	 * @param MediaWiki\Api\ApiMain $main
+	 * @param string $action
+	 * @param BlockPermissionCheckerFactory $permissionCheckerFactory
+	 */
+	public function __construct(
+		MediaWiki\Api\ApiMain $main,
+		string $action,
+		BlockPermissionCheckerFactory $permissionCheckerFactory
+	) {
+		parent::__construct( $main, $action );
+		$this->permissionCheckerFactory = $permissionCheckerFactory;
+	}
 
 	/**
 	 * Unblocks the specified regular expression or provides the reason the unblock failed.
@@ -43,15 +63,17 @@ class ApiRegexUnblock extends ApiBase {
 		}
 
 		# T17810: blocked admins should have limited access here
-		if ( $user->getBlock() ) {
-			$status = SpecialBlock::checkUnblockSelf( $params['regex'], $user );
-			if ( $status !== true ) {
-				$this->dieWithError(
-					$status,
-					null,
-					[ 'blockinfo' => $this->getBlockDetails( $user->getBlock() ) ]
-				);
-			}
+		$status = $this->permissionCheckerFactory
+			->newBlockPermissionChecker(
+				$params['regex'],
+				$this->getAuthority()
+			)->checkBlockPermissions();
+		if ( $status !== true ) {
+			$this->dieWithError(
+				$status,
+				null,
+				[ 'blockinfo' => $this->getBlockDetails( $user->getBlock() ) ]
+			);
 		}
 
 		$regex = $params['regex'];
@@ -85,8 +107,8 @@ class ApiRegexUnblock extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'regex' => [
-				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_REQUIRED => true
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => true
 			],
 		];
 	}

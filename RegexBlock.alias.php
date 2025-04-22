@@ -11,6 +11,7 @@ $specialPageAliases = [];
 /** English */
 $specialPageAliases['en'] = [
 	'RegexBlock' => [ 'RegexBlock' ],
+	'RegexBlockBatch' => [ 'RegexBlockBatch' ],
 ];
 
 /** Arabic (العربية) */

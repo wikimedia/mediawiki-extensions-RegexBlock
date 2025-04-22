@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\User\User;
 use Wikimedia\IPUtils;
 
 class RegexBlockHooks {
@@ -77,9 +79,9 @@ class RegexBlockHooks {
 	 * pages if the user has 'regexblock' permission
 	 *
 	 * @param int $id
-	 * @param Title $nt
+	 * @param MediaWiki\Title\Title $nt
 	 * @param array &$links Other existing contributions links
-	 * @param SpecialContributions $sp
+	 * @param MediaWiki\Specials\SpecialContributions $sp
 	 */
 	public static function onContributionsToolLinks( $id, $nt, &$links, SpecialPage $sp ) {
 		if ( $sp->getUser()->isAllowed( 'regexblock' ) ) {
@@ -96,7 +98,7 @@ class RegexBlockHooks {
 	 * Creates the necessary database tables when the user runs
 	 * maintenance/update.php.
 	 *
-	 * @param DatabaseUpdater $updater
+	 * @param MediaWiki\Installer\DatabaseUpdater $updater
 	 */
 	public static function onLoadExtensionSchemaUpdates( $updater ) {
 		$file = __DIR__ . '/../sql/regexblock_schema.sql';

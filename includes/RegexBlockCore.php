@@ -16,6 +16,7 @@
  * @license GPL-2.0-or-later
  */
 use MediaWiki\MediaWikiServices;
+use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\Rdbms\IResultWrapper;
 
 class RegexBlock {
