@@ -22,6 +22,8 @@ class SpecialRegexBlockTest extends SpecialPageTestBase {
 	protected function newSpecialPage() {
 		$services = $this->getServiceContainer();
 		return new SpecialRegexBlock(
+			$services->getConnectionProvider(),
+			$services->getContentLanguage(),
 			$services->getUserNameUtils(),
 			$services->getUserNamePrefixSearch()
 		);

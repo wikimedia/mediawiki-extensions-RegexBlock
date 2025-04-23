@@ -23,9 +23,9 @@ use MediaWiki\Block\BlockUser;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Html\Html;
 use MediaWiki\HTMLForm\HTMLForm;
+use MediaWiki\Language\Language;
 // not in MW 1.43, namespaceization happened only in 1.44
 // use MediaWiki\Logging\LogEventsList;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\SpecialPage\SpecialPage;
@@ -36,8 +36,11 @@ use OOUI\FieldLayout;
 use OOUI\HtmlSnippet;
 use OOUI\Widget;
 use Wikimedia\IPUtils;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class SpecialRegexBlock extends FormSpecialPage {
+	private IConnectionProvider $dbProvider;
+	private Language $contLang;
 	private UserNameUtils $userNameUtils;
 	private UserNamePrefixSearch $userNamePrefixSearch;
 
@@ -71,6 +74,8 @@ class SpecialRegexBlock extends FormSpecialPage {
 	 * Constructor -- set up the new, restricted special page
 	 */
 	public function __construct(
+		IConnectionProvider $dbProvider,
+		Language $contLang,
 		UserNameUtils $userNameUtils,
 		UserNamePrefixSearch $userNamePrefixSearch
 	) {
@@ -78,6 +83,8 @@ class SpecialRegexBlock extends FormSpecialPage {
 		$this->mFilter = $this->mRegexFilter = '';
 		parent::__construct( 'RegexBlock', 'regexblock' );
 
+		$this->dbProvider = $dbProvider;
+		$this->contLang = $contLang;
 		$this->userNameUtils = $userNameUtils;
 		$this->userNamePrefixSearch = $userNamePrefixSearch;
 	}
@@ -227,7 +234,7 @@ class SpecialRegexBlock extends FormSpecialPage {
 			$out->addHTML( '<ul id="regexblock_blocks">' );
 			$loop = 0;
 			$comma = ' <b>&#183;</b> '; // the spaces here are intentional
-			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+			$dbr = $this->dbProvider->getReplicaDatabase();
 			$linkRenderer = $this->getLinkRenderer();
 
 			foreach ( $blocker_list as $id => $row ) {
@@ -732,7 +739,7 @@ class SpecialRegexBlock extends FormSpecialPage {
 	 * @param IContextSource $context
 	 * @return bool|string
 	 */
-	public static function processForm( array $data, IContextSource $context ) {
+	private function processForm( array $data, IContextSource $context ) {
 		$performer = $context->getUser();
 
 		// Handled by field validator callback
@@ -775,9 +782,8 @@ class SpecialRegexBlock extends FormSpecialPage {
 			return [ 'badipaddress' ];
 		}
 
-		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 		// Reason, to be passed to the block object.
-		$blockReason = $contLang->truncateForDatabase( $data['Reason'][0], 255 );
+		$blockReason = $this->contLang->truncateForDatabase( $data['Reason'][0], 255 );
 
 		$expiryTime = BlockUser::parseExpiryInput( $data['Expiry'] );
 
@@ -818,7 +824,7 @@ class SpecialRegexBlock extends FormSpecialPage {
 			$data['RegexBlockedExact'],
 			$data['RegexBlockedCreation'],
 			# Truncate reason for whole multibyte characters
-			$contLang->truncateForDatabase( $data['Reason'][0], 255 )
+			$this->contLang->truncateForDatabase( $data['Reason'][0], 255 )
 		);
 		*/
 
@@ -906,7 +912,7 @@ class SpecialRegexBlock extends FormSpecialPage {
 	 * @return bool|array True for success, false for didn't-try, array of errors on failure
 	 */
 	public function onSubmit( array $data, ?HTMLForm $form = null ) {
-		return self::processForm( $data, $form->getContext() );
+		return $this->processForm( $data, $form->getContext() );
 	}
 
 	/**

@@ -24,6 +24,8 @@
 		"RegexBlock": {
 			"class": "SpecialRegexBlock",
 			"services": [
+				"ConnectionProvider",
+				"ContentLanguage",
 				"UserNameUtils",
 				"UserNamePrefixSearch"
 			]
