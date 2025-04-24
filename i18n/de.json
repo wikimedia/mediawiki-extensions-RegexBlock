@@ -27,6 +27,7 @@
 	"apihelp-regexunblock-example-regex": "Entsperren des regulären Ausdrucks „SpamUser.*“, damit Konten wie „SpamUser66“ erstellt werden können und bestehende Konten mit solchen Namen die Website bearbeiten können.",
 	"regexblock": "Regex-Sperre",
 	"regexblock-already-blocked": "$1 ist bereits gesperrt.",
+	"regexblock-batch-regexes": "Reguläre Ausdrücke:",
 	"regexblock-block-log": "Benutzername oder IP-Adresse '''$1''' wurde gesperrt",
 	"regexblock-block-success": "Die Sperrung war erfolgreich",
 	"regexblock-currently-blocked": "Derzeit gesperrte Adressen:",
