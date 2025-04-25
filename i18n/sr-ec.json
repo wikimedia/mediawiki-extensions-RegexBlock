@@ -3,12 +3,14 @@
 		"authors": [
 			"BadDog",
 			"FriedrickMILBarbarossa",
+			"Milicevic01",
 			"Rancher",
 			"Sasa Stefanovic",
 			"Жељко Тодоровић",
 			"Михајло Анђелковић"
 		]
 	},
+	"regexblock-batch-regexes": "Регуларни израз:",
 	"regexblock-block-success": "Успешно блокирање",
 	"regexblock-currently-blocked": "Актуелно блокиране адресе:",
 	"regexblock-page-title-1": "Блокирај адресу користећи регуларне изразе",
