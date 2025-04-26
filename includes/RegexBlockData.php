@@ -204,7 +204,7 @@ class RegexBlockData {
 	 *
 	 * @todo FIXME: only used once; _should_ ideally be superseded by
 	 * RegularExpressionDatabaseBlock#newFromID, but that doesn't yet work the way
-	 * it should (see the note on RegexBlockForm#showStatsList for details).
+	 * it should (see the note on SpecialRegexBlock#showStatsList for details).
 	 *
 	 * @param int $id ID of the regexBlock entry (value of blckby_id column in the stats_blockedby database table)
 	 * @return $record
@@ -233,7 +233,7 @@ class RegexBlockData {
 	/**
 	 * Insert a block record to the blockedby database table
 	 *
-	 * @todo FIXME: now unused; was used by RegexBlockForm#processForm in SpecialRegexBlock.php
+	 * @todo FIXME: now unused; was used by SpecialRegexBlock#processForm in SpecialRegexBlock.php
 	 *
 	 * @param string $address User name, IP address or regular expression being blocked
 	 * @param int|null $expiry Expiry time of the block

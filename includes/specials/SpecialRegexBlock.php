@@ -37,7 +37,7 @@ use OOUI\HtmlSnippet;
 use OOUI\Widget;
 use Wikimedia\IPUtils;
 
-class RegexBlockForm extends FormSpecialPage {
+class SpecialRegexBlock extends FormSpecialPage {
 	private UserNameUtils $userNameUtils;
 	private UserNamePrefixSearch $userNamePrefixSearch;
 

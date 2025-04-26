@@ -22,7 +22,7 @@
 	},
 	"SpecialPages": {
 		"RegexBlock": {
-			"class": "RegexBlockForm",
+			"class": "SpecialRegexBlock",
 			"services": [
 				"UserNameUtils",
 				"UserNamePrefixSearch"
@@ -62,10 +62,10 @@
 		"ApiRegexBlock": "includes/api/ApiRegexBlock.php",
 		"ApiRegexUnblock": "includes/api/ApiRegexUnblock.php",
 		"RegularExpressionDatabaseBlock": "includes/block/RegularExpressionDatabaseBlock.php",
-		"RegexBlock": "includes/RegexBlockCore.php",
+		"RegexBlock": "includes/RegexBlock.php",
 		"RegexBlockData": "includes/RegexBlockData.php",
-		"RegexBlockForm": "includes/specials/SpecialRegexBlock.php",
 		"RegexBlockHooks": "includes/RegexBlockHooks.php",
+		"SpecialRegexBlock": "includes/specials/SpecialRegexBlock.php",
 		"SpecialRegexBlockBatch": "includes/specials/SpecialRegexBlockBatch.php"
 	},
 	"Hooks": {

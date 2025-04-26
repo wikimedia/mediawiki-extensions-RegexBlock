@@ -3,7 +3,7 @@
 use Wikimedia\TestingAccessWrapper;
 
 /**
- * @covers RegexBlockForm
+ * @covers SpecialRegexBlock
  * @group Database
  */
 class SpecialRegexBlockTest extends SpecialPageTestBase {
@@ -21,7 +21,7 @@ class SpecialRegexBlockTest extends SpecialPageTestBase {
 	 */
 	protected function newSpecialPage() {
 		$services = $this->getServiceContainer();
-		return new RegexBlockForm(
+		return new SpecialRegexBlock(
 			$services->getUserNameUtils(),
 			$services->getUserNamePrefixSearch()
 		);

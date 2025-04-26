@@ -84,7 +84,7 @@ class ApiRegexBlock extends MediaWiki\Api\ApiBase {
 			);
 		}
 
-		[ $target, $type ] = RegexBlockForm::getTargetAndType( $params['regex'] );
+		[ $target, $type ] = SpecialRegexBlock::getTargetAndType( $params['regex'] );
 
 		// T40633 - if the target is a user (not an IP address), but it
 		// doesn't exist or is unusable, error.
@@ -107,12 +107,12 @@ class ApiRegexBlock extends MediaWiki\Api\ApiBase {
 			'RegexBlockedExact' => $params['exact'],
 		];
 
-		$retval = RegexBlockForm::processForm( $data, $this->getContext() );
+		$retval = SpecialRegexBlock::processForm( $data, $this->getContext() );
 		if ( $retval !== true ) {
 			$this->dieStatus( $this->errorArrayToStatus( $retval ) );
 		}
 
-		[ $target, /*...*/ ] = RegexBlockForm::getTargetAndType( $params['regex'] );
+		[ $target, /*...*/ ] = SpecialRegexBlock::getTargetAndType( $params['regex'] );
 		$res['user'] = $params['regex'];
 		$res['userID'] = $target instanceof User ? $target->getId() : 0;
 
@@ -121,7 +121,7 @@ class ApiRegexBlock extends MediaWiki\Api\ApiBase {
 		// set the block ID via the Block class, *and* my patch which introduces a setId()
 		// method to the Block class is permanently stuck in code review limbo@upstream,
 		// we'll just set this to an empty string. Sucks, but whatcha gonna do?</s>
-		// Could maybe change the return value of RegexBlockForm#processForm so that on success it
+		// Could maybe change the return value of SpecialRegexBlock#processForm so that on success it
 		// somehow reports the block ID? That'd do it, because the new block class
 		// can now properly set and get the block ID.
 		$res['id'] = '';
