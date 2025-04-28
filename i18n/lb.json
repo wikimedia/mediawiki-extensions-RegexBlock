@@ -11,6 +11,7 @@
 	"apihelp-regexblock-param-nocreate": "Uleeë vun engem Benotzerkont verhënneren.",
 	"regexblock": "Begrëffer fir e Benotzer oder eng IP-Adress ze spären",
 	"regexblock-already-blocked": "$1 ass scho gespaart.",
+	"regexblock-batch-regexes": "Regulär Ausdréck:",
 	"regexblock-block-log": "De Benotzer oder d'IP-Adress '''$1''' gouf gespaart.",
 	"regexblock-block-success": "D'Spär ass elo ageschalt",
 	"regexblock-currently-blocked": "Aktuell gespaarten Adressen:",
