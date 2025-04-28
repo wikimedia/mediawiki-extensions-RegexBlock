@@ -675,7 +675,7 @@ class RegexBlockForm extends FormSpecialPage {
 					# below; so this has to have a higher precedence here than $par, or
 					# we could end up with different values in $this->target and the HTMLForm!
 					if ( $request instanceof WebRequest ) {
-						$target = $request->getText( 'wpTarget', null );
+						$target = $request->getVal( 'wpTarget' );
 					}
 					break;
 				case 1:
@@ -683,13 +683,13 @@ class RegexBlockForm extends FormSpecialPage {
 					break;
 				case 2:
 					if ( $request instanceof WebRequest ) {
-						$target = $request->getText( 'ip', null );
+						$target = $request->getVal( 'ip' );
 					}
 					break;
 				case 3:
 					# B/C @since 1.18
 					if ( $request instanceof WebRequest ) {
-						$target = $request->getText( 'wpBlockAddress', null );
+						$target = $request->getVal( 'wpBlockAddress' );
 					}
 					break;
 				case 4:
