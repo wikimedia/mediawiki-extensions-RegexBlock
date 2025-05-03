@@ -18,8 +18,8 @@
 		return OO.ui.infuse( $el );
 	}
 
-	$( function () {
-		var blockTargetWidget;
+	$( () => {
+		let blockTargetWidget;
 
 		// This code is also loaded on the "block succeeded" page where there is no form,
 		// so check for block target widget; if it exists, the form is present

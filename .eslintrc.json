@@ -1,10 +1,11 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client-es5",
+		"wikimedia/client",
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"no-undef": "off"
+		"no-undef": "off",
+		"prefer-const": "warn"
 	}
 }
