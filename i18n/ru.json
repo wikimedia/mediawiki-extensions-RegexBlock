@@ -7,7 +7,8 @@
 			"MaxSem",
 			"Mouse21",
 			"Александр Сигачёв",
-			"Okras"
+			"Okras",
+			"Vlad5250"
 		]
 	},
 	"apihelp-regexblock-param-reason": "Причина блокировки.",
@@ -57,5 +58,6 @@
 	"regexblock-view-time": "$1",
 	"action-regexblock": "блокировать пользователей от редактирования на всех вики-сайтах в ферме вики",
 	"right-regexblock": "Запретить участникам редактировать во всех вики этой вики-фермы",
-	"right-regexblock-exempt": "Быть исключённым из глобальных блокировок"
+	"action-regexblock-exempt": "освобождение от глобальных блокировок",
+	"right-regexblock-exempt": "Освобождение от глобальных блокировок"
 }
