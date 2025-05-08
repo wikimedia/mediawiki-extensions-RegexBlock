@@ -12,6 +12,7 @@
 	"apihelp-regexunblock-summary": "정규 표현식으로 사용자 이름과 IP 주소의 차단을 해제합니다.",
 	"regexblock": "정규 표현식 차단",
 	"regexblock-already-blocked": "$1님은 이미 차단되었습니다.",
+	"regexblock-batch-regexes": "정규 표현식:",
 	"regexblock-block-log": "'''$1''' 사용자 이름 또는 IP 주소는 차단되었습니다.",
 	"regexblock-block-success": "차단을 성공했습니다",
 	"regexblock-currently-blocked": "현재 차단된 주소:",
