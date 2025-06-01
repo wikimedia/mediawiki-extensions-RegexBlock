@@ -53,7 +53,7 @@ class RegexBlockForm extends FormSpecialPage {
 	 * @var User|string|null User to be blocked, as passed either by parameter (url?wpTarget=Foo)
 	 * or as subpage (Special:Block/Foo)
 	 */
-	protected $target;
+	public $target;
 
 	/** @var int AbstractBlock::TYPE_ constant */
 	protected $type;
