@@ -1,6 +1,8 @@
 <?php
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\User;
 
 /**
  * @class RegexBlockData
@@ -264,7 +266,7 @@ class RegexBlockData {
 
 		// Change user login token to force them to be logged out.
 		if ( $exact ) {
-			$targetUser = User::newFromName( $address );
+			$targetUser = MediaWikiServices::getInstance()->getUserFactory()->newFromName( $address );
 			if ( $targetUser instanceof User ) {
 				$targetUser->setToken();
 				$targetUser->saveSettings();
