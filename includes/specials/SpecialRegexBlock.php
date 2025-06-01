@@ -191,12 +191,12 @@ class RegexBlockForm extends FormSpecialPage {
 
 		/* make link to statistics */
 		$out->addHTML( '<br />
-			<b>' . $this->msg( 'regexblock-currently-blocked' )->text() . '</b>
+			<b>' . $this->msg( 'regexblock-currently-blocked' )->escaped() . '</b>
 			<p>' . $pager . '</p>
 			<form name="regexlist" method="get" action="' . $action . '">
-				' . $this->msg( 'regexblock-view-blocked' )->text() . '
+				' . $this->msg( 'regexblock-view-blocked' )->escaped() . '
 				<select name="filter">
-					<option value="">' . $this->msg( 'regexblock-view-all' )->text() . '</option>'
+					<option value="">' . $this->msg( 'regexblock-view-all' )->escaped() . '</option>'
 		);
 
 		if ( is_array( $blockers ) ) {
@@ -207,19 +207,19 @@ class RegexBlockForm extends FormSpecialPage {
 		}
 
 		$out->addHTML(
-			'</select>&#160;' . $this->msg( 'regexblock-regex-filter' )->text() . $this->msg( 'word-separator' )->text() .
+			'</select>&#160;' . $this->msg( 'regexblock-regex-filter' )->escaped() . $this->msg( 'word-separator' )->escaped() .
 				Html::hidden( 'title', $this->getPageTitle() ) .
 				Html::input( 'rfilter', $this->mRegexFilter, 'text', [ 'id' => 'regex_filter' ] ) .
-				'<input type="submit" value="' . $this->msg( 'regexblock-view-go' )->text() . '" />
+				'<input type="submit" value="' . $this->msg( 'regexblock-view-go' )->escaped() . '" />
 			</form>
 			<br />
 			<form name="regexbyid" method="get" action="' . $action . '">' .
 				Html::hidden( 'title', $this->getPageTitle() ) .
 				Html::hidden( 'action', 'stats' ) .
-				$this->msg( 'regexblock-view-block-id' )->text() .
-				$this->msg( 'word-separator' )->text() .
+				$this->msg( 'regexblock-view-block-id' )->escaped() .
+				$this->msg( 'word-separator' )->escaped() .
 				'<input type="text" name="blckid" id="blckid" value="" />
-				<input type="submit" value="' . $this->msg( 'regexblock-view-go' )->text() . '" />
+				<input type="submit" value="' . $this->msg( 'regexblock-view-go' )->escaped() . '" />
 			</form>'
 		);
 
@@ -235,7 +235,7 @@ class RegexBlockForm extends FormSpecialPage {
 				$color_expire = '%s';
 				$expiry = $dbr->decodeExpiry( $row['expiry'] );
 				if ( $expiry == 'infinity' ) {
-					$expiry = $this->msg( 'regexblock-view-block-infinite' )->text();
+					$expiry = $this->msg( 'regexblock-view-block-infinite' )->escaped();
 				} else {
 					if ( wfTimestampNow() > $expiry ) {
 						$color_expire = '<span class="regexblock-expired">%s</span>';
@@ -243,8 +243,8 @@ class RegexBlockForm extends FormSpecialPage {
 					$expiry = sprintf( $color_expire, $lang->timeanddate( wfTimestamp( TS_MW, $expiry ), true ) );
 				}
 
-				$exact_match = ( ( $row['exact_match'] ) ? $this->msg( 'regexblock-view-match' )->text() : $this->msg( 'regexblock-view-regex' )->text() );
-				$create_block = ( $row['create_block'] ) ? $this->msg( 'regexblock-view-account' )->text() : '';
+				$exact_match = ( ( $row['exact_match'] ) ? $this->msg( 'regexblock-view-match' )->escaped() : $this->msg( 'regexblock-view-regex' )->escaped() );
+				$create_block = ( $row['create_block'] ) ? $this->msg( 'regexblock-view-account' )->escaped() : '';
 				$reason = '<i>' . $row['reason'] . '</i>';
 				$stats_link = $linkRenderer->makeKnownLink(
 					$this->mTitle,
@@ -267,8 +267,8 @@ class RegexBlockForm extends FormSpecialPage {
 				$out->addHTML(
 					'<li>
 					<code class="regexblock-target">' . $row['blckby_name'] . '</code><b>' . $comma . $exact_match . $space . $create_block . '</b>' . $comma . '
-					(' . $this->msg( 'regexblock-view-block-by' )->text() . ' <b>' . $row['blocker'] . '</b>, ' . $reason . ') ' .
-					 $this->msg( 'regexblock-view-time', $row['datim'], $row['date'], $row['time'] )->text() . $comma .
+					(' . $this->msg( 'regexblock-view-block-by' )->escaped() . ' <b>' . $row['blocker'] . '</b>, ' . $reason . ') ' .
+					 $this->msg( 'regexblock-view-time', $row['datim'], $row['date'], $row['time'] )->parse() . $comma .
 					'(' . $unblock_link . ') ' . $comma . $expiry . $comma . ' (' . $stats_link . ')
 					</li>'
 				);
@@ -361,14 +361,14 @@ class RegexBlockForm extends FormSpecialPage {
 			$blockername_link = $linkRenderer->makeKnownLink( $this->mTitle, $blockInfo->blckby_name, [], [ 'rfilter' => $blockInfo->blckby_name ] );
 		}
 		if ( isset( $blockInfo->blckby_reason ) && $blockInfo->blckby_reason ) {
-			$blockReason = $this->msg( 'regexblock-form-reason' ) . $blockInfo->blckby_reason;
+			$blockReason = $this->msg( 'regexblock-form-reason' )->escaped() . $blockInfo->blckby_reason;
 		} else {
-			$blockReason = $this->msg( 'regexblock-view-reason-default' )->text();
+			$blockReason = $this->msg( 'regexblock-view-reason-default' )->escaped();
 		}
 
 		$out->addHTML(
-			'<h5>' . $this->msg( 'regexblock-stats-title' )->text() . ' <strong> ' .
-			$blockername_link . '</strong> (' . $this->msg( 'regexblock-view-block-by' )->text() .
+			'<h5>' . $this->msg( 'regexblock-stats-title' )->escaped() . ' <strong> ' .
+			$blockername_link . '</strong> (' . $this->msg( 'regexblock-view-block-by' )->escaped() .
 			' <b>' . $blocker_link . '</b>,&#160;<i>' . $blockReason . '</i>)</h5><br />'
 		);
 

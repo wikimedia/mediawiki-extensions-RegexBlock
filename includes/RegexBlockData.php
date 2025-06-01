@@ -110,9 +110,9 @@ class RegexBlockData {
 			$ublock_ip = urlencode( $row->blckby_name );
 			$ublock_blocker = urlencode( $row->blckby_blocker );
 			if ( $row->blckby_reason ) {
-				$reason = wfMessage( 'regexblock-form-reason' )->text() . $row->blckby_reason;
+				$reason = wfMessage( 'regexblock-form-reason' )->escaped() . $row->blckby_reason;
 			} else {
-				$reason = wfMessage( 'regexblock-view-reason-default' )->text();
+				$reason = wfMessage( 'regexblock-view-reason-default' )->escaped();
 			}
 			$datim = $wgLang->timeanddate( wfTimestamp( TS_MW, $row->blckby_timestamp ), true );
 			$date = $wgLang->date( wfTimestamp( TS_MW, $row->blckby_timestamp ), true );
