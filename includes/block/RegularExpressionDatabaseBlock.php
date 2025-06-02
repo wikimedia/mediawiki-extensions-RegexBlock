@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use MediaWiki\User\UserRigorOptions;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IDatabase;
 
@@ -462,7 +463,7 @@ class RegularExpressionDatabaseBlock extends MediaWiki\Block\DatabaseBlock {
 			# We can still create a User if it's an IP address, but we need to turn
 			# off validation checking (which would exclude IP addresses)
 			return [
-				$userFactory->newFromName( IPUtils::sanitizeIP( $target ), false ),
+				$userFactory->newFromName( IPUtils::sanitizeIP( $target ), UserRigorOptions::RIGOR_NONE ),
 				self::TYPE_IP
 			];
 
