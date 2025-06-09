@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
 	"regexblock-already-blocked": "پر $1 د پخوا نه بنديز لګېدلی.",
@@ -12,7 +13,7 @@
 	"regexblock-form-reason": "سبب:",
 	"regexblock-form-account-block": "د نوؤ کارن-حسابونو په جوړېدو بنديز لګول",
 	"regexblock-form-submit": "په دې کارن بنديز لګول",
-	"regexblock-form-submit-expiry": "لطفاً يوه نوې پای موده وټاکۍ.",
+	"regexblock-form-submit-expiry": "لطفاً يوه نوې پای موده وټاکئ.",
 	"regexblock-nodata-found": "اومتوک و نه موندل شو",
 	"regexblock-unblock-success": "بنديز په برياليتوب سره ليري شو",
 	"regexblock-view-all": "ټول",
