@@ -6,6 +6,7 @@
 		]
 	},
 	"regexblock-already-blocked": "$1 lii jo estum.",
+	"regexblock-block-success": "Estim luhostui",
 	"regexblock-form-reason": "Suijâ:",
 	"regexblock-view-all": "Puoh",
 	"regexblock-view-reason": "suijâ: $1"
