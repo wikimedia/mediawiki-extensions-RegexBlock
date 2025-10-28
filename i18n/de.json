@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brettchenweber",
 			"ChrisiPK",
 			"Church of emacs",
 			"Imre",
@@ -34,7 +35,7 @@
 	"regexblock-desc": "Ermöglicht das Sperren von Benutzernamen und IP-Adressen mit Hilfe regulärer Ausdrücke. Es wird ein Sperrmechanismus bereitgestellt sowie eine [[Special:Regexblock|Spezialseite]] zum Hinzufügen und Verwalten von Sperrungen ergänzt",
 	"regexblock-page-title": "Sperre von Benutzerkonten anhand regulärer Ausdrücke",
 	"regexblockstats": "Regex-Sperrstatistiken",
-	"regexblock-help": "{{#FORMAL:Verwende|Verwenden Sie}} das folgende Formular, um den Schreibzugriff einer bestimmten IP-Adresse oder eines Benutzerkontos zu sperren.\n \nDiese Funktion sollte nur zur Verhinderung von Vandalismus und anderem Fehlverhalten, gemäß der bestehenden Richtlinien, eingesetzt werden. ''Diese Seite ermöglicht es auch, nicht vorhandene Benutzerkonten zu sperren, sowie solche, die einen ähnliche Namen zu bestehenden Benutzerkonten haben. Beispielsweise bewirkt die Sperre von „Test” auch die Sperre von „Test 2“, usw.\n \n{{#FORMAL:Du kannst|Sie können}} auch IP-Adressen sperren, so dass niemand, der sich unter der entsprechenden IP-Adressen anmeldet, Seiten bearbeiten kann. Achtung: Teile von IP-Adressen werden beim Sperren als Benutzername aufgefasst.\n \nFalls kein Sperrgrund angegeben wird, wird eine Standardbegründung verwendet.''",
+	"regexblock-help": "{{#FORMAL:Verwende|Verwenden Sie}} das folgende Formular, um den Schreibzugriff einer bestimmten IP-Adresse oder eines Benutzerkontos zu sperren.\nDiese Funktion sollte nur zur Verhinderung von Vandalismus und anderem Fehlverhalten, gemäß der bestehenden Richtlinien, eingesetzt werden.\n''Diese Seite ermöglicht es auch, nicht vorhandene Benutzerkonten zu sperren sowie solche, die einen ähnliche Namen zu bestehenden Benutzerkonten haben. Beispielsweise bewirkt die Sperre von „Test” auch die Sperre von „Test 2“ usw.\n{{#FORMAL:Du kannst|Sie können}} auch IP-Adressen sperren, so dass niemand, der sich unter der entsprechenden IP-Adresse anmeldet, Seiten bearbeiten kann. Achtung: Teile von IP-Adressen werden beim Sperren als Benutzername aufgefasst.\nFalls kein Sperrgrund angegeben wird, wird eine Standardbegründung verwendet.''",
 	"regexblock-page-title-1": "Sperre Adressen anhand regulärer Ausdrücke",
 	"regexblock-reason-ip": "Aufgrund von Vandalismus oder anderem Fehlverhalten durch {{#FORMAL:dich|Sie}} oder jemanden, der diese IP-Adresse mitbenutzt, wurde dieser IP-Adresse das Schreibrecht entzogen. [[$1|{{#FORMAL:Kontaktiere|Kontaktieren Sie}} uns]] bitte, sofern {{#FORMAL:du denkst|Sie denken}}, dass es sich hierbei um einen Fehler handelt.",
 	"regexblock-reason-name": "Aufgrund von Vandalismus oder anderem Fehlverhalten wurde diesem Benutzernamen das Schreibrecht entzogen. [[$1|{{#FORMAL:Kontaktiere|Kontaktieren Sie}} uns]] bitte, sofern {{#FORMAL:du denkst|Sie denken}}, dass es sich hierbei um einen Fehler handelt.",
