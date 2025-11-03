@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Block\BlockUser;
+use MediaWiki\Html\Html;
 use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\SpecialPage\FormSpecialPage;
 use MediaWiki\SpecialPage\SpecialPage;
