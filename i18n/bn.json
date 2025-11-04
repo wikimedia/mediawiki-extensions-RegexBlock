@@ -4,7 +4,8 @@
 			"Aftabuzzaman",
 			"Bellayet",
 			"Wikitanvir",
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"আজিজ"
 		]
 	},
 	"regexblock": "রেজেক্স বাধা",
@@ -21,7 +22,7 @@
 	"regexblock-form-submit-regex": "অবৈধ রেগুলার এক্সপ্রেশন",
 	"regexblock-form-submit-expiry": "অনুগ্রহপূর্বক মেয়াদ উত্তীর্ণের সময়সীমা উল্লেখ করুন।",
 	"regexblock-link": "রেগুলার এক্সপ্রেশনসহ বাধাদান",
-	"regexblock-nodata-found": "কোনো ডেটা খুঁজে পাওয়া যায়নি",
+	"regexblock-nodata-found": "কোনো উপাত্ত পাওয়া যায়নি",
 	"regexblock-stats-title": "রেজেক্স বাধার পরিসংখ্যান",
 	"regexblock-unblock-success": "সফলভাবে বাধা তুলে নেওয়া হয়েছে",
 	"regexblock-regex-filter": "বা রেজেক্স মান:",
