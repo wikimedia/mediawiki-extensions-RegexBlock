@@ -3,7 +3,8 @@
 		"authors": [
 			"EugeneZelenko",
 			"Jim-by",
-			"Red Winged Duck"
+			"Red Winged Duck",
+			"Ucukor"
 		]
 	},
 	"regexblock": "Блякаваньне з дапамогай рэгулярных выразаў",
@@ -33,7 +34,7 @@
 	"regexblock-stats-title": "Статыстыка блякаваньняў з дапамогай рэгулярных выразаў",
 	"regexblock-unblock-success": "Разблякаваньне пасьпяховае",
 	"regexblock-unblock-log": "Імя ўдзельніка альбо ІР-адрас '''$1''' быў разблякаваны.",
-	"regexblock-unblock-error": "Памылка разблякаваньня $1.\nВерагодна няма такога ўдзельніка.",
+	"regexblock-unblock-error": "Памылка разблякаваньня $1.\nНапэўна, такога карыстальніка няма.",
 	"regexblock-regex-filter": "   ці значэньне рэгулярнага выразу:",
 	"regexblock-view-blocked": "Паказаць заблякаваных праз:",
 	"regexblock-view-block-id": "Паглядзець ідэнтыфікатар блякаваньня:",
