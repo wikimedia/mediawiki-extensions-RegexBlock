@@ -6,6 +6,7 @@
 			"Liangent",
 			"LittlePaw365",
 			"Liuxinyu970226",
+			"Peterxy12",
 			"SolidBlock",
 			"Tranve",
 			"Xiaomingyan",
@@ -13,6 +14,7 @@
 		]
 	},
 	"apihelp-regexblock-summary": "通过正则表达式封禁用户的名称和IP地址。",
+	"apihelp-regexblock-example-ip-exact-simple": "以“First strike”为原因来封禁符合“192.0.2.5”的IP地址三天",
 	"apihelp-regexblock-param-reason": "封禁的原因。",
 	"apihelp-regexblock-param-nocreate": "禁止创建账号。",
 	"regexblock": "正则表达式封禁",
