@@ -4,7 +4,8 @@
 			"BaRaN6161 TURK",
 			"Karduelis",
 			"Suelnur",
-			"Vito Genovese"
+			"Vito Genovese",
+			"SaldırganSincap"
 		]
 	},
 	"apihelp-regexblock-summary": "Kullanıcıların adlarını ve IP adreslerini normal ifadelerle engelleyin.",
@@ -65,6 +66,6 @@
 	"regexblock-view-time": "$1 üzerinde",
 	"action-regexblock": "kullanıcıların viki çiftliğindeki tüm vikilerde düzenlemelerini engelle",
 	"right-regexblock": "Kullanıcıların viki çiftliğindeki tüm vikilerde düzenlemelerini engelle",
-	"action-regexblock-exempt": "küresel bloklardan muaf",
-	"right-regexblock-exempt": "Küresel bloklardan muaf"
+	"action-regexblock-exempt": "küresel engellerden muaflama",
+	"right-regexblock-exempt": "Küresel engellemeye muaf et"
 }
