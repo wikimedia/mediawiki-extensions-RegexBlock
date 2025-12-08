@@ -5,7 +5,7 @@
 		]
 	},
 	"regexblock-form-username": "Enmys IP ny ennym ymmydeyr:",
-	"regexblock-form-reason": "Fa:",
+	"regexblock-form-reason": "Oyr:",
 	"regexblock-view-go": "Gow",
-	"regexblock-view-reason": "fa: $1"
+	"regexblock-view-reason": "oyr: $1"
 }
