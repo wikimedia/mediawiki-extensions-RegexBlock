@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bennylin",
 			"Diki Ananta",
 			"Meursault2004",
 			"Pras",
@@ -9,8 +10,8 @@
 	},
 	"regexblock-already-blocked": "$1 wis diblokir",
 	"regexblock-block-log": "Jeneng naraguna utawa alamat IP '''$1''' wis diblokir.",
-	"regexblockstats": "Setatistik pamblokiran regex",
-	"regexblock-help": "Nganggoa formulir ing ngisor iki kanggo mblokir aksès panulisan saka sawijining alamat IP tartamtu utawa jeneng naraguna.\nIki nanging namung kudu dilakokaké waé kanggo menggak vandhalisme, lan miturut kawicaksanan sing ana.\n''Nganggo kaca iki panjenengan uga bisa mblokir para naraguna sing durung ana, lan uga mblokir naraguna sing duwé jeneng mèmper karo jeneng sing wis ana. Contoné « Test » bakal diblokir karo « Test 2 » lsp.\nPanjenengan uga bisa mblokir alamat-alamat IP sacara pol-polan, dadi tegesé ora ana sing bisa log mlebu saka kana lan nyunting kaca-kaca.\nCathetan: alamat IP parsial bakal dianggep miturut jeneng naraguna yèn arep diblokir.\nYèn ora ana alesan sing diwènèhaké, sawijining alesan umum baku bakal dienggo.",
+	"regexblockstats": "Setatistik penggakan regex",
+	"regexblock-help": "Nganggoa formulir ing ngisor iki kanggo menggak aksès panulisan saka sawijining alamat IP tartamtu utawa jeneng naraguna.\nIki nanging namung kudu dilakokaké waé kanggo menggak vandhalisme, lan miturut kawicaksanan sing ana.\n''Nganggo kaca iki panjenengan uga bisa menggak para naraguna sing durung ana, lan uga menggak naraguna sing duwé jeneng mèmper karo jeneng sing wis ana. Contoné « Test » bakal dipenggak karo « Test 2 » lsp.\nPanjenengan uga bisa menggak alamat-alamat IP sacara pol-polan, dadi tegesé ora ana sing bisa log mlebu saka kana lan nyunting kaca-kaca.\nCathetan: alamat IP parsial bakal dianggep miturut jeneng naraguna yèn arep dipenggak.\nYèn ora ana alesan sing diwènèhaké, sawijining alesan umum baku bakal dienggo.",
 	"regexblock-form-username": "Alamat IP utawa jeneng naraguna:",
 	"regexblock-form-reason": "Alesan:",
 	"regexblock-form-match": "Persis cocog",
@@ -19,6 +20,6 @@
 	"regexblock-view-go": "Golèk",
 	"regexblock-view-reason": "alesan: $1",
 	"regexblock-view-reason-default": "alesan umum",
-	"regexblock-view-block-infinite": "blokade permanèn",
+	"regexblock-view-block-infinite": "penggak permanèn",
 	"regexblock-view-block-by": "diblokir déning:"
 }
