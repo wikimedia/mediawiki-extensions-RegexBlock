@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ars-arsa",
 			"Bennylin",
 			"Diki Ananta",
 			"Meursault2004",
@@ -11,7 +12,7 @@
 	"regexblock-already-blocked": "$1 wis diblokir",
 	"regexblock-block-log": "Jeneng naraguna utawa alamat IP '''$1''' wis diblokir.",
 	"regexblockstats": "Setatistik penggakan regex",
-	"regexblock-help": "Nganggoa formulir ing ngisor iki kanggo menggak aksès panulisan saka sawijining alamat IP tartamtu utawa jeneng naraguna.\nIki nanging namung kudu dilakokaké waé kanggo menggak vandhalisme, lan miturut kawicaksanan sing ana.\n''Nganggo kaca iki panjenengan uga bisa menggak para naraguna sing durung ana, lan uga menggak naraguna sing duwé jeneng mèmper karo jeneng sing wis ana. Contoné « Test » bakal dipenggak karo « Test 2 » lsp.\nPanjenengan uga bisa menggak alamat-alamat IP sacara pol-polan, dadi tegesé ora ana sing bisa log mlebu saka kana lan nyunting kaca-kaca.\nCathetan: alamat IP parsial bakal dianggep miturut jeneng naraguna yèn arep dipenggak.\nYèn ora ana alesan sing diwènèhaké, sawijining alesan umum baku bakal dienggo.",
+	"regexblock-help": "Gunakake formulir ing ngisor iki kanggo mblokir akses nulis saka alamat IP utawa jeneng panganggo tartamtu.\nIki kudu ditindakake mung kanggo nyegah vandalisme, lan manut kabijakan.\n''Kaca iki ngidini sampeyan mblokir panganggo sing ora ana, lan uga bakal ngalangi pangguna kanthi jeneng sing padha, yaiku \"Tes\" bakal diblokir bebarengan karo \"Tes 2\" lsp. kaca.\nCathetan: alamat IP parsial bakal dianggep minangka jeneng panganggo kanggo nemtokake pamblokiran.\nYen ora ana alesan sing ditemtokake, alesan umum standar bakal digunakake.''",
 	"regexblock-form-username": "Alamat IP utawa jeneng naraguna:",
 	"regexblock-form-reason": "Alesan:",
 	"regexblock-form-match": "Persis cocog",
