@@ -22,7 +22,7 @@
 	"regexblock-already-blocked": "$1 is already blocked.",
 	"regexblock-batch": "Block multiple regular expressions",
 	"regexblock-batch-regexes": "Regular expressions:",
-	"regexblock-batch-intro": "Use this form to block multiple regular expressions at once with the same expiry time and reason.\n\nPut one regular expression per line and separate the expressions by newlines.\n\nRegular expresisons blocked via this form will be blocked as regular expressions (obviously) and with the account creation block option set.",
+	"regexblock-batch-intro": "Use this form to block multiple regular expressions at once with the same expiry time and reason.\n\nPut one regular expression per line and separate the expressions by newlines.\n\nRegular expressions blocked via this form will be blocked as regular expressions (obviously) and with the account creation block option set.",
 	"regexblock-batch-errors": "$1 {{PLURAL:$1|regular expression|regular expressions}} could not be blocked.",
 	"regexblock-batch-success": "{{PLURAL:$1|The regular expression was|The regular expressions were}} blocked successfully!",
 	"regexblock-block-log": "User name or IP address '''$1''' has been blocked.",
