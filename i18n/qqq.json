@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Fryed-peach",
+			"Jack Phoenix",
 			"Jon Harald Søby",
 			"Liuxinyu970226",
 			"Purodha",
@@ -50,7 +51,7 @@
 	"regexblock-form-submit-empty": "Used on Special:RegexBlock",
 	"regexblock-form-submit-regex": "Used as error message on Special:RegexBlock",
 	"regexblock-form-submit-expiry": "Used on Special:RegexBlock",
-	"regexblock-link": "Used as link text on Special:RegexBlock",
+	"regexblock-link": "Used as link text on the subtitle on Special:Contributions for users who are allowed to block people with Special:RegexBlock; see also related MediaWiki core messages like {{msg-mw|sp-contributions-talk}}, {{msg-mw|sp-contributions-blocklog}}, {{msg-mw|sp-contributions-uploads}}, {{msg-mw|sp-contributions-logs}}, {{msg-mw|sp-contributions-userrights}}, etc.",
 	"regexblock-match-stats-record": "Parameters are:\n* $1: regex match\n* $2: username\n* $3: database name\n* $4: date/time\n* $5: IP address\n* $6: isolated date of $4\n* $7: isolated time of $4",
 	"regexblock-nodata-found": "Used when there are no stats on Special:RegexBlock",
 	"regexblock-stats-title": "Used as header on Special:RegexBlock",
