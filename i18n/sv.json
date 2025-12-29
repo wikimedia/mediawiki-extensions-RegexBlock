@@ -7,6 +7,7 @@
 			"Najami",
 			"Sabelöga",
 			"Sertion",
+			"Stefan2255",
 			"WikiPhoenix"
 		]
 	},
@@ -14,6 +15,7 @@
 	"apihelp-regexblock-param-nocreate": "Förhindra registrering av konton.",
 	"regexblock": "Regex-blockering",
 	"regexblock-already-blocked": "\"$1\" är redan blockerad.",
+	"regexblock-batch-intro": "Använd det här formuläret för att blockera flera reguljära uttryck samtidigt med samma utgångstid och orsak.\n\nSätt ett reguljärt uttryck per rad och separera uttrycken med radbrytningar.\n\nReguliära uttryck som blockeras via det här formuläret kommer att blockeras som reguljära uttryck (självklart) och med alternativet för att blockera kontoskapande inställt.",
 	"regexblock-block-log": "Användarnamnet eller IP-adressen '''$1''' har blockerats.",
 	"regexblock-block-success": "Blockering lyckades",
 	"regexblock-currently-blocked": "Nuvarande blockerade adresser:",
