@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Avengium",
 			"Crazymadlover",
 			"DiegoAmbrocio",
 			"Hamilton Abreu",
@@ -15,6 +16,7 @@
 	"apihelp-regexblock-param-reason": "Motivo de bloqueo.",
 	"regexblock": "Bloque de expresión regular",
 	"regexblock-already-blocked": "\"$1\" ya está bloqueado.",
+	"regexblock-batch-intro": "Utilice este formulario para bloquear múltiples expresiones regulares a la vez con el mismo tiempo de expiración y motivo.\n\nColoque una expresión regular por línea y separe las expresiones con newlines.\n\nLas expresiones regulares bloqueadas a través de este formulario se bloquearán como expresiones regulares (obviamente) y con la opción de bloqueo de creación de cuenta establecida.",
 	"regexblock-block-log": "Nombre de usuario o dirección IP '''$1''' ha sido bloqueada.",
 	"regexblock-block-success": "Bloqueo fue un éxito",
 	"regexblock-currently-blocked": "Direcciones actualmente bloqueadas:",
