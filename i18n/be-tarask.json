@@ -7,6 +7,7 @@
 			"Ucukor"
 		]
 	},
+	"apihelp-regexblock-param-nocreate": "Забарона стварэньня рахункаў.",
 	"regexblock": "Блякаваньне з дапамогай рэгулярных выразаў",
 	"regexblock-already-blocked": "$1 ужо {{GENDER:$1|заблякаваны|заблякаваная}}.",
 	"regexblock-block-log": "Рахунак {{GENDER:$1|ўдзельніка|ўдзельніцы}} альбо ІР-адрас '''$1''' заблякаваны.",
