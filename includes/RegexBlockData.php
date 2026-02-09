@@ -282,7 +282,7 @@ class RegexBlockData {
 	 * @param string $text Regular expression to be tested for validity
 	 * @return bool
 	 */
-	public static function isValidRegex( $text ) {
-		return ( sprintf( '%s', @preg_match( "/{$text}/", 'regex' ) ) !== '' );
+	public static function isValidRegex( string $text ): bool {
+		return StringUtils::isValidPCRERegex( "/$text/" );
 	}
 }
