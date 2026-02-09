@@ -96,14 +96,17 @@ class ApiRegexUnblock extends MediaWiki\Api\ApiBase {
 		$this->getResult()->addValue( null, $this->getModuleName(), $res );
 	}
 
+	/** @inheritDoc */
 	public function mustBePosted() {
 		return true;
 	}
 
+	/** @inheritDoc */
 	public function isWriteMode() {
 		return true;
 	}
 
+	/** @inheritDoc */
 	public function getAllowedParams() {
 		return [
 			'regex' => [
@@ -113,10 +116,12 @@ class ApiRegexUnblock extends MediaWiki\Api\ApiBase {
 		];
 	}
 
+	/** @inheritDoc */
 	public function needsToken() {
 		return 'csrf';
 	}
 
+	/** @inheritDoc */
 	protected function getExamplesMessages() {
 		return [
 			'action=regexunblock&regex=192.0.2.5'
@@ -126,6 +131,7 @@ class ApiRegexUnblock extends MediaWiki\Api\ApiBase {
 		];
 	}
 
+	/** @inheritDoc */
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexBlock';
 	}

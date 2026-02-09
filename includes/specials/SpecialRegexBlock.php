@@ -44,12 +44,19 @@ class SpecialRegexBlock extends FormSpecialPage {
 	private UserNameUtils $userNameUtils;
 	private UserNamePrefixSearch $userNamePrefixSearch;
 
+	/** @var int */
 	public $numResults = 0;
+	/** @var int */
 	public $numStatResults = 0;
+	/** @var string */
 	public $mAction;
+	/** @var string */
 	public $mFilter;
+	/** @var string */
 	public $mRegexFilter;
+	/** @var int|null */
 	public $mLimit;
+	/** @var int|null */
 	public $mOffset;
 
 	/**
@@ -141,14 +148,20 @@ class SpecialRegexBlock extends FormSpecialPage {
 		switch ( $this->mAction ) {
 			case 'success_block':
 				$out->setSubtitle( $this->msg( 'regexblock-block-success' ) );
-				$out->wrapWikiMsg( '<div class="successbox">$1</div><br />' . "\n", [ 'regexblock-block-log', urldecode( $request->getVal( 'ip' ) ) ] );
+				$out->wrapWikiMsg( '<div class="successbox">$1</div><br />' . "\n",
+					[ 'regexblock-block-log', urldecode( $request->getVal( 'ip' ) ) ]
+				);
 				break;
 			case 'success_unblock':
 				$out->setSubtitle( $this->msg( 'regexblock-unblock-success' ) );
-				$out->wrapWikiMsg( '<div class="successbox">$1</div><br />' . "\n", [ 'regexblock-unblock-log', urldecode( $request->getVal( 'ip' ) ) ] );
+				$out->wrapWikiMsg( '<div class="successbox">$1</div><br />' . "\n",
+					[ 'regexblock-unblock-log', urldecode( $request->getVal( 'ip' ) ) ]
+				);
 				break;
 			case 'failure_unblock':
-				$out->wrapWikiMsg( '<div class="errorbox">$1</div><br />' . "\n", [ 'regexblock-unblock-error', urldecode( $request->getVal( 'ip' ) ) ] );
+				$out->wrapWikiMsg( '<div class="errorbox">$1</div><br />' . "\n",
+					[ 'regexblock-unblock-error', urldecode( $request->getVal( 'ip' ) ) ]
+				);
 				break;
 			case 'stats':
 				$blckid = $request->getVal( 'blckid' );
@@ -209,7 +222,10 @@ class SpecialRegexBlock extends FormSpecialPage {
 		if ( is_array( $blockers ) ) {
 			foreach ( $blockers as $id => $blocker ) {
 				$sel = htmlspecialchars( ( $this->mFilter == $blocker ) ) ? ' selected="selected"' : '';
-				$out->addHTML( '<option value="' . htmlspecialchars( $blocker ) . '"' . $sel . '>' . htmlspecialchars( $blocker ) . '</option>' );
+				$out->addHTML( '<option value="' . htmlspecialchars( $blocker ) . '"' . $sel . '>' .
+					htmlspecialchars( $blocker ) .
+					'</option>'
+				);
 			}
 		}
 
@@ -250,7 +266,10 @@ class SpecialRegexBlock extends FormSpecialPage {
 					$expiry = sprintf( $color_expire, $lang->timeanddate( wfTimestamp( TS_MW, $expiry ), true ) );
 				}
 
-				$exact_match = ( ( $row['exact_match'] ) ? $this->msg( 'regexblock-view-match' )->escaped() : $this->msg( 'regexblock-view-regex' )->escaped() );
+				$exact_match = $this->msg( $row['exact_match'] ?
+					'regexblock-view-match' :
+					'regexblock-view-regex'
+				)->escaped();
 				$create_block = ( $row['create_block'] ) ? $this->msg( 'regexblock-view-account' )->escaped() : '';
 				$reason = '<i>' . $row['reason'] . '</i>';
 				$stats_link = $linkRenderer->makeKnownLink(
@@ -273,7 +292,8 @@ class SpecialRegexBlock extends FormSpecialPage {
 
 				$out->addHTML(
 					'<li>
-					<code class="regexblock-target">' . $row['blckby_name'] . '</code><b>' . $comma . $exact_match . $space . $create_block . '</b>' . $comma . '
+					<code class="regexblock-target">' . $row['blckby_name'] . '</code><b>' . $comma .
+					$exact_match . $space . $create_block . '</b>' . $comma . '
 					(' . $this->msg( 'regexblock-view-block-by' )->escaped() . ' <b>' . $row['blocker'] . '</b>, ' . $reason . ') ' .
 					 $this->msg( 'regexblock-view-time', $row['datim'], $row['date'], $row['time'] )->parse() . $comma .
 					'(' . $unblock_link . ') ' . $comma . $expiry . $comma . ' (' . $stats_link . ')
@@ -362,10 +382,14 @@ class SpecialRegexBlock extends FormSpecialPage {
 		$linkRenderer = $this->getLinkRenderer();
 		$blocker_link = $blockername_link = '';
 		if ( isset( $blockInfo->blckby_blocker ) && $blockInfo->blckby_blocker ) {
-			$blocker_link = $linkRenderer->makeKnownLink( $this->mTitle, $blockInfo->blckby_blocker, [], [ 'filter' => $blockInfo->blckby_blocker ] );
+			$blocker_link = $linkRenderer->makeKnownLink( $this->mTitle, $blockInfo->blckby_blocker, [],
+				[ 'filter' => $blockInfo->blckby_blocker ]
+			);
 		}
 		if ( isset( $blockInfo->blckby_name ) && $blockInfo->blckby_name ) {
-			$blockername_link = $linkRenderer->makeKnownLink( $this->mTitle, $blockInfo->blckby_name, [], [ 'rfilter' => $blockInfo->blckby_name ] );
+			$blockername_link = $linkRenderer->makeKnownLink( $this->mTitle, $blockInfo->blckby_name, [],
+				[ 'rfilter' => $blockInfo->blckby_name ]
+			);
 		}
 		if ( isset( $blockInfo->blckby_reason ) && $blockInfo->blckby_reason ) {
 			$blockReason = $this->msg( 'regexblock-form-reason' )->escaped() . $blockInfo->blckby_reason;
@@ -385,7 +409,7 @@ class SpecialRegexBlock extends FormSpecialPage {
 			$messageKey = 'regexblock-match-stats-record';
 
 			$hookContainer = $this->getHookContainer();
-			foreach ( $stats_list as $id => $row ) {
+			foreach ( $stats_list as $row ) {
 				$params = [
 					$row->stats_match,
 					$row->stats_user,

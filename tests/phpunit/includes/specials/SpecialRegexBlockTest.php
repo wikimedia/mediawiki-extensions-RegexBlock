@@ -3,7 +3,7 @@
 use Wikimedia\TestingAccessWrapper;
 
 /**
- * @covers SpecialRegexBlock
+ * @covers \SpecialRegexBlock
  * @group Database
  */
 class SpecialRegexBlockTest extends SpecialPageTestBase {

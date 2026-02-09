@@ -536,7 +536,8 @@ class RegexBlock {
 				}
 
 				/* set expiry information */
-				$block->setExpiry( MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA )->decodeExpiry( $valid['expire'] ) );
+				$block->setExpiry( MediaWikiServices::getInstance()->getDBLoadBalancer()
+					->getConnection( DB_REPLICA )->decodeExpiry( $valid['expire'] ) );
 				$block->setTimestamp( $valid['timestamp'] );
 				$block->setTarget( ( $valid['ip'] == 1 ) ? $wgRequest->getIP() : $user->getName() );
 			}

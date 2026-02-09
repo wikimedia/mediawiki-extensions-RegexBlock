@@ -131,14 +131,17 @@ class ApiRegexBlock extends MediaWiki\Api\ApiBase {
 		$this->getResult()->addValue( null, $this->getModuleName(), $res );
 	}
 
+	/** @inheritDoc */
 	public function mustBePosted() {
 		return true;
 	}
 
+	/** @inheritDoc */
 	public function isWriteMode() {
 		return true;
 	}
 
+	/** @inheritDoc */
 	public function getAllowedParams() {
 		return [
 			'regex' => [
@@ -152,10 +155,12 @@ class ApiRegexBlock extends MediaWiki\Api\ApiBase {
 		];
 	}
 
+	/** @inheritDoc */
 	public function needsToken() {
 		return 'csrf';
 	}
 
+	/** @inheritDoc */
 	protected function getExamplesMessages() {
 		// phpcs:disable Generic.Files.LineLength
 		return [
@@ -167,6 +172,7 @@ class ApiRegexBlock extends MediaWiki\Api\ApiBase {
 		// phpcs:enable
 	}
 
+	/** @inheritDoc */
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RegexBlock';
 	}

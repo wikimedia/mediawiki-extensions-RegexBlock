@@ -11,8 +11,6 @@ use MediaWiki\SpecialPage\SpecialPage;
  *
  * Forked from the BulkBlock extension written by WikiTeq on 20 April 2025.
  *
- * @file
- * @date 20 April 2025
  * @author Jack Phoenix
  */
 class SpecialRegexBlockBatch extends FormSpecialPage {

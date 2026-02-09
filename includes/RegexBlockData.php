@@ -170,7 +170,7 @@ class RegexBlockData {
 	 * @param int $id ID of the regexBlock entry (value of stats_blckby_id column in the stats_blockedby database table)
 	 * @param int $limit LIMIT for the SQL query
 	 * @param int $offset OFFSET for the SQL query (skip this many entries)
-	 * @return $stats
+	 * @return stdClass[]
 	 */
 	public function getStatsData( $id, $limit = 50, $offset = 0 ) {
 		$stats = [];
@@ -207,7 +207,7 @@ class RegexBlockData {
 	 * it should (see the note on SpecialRegexBlock#showStatsList for details).
 	 *
 	 * @param int $id ID of the regexBlock entry (value of blckby_id column in the stats_blockedby database table)
-	 * @return $record
+	 * @return stdClass
 	 */
 	public function getRegexBlockById( $id ) {
 		$record = null;
