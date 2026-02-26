@@ -6,5 +6,6 @@
 	},
 	"regexblock-form-username": "IP-addrõs leʹbe õõʹnninõmm:",
 	"regexblock-form-reason": "Mäinn:",
-	"regexblock-view-reason": "mäinn: $1"
+	"regexblock-view-reason": "mäinn: $1",
+	"regexblock-view-stats": "statistiikk"
 }

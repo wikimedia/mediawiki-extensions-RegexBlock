@@ -9,5 +9,6 @@
 	"regexblock-block-success": "Estim luhostui",
 	"regexblock-form-reason": "Suijâ:",
 	"regexblock-view-all": "Puoh",
-	"regexblock-view-reason": "suijâ: $1"
+	"regexblock-view-reason": "suijâ: $1",
+	"regexblock-view-stats": "statistiik"
 }
