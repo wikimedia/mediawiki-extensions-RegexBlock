@@ -13,7 +13,7 @@
 	"apihelp-regexblock-param-regex": "A expresión regular que se vai bloquear. Ten en conta que cando se proporciona o parámetro «exact» no enderezo URL, este non se trata como unha expresión regular, senón como unha cadea simple de caracteres.",
 	"apihelp-regexblock-param-expiry": "Tempo de caducidade. Pode ser relativo (por exemplo, <kbd>5 months</kbd> ou <kbd>2 weeks</kbd>) ou absoluto (por exemplo, <kbd>2014-09-18T12:34:56Z</kbd>). Se se pon <kbd>infinite</kbd>, <kbd>indefinite</kbd> ou <kbd>never</kbd>, o bloqueo nunca caducará.",
 	"apihelp-regexblock-param-reason": "Motivo para o bloqueo.",
-	"apihelp-regexblock-param-nocreate": "Previr a creación de contas.",
+	"apihelp-regexblock-param-nocreate": "Impedir a creación de contas.",
 	"apihelp-regexblock-param-exact": "Utilizar a coincidencia exacta para bloquear o nome indicado exactamente como se dá (en lugar de tratalo como unha expresión regular).",
 	"apihelp-regexunblock-summary": "Desbloquear nomes e enderezos IP dos usuarios mediante expresións regulares.",
 	"apihelp-regexunblock-param-regex": "A expresión regular bloqueada a desbloquear (pode que non sexa unha expresión regular verdadeira cando se usa o bloqueo exacto).",
