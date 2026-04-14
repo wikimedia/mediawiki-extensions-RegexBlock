@@ -11,7 +11,11 @@
 			"Vlad5250"
 		]
 	},
+	"apihelp-regexblock-summary": "Блокировка имён участников и IP-адресов с помощью регулярных выражений.",
+	"apihelp-regexblock-param-expiry": "Время истечения срока действия. Может быть относительным (например, <kbd>5 months</kbd> или <kbd>2 weeks</kbd>) или абсолютным (например, <kbd>2014-09-18T12:34:56Z</kbd>). Если задано <kbd>infinite</kbd>, <kbd>indefinite</kbd> или <kbd>never</kbd>, блокировка никогда не истечёт.",
 	"apihelp-regexblock-param-reason": "Причина блокировки.",
+	"apihelp-regexblock-param-nocreate": "Запретить создание учётных записей.",
+	"apihelp-regexunblock-summary": "Разблокировка имён участников и IP-адресов с помощью регулярных выражений.",
 	"regexblock": "RegexBlock",
 	"regexblock-already-blocked": "$1 уже заблокирован.",
 	"regexblock-block-log": "Имя участника или IP-адрес '''$1''' заблокирован.",

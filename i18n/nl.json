@@ -52,7 +52,7 @@
 	"regexblock-unblock-error": "Een fout bij het deblokkeren van $1. Waarschijnlijk bestaat er geen gebruiker met die naam.",
 	"regexblock-regex-filter": "of reguliere expressiewaarde:",
 	"regexblock-view-blocked": "Blokkades weergeven door:",
-	"regexblock-view-block-id": "Toon blokkade ID:",
+	"regexblock-view-block-id": "Blokkade ID bekijken:",
 	"regexblock-view-all": "Alles",
 	"regexblock-view-go": "OK",
 	"regexblock-view-match": "(voldoet precies)",
