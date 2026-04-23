@@ -14,7 +14,7 @@
 	"descriptionmsg": "regexblock-desc",
 	"type": "antispam",
 	"requires": {
-		"MediaWiki": ">=1.43"
+		"MediaWiki": ">=1.46"
 	},
 	"config": {
 		"ContactLink": "Special:Contact",

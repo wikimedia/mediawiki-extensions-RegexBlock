@@ -88,12 +88,17 @@ class SpecialRegexBlock extends FormSpecialPage {
 	) {
 		$this->mAction = '';
 		$this->mFilter = $this->mRegexFilter = '';
-		parent::__construct( 'RegexBlock', 'regexblock' );
+		parent::__construct( 'RegexBlock' );
 
 		$this->dbProvider = $dbProvider;
 		$this->contLang = $contLang;
 		$this->userNameUtils = $userNameUtils;
 		$this->userNamePrefixSearch = $userNamePrefixSearch;
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'regexblock';
 	}
 
 	/**

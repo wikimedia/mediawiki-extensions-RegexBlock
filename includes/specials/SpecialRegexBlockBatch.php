@@ -20,8 +20,13 @@ class SpecialRegexBlockBatch extends FormSpecialPage {
 	public function __construct(
 		Language $language
 	) {
-		parent::__construct( 'RegexBlockBatch', 'regexblock' );
+		parent::__construct( 'RegexBlockBatch' );
 		$this->language = $language;
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'regexblock';
 	}
 
 	/** @inheritDoc */
