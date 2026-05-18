@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"Ykhwong",
 			"아라"
 		]
@@ -45,6 +46,6 @@
 	"regexblock-view-block-by": "차단자:",
 	"regexblock-view-block-unblock": "차단 해제",
 	"regexblock-view-empty": "차단된 이름과 주소 목록이 비어 있습니다.",
-	"action-regexblock": "위키 팜의 모든 위키에서 사용자 편집을 차단할",
-	"right-regexblock": "위키 팜의 모든 위키에서 사용자 편집 차단"
+	"action-regexblock": "위키 팜의 모든 위키에서 사용자 편집을 차단",
+	"right-regexblock": "위키 팜의 모든 위키에서 사용자 편집을 차단"
 }
