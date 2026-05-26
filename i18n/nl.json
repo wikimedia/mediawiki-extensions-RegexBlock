@@ -19,7 +19,7 @@
 	"apihelp-regexblock-param-nocreate": "Het aanmaken van accounts verhinderen.",
 	"apihelp-regexblock-param-exact": "Gebruik exacte vergelijking om de opgegeven naam precies zoals opgegeven te blokkeren (in plaats van deze als een reguliere expressie te behandelen).",
 	"apihelp-regexunblock-summary": "De namen en IP-adressen van gebruikers deblokkeren via reguliere expressies.",
-	"apihelp-regexunblock-param-regex": "De te deblokkeren geblokkeerde reguliere expressie (is niet echt een reguliere expressie wanneer exacte blokkering wordt gebruikt).",
+	"apihelp-regexunblock-param-regex": "De te deblokkeren geblokkeerde reguliere expressie (is niet echt een reguliere expressie wanneer exacte blokkade wordt gebruikt).",
 	"apihelp-regexunblock-example-ip": "Deblokkeer “192.0.2.5” (waarschijnlijk geblokkeerd met de optie “exact” om alleen dat IP-adres te blokkeren voor bewerking)",
 	"apihelp-regexunblock-example-regex": "Deblokkeer de reguliere expressie “SpamUser.*”, zodat accounts zoals “SpamUser66” kunnen worden aangemaakt en bestaande accounts met dergelijke namen de site kunnen bewerken.",
 	"regexblock": "RegexBlokkeren",
