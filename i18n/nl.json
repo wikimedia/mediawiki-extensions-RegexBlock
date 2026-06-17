@@ -46,7 +46,7 @@
 	"regexblock-form-account-block": "Het aanmaken van nieuwe gebruikers blokkeren",
 	"regexblock-form-submit": "Deze gebruiker blokkeren",
 	"regexblock-form-submit-empty": "Geef een gebruikersnaam of een IP-adres om te blokkeren.",
-	"regexblock-form-submit-regex": "Ongeldige reguliere uitdrukking.",
+	"regexblock-form-submit-regex": "Incorrecte reguliere expressie.",
 	"regexblock-form-submit-expiry": "Geef een vervaltermijn op.",
 	"regexblock-link": "blokkeren met reguliere expressies",
 	"regexblock-match-stats-record": "$1 blokkeerde \"$2\" op \"$3\" om \"$4\", werkend via IP-adres \"$5\"",
