@@ -5,7 +5,8 @@
 			"Prima klasy4na",
 			"Vlad5250",
 			"Ата",
-			"Тест"
+			"Тест",
+			"Movses"
 		]
 	},
 	"apihelp-regexblock-summary": "Блокувати імена користувачів та IP-адреси за допомогою регулярних виразів.",
@@ -24,6 +25,7 @@
 	"regexblock-already-blocked": "$1 вже заблокований.",
 	"regexblock-batch": "Блокування кількох регулярних виразів",
 	"regexblock-batch-regexes": "Регулярні вирази:",
+	"regexblock-batch-errors": "$1 {{PLURAL:$1|регулярний вираз|регулярні вирази|регулярних виразів}} не вдалося заблокувати.",
 	"regexblock-batch-success": "{{PLURAL:$1|1=Регулярний вираз|Регулярні вирази}} було заблоковано успішно!",
 	"regexblock-block-log": "Ім'я користувача або IP-адресу '''$1''' заблоковано.",
 	"regexblock-block-success": "Блокування здійснено",
