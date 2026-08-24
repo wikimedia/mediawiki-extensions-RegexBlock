@@ -15,6 +15,7 @@
  * @copyright Copyright © 2007, Wikia Inc.
  * @license GPL-2.0-or-later
  */
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\WikiMap\WikiMap;
 use Wikimedia\Rdbms\IResultWrapper;

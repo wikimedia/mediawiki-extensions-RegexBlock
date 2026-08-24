@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Context\RequestContext;
+use MediaWiki\Tests\Specials\SpecialPageTestBase;
 use Wikimedia\TestingAccessWrapper;
 
 /**
