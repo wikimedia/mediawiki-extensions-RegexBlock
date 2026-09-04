@@ -10,7 +10,8 @@
 			"Jatrobat",
 			"Piolinfax",
 			"Sanbec",
-			"Translationista"
+			"Translationista",
+			"No se"
 		]
 	},
 	"apihelp-regexblock-param-reason": "Motivo de bloqueo.",
@@ -31,7 +32,7 @@
 	"regexblock-form-username": "Dirección IP o nombre de usuario:",
 	"regexblock-form-reason": "Motivo:",
 	"regexblock-form-match": "Coincidencia exacta",
-	"regexblock-form-account-block": "Bloquear creaación de nuevas cuentas",
+	"regexblock-form-account-block": "Bloquear creación de nuevas cuentas",
 	"regexblock-form-submit": "Bloquear este usuario",
 	"regexblock-form-submit-empty": "De un nombre de usuario o una dirección IP a bloquear.",
 	"regexblock-form-submit-regex": "Expresión regular inválida.",
